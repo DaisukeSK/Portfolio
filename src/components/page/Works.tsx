@@ -170,9 +170,9 @@ function Works({selected}:Props) {
           You can select news from various categories, and search by keywords too.
         </p>
         <div className='iconFlex'>
-        <JS></JS>
-        {/* <TS></TS>
-        <HTML></HTML>
+        {/* <JS></JS> */}
+        <TS></TS>
+        {/* <HTML></HTML>
         <CSS></CSS>
         <Jquery></Jquery> */}
         <React></React>
