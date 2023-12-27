@@ -1,8 +1,14 @@
-import { useState } from 'react'
-import { Main } from '../StyledComponents'
 
-function Contact(props) {
-  const [count, setCount] = useState(0)
+import { Main } from '../StyledComponents'
+import {Selected} from '../../App'
+
+type Props = {
+  selected:Selected
+};
+
+
+function Contact({selected}:Props) {
+
 
   return (
     <>
@@ -12,10 +18,10 @@ function Contact(props) {
         // opacity:props.selected.current==3?1:0,
         // backgroundColor:'#A6A6A680'
       }}
-      show={props.selected.current==3?1:0}
+      show={selected.current==3?1:0}
       // block={props.display}
-      direction={props.selected.current-props.selected.prev<0?1:0}
-      aa={props.selected.current==3 || props.selected.prev==3? 1:0}
+      direction={selected.current-selected.prev<0?1:0}
+      aa={selected.current==3 || selected.prev==3? 1:0}
       >
         
       
@@ -31,7 +37,7 @@ function Contact(props) {
         <label>E-mail:</label>
         <input type='email'  name='email' placeholder=' Your E-mail address.' required/>
         <label>Message:</label>
-        <textarea name='inquiry' cols='50' rows='5' placeholder=' Message.' required></textarea>
+        <textarea name='inquiry' cols={50} rows={5} placeholder=' Message.' required></textarea>
         <input type='submit' value='Send'/>
 
 </div>

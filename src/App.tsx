@@ -1,14 +1,19 @@
 import { useState, useEffect } from 'react'
-import Header from './components/Header.jsx'
-import About from './components/page/About.jsx'
-import Contact from './components/page/Contact.jsx'
-import Home from './components/page/Home.jsx'
-import Works from './components/page/Works.jsx'
-import Inquiry from './components/page/Inquiry.jsx'
+import Header from './components/Header.tsx'
+import About from './components/page/About.tsx'
+import Contact from './components/page/Contact.tsx'
+import Home from './components/page/Home.tsx'
+import Works from './components/page/Works.tsx'
+import Inquiry from './components/page/Inquiry.tsx'
+
+export type Selected={
+
+  prev:number,current:number
+}
 
 
 function App() {
-  const [selected, setSelected] = useState({prev:0,current:0})
+  const [selected, setSelected] = useState<Selected>({prev:0,current:0})
   const [inquiry, setInquiry] = useState(false)
 
   console.log("pathname",window.location)
@@ -50,7 +55,7 @@ function App() {
 
   return (
     <>
-    <Header inquiry={inquiry} select={selected} selected={setSelected} state={selected}></Header>
+    <Header inquiry={inquiry} selected={selected} setSelected={setSelected}></Header>
     
     {/* <About style={{opacity:selected=='About'?1:0, trasition: 'all ease-in-out 2s'}}></About>
     <Contact style={{opacity:selected=='Contact'?1:0, trasition: 'all ease-in-out 2s'}}></Contact>

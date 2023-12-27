@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { UnderLine, HeaderRightChild } from './StyledComponents'
+
 import path from '../../public/smpl.png'
 
 function WFchild() {

@@ -1,9 +1,13 @@
-import { useState } from 'react'
+
 import { Main } from '../StyledComponents'
+import {Selected} from '../../App'
 
-function Inquiry(props) {
-  const [count, setCount] = useState(0)
+type Props = {
+  selected:Selected
+};
 
+
+function Inquiry({selected}:Props) {
   return (
     <>
       <Main
@@ -13,10 +17,10 @@ function Inquiry(props) {
         // backgroundColor:'#F2767680',
         // background: 'linear-gradient(navy,rgb(60, 60, 255))',
       }}
-      show={props.selected.current==4?1:0}
+      show={selected.current==4?1:0}
       // block={props.display}
-      direction={props.selected.current-props.selected.prev<0?1:0}
-      aa={props.selected.current==4 || props.selected.prev==4? 1:0}
+      direction={selected.current-selected.prev<0?1:0}
+      aa={selected.current==4 || selected.prev==4? 1:0}
       >
         <h1>Thank you for your inquiry</h1>
         <p>Your inquiry has successfully been sent.<br/>

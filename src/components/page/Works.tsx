@@ -1,16 +1,13 @@
-import { useState } from 'react'
+
 import { Main } from '../StyledComponents'
-import WorksFlex from '../WorksFlex'
-import JS from '../../components/icons/JS'
-import TS from '../../components/icons/TS'
-import HTML from '../../components/icons/HTML'
-import CSS from '../../components/icons/CSS'
-import Jquery from '../../components/icons/Jquery'
-import React from '../../components/icons/React'
-import MySQL from '../../components/icons/MySQL'
-import PHP from '../../components/icons/PHP'
-import NodeJS from '../../components/icons/NodeJS'
-import PostgreSQL from '../../components/icons/PostgreSQL'
+
+import JS from '../icons/JS'
+import TS from '../icons/TS'
+
+import Jquery from '../icons/Jquery'
+import React from '../icons/React'
+import MySQL from '../icons/MySQL'
+import PHP from '../icons/PHP'
 import portfolio from '../../../public/portfolio.png'
 import ccc from '../../../public/ccc.png'
 import satellite from '../../../public/satellite2.png'
@@ -18,8 +15,15 @@ import animation from '../../../public/animation.png'
 import memolis from '../../../public/memolis.png'
 import news from '../../../public/news.png'
 
+import {Selected} from '../../App'
 
-function Works(props) {
+
+type Props = {
+  selected:Selected
+};
+
+
+function Works({selected}:Props) {
   
   return (
     <>
@@ -34,10 +38,10 @@ function Works(props) {
         // backgroundAttachment: 'fixed',
         
       }}
-      show={props.selected.current==2?1:0}
+      show={selected.current==2?1:0}
       // block={props.display}
-      direction={props.selected.current-props.selected.prev<0?1:0}
-      aa={props.selected.current==2 || props.selected.prev==2? 1:0}
+      direction={selected.current-selected.prev<0?1:0}
+      aa={selected.current==2 || selected.prev==2? 1:0}
       >
         <h1>Works</h1>
 
@@ -186,9 +190,9 @@ function Works(props) {
           Thank you for visiting my portfolio, have fun, I hope you like it.
         </p>
         <div className='iconFlex'>
-        <JS></JS>
-        {/* <TS></TS>
-        <HTML></HTML>
+        {/* <JS></JS> */}
+        <TS></TS>
+        {/* <HTML></HTML>
         <CSS></CSS>
         <Jquery></Jquery> */}
         <React></React>

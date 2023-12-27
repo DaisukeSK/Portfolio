@@ -1,21 +1,27 @@
-import { useState } from 'react'
+
 import { Main } from '../StyledComponents'
 import path from "../../../public/me.png";
 
-import JS from '../../components/icons/JS'
-import TS from '../../components/icons/TS'
-import HTML from '../../components/icons/HTML'
-import CSS from '../../components/icons/CSS'
-import Jquery from '../../components/icons/Jquery'
-import React from '../../components/icons/React'
-import MySQL from '../../components/icons/MySQL'
-import PHP from '../../components/icons/PHP'
-import NodeJS from '../../components/icons/NodeJS'
-import PostgreSQL from '../../components/icons/PostgreSQL'
+import JS from '../icons/JS'
+import TS from '../icons/TS'
+import HTML from '../icons/HTML'
+import CSS from '../icons/CSS'
+import Jquery from '../icons/Jquery'
+import React from '../icons/React'
+import MySQL from '../icons/MySQL'
+import PHP from '../icons/PHP'
+import NodeJS from '../icons/NodeJS'
+import PostgreSQL from '../icons/PostgreSQL'
+import {Selected} from '../../App'
 
 
-function About(props) {
-  const [count, setCount] = useState(0)
+type Props = {
+  selected:Selected
+};
+
+
+function About({selected}:Props) {
+
 
 
   return (
@@ -30,10 +36,10 @@ function About(props) {
         // backgroundAttachment: 'fixed',
         // backgroundColor:'#000055',
       }}
-      show={props.selected.current==1?1:0}
+      show={selected.current==1?1:0}
       // block={props.display}
-      direction={props.selected.current-props.selected.prev<0?1:0}
-      aa={props.selected.current==1 || props.selected.prev==1? 1:0}
+      direction={selected.current-selected.prev<0?1:0}
+      aa={selected.current==1 || selected.prev==1? 1:0}
       >
         <h1>About Me</h1>
         

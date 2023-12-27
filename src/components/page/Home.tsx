@@ -1,11 +1,15 @@
-import { useState } from 'react'
+
 import { Main } from '../StyledComponents'
 // import pathName from '../../../public/me9.png'
 import pathName from '../../../public/me2.png'
-import Sunglasses from './Sunglasses'
+import {Selected} from '../../App'
 
-function Home(props) {
-  const [count, setCount] = useState(0)
+type Props = {
+  selected:Selected
+};
+
+
+function Home({selected}:Props) {
 
   return (
     <>
@@ -18,10 +22,10 @@ function Home(props) {
         // boxSizing: 'border-box',
         
       }}
-      show={props.selected.current==0?1:0}
+      show={selected.current==0?1:0}
       // block={props.display}
-      direction={props.selected.current-props.selected.prev<0?1:0}
-      aa={props.selected.current==0 || props.selected.prev==0? 1:0}
+      direction={selected.current-selected.prev<0?1:0}
+      aa={selected.current==0 || selected.prev==0? 1:0}
       >
 
         <div className='left'>
