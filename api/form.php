@@ -44,7 +44,7 @@ function db_open(){
         $stmt2->execute();
 
         // echo '<script>alert("Inquiry has been successfully sent.")</script>';
-        echo '<script>location.href="https://portfolio2023dec13.000webhostapp.com/index.html?inquiry"</script>';
+        echo '<script>location.href="https://portfolio-daisuke.vercel.app?inquiry"</script>';
         
         
         
