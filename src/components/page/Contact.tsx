@@ -25,7 +25,7 @@ function Contact({selected}:Props) {
       >
         
       
-      <form method='post' action='../../form.php'>
+      <form method='post' action='../../../api/form.php'>
 
         <h1>Contact</h1>
         {/* <p>Please feel free to send any inquiries.</p> */}
