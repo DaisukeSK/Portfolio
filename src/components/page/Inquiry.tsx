@@ -29,7 +29,7 @@ function Inquiry({selected}:Props) {
         </p>
 
         {/* <a href='http://localhost:5174/'>Back to Homepage</a> */}
-        <a href='https://portfolio2023dec13.000webhostapp.com/index.html'>Back to Homepage</a>
+        <a href='https://portfolio-daisuke.vercel.app'>Back to Homepage</a>
         
         
 
