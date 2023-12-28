@@ -29,30 +29,29 @@ function db_open(){
 
 
 
-    // try{
-    //     $dbh=db_open();
+    try{
+        $dbh=db_open();
     
     
-    //     $sql='insert into Form (id, name, email, inquiry) values (null, :name, :email, :inquiry)';
-    //     $stmt2=$dbh->prepare($sql);
-    //     //var_dump($stmt);
+        $sql='insert into Form (id, name, email, inquiry) values (null, :name, :email, :inquiry)';
+        $stmt2=$dbh->prepare($sql);
+        //var_dump($stmt);
         
-    //     $stmt2->bindParam(':name', $name, PDO::PARAM_STR);
-    //     $stmt2->bindParam(':email', $email, PDO::PARAM_STR);
-    //     $stmt2->bindParam(':inquiry', $inquiry, PDO::PARAM_STR);
+        $stmt2->bindParam(':name', $name, PDO::PARAM_STR);
+        $stmt2->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt2->bindParam(':inquiry', $inquiry, PDO::PARAM_STR);
         
-    //     $stmt2->execute();
+        $stmt2->execute();
 
-    //     // echo '<script>alert("Inquiry has been successfully sent.")</script>';
-    //     echo '<script>location.href="https://portfolio2023dec13.000webhostapp.com/index.html?inquiry"</script>';
+        // echo '<script>alert("Inquiry has been successfully sent.")</script>';
+        echo '<script>location.href="https://portfolio2023dec13.000webhostapp.com/index.html?inquiry"</script>';
         
         
         
-    // }catch(PDOException $e){
-    //     echo 'Error: ';
-    //     exit;
-    // }
+    }catch(PDOException $e){
+        echo 'Error: ';
+        exit;
+    }
 
 
-    var_dump($name);
 ?>
