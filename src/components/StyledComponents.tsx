@@ -22,7 +22,7 @@ const fromLeft=keyframes`
     to{ left: 0; opacity:1; }
 `;
 
-export const Main=Styled.main< { show: number,direction: number,aa:number } >`
+export const Main=Styled.main< { show: number,direction: number,aa:number} >`
 position: absolute;
 top: 0;
 

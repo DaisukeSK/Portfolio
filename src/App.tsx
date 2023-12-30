@@ -4,9 +4,8 @@ import About from './components/page/About.tsx'
 import Contact from './components/page/Contact.tsx'
 import Home from './components/page/Home.tsx'
 import Works from './components/page/Works.tsx'
-import Inquiry from './components/page/Inquiry.tsx'
 
-import Inquiry2 from './components/page/Inquiry2.tsx'
+import Inquiry from './components/page/Inquiry.tsx'
 
 export type Selected={
 
@@ -29,7 +28,7 @@ function App() {
 
     if(window.location.search=="?inquiry"){
       setInquiry(true);
-      setSelected({prev:0,current:4})
+      // setSelected({prev:0,current:4})
     }
   },[])
 
@@ -59,11 +58,11 @@ function App() {
     <>
 
     {inquiry &&
-    <Inquiry2></Inquiry2>
+    <Inquiry></Inquiry>
     }
     {!inquiry &&
     <>
-    <Header inquiry={inquiry} selected={selected} setSelected={setSelected}></Header>
+    <Header selected={selected} setSelected={setSelected}></Header>
     
     {/* <About style={{opacity:selected=='About'?1:0, trasition: 'all ease-in-out 2s'}}></About>
     <Contact style={{opacity:selected=='Contact'?1:0, trasition: 'all ease-in-out 2s'}}></Contact>
@@ -74,7 +73,7 @@ function App() {
     <Home selected={selected}></Home>
     <Works selected={selected}></Works>
 
-    <Inquiry selected={selected}></Inquiry>
+    {/* <Inquiry selected={selected}></Inquiry> */}
     
     </>
     }

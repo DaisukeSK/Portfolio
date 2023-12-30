@@ -4,7 +4,7 @@ import {Selected} from '../App'
 
 type Props={
 
-  inquiry:boolean,
+
   selected:Selected,
   setSelected:(state:Selected)=>void
 
@@ -12,7 +12,7 @@ type Props={
 
 
 
-function Header({inquiry,selected,setSelected}:Props) {
+function Header({selected,setSelected}:Props) {
 
   const [width_headerRight, setWidth_headerRight] = useState(window.innerWidth*0.48>=600? 600:window.innerWidth*0.48)
 
@@ -27,6 +27,7 @@ function Header({inquiry,selected,setSelected}:Props) {
     // console.log(event.target.innerText)
     // console.log(props)
     const Div= event.target as HTMLDivElement
+
     setSelected(
 
       // prevData=>({prev:prevData.current,current:event.target.innerText==='Home'?0:
@@ -40,6 +41,7 @@ function Header({inquiry,selected,setSelected}:Props) {
       
       
       )
+      window.scrollTo(0, 0);
   }
 
   // console.log("innerWidth",window.innerWidth*0.8*0.6/4)
@@ -56,10 +58,7 @@ function Header({inquiry,selected,setSelected}:Props) {
   return (
     <>
       <header
-      style={{
-        display: inquiry?'none':'flex'
-        
-      }}
+      
       >
 
       <div
