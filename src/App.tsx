@@ -6,6 +6,8 @@ import Home from './components/page/Home.tsx'
 import Works from './components/page/Works.tsx'
 import Inquiry from './components/page/Inquiry.tsx'
 
+import Inquiry2 from './components/page/Inquiry2.tsx'
+
 export type Selected={
 
   prev:number,current:number
@@ -55,6 +57,12 @@ function App() {
 
   return (
     <>
+
+    {inquiry &&
+    <Inquiry2></Inquiry2>
+    }
+    {!inquiry &&
+    <>
     <Header inquiry={inquiry} selected={selected} setSelected={setSelected}></Header>
     
     {/* <About style={{opacity:selected=='About'?1:0, trasition: 'all ease-in-out 2s'}}></About>
@@ -67,6 +75,9 @@ function App() {
     <Works selected={selected}></Works>
 
     <Inquiry selected={selected}></Inquiry>
+    
+    </>
+    }
 
       
     </>
