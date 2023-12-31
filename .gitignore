@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-ignoretest.tsx
+trash
+PostgreSQL_original.tsx
+Sunglasses.jsx

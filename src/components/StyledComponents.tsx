@@ -3,7 +3,6 @@ import Styled from "styled-components";
 import { css,keyframes } from "styled-components";
 
 const timingFunc='cubic-bezier(0,1,.7,1)';
-// const timingFunc='cubic-bezier(1,0,0,1)';
 
 const toRight=keyframes`
     from{ left: 0; opacity:1; }
@@ -23,57 +22,37 @@ const fromLeft=keyframes`
 `;
 
 export const Main=Styled.main< { show: number,direction: number,aa:number} >`
-position: absolute;
-top: 0;
+    position: absolute;
+    top: 0;
 
-width: 100%;
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
+    padding-top: 100px;
 
-height: fit-content;
-min-height: 100vh;
+    overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
 
-max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
-overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
-
-padding-top: 100px;
-    
-
-// background:linear-gradient(black,blue);
-// background-color:#000040;
-//         background-attachment: fixed;
-
-background-color:#000055;
-
-// background: url(../../../public/wallpaper.jpg);
-// background-size: cover;
-
+    background-color:#000055;
 
     opacity: ${(props)=>props.show?css`1`:css`0`};
     z-index: ${(props)=>props.show?css`1`:css`0`};
-
-
-    
-
-    
-
-    // animation-name:${(props) => props.show? css`${fromRight}`: css`${toLeft}`};
-
     animation-name:${(props) =>
         props.aa && props.show && props.direction? css`${fromLeft}`:
         props.aa && props.show && !props.direction? css`${fromRight}`:
         props.aa && !props.show && props.direction? css`${toRight}`:
-        
-        props.aa && !props.show && !props.direction? css`${toLeft}`:null};
-
-        animation-timing-function: ${timingFunc};
-
+        props.aa && !props.show && !props.direction? css`${toLeft}`:
+        null
+    };
+    animation-timing-function: ${timingFunc};
     animation-duration: 1s;
     box-sizing: border-box;
 `;
 
 export const UnderLine=Styled.div< { position: number,testprop:number} >`
+    height: 2px;
     width: ${(props)=>(props.testprop/4)*0.6}px;
     margin-left: ${(props)=>(props.testprop/4)*0.2}px;
-    height: 2px;
     background-color: white;
     position: absolute;
     bottom: -5px;
@@ -83,13 +62,10 @@ export const UnderLine=Styled.div< { position: number,testprop:number} >`
         props.position==2?css`50%`:
         `75%`
     };
-    transition: all ${timingFunc} 1s;
-    // box-shadow: 0 0 3px 2px white;
-
+    transition: left ${timingFunc} 1s;
 `;
 
 export const HeaderRightChild=Styled.div<{disabled:number}>`
-
     pointer-events: ${(props)=>props.disabled?css`none`:css`auto`};
     width: 100px;
     text-align: center;
@@ -99,7 +75,6 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
     &:hover {
         background-color: rgba(255, 255, 255, 0.4);
         transition: all ease-out 1s;
-    }
-
+    };
 `;
 
