@@ -206,14 +206,32 @@ main h1 {
 
 .inquiry {
   background: linear-gradient(160deg, rgb(0, 0, 77), rgb(84, 84, 255));
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.inquiry h1 {
-  margin-top: 100px;
+.inquiry .inquiryFlex {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 7px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 70px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-.inquiry p {
+.inquiry .inquiryFlex h1 {
   text-align: center;
+  text-shadow: navy 4px 4px 3px;
 }
-.inquiry a {
+.inquiry .inquiryFlex p {
+  text-align: center;
+  font-size: 1.1em;
+}
+.inquiry .inquiryFlex a {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
@@ -221,9 +239,9 @@ main h1 {
   padding: 5px 15px;
   text-decoration: none;
   background: linear-gradient(45deg, rgb(74, 163, 247), rgb(53, 53, 255));
-  outline: 1px solid rgb(143, 143, 143);
+  outline: 1px solid rgb(173, 173, 173);
   border-radius: 15px;
 }
-.inquiry a:visited {
+.inquiry .inquiryFlex a:visited {
   color: white;
 }/*# sourceMappingURL=index.css.map */
