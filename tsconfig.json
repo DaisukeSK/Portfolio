@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "trash/PostgreSQL_original.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

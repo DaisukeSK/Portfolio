@@ -1,6 +1,5 @@
 import { Main } from '../StyledComponents';
 import path from "../../../public/me.png";
-
 import JS from '../icons/JS';
 import TS from '../icons/TS';
 import HTML from '../icons/HTML';
@@ -40,7 +39,7 @@ function About({selected}:Props) {
         </div>
 
         <article>{/* Right side */}
-        
+
           <h3>Experience</h3>
           <div className='expDiv'>
             <h4>Education:</h4>

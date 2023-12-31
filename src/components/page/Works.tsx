@@ -8,7 +8,7 @@ import MySQL from '../icons/MySQL';
 import PHP from '../icons/PHP';
 import portfolio from '../../../public/portfolio.png';
 import ccc from '../../../public/ccc.png';
-import satellite from '../../../public/satellite2.png';
+import satellite from '../../../public/satellite.png';
 import animation from '../../../public/animation.png';
 import memolis from '../../../public/memolis.png';
 import news from '../../../public/news.png';
