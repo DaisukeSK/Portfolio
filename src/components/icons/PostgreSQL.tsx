@@ -30,7 +30,7 @@ function PostgreSQL() {
          id="path145"
       />
    </svg>
-  );
+  )
 };
 
 export default PostgreSQL;

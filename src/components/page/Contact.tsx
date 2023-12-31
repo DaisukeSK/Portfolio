@@ -2,7 +2,7 @@ import { Main } from '../StyledComponents';
 import { Selected } from '../../App';
 
 type Props = {
-  selected:Selected
+  selected: Selected
 };
 
 function Contact({selected}:Props) {
@@ -26,7 +26,7 @@ function Contact({selected}:Props) {
         </div>
       </form>
     </Main>
-  );
+  )
 };
 
 export default Contact;

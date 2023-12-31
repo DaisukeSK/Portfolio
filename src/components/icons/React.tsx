@@ -7,7 +7,7 @@ function React() {
         </path>
       </g>
     </svg>
-  );
+  )
 };
 
 export default React;

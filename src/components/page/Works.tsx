@@ -1,4 +1,3 @@
-
 import { Main } from '../StyledComponents';
 import JS from '../icons/JS';
 import TS from '../icons/TS';
@@ -155,7 +154,7 @@ function Works({selected}:Props) {
         </div>
       </div>
     </Main>
-  );
+  )
 };
 
 export default Works;

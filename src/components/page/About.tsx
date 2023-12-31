@@ -92,7 +92,7 @@ function About({selected}:Props) {
 
       </section>
     </Main>
-  );
+  )
 };
 
 export default About;

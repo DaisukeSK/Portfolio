@@ -1,7 +1,6 @@
-
-import { Main } from '../StyledComponents'
-import pathName from '../../../public/me2.png'
-import {Selected} from '../../App'
+import { Main } from '../StyledComponents';
+import pathName from '../../../public/me2.png';
+import { Selected } from '../../App';
 
 type Props = {
   selected:Selected
@@ -25,7 +24,7 @@ function Home({selected}:Props) {
         <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
       </div>
     </Main>
-  );
+  )
 };
 
 export default Home;

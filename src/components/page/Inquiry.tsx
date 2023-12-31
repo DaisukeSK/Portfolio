@@ -10,7 +10,7 @@ function Inquiry() {
         <a href='https://portfolio-daisuke.vercel.app'>Back to Homepage</a>
       </div>
     </main>
-  );
+  )
 };
 
 export default Inquiry;

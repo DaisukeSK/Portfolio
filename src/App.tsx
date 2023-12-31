@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      {inquiry && <Inquiry/>};
+      {inquiry && <Inquiry/>}
 
       {!inquiry &&
         <>
@@ -31,9 +31,9 @@ function App() {
           <Home selected={selected}></Home>
           <Works selected={selected}></Works>
         </>
-      };
+      }
     </>
-  );
+  )
 };
 
 export default App;

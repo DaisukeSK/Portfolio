@@ -53,7 +53,7 @@ function Header({selected,setSelected}:Props) {
         </div>
       </div>
     </header>
-  );
+  )
 };
 
 export default Header;
