@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-trash
+ignore
 PostgreSQL_original.tsx
 Sunglasses.jsx
