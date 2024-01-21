@@ -163,24 +163,15 @@ main h1 {
 
 .works .worksFlex {
   display: flex;
-  justify-content: space-between;
-  width: 70%;
-  max-width: 850px;
-  margin: 40px auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px auto;
 }
 .works .worksFlex .WFchild {
   width: 45%;
+  width: 400px;
+  margin: 20px 50px;
   box-sizing: border-box;
-}
-.works .worksFlex .WFchild a:visited {
-  color: white;
-}
-.works .worksFlex .WFchild img {
-  width: 100%;
-  display: block;
-  margin: 0 auto 10px;
-  border-radius: 5px;
-  outline: 1px solid rgba(255, 255, 255, 0.3);
 }
 .works .worksFlex .WFchild h2 {
   width: -moz-fit-content;

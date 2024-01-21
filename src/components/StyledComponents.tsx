@@ -76,5 +76,88 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
         background-color: rgba(255, 255, 255, 0.4);
         transition: all ease-out 1s;
     };
-`;
+    `;
+    
+    export const LinkDiv=Styled.div<{onmouse:number, bg:string}>`
+    //width:400px
+    
+    height: 250px;
+    position: relative;
+    border-radius: 5px;
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+    overflow:hidden;
 
+    &:before {
+        content:'';
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        background-image:${(props)=>css`url("../../../public/${props.bg}.png")`};
+        background-size: cover;
+        background-position: center;
+        z-index:-1;
+    }
+
+    .linkFlex {
+        opacity:0;
+        transition: ${(props)=>props.onmouse?css`all 0s ease-in`:css`all .5s ease-in`};
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        // background:navy;
+        display: flex;
+
+        // .demo {
+        //     border-right: 1px solid black;
+        // }
+
+        .demo, .github {
+
+            width:fit-content;
+            padding: 0 25px;
+            // outline: 1px solid grey;
+
+            a {
+                // width: fit-content;
+                text-decoration: none;
+                svg {
+                    height:80px;
+                    // background: orange;
+                    display: block;
+                    margin: 0 auto;
+                    path {
+                        fill: black;
+                    }
+                }
+                span {
+                    opacity: 0;
+                    display: block;
+                    text-align:center;
+                    color:#0000CD;
+                }
+
+                &:hover {
+                    svg {
+                        path {
+                            fill: #0000CD;
+                        }
+                    }
+                    span {
+                        opacity: 1;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &:hover {
+        background: #ffffffbb;
+        .linkFlex {
+            opacity:1;
+        }
+    }
+`

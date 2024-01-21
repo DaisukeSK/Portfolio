@@ -1,0 +1,50 @@
+{
+    "memolis":{
+        "url":[
+            "https://memolis.000webhostapp.com/login/login.php",
+            "https://portfolio-daisuke.vercel.app?preparing"
+        ],
+        "description":"WordBook app. You can create your own account, and add pairs of a term and definition that you want to memorize.",
+        "languages":["JS","Jquery","PHP","MySQL"]
+    },
+    "Color Code Converter":{
+        "url":[
+            "https://color-code-converter.vercel.app/",
+            "https://portfolio-daisuke.vercel.app?preparing"
+        ],
+        "description":"It provides multiple kinds of color codes of any color that you want. You can pick up any color from color space or color bars.",
+        "languages":["TS","React"]
+    },
+    "Satellite Launch Simulation":{
+        "url":[
+            "https://satellite-launch-simulation.vercel.app/",
+            "https://portfolio-daisuke.vercel.app?preparing"
+        ],
+        "description":"A numerical simulation of a satellite's behavior going around the planet, created based on a formula for gravity. You can try it in various situations.",
+        "languages":["JS","Jquery"]
+    },
+    "SVG Animation Gallery":{
+        "url":[
+            "https://svg-animation-gallery.vercel.app/",
+            "https://portfolio-daisuke.vercel.app?preparing"
+        ],
+        "description":"You can enjoy many mouse-interactive SVG animations. They are all made with only Vanilla JavaScript.",
+        "languages":["JS"]
+    },
+    "News App":{
+        "url":[
+            "https://news-app2023.vercel.app/",
+            "https://portfolio-daisuke.vercel.app?preparing"
+        ],
+        "description":"API application for news feed. You can select news from various categories, and search by keywords too.",
+        "languages":["TS","React"]
+    },
+    "This portfolio":{
+        "url":[
+            "",
+            "https://portfolio-daisuke.vercel.app?preparing"
+        ],
+        "description":"Portfolio you are browsing right now. Thank you for visiting my portfolio, have fun, I hope you like it.",
+        "languages":["TS","React","PHP","MySQL"]
+    }
+}

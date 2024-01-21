@@ -33,7 +33,7 @@ function Header({selected,setSelected}:Props) {
 
   return (
     <header>
-      <div
+      {/* <div
         style={{
           position: 'absolute',
           top: '10px',
@@ -41,7 +41,7 @@ function Header({selected,setSelected}:Props) {
         }}
       >
         {selected.prev},{selected.current}
-      </div>
+      </div> */}
 
       <div className='headerRight'>
         <UnderLine position={selected.current} testprop={width_headerRight}></UnderLine>
