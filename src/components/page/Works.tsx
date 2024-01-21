@@ -8,6 +8,12 @@ import MySQL from '../icons/MySQL';
 import PHP from '../icons/PHP';
 import Github from '../icons/Github';
 import Laptop from '../icons/Laptop';
+import portfolio from '../../../public/portfolio.png';
+import ccc from '../../../public/ccc.png';
+import satellite from '../../../public/satellite.png';
+import animation from '../../../public/animation.png';
+import memolis from '../../../public/memolis.png';
+import news from '../../../public/news.png';
 import { Selected } from '../../App';
 import js from './works.json';
 
@@ -29,7 +35,7 @@ function Works({selected}:Props) {
 
   const worksObj:JsonType = {...js}
   const languageObj:{[key:string]:JSX.Element} = {'JS':<JS/>,'TS':<TS/>,'Jquery':<Jquery/>,'React':<React/>,'MySQL':<MySQL/>,'PHP':<PHP/>}
-  const paths:Array<string> = ['memolis','ccc','satellite','animation','news','portfolio']
+  const paths:Array<string> = [memolis, ccc, satellite, animation, news, portfolio]
 
   return (
 

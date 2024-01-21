@@ -94,7 +94,7 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
         height:100%;
         top:0;
         left:0;
-        background-image:${(props)=>css`url("../../../public/${props.bg}.png")`};
+        background-image:${(props)=>css`url(${props.bg})`};
         background-size: cover;
         background-position: center;
         z-index:-1;
