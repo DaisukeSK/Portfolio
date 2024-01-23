@@ -161,3 +161,43 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
         }
     }
 `
+
+export const G1=Styled.g<{anime:number}>`
+
+opacity:${(props)=>props.anime<7?1:0};
+transition:all .5s ease-in-out;
+    path {
+        transition:all .5s ease-in-out;
+    }
+    .g1_path1 {
+        opacity:${(props)=>props.anime>=2?1:0};
+    }
+    .g1_path2 {
+        opacity:${(props)=>props.anime>=3?1:0};
+        // opacity:1;
+    }
+    .g1_path3 {
+        opacity:${(props)=>props.anime>=4?1:0};
+        // opacity:1;
+    }
+
+`;
+
+export const G2=Styled.g<{anime:number}>`
+
+opacity:${(props)=>(props.anime>=9 && props.anime<17)?1:0};
+// transition:all .5s ease-in-out;
+    rect {
+        // transition:all .5s ease-in-out;
+    }
+    .g2_rect1 {
+        opacity:${(props)=>props.anime>=9?1:0};
+    }
+    .g2_rect2 {
+        opacity:${(props)=>props.anime>=10?1:0};
+    }
+    .g2_rect3 {
+        opacity:${(props)=>props.anime>=11?1:0};
+    }
+
+`

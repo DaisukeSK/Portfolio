@@ -60,6 +60,7 @@ main h1 {
   height: 100vh;
 }
 .home .right {
+  margin-top: 70px;
   text-align: center;
   width: 50%;
   display: flex;
@@ -71,6 +72,11 @@ main h1 {
 }
 .home .right h2 {
   margin-top: 10px;
+}
+.home .right .animationDiv {
+  margin: 30px auto 0;
+  width: 450px;
+  height: 240px;
 }
 
 .about section {
