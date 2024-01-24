@@ -162,9 +162,20 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
     }
 `
 
+export const AnimationDiv=Styled.div<{anime:number}>`
+    margin: 50px auto 0;
+    width: 430px;
+    height: ${(props)=>props.anime<27?css`240px`:css`0`};
+    transition: all 3s ease-in-out;
+
+    svg {
+        overflow: visible;
+    }
+`;
+
 export const G1=Styled.g<{anime:number}>`
 
-opacity:${(props)=>props.anime<7?1:0};
+opacity:${(props)=>(props.anime>=2 && props.anime<7)?1:0};
 transition:all .5s ease-in-out;
     path {
         transition:all .5s ease-in-out;
@@ -185,7 +196,7 @@ transition:all .5s ease-in-out;
 
 export const G2=Styled.g<{anime:number}>`
 
-opacity:${(props)=>(props.anime>=9 && props.anime<17)?1:0};
+opacity:${(props)=>(props.anime>=9 && props.anime<15)?1:0};
 // transition:all .5s ease-in-out;
     rect {
         // transition:all .5s ease-in-out;
@@ -194,10 +205,22 @@ opacity:${(props)=>(props.anime>=9 && props.anime<17)?1:0};
         opacity:${(props)=>props.anime>=9?1:0};
     }
     .g2_rect2 {
-        opacity:${(props)=>props.anime>=10?1:0};
-    }
-    .g2_rect3 {
         opacity:${(props)=>props.anime>=11?1:0};
     }
+    .g2_rect3 {
+        opacity:${(props)=>props.anime>=10?1:0};
+    }
 
-`
+`;
+
+export const G3=Styled.g<{anime:number}>`
+
+opacity:${(props)=>(props.anime>=16 && props.anime<27)?1:0};
+// overflow: visible;
+
+transition:all .5s ease-in-out;
+
+
+
+
+`;
