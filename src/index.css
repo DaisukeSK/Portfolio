@@ -185,7 +185,7 @@ main h1 {
 .works .worksFlex .WFchild h2 {
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
+  margin: 10px auto 0;
 }
 .works .worksFlex .WFchild .iconFlex {
   width: 100%;

@@ -7,6 +7,7 @@ import G1_bg3 from '../../../public/bg2.png';
 import G2_bg1 from '../../../public/bg3.png';
 import G2_bg2 from '../../../public/bg5.png';
 import G2_bg3 from '../../../public/bg4.png';
+import G3_bg1 from '../../../public/bg8.png';
 import { Selected } from '../../App';
 
 type Props = {
@@ -49,7 +50,7 @@ function Home({selected}:Props) {
     insert4.push(
       <text y='170' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='#ffffff' fontFamily='arial' fontSize='65' fontWeight='900' fontStyle='italic'>
         <animate attributeName='x' values='20%;50%' fill='freeze' calcMode="spline" keySplines='0 .5 .5 1' begin={`${18+i*0.1}s`} dur='1.5s' repeatCount="1"/>
-        <animate attributeName='opacity' values='0;1' fill={i==0?'freeze':'remove'} begin={`${18+i*0.1}s`} dur='3s' repeatCount="1"/>
+        <animate attributeName='opacity' values='0;1' begin={`${18+i*0.1}s`} dur='3s' repeatCount="1"/>
           Vancouver
       </text>
     )
@@ -65,45 +66,14 @@ function Home({selected}:Props) {
       </text>
     )
   }
-  // <rect className='g2_rect3' x='80' y='50' width='290' height='140px' fill='url(#img6)'/>
 
+    useEffect(()=>{
 
-  const setAnimation=():void=>{
-    // setTimeout(()=>setAnimeState(2),2000)
-    // setTimeout(()=>setAnimeState(3),3000)
-    // setTimeout(()=>setAnimeState(4),4000)
-    // setTimeout(()=>setAnimeState(7),7000)
-    // setTimeout(()=>setAnimeState(9),9000)
-    // setTimeout(()=>setAnimeState(10),10000)
-    // setTimeout(()=>setAnimeState(11),11000)
-    // setTimeout(()=>setAnimeState(15),15000)
-    [2,3,4,7,9,10,11,15,16,27].map((num:number)=>{
+    [2,3,4,7,9,10,11,15,16,17,25,28.5,29.5,31].map((num:number)=>{
       setTimeout(()=>setAnimeState(num),num*1000)
     })
-
-    // setTimeout(()=>setAnimeState(0),27000)
-
-    // setTimeout(()=>{
-    //   console.log("7")
-    // },7000)
-  }
-
-  useEffect(()=>{
-    if(animeState==0){
-      // document.querySelectorAll('animate').forEach((ani:SVGAnimateElement)=>{
-      //   const sec:number=+ani.getAttribute('begin')!.split('s')[0]
-      //   ani.beginElementAt(sec)
-      // })
-
-      setAnimation()
-    }
-  },[animeState])
-
-  // useEffect(()=>{
-
-  //   console.log("animeState",animeState)
-  // },[animeState])
-
+    
+  },[])
 
   return (
     <Main
@@ -127,13 +97,10 @@ function Home({selected}:Props) {
           <svg width='100%' height='100%'>
 
             <defs>
+
               <pattern id="g1_1" width="100%" height="100%">
                 <image href={G1_bg1} y="0" height="100%">
-                  
-                  
                   <animate attributeName="x" values="-150;-50" dur="6s" begin='2s' repeatCount="1"/>
-                  
-                  {/* <animate attributeName="opacity" values="0;1" dur="1s" begin='2s' repeatCount="1"/> */}
                 </image>
               </pattern>
 
@@ -168,6 +135,20 @@ function Home({selected}:Props) {
                 </image>
               </pattern>
 
+              <pattern id="g3_1" width="100%" height="100%">
+                <image opacity='0' href={G3_bg1} y="110" width="450px">
+                  <animate attributeName="x" values="0;-50" dur="8s" begin='23s' repeatCount="1"/>
+                  <animate attributeName="opacity" values="0;1" dur="1s" fill='freeze' begin='23s' repeatCount="1"/>
+                  <animate attributeName="opacity" values="1;0" dur="1s" fill='freeze' begin='30s' repeatCount="1"/>
+                </image>
+              </pattern>
+
+              <clipPath id="g3_clip">
+                <text x='50%' y='170' dominantBaseline="middle" textAnchor="middle" fontFamily='arial' fontSize='65' fontWeight='900' fontStyle='italic'>
+                  Vancouver
+                </text>
+              </clipPath>
+
               <linearGradient id="linearG" x1="0%" y1="0%" x2="110%" y2="22%">
                 <stop stopColor='white'>
                 <animate attributeName="offset" dur="1s" values="0;1" fill='freeze' begin='16s' repeatCount="1" />
@@ -186,34 +167,38 @@ function Home({selected}:Props) {
                 <path className='g1_path3' d='m160 240 h200 l74 -102 h-200' fill='url(#g1_3)'/>
             </G1>
 
-              <G2 anime={animeState}>
+            <G2 anime={animeState}>
+              <rect className='g2_rect1' x='0' y='0' width='130' height='100%' fill='url(#g2_1)'/>
+              <rect className='g2_rect2' x='150' y='0' width='130' height='100%' fill='url(#g2_2)'/>
+              <rect className='g2_rect3' x='300' y='0' width='130' height='100%' fill='url(#g2_3)'/>
+              {insert1}{insert2}{insert3}
+            </G2>
 
+            <G3 anime={animeState}>
+              <text className='g3_text1' x="50%" y="50" dominantBaseline="middle" textAnchor="middle" fill='url(#linearG)' fontFamily='Times' fontSize='45' fontWeight='bold' fontStyle='italic'>
+                Based
+              </text>
 
-                <rect className='g2_rect1' x='0' y='0' width='130' height='100%' fill='url(#g2_1)'/>
-                <rect className='g2_rect2' x='150' y='0' width='130' height='100%' fill='url(#g2_2)'/>
-                <rect className='g2_rect3' x='300' y='0' width='130' height='100%' fill='url(#g2_3)'/>
-              {insert1}{insert2}
-                {insert3}
+              <text className='g3_text2' x='50%' y='110' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='#ffffff' fontFamily='serif' fontSize='50' fontWeight='bold' fontStyle='italic'>
+                in
+              </text>
 
-              </G2>
+              <text className='g3_text3' y='170' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='white' fontFamily='arial' fontSize='65' fontWeight='900' fontStyle='italic'>
+                <animate attributeName='x' values='20%;50%' fill='freeze' calcMode="spline" keySplines='0 .5 .5 1' begin='18s' dur='1.5s' repeatCount="1"/>
+                <animate attributeName='opacity' values='0;1' fill='freeze' begin='18s' dur='3s' repeatCount="1"/>
+                <animate attributeName='opacity' values='1;0' fill='freeze' begin='22.5s' dur='1s' repeatCount="1"/>
+                <animate attributeName='opacity' values='0;1' fill='freeze' begin='30.5s' dur='.5s' repeatCount="1"/>
+                <animate attributeName='opacity' values='1;0' fill='freeze' begin='31s' dur='.5s' repeatCount="1"/>
+                  Vancouver
+              </text>
 
-              <G3 anime={animeState}>
-                
-              <text x="50%" y="50" dominantBaseline="middle" textAnchor="middle" fill='url(#linearG)' fontFamily='Times' fontSize='45' fontWeight='bold' fontStyle='italic'>
-                  Based
-                </text>
+              <rect x='0' y='0' width='100%' height='200px' fill='url(#g3_1)' clip-path='url(#g3_clip)'/>
+              
+              {insert4}{insert5}
+            </G3>
 
-                <></>
-                <text x='50%' y='110' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='#ffffff' fontFamily='serif' fontSize='50' fontWeight='bold' fontStyle='italic'>
-                  <animate attributeName='opacity' values='0;1' fill='freeze' dur='1s' begin='17s' repeatCount="1"/>
-                  in
-                </text>
-                {insert4}{insert5}
-
-                
-
-              </G3>
           </svg>
+
         </AnimationDiv>
       </div>
     </Main>
