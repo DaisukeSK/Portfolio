@@ -186,7 +186,7 @@ function Home({selected}:Props) {
               <text className='g3_text3' y='170' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='white' fontFamily='arial' fontSize='65' fontWeight='900' fontStyle='italic'>
                 <animate attributeName='x' values='20%;50%' fill='freeze' calcMode="spline" keySplines='0 .5 .5 1' begin='18s' dur='1.5s' repeatCount="1"/>
                 <animate attributeName='opacity' values='0;1' fill='freeze' begin='18s' dur='3s' repeatCount="1"/>
-                <animate attributeName='opacity' values='1;0' fill='freeze' begin='22.5s' dur='1s' repeatCount="1"/>
+                <animate attributeName='opacity' values='1;0' fill='freeze' begin='22.2s' dur='1s' repeatCount="1"/>
                 <animate attributeName='opacity' values='0;1' fill='freeze' begin='30.5s' dur='.5s' repeatCount="1"/>
                 <animate attributeName='opacity' values='1;0' fill='freeze' begin='31s' dur='.5s' repeatCount="1"/>
                   Vancouver
