@@ -1,5 +1,5 @@
 import { Main } from '../StyledComponents';
-import path from "../../../public/me.png";
+import path from "../../../public/me4-5.png";
 import JS from '../icons/JS';
 import TS from '../icons/TS';
 import HTML from '../icons/HTML';
@@ -36,34 +36,6 @@ function About({selected}:Props) {
             always improving my technical abilities while working on team projects,
             and excited about utilizing them in a professional scene and fulfilling real clients' demands.
           </p>
-        </div>
-
-        <article>{/* Right side */}
-
-          <h3>Experience</h3>
-          <div className='expDiv'>
-            <h4>Education:</h4>
-            <ul>
-              <li>
-                Web Application Development Diploma (September 2022 - present)<br/>
-                <span>
-                  Cornerstone International Community College of Canada,<br/>
-                  Vancouver, BC
-                </span>
-              </li>
-              <li>
-                Bachelor's degree in Science and Engineering (September 2014)<br/>
-                <span>Kansai University, Osaka, Japan</span>
-              </li>
-            </ul>
-
-            <h4>Work:</h4>
-            <ul>
-              <li>Production Management (April 2015 - March 2018)<br/><span>Okabe co., ltd. - Tokyo, Japan</span></li>
-              <li>Warehouse Worker (April 2018 - September 2022)<br/><span>Multiple companies - Osaka, Japan</span></li>
-              <li>Warehouse Worker (April 2023 - Present)<br/><span>United Floral Inc. - Burnaby, BC Canada</span></li>
-            </ul>
-          </div>
 
           <h3>Technical Skills</h3>
           <div className='iconContainer'>
@@ -77,8 +49,8 @@ function About({selected}:Props) {
             </div>
             <div className='iconFlex'>
               <PHP/>
-              <MySQL/>
               <NodeJS/>
+              <MySQL/>
               <PostgreSQL/>
             </div>
           </div>
@@ -87,6 +59,109 @@ function About({selected}:Props) {
           <div className='setBG'>
             Quick Learner | Attentive | Problem-solving | Teamwork | Adaptability | Strong work ethic
           </div>
+        </div>
+
+        <article>{/* Right side */}
+
+          <h3>Experience</h3>
+          <div className='expDiv'>
+            <h4>Education:</h4>
+            <ul>
+              <li>
+
+                <div className='title'>Web Application Development Diploma</div>
+                <div className='place'>Cornerstone International Community College of Canada, Vancouver, BC</div>
+                <div className='period'>(September 2022 - December 2023)</div>
+                
+                <p>Learned programming languages listed below and experienced multiple team projects.</p>
+              </li>
+              <li>
+
+                <div className='title'>Bachelor's degree in Science and Engineering</div>
+                <div className='place'>Kansai University, Osaka, Japan</div>
+                <div className='period'>(April 2010 - September 2014)</div>
+                
+                <p>Majored in machine engineering and learned relevant subjects widely such as mathematic, physics, chemistry, programming etc.</p>
+              </li>
+            </ul>
+
+            <h4>Work:</h4>
+            <ul>
+              <li>
+                <div className='title'>Production Management (building materials)</div>
+                <div className='place'>Okabe co., ltd. - Tokyo, Japan</div>
+                <div className='period'>(April 2015 - March 2018)</div>
+
+                <ul>
+
+                <li>
+                    Proceeded with the production process starting with material until products are completed.
+
+                  </li>
+                  <li>
+                  Controlled drawings, specifications, costs, processes, production quantity and quality of products which I was in charge of.
+
+                  </li>
+                  <li>
+                  Dealt with custom-order products too according as construction sites' needs.
+
+                  </li>
+                </ul>
+                
+                
+              </li>
+
+              <li>
+
+                <div className='title'>Warehouse Worker</div>
+                <div className='place'>Multiple companies - Osaka, Japan</div>
+                <div className='period'>(April 2018 - September 2022)</div>
+                 <ul>
+                  <li>Treated chilled and frozen food products at multiple warehouse.</li>
+                  <li>Performed warehouse laborer duties including storing, picking, packing, checking, distributing.</li>
+                 </ul>
+                
+                
+              </li>
+              
+              <li>
+
+                <div className='title'>Warehouse Worker</div>
+                <div className='place'>United Floral Inc. - Burnaby, BC Canada</div>
+                <div className='period'>(April 2023 - Present)</div>
+                
+                
+                
+                <ul>
+                  <li>Treating plants at the warehouse.</li>
+                  <li>Performing warehouse laborer duties including storing, picking, packing, checking, distributing.</li>
+                 </ul>
+              </li>
+            </ul>
+          </div>
+
+          {/* <h3>Technical Skills</h3>
+          <div className='iconContainer'>
+            <div className='iconFlex'>
+              <HTML/>
+              <CSS/>
+              <JS/>
+              <TS/>
+              <Jquery/>
+              <React/>
+            </div>
+            <div className='iconFlex'>
+              <PHP/>
+              <NodeJS/>
+              <MySQL/>
+              <PostgreSQL/>
+            </div>
+          </div>
+
+          <h3>Soft Skills</h3>
+          <div className='setBG'>
+            Quick Learner | Attentive | Problem-solving | Teamwork | Adaptability | Strong work ethic
+          </div> */}
 
         </article>
 

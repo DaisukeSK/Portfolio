@@ -17,11 +17,11 @@ function Contact({selected}:Props) {
         <h1>Contact</h1>
         <div className='formFlex'>
           <label>Your name:</label>
-          <input type='text' name='userName' placeholder=' Your name.' required/>
+          <input type='text' name='userName' required/>
           <label>E-mail:</label>
-          <input type='email'  name='email' placeholder=' Your E-mail address.' required/>
+          <input type='email'  name='email' required/>
           <label>Message:</label>
-          <textarea name='inquiry' cols={50} rows={5} placeholder=' Message.' required></textarea>
+          <textarea name='inquiry' cols={50} rows={5} required></textarea>
           <input type='submit' value='Send'/>
         </div>
       </form>

@@ -49,15 +49,27 @@ main h1 {
 }
 .home .left {
   width: 30%;
-  position: relative;
 }
-.home .left img, .home .left svg {
+.home .left .imgHolder {
+  position: relative;
+  background: linear-gradient(135deg, white 50%, rgb(0, 89, 255) 50%, rgb(0, 89, 255));
+  margin: 0 auto;
+  height: 100vh;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home .left .imgHolder img {
+  height: 100%;
+  display: block;
+}
+.home .left .imgHolder::after {
+  content: "";
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
-  margin: 0 auto;
-  height: 100vh;
+  background: linear-gradient(transparent 50%, #000055);
 }
 .home .right {
   margin-top: 70px;
@@ -83,6 +95,7 @@ main h1 {
 }
 
 .about section {
+  font-size: 1.1em;
   display: flex;
   width: -moz-fit-content;
   width: fit-content;
@@ -90,20 +103,7 @@ main h1 {
   align-items: flex-start;
   margin: 30px auto;
 }
-.about section .aboutLeft {
-  width: 400px;
-  margin-top: 50px;
-  margin-right: 50px;
-}
-.about section .aboutLeft img {
-  width: 70%;
-  display: block;
-  margin: 0 auto;
-}
-.about section article {
-  width: 50%;
-}
-.about section article h3 {
+.about section h3 {
   margin: 20px 0 0;
   width: -moz-fit-content;
   width: fit-content;
@@ -111,26 +111,72 @@ main h1 {
   border-radius: 5px 5px 0 0;
   background-color: rgba(240, 248, 255, 0.3);
 }
+.about section .aboutLeft {
+  width: 40%;
+}
+.about section .aboutLeft h3 {
+  margin: 50px 0 0;
+}
+.about section .aboutLeft .setBG, .about section .aboutLeft .introduction {
+  color: rgba(255, 255, 255, 0.6);
+}
+.about section .aboutLeft img {
+  width: 50%;
+  display: block;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+.about section .aboutLeft .iconFlex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about section .aboutLeft .iconFlex svg {
+  width: 50px;
+  margin: 5px 15px;
+}
+.about section article {
+  width: 40%;
+}
 .about section article h4 {
   margin: 5px 0;
   text-decoration: underline;
 }
-.about section article .expDiv ul {
-  margin-left: 0;
+.about section article .expDiv > ul {
+  padding: 0;
+  list-style: none;
 }
-.about section article .expDiv ul li {
+.about section article .expDiv > ul > li {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  background-color: rgba(240, 248, 255, 0.15);
+  border-radius: 7px;
+}
+.about section article .expDiv > ul > li .title, .about section article .expDiv > ul > li .period, .about section article .expDiv > ul > li .place {
+  text-align: center;
+}
+.about section article .expDiv > ul > li .title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.about section article .expDiv > ul > li .period {
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 10px;
 }
-.about section article .expDiv ul li span {
+.about section article .expDiv > ul > li .place {
   color: aquamarine;
 }
-.about section article .iconFlex {
-  display: flex;
-  flex-wrap: wrap;
+.about section article .expDiv > ul > li p {
+  margin: 0;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.6);
 }
-.about section article .iconFlex svg {
-  width: 50px;
-  margin: 5px 15px;
+.about section article .expDiv > ul > li ul {
+  list-style: circle;
+}
+.about section article .expDiv > ul > li ul li {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 10px 0;
 }
 .about section .expDiv, .about section .iconContainer, .about section .setBG, .about section .introduction {
   background-color: rgba(255, 255, 255, 0.2);

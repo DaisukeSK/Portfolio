@@ -15,6 +15,14 @@
         "description":"It provides multiple kinds of color codes of any color that you want. You can pick up any color from color space or color bars.",
         "languages":["TS","React"]
     },
+    "E-Commerce":{
+        "url":[
+            "https://e-commerce-u5ft.vercel.app/",
+            "https://portfolio-daisuke.vercel.app?preparing"
+        ],
+        "description":"E-commerce app which has basic fanctionalities such as creating account, adding to cart, adding to favorite, purchase, and refering shopping history.",
+        "languages":["TS","React","NodeJs","PostgreSQL"]
+    },
     "Satellite Launch Simulation":{
         "url":[
             "https://satellite-launch-simulation.vercel.app/",

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Main,AnimationDiv,G1,G2, G3 } from '../StyledComponents';
-import pathName from '../../../public/me2.png';
+import pathName from '../../../public/me5-2-5.png';
 import G1_bg1 from '../../../public/van4.png';
 import G1_bg2 from '../../../public/van3.png';
 import G1_bg3 from '../../../public/bg2.png';
@@ -85,11 +85,13 @@ function Home({selected}:Props) {
     >
       <div className='left'>
         {/* <div style={{position:'absolute', top:'70px',right:'0px'}}>{animeState}</div> */}
-        <img src={pathName}/>
+        <div className='imgHolder'>
+          <img src={pathName}/>
+        </div>
       </div>
       <div className='right'>
         <h1>Daisuke's portfolio</h1>
-        <h2>-Full Stuck Developer-</h2>
+        <h2>-Full Stack Developer-</h2>
         <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
 
         <AnimationDiv anime={animeState}>

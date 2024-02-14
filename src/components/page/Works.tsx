@@ -6,10 +6,13 @@ import Jquery from '../icons/Jquery';
 import React from '../icons/React';
 import MySQL from '../icons/MySQL';
 import PHP from '../icons/PHP';
+import NodeJS2 from '../icons/NodeJS2';
+import PostgreSQL from '../icons/PostgreSQL';
 import Github from '../icons/Github';
 import Laptop from '../icons/Laptop';
 import portfolio from '../../../public/portfolio.png';
 import ccc from '../../../public/ccc.png';
+import ecommerce from '../../../public/ecommerce.png';
 import satellite from '../../../public/satellite.png';
 import animation from '../../../public/animation.png';
 import memolis from '../../../public/memolis.png';
@@ -34,8 +37,8 @@ function Works({selected}:Props) {
   const [onMouse, setOnMouse] = useState<boolean>(false)
 
   const worksObj:JsonType = {...js}
-  const languageObj:{[key:string]:JSX.Element} = {'JS':<JS/>,'TS':<TS/>,'Jquery':<Jquery/>,'React':<React/>,'MySQL':<MySQL/>,'PHP':<PHP/>}
-  const paths:Array<string> = [memolis, ccc, satellite, animation, news, portfolio]
+  const languageObj:{[key:string]:JSX.Element} = {'JS':<JS/>,'TS':<TS/>,'Jquery':<Jquery/>,'React':<React/>,'MySQL':<MySQL/>,'PHP':<PHP/>,'PostgreSQL':<PostgreSQL/>,'NodeJs':<NodeJS2/>}
+  const paths:Array<string> = [memolis, ccc, ecommerce, satellite, animation, news, portfolio]
 
   return (
 
