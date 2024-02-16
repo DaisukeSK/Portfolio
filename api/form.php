@@ -5,16 +5,15 @@ $email=$_POST['email'];
 $inquiry=$_POST['inquiry'];
 
 function db_open(){
-    // $user='sql3673292';
-    $user=$_ENV["USER"];
     
-    $password='6IXqJTVStm';
+    $user=$_ENV['USER'];
+    $password=$_ENV['PASSWORD'];
     $opt=[
         PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES=>false,
         PDO::MYSQL_ATTR_MULTI_STATEMENTS=>false,
     ];
-    $dbh=new PDO('mysql:host=sql3.freesqldatabase.com;dbname=sql3673292',$user,$password,$opt);
+    $dbh=new PDO($_ENV['URL'], $user,$password,$opt);
     return $dbh;
 };
 
