@@ -118,7 +118,7 @@ function About({selected}:Props) {
                 <div className='place'>Multiple companies - Osaka, Japan</div>
                 <div className='period'>(April 2018 - September 2022)</div>
                  <ul>
-                  <li>Treated chilled and frozen food products at multiple warehouse.</li>
+                  {/* <li>Treated chilled and frozen food products at multiple warehouse.</li> */}
                   <li>Performed warehouse laborer duties including storing, picking, packing, checking, distributing.</li>
                  </ul>
                 
@@ -134,7 +134,7 @@ function About({selected}:Props) {
                 
                 
                 <ul>
-                  <li>Treating plants at the warehouse.</li>
+                  {/* <li>Treating plants at the warehouse.</li> */}
                   <li>Performing warehouse laborer duties including storing, picking, packing, checking, distributing.</li>
                  </ul>
               </li>
