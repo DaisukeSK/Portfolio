@@ -22,7 +22,7 @@ function Home({selected}:Props) {
   for(let i:number=0;i<13;i++){
     insert1.push(
     <rect x={i*10} y='0' height='100%' fill='#000055'>
-      <animate attributeName="width" values="0;10;10" dur="5s" keyTimes="0; 0.1; 1" begin={`${13+i*0.1}s`} repeatCount="1"/>
+      <animate attributeName="width" values="0;10" dur=".5s" fill='freeze' begin={`${13+i*0.1}s`} repeatCount="1"/>
     </rect>
     )
   }
@@ -31,7 +31,7 @@ function Home({selected}:Props) {
   for(let i:number=0;i<24;i++){
     insert2.push(
     <rect x='150' y={i*10} width='130' fill='#000055'>
-      <animate attributeName="height" values="0;10;10" dur="5s" keyTimes="0; 0.1; 1" begin={`${13+i*0.05}s`} repeatCount="1"/>
+      <animate attributeName="height" values="0;10" dur=".5s" fill='freeze' begin={`${13+i*0.05}s`} repeatCount="1"/>
     </rect>
     )
   }
@@ -40,7 +40,7 @@ function Home({selected}:Props) {
   for(let i:number=0;i<13;i++){
     insert3.push(
     <rect x={420-i*10} y='0' height='100%' fill='#000055'>
-      <animate attributeName="width" values="0;10;10" dur="5s" keyTimes="0; 0.1; 1" begin={`${13+i*0.1}s`} repeatCount="1"/>
+      <animate attributeName="width" values="0;10" dur=".5s" fill='freeze' begin={`${13+i*0.1}s`} repeatCount="1"/>
     </rect>
     )
   }
@@ -67,7 +67,7 @@ function Home({selected}:Props) {
     )
   }
 
-    useEffect(()=>{
+  useEffect(()=>{
 
     [2,3,4,7,9,10,11,15,16,17,25,28.5,29.5,31].map((num:number)=>{
       setTimeout(()=>setAnimeState(num),num*1000)

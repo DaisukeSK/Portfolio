@@ -29,7 +29,7 @@ export const Main=Styled.main< { show: number,direction: number,aa:number} >`
     height: fit-content;
     min-height: 100vh;
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
-    padding-top: 100px;
+    padding-top: 50px;
 
     overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
 

@@ -15,7 +15,7 @@ header {
     top: 0;
     width: 100%;
     height: 70px;
-    background-color: rgba(95, 158, 160, 0.5);
+    // background-color: rgba(95, 158, 160, 0.5);
     display: flex;
     // justify-content: space-between;
     justify-content: center;
@@ -34,6 +34,10 @@ header {
             width: 100%;
             display: flex;
             justify-content: space-around;
+
+            div {
+                cursor: pointer;
+            }
 
         }
 
@@ -278,36 +282,89 @@ main {
 }
 
 .contact {
-    form {
+    position: relative;
+    p {
+        // text-align: center;
+        width: fit-content;
+        margin: 70px auto 0;
+        padding: 5px 30px;
+        font-size: 1.2em;
+        // background-color: #404dff;
+    }
+    .contactFlex {
+        // height: 100vh;
+        display: flex;
+        justify-content: center;
+        width: 100%;
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%,-50%);
-        width: 50%;
-        max-width: 400px;
-        // margin: 20px auto;
-        h1 {
-            margin-bottom: 20px;
-        }
-        .formFlex {
+
+        .contactFlexLeft {
+            width: 25%;
+            // background-color: cadetblue;
+            // outline: 1px solid grey;
+            margin-top: -50px;
+            margin-right: 100px;
             display: flex;
-            flex-direction: column;
-            width: 100%;
-            input, textarea {
-                margin-bottom: 15px;
-                font-family: Arial, 'Times New Roman', serif;
-                &::placeholder {
-                    font-family: Arial, 'Times New Roman', serif;
+            justify-content: space-between;
+            align-items: center;
+            a {
+    
+                width: 30%;
+                margin: 0 20px;
+                svg {
+                    fill: #ffffff;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        fill: #404dff;
+                    }
                 }
             }
-
-            input[type='submit'] {
-                width: 100px;
-                margin: 15px auto;
-                // background-color: aquamarine;
+        }
+    
+        .contactFlexRight {
+            
+            width: 40%;
+            max-width: 400px;
+    
+            display: flex;
+            align-items: center;
+            // outline: 1px solid grey;
+            form {
+                width: 100%;
+                // position: absolute;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%,-50%);
+                // background-color: lightblue;
+                // margin: 20px auto;
+                h1 {
+                    margin-bottom: 20px;
+                }
+                .formFlex {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    input, textarea {
+                        margin-bottom: 15px;
+                        font-family: Arial, 'Times New Roman', serif;
+                        &::placeholder {
+                            font-family: Arial, 'Times New Roman', serif;
+                        }
+                    }
+        
+                    input[type='submit'] {
+                        width: 100px;
+                        margin: 15px auto;
+                        // background-color: aquamarine;
+                    }
+                }
             }
         }
     }
+
 }
 
 
@@ -360,6 +417,7 @@ main {
             p {
                 // color: black;
                 margin: 10px auto;
+                min-height: 60px;
             }
         }
     }

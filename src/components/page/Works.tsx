@@ -48,7 +48,7 @@ function Works({selected}:Props) {
       direction={selected.current-selected.prev<0?1:0}
       aa={selected.current==2 || selected.prev==2? 1:0}
     >
-      <h1>Works</h1>
+      {/* <h1>Works</h1> */}
 
       <div className='worksFlex'>
 

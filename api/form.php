@@ -5,7 +5,8 @@ $email=$_POST['email'];
 $inquiry=$_POST['inquiry'];
 
 function db_open(){
-    $user='sql3673292';
+    // $user='sql3673292';
+    $user=$_ENV["USER"];
     $password='6IXqJTVStm';
     $opt=[
         PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,

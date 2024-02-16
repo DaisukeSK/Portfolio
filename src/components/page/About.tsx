@@ -24,18 +24,23 @@ function About({selected}:Props) {
       direction={selected.current-selected.prev<0?1:0}
       aa={selected.current==1 || selected.prev==1? 1:0}
     >
-      <h1>About Me</h1>
+      {/* <h1>About Me</h1> */}
 
       <section>
 
         <div className='aboutLeft'>{/* Left side */}
           <img src={path}/>
           <p className='introduction'>
-            Hi, my name is Daisuke Seki, a junior web developer.<br/>
-            Currently studying programming at CICCC, 
+            Hi, my name is Daisuke Seki, a full stack web developer.<br/>
+            Graduated from CICCC, and
             always improving my technical abilities while working on team projects,
             and excited about utilizing them in a professional scene and fulfilling real clients' demands.
           </p>
+
+          <h3>Soft Skills</h3>
+          <div className='setBG'>
+            Quick Learner | Attentive | Problem-solving | Teamwork | Adaptability | Strong work ethic
+          </div>
 
           <h3>Technical Skills</h3>
           <div className='iconContainer'>
@@ -55,10 +60,6 @@ function About({selected}:Props) {
             </div>
           </div>
 
-          <h3>Soft Skills</h3>
-          <div className='setBG'>
-            Quick Learner | Attentive | Problem-solving | Teamwork | Adaptability | Strong work ethic
-          </div>
         </div>
 
         <article>{/* Right side */}
@@ -73,7 +74,7 @@ function About({selected}:Props) {
                 <div className='place'>Cornerstone International Community College of Canada, Vancouver, BC</div>
                 <div className='period'>(September 2022 - December 2023)</div>
                 
-                <p>Learned programming languages listed below and experienced multiple team projects.</p>
+                <p>Learned programming languages listed below and worked on multiple team projects.</p>
               </li>
               <li>
 
@@ -81,7 +82,7 @@ function About({selected}:Props) {
                 <div className='place'>Kansai University, Osaka, Japan</div>
                 <div className='period'>(April 2010 - September 2014)</div>
                 
-                <p>Majored in machine engineering and learned relevant subjects widely such as mathematic, physics, chemistry, programming etc.</p>
+                <p>Majored in machine engineering and studied relevant subjects such as mathematic, physics, chemistry, programming etc.</p>
               </li>
             </ul>
 
@@ -102,10 +103,10 @@ function About({selected}:Props) {
                   Controlled drawings, specifications, costs, processes, production quantity and quality of products which I was in charge of.
 
                   </li>
-                  <li>
+                  {/* <li>
                   Dealt with custom-order products too according as construction sites' needs.
 
-                  </li>
+                  </li> */}
                 </ul>
                 
                 
