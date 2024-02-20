@@ -17,6 +17,7 @@ type Props = {
 function Home({selected}:Props) {
 
   const [animeState, setAnimeState]=useState<number>(0)
+  // const [resetAnimation, setResetAnimation]=useState<boolean>(true)
 
   let insert1:Array<JSX.Element>=[]
   for(let i:number=0;i<13;i++){
@@ -74,6 +75,33 @@ function Home({selected}:Props) {
     })
     
   },[])
+
+
+  // let idArray:any=[];
+
+  // const Count=()=>{
+  //   [2,3,4,7,9,10,11,15,16,17,25,28.5,29.5,31].map((num:number)=>{
+  //     const id=setTimeout(()=>setAnimeState(num),num*1000)
+  //     idArray.push(id)
+  //     console.log("id:",id)
+  //     console.log("idArray",idArray)
+  //   })
+  // }
+
+  // useEffect(()=>{
+  //   if(selected.current==0){
+  //     setResetAnimation(true)
+  //     Count()
+  //     console.log("selected=0",idArray.length)
+  //   }else{
+  //     while(idArray.length){
+  //       clearTimeout(idArray.pop());
+  //       console.log("idArray",idArray)
+  //     }
+  //     setResetAnimation(false)
+  //     console.log("selected!=0",idArray.length)
+  //   }
+  // },[selected])
 
   return (
     <Main
