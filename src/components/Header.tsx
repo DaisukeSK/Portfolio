@@ -14,8 +14,13 @@ const setWidth=():number=>{
 function Header({selected,setSelected}:Props) {
 
   const [width_headerRight, setWidth_headerRight] = useState(setWidth());
+  const [still, setStill] = useState<boolean>(true);
   
   const ClickHandler=(event: React.MouseEvent<HTMLDivElement>): void=>{
+    setStill(false)
+    setTimeout(()=>{
+      setStill(true)
+    },1000)
     const Div = event.target as HTMLDivElement
     setSelected({
         prev: selected.current,
@@ -44,7 +49,7 @@ function Header({selected,setSelected}:Props) {
       </div> */}
 
       <div className='headerRight'>
-        <UnderLine position={selected.current} testprop={width_headerRight}></UnderLine>
+        <UnderLine still={still?1:0} position={selected.current} testprop={width_headerRight}></UnderLine>
         <div className='headerRightFlex'>
           <HeaderRightChild disabled={selected.current==0?1:0} onClick={(e)=>ClickHandler(e)}>Home</HeaderRightChild>
           <HeaderRightChild disabled={selected.current==1?1:0} onClick={(e)=>ClickHandler(e)}>About</HeaderRightChild>

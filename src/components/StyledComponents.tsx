@@ -49,11 +49,12 @@ export const Main=Styled.main< { show: number,direction: number,aa:number} >`
     box-sizing: border-box;
 `;
 
-export const UnderLine=Styled.div< { position: number,testprop:number} >`
-    height: 2px;
+export const UnderLine=Styled.div< { position: number,testprop:number, still:number} >`
+    position: relative;
+    height: 32px;
     width: ${(props)=>(props.testprop/4)*0.6}px;
     margin-left: ${(props)=>(props.testprop/4)*0.2}px;
-    background-color: white;
+    border-bottom: 2px solid #ffffff;
     position: absolute;
     bottom: -5px;
     left: ${(props)=>
@@ -63,13 +64,34 @@ export const UnderLine=Styled.div< { position: number,testprop:number} >`
         `75%`
     };
     transition: left ${timingFunc} 1s;
+
+    &::after {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        // background: linear-gradient(transparent, #ffffff55);
+        background: ${(props)=>
+            props.position==0?css`linear-gradient(transparent, #ffffff35)`:
+            props.position==1?css`linear-gradient(transparent, #F2000054)`:
+            props.position==2?css`linear-gradient(transparent, #00F22834)`:
+            `linear-gradient(transparent, #F2F2003E)`
+        };
+        opacity: ${(props)=>props.still?css`1`:css`0`};
+        transition: ${(props)=>props.still?css`all 1s ease-in-out`:css`all 0s`};
+        
+
+    }
 `;
 
 export const HeaderRightChild=Styled.div<{disabled:number}>`
     pointer-events: ${(props)=>props.disabled?css`none`:css`auto`};
     width: 100px;
+    // font-weight: bold;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 7px;
     padding: 5px;
     box-sizing: border-box;
     &:hover {

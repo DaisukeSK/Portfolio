@@ -18,6 +18,7 @@ function Contact({selected}:Props) {
     >
       {/* <h1>Contact</h1> */}
       <p>Please feel free to contact me for any inquiries.</p>
+      <hr/>
 
       <div className="contactFlex">
 

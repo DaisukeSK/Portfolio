@@ -6,7 +6,7 @@ body {
     background-color: black;
     color: white;
     position: relative;
-    font-family: 'Times New Roman', Arial, serif;
+    font-family: 'Helvetica', Arial, serif;
     font-size: 1.05rem;
 }
 
@@ -14,7 +14,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 70px;
+    height: 60px;
     // background-color: rgba(95, 158, 160, 0.5);
     display: flex;
     // justify-content: space-between;
@@ -23,7 +23,8 @@ header {
     box-sizing: border-box;
     align-items: center;
     z-index: 2;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(rgb(0, 0, 41),rgb(15, 15, 15));
     .headerRight {
         width: 60%;
         max-width: 600px;
@@ -148,7 +149,7 @@ main {
 .about {
     section {
         $textColor: rgba(255, 255, 255, 0.6);
-        font-size: 1.1em;
+        // font-size: 1.1em;
         display: flex;
         width: fit-content;
         justify-content: space-evenly;
@@ -288,18 +289,22 @@ main {
         width: fit-content;
         margin: 70px auto 0;
         padding: 5px 30px;
-        font-size: 1.2em;
+        // font-size: 1.2em;
         // background-color: #404dff;
+    }
+    hr {
+        width: 80%;
+        margin-bottom: 50px;
     }
     .contactFlex {
         // height: 100vh;
         display: flex;
         justify-content: center;
         width: 100%;
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        // position: absolute;
+        // top: 55%;
+        // left: 50%;
+        // transform: translate(-50%,-50%);
 
         .contactFlexLeft {
             width: 25%;
@@ -323,6 +328,7 @@ main {
                 }
             }
         }
+
     
         .contactFlexRight {
             
@@ -331,6 +337,8 @@ main {
     
             display: flex;
             align-items: center;
+            padding: 10px 20px;
+            background-color: #ffffff2d;
             // outline: 1px solid grey;
             form {
                 width: 100%;
@@ -350,15 +358,27 @@ main {
                     input, textarea {
                         margin-bottom: 15px;
                         font-family: Arial, 'Times New Roman', serif;
-                        &::placeholder {
-                            font-family: Arial, 'Times New Roman', serif;
+                        border-radius: 3px;
+                        min-height: 18px;
+                        background-color: #ffffffb4;
+                        // outline: none;
+                        border: none;
+                        &:focus {
+                            outline: none;
                         }
                     }
         
                     input[type='submit'] {
                         width: 100px;
                         margin: 15px auto;
+                        padding: 5px 15px;
                         // background-color: aquamarine;
+                        background: linear-gradient(33deg,rgb(193, 237, 252),rgb(124, 159, 233));
+                        border: none;
+                        border-radius: 7px;
+                        &:hover {
+                            background: linear-gradient(33deg,rgb(144, 194, 211),rgb(87, 122, 197));
+                        }
                     }
                 }
             }
@@ -416,6 +436,7 @@ main {
             }
             p {
                 // color: black;
+                color: #ffffff80;
                 margin: 10px auto;
                 min-height: 60px;
             }
