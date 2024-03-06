@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import Header from './components/Header.tsx';
 import About from './components/page/About.tsx';
 import Contact from './components/page/Contact.tsx';
@@ -12,6 +12,8 @@ export type Selected={
   current:number
 };
 
+export const AppContext=createContext({selected:{prev:0, current:0}})
+
 function App() {
   const [selected, setSelected] = useState<Selected>({prev:0, current:0});
   const [inquiry, setInquiry] = useState<boolean>(false);
@@ -19,15 +21,22 @@ function App() {
 
   useEffect(()=>{
     window.location.search=='?inquiry' && setInquiry(true);
-  },[]);
 
-  useEffect(()=>{
     window.location.search=='?preparing' && setPreparing(true);
     console.log("preparing running")
   },[]);
 
+  // useEffect(()=>{
+  //   window.location.search=='?preparing' && setPreparing(true);
+  //   console.log("preparing running")
+  // },[]);
+
+  // useEffect(()=>{
+  //   selected.current==0 && location.reload()
+  // },[selected]);
+
   return (
-    <>
+    <AppContext.Provider value={{selected}}>
       {preparing && <ComingSoon/>}
       {inquiry && <Inquiry/>}
 
@@ -40,7 +49,7 @@ function App() {
           <Works selected={selected}></Works>
         </>
       }
-    </>
+    </AppContext.Provider>
   )
 };
 

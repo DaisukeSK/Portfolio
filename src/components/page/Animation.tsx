@@ -8,18 +8,20 @@ import G2_bg1 from '../../../public/bg3.png';
 import G2_bg2 from '../../../public/bg5.png';
 import G2_bg3 from '../../../public/bg4.png';
 import G3_bg1 from '../../../public/bg8.png';
-// import { Selected } from '../../App';
+// import { AppContext } from '../../App';
 
 function Animation() {
 
   const [animeState, setAnimeState]=useState<number>(0)
+  // const { selected } = useContext(AppContext)
   // const [resetAnimation, setResetAnimation]=useState<boolean>(true)
+
 
   let insert1:Array<JSX.Element>=[]
   for(let i:number=0;i<13;i++){
     insert1.push(
-    <rect x={i*10} y='0' height='100%' fill='#000055'>
-      <animate attributeName="width" values="0;10" dur=".5s" fill='freeze' begin={`${13+i*0.1}s`} repeatCount="1"/>
+    <rect x={i*10} y='0' width='10' height='240' fill='#000055'>
+      <animate attributeName="width" values="10;0" dur=".5s" fill='freeze' begin={`${13+i*0.1}s`} repeatCount="1"/>
     </rect>
     )
   }
@@ -27,8 +29,8 @@ function Animation() {
   let insert2:Array<JSX.Element>=[]
   for(let i:number=0;i<24;i++){
     insert2.push(
-    <rect x='150' y={i*10} width='130' fill='#000055'>
-      <animate attributeName="height" values="0;10" dur=".5s" fill='freeze' begin={`${13+i*0.05}s`} repeatCount="1"/>
+    <rect x='150' y={i*10} width='130' height='10' fill='#000055'>
+      <animate attributeName="height" values="10;0" dur=".5s" fill='freeze' begin={`${13+i*0.05}s`} repeatCount="1"/>
     </rect>
     )
   }
@@ -36,8 +38,8 @@ function Animation() {
   let insert3:Array<JSX.Element>=[]
   for(let i:number=0;i<13;i++){
     insert3.push(
-    <rect x={420-i*10} y='0' height='100%' fill='#000055'>
-      <animate attributeName="width" values="0;10" dur=".5s" fill='freeze' begin={`${13+i*0.1}s`} repeatCount="1"/>
+    <rect x={420-i*10} y='0' width='10' height='240' fill='#000055'>
+      <animate attributeName="width" values="10;0" dur=".5s" fill='freeze' begin={`${13+i*0.1}s`} repeatCount="1"/>
     </rect>
     )
   }
@@ -86,7 +88,7 @@ function Animation() {
 
   // useEffect(()=>{
   //   if(selected.current==0){
-  //     setResetAnimation(true)
+  //     // setResetAnimation(true)
   //     Count()
   //     console.log("selected=0",idArray.length)
   //   }else{
@@ -94,7 +96,8 @@ function Animation() {
   //       clearTimeout(idArray.pop());
   //       console.log("idArray",idArray)
   //     }
-  //     setResetAnimation(false)
+  //     idArray=[]
+  //     // setResetAnimation(false)
   //     console.log("selected!=0",idArray.length)
   //   }
   // },[selected])
@@ -159,6 +162,16 @@ function Animation() {
                 </text>
               </clipPath>
 
+              <clipPath id="g2_clip1">
+                {insert1}
+              </clipPath>
+              <clipPath id="g2_clip2">
+                {insert2}
+              </clipPath>
+              <clipPath id="g2_clip3">
+                {insert3}
+              </clipPath>
+
               <linearGradient id="linearG" x1="0%" y1="0%" x2="110%" y2="22%">
                 <stop stopColor='white'>
                 <animate attributeName="offset" dur="1s" values="0;1" fill='freeze' begin='16s' repeatCount="1" />
@@ -178,10 +191,10 @@ function Animation() {
             </G1>
 
             <G2 anime={animeState}>
-              <rect className='g2_rect1' x='0' y='0' width='130' height='100%' fill='url(#g2_1)'/>
-              <rect className='g2_rect2' x='150' y='0' width='130' height='100%' fill='url(#g2_2)'/>
-              <rect className='g2_rect3' x='300' y='0' width='130' height='100%' fill='url(#g2_3)'/>
-              {insert1}{insert2}{insert3}
+              <rect className='g2_rect1' x='0' y='0' width='130' height='100%' fill='url(#g2_1)' clip-path='url(#g2_clip1)'/>
+              <rect className='g2_rect2' x='150' y='0' width='130' height='100%' fill='url(#g2_2)' clip-path='url(#g2_clip2)'/>
+              <rect className='g2_rect3' x='300' y='0' width='130' height='100%' fill='url(#g2_3)' clip-path='url(#g2_clip3)'/>
+              {/* {insert1}{insert2}{insert3} */}
             </G2>
 
             <G3 anime={animeState}>

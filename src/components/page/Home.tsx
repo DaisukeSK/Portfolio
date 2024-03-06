@@ -122,7 +122,8 @@ function Home({selected}:Props) {
         <h2>-Full Stack Developer-</h2>
         <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
 
-        <Animation/>
+{selected.current==0 && <Animation/>}
+       
       </div>
     </Main>
   )

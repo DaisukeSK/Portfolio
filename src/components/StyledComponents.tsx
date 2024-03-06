@@ -54,8 +54,8 @@ export const Main=Styled.main< { show: number,direction: number} >`
         position: fixed;
         top: 0;
         left: 0;
-        background: linear-gradient(lightblue, blue);
-        background: #000055;
+        background: linear-gradient(#4455CF, #020B4E);
+        // background: #000055;
         z-index: -1;
     }
 `;
