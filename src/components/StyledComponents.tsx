@@ -33,7 +33,7 @@ export const Main=Styled.main< { show: number,direction: number,aa:number} >`
 
     overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
 
-    background-color:#000055;
+    // background-color:#000055;
 
     opacity: ${(props)=>props.show?css`1`:css`0`};
     z-index: ${(props)=>props.show?css`1`:css`0`};
@@ -47,6 +47,17 @@ export const Main=Styled.main< { show: number,direction: number,aa:number} >`
     animation-timing-function: ${timingFunc};
     animation-duration: 1s;
     box-sizing: border-box;
+    &::before {
+        width: 100%;
+        height: 100vh;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: linear-gradient(lightblue, blue);
+        background: #000055;
+        z-index: -1;
+    }
 `;
 
 export const UnderLine=Styled.div< { position: number,testprop:number, still:number} >`
