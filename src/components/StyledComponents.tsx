@@ -21,7 +21,7 @@ const fromLeft=keyframes`
     to{ left: 0; opacity:1; }
 `;
 
-export const Main=Styled.main< { show: number,direction: number,aa:number} >`
+export const Main=Styled.main< { show: number,direction: number} >`
     position: absolute;
     top: 0;
 
@@ -35,13 +35,13 @@ export const Main=Styled.main< { show: number,direction: number,aa:number} >`
 
     // background-color:#000055;
 
-    opacity: ${(props)=>props.show?css`1`:css`0`};
+    visibility: ${(props)=>props.show?css`visible`:css`hidden`};
     z-index: ${(props)=>props.show?css`1`:css`0`};
     animation-name:${(props) =>
-        props.aa && props.show && props.direction? css`${fromLeft}`:
-        props.aa && props.show && !props.direction? css`${fromRight}`:
-        props.aa && !props.show && props.direction? css`${toRight}`:
-        props.aa && !props.show && !props.direction? css`${toLeft}`:
+        props.show && props.direction? css`${fromLeft}`:
+        props.show && !props.direction? css`${fromRight}`:
+        !props.show && props.direction? css`${toRight}`:
+        !props.show && !props.direction? css`${toLeft}`:
         null
     };
     animation-timing-function: ${timingFunc};

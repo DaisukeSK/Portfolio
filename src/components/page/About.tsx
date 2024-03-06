@@ -22,7 +22,6 @@ function About({selected}:Props) {
       className='about'
       show={selected.current==1?1:0}
       direction={selected.current-selected.prev<0?1:0}
-      aa={selected.current==1 || selected.prev==1? 1:0}
     >
       {/* <h1>About Me</h1> */}
 

@@ -46,7 +46,6 @@ function Works({selected}:Props) {
       className='works'
       show={selected.current==2?1:0}
       direction={selected.current-selected.prev<0?1:0}
-      aa={selected.current==2 || selected.prev==2? 1:0}
     >
       {/* <h1>Works</h1> */}
 

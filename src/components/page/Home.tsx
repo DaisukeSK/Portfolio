@@ -110,7 +110,6 @@ function Home({selected}:Props) {
       style={{paddingTop: 0}}
       show={selected.current==0?1:0}
       direction={selected.current-selected.prev<0?1:0}
-      aa={selected.current==0 || selected.prev==0? 1:0}
     >
       <div className='left'>
         {/* <div style={{position:'absolute', top:'70px',right:'0px'}}>{animeState}</div> */}

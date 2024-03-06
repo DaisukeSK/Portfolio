@@ -14,7 +14,6 @@ function Contact({selected}:Props) {
       className='contact'
       show={selected.current==3?1:0}
       direction={selected.current-selected.prev<0?1:0}
-      aa={selected.current==3 || selected.prev==3? 1:0}
     >
       {/* <h1>Contact</h1> */}
       <p>Please feel free to contact me for any inquiries.</p>
