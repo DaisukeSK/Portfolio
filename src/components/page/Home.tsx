@@ -1,4 +1,4 @@
-// import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Main } from '../StyledComponents';
 import pathName from '../../../public/me5-2-5.png';
 // import G1_bg1 from '../../../public/van4.png';
@@ -17,6 +17,7 @@ type Props = {
 
 function Home({selected}:Props) {
 
+  const [innerH, setInnerH]=useState<number>(window.innerHeight)
   // const [animeState, setAnimeState]=useState<number>(0)
   // const [resetAnimation, setResetAnimation]=useState<boolean>(true)
 
@@ -69,13 +70,11 @@ function Home({selected}:Props) {
   //   )
   // }
 
-  // useEffect(()=>{
+  useEffect(()=>{
 
-  //   [2,3,4,7,9,10,11,15,16,17,25,28.5,29.5,31].map((num:number)=>{
-  //     setTimeout(()=>setAnimeState(num),num*1000)
-  //   })
+    console.log('window.innerHeight',window.innerHeight)
     
-  // },[])
+  },[])
 
 
   // let idArray:any=[];
@@ -103,6 +102,11 @@ function Home({selected}:Props) {
   //     console.log("selected!=0",idArray.length)
   //   }
   // },[selected])
+  // let innerH:number=window.innerHeight
+  window.onresize=()=>{
+    // innerH=window.innerHeight
+    setInnerH(window.innerHeight)
+  }
 
   return (
     <Main
@@ -110,12 +114,12 @@ function Home({selected}:Props) {
       style={{paddingTop: 0}}
       show={selected.current==0?1:0}
       direction={selected.current-selected.prev<0?1:0}
+      selected={selected.current}
     >
-      <div className='left'>
+      <div className='left' style={{height:`${(innerH-60)}px`}}>
         {/* <div style={{position:'absolute', top:'70px',right:'0px'}}>{animeState}</div> */}
-        <div className='imgHolder'>
           <img src={pathName}/>
-        </div>
+        
       </div>
       <div className='right'>
         <h1>Daisuke's portfolio</h1>

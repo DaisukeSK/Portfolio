@@ -4,6 +4,16 @@ import { css,keyframes } from "styled-components";
 
 const timingFunc='cubic-bezier(0,1,.7,1)';
 
+
+const color_01='#4455CF'
+const color_02='#020B4E'
+const color_11='#CED71C'
+const color_12='#FF4E13'
+const color_21='#85FF74'
+const color_22='#0077FF'
+const color_31='#6455CF'
+const color_32='#b20B4E'
+
 const toRight=keyframes`
     from{ left: 0; opacity:1; }
     to{ left: 100%; opacity:0; }
@@ -21,7 +31,7 @@ const fromLeft=keyframes`
     to{ left: 0; opacity:1; }
 `;
 
-export const Main=Styled.main< { show: number,direction: number} >`
+export const Main=Styled.main< { show: number,direction: number, selected:number} >`
     position: absolute;
     top: 0;
 
@@ -29,7 +39,7 @@ export const Main=Styled.main< { show: number,direction: number} >`
     height: fit-content;
     min-height: 100vh;
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
-    padding-top: 50px;
+    // padding-top: 50px;
 
     overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
 
@@ -55,14 +65,26 @@ export const Main=Styled.main< { show: number,direction: number} >`
         top: 0;
         left: 0;
         background: linear-gradient(#4455CF, #020B4E);
+        background: ${(props) =>
+            props.selected==0? css`linear-gradient(${color_01}, ${color_02})`:
+            props.selected==1? css`linear-gradient(165deg, ${color_11}, ${color_12})`:
+            props.selected==2? css`linear-gradient(20deg, ${color_21}, ${color_22})`:
+            props.selected==3? css`linear-gradient(${color_31}, ${color_32})`:
+            null
+        };
         // background: #000055;
+        transition: opacity 3s ease-out;
+        opacity: ${(props) =>
+            props.show?css`1`:`0`
+        };
         z-index: -1;
     }
+    
 `;
 
 export const UnderLine=Styled.div< { position: number,testprop:number, still:number} >`
     position: relative;
-    height: 32px;
+    height: 30px;
     width: ${(props)=>(props.testprop/4)*0.6}px;
     margin-left: ${(props)=>(props.testprop/4)*0.2}px;
     border-bottom: 2px solid #ffffff;
@@ -76,22 +98,25 @@ export const UnderLine=Styled.div< { position: number,testprop:number, still:num
     };
     transition: left ${timingFunc} 1s;
 
-    &::after {
+    &::before {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0;
         content: '';
+
         // background: linear-gradient(transparent, #ffffff55);
         background: ${(props)=>
-            props.position==0?css`linear-gradient(transparent, #ffffff35)`:
-            props.position==1?css`linear-gradient(transparent, #F2000054)`:
-            props.position==2?css`linear-gradient(transparent, #00F22834)`:
-            `linear-gradient(transparent, #F2F2003E)`
+            props.position==0?css`linear-gradient(transparent, ${color_01}55)`:
+            props.position==1?css`linear-gradient(transparent, ${color_12}55)`:
+            props.position==2?css`linear-gradient(transparent, ${color_22}55)`:
+            `linear-gradient(transparent, ${color_32}55)`
         };
+        background: linear-gradient(transparent, #ffffff55);
         opacity: ${(props)=>props.still?css`1`:css`0`};
         transition: ${(props)=>props.still?css`all 1s ease-in-out`:css`all 0s`};
+        z-index: -1;
         
 
     }
@@ -111,8 +136,7 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
     };
     `;
     
-    export const LinkDiv=Styled.div<{onmouse:number, bg:string}>`
-    //width:400px
+    export const LinkDiv=Styled.div<{bg:string}>`
     
     height: 250px;
     position: relative;
@@ -120,6 +144,14 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
     outline: 1px solid rgba(255, 255, 255, 0.3);
     overflow:hidden;
 
+    background-image:${(props)=>css`url(${props.bg})`};
+    background-size: cover;
+    background-position: center;
+    &:before, &:after {
+
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
     &:before {
         content:'';
         position:absolute;
@@ -127,72 +159,26 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
         height:100%;
         top:0;
         left:0;
-        background-image:${(props)=>css`url(${props.bg})`};
-        background-size: cover;
-        background-position: center;
-        z-index:-1;
+        background: #ffffffaa;
+
     }
-
-    .linkFlex {
-        opacity:0;
-        transition: ${(props)=>props.onmouse?css`all 0s ease-in`:css`all .5s ease-in`};
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        // background:navy;
-        display: flex;
-
-        // .demo {
-        //     border-right: 1px solid black;
-        // }
-
-        .demo, .github {
-
-            width:fit-content;
-            padding: 0 25px;
-            // outline: 1px solid grey;
-
-            a {
-                // width: fit-content;
-                text-decoration: none;
-                svg {
-                    height:80px;
-                    // background: orange;
-                    display: block;
-                    margin: 0 auto;
-                    path {
-                        fill: black;
-                    }
-                }
-                span {
-                    opacity: 0;
-                    display: block;
-                    text-align:center;
-                    color:#0000CD;
-                }
-
-                &:hover {
-                    svg {
-                        path {
-                            fill: #0000CD;
-                        }
-                    }
-                    span {
-                        opacity: 1;
-                    }
-                }
-
-            }
-        }
+    &:after {
+        content:'Click for detail...';
+        position:absolute;
+        
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        color: navy;
+        
     }
-
     &:hover {
-        background: #ffffffbb;
-        .linkFlex {
-            opacity:1;
+        &:before, &:after {
+            opacity: 1;
         }
     }
+    
+
 `
 
 export const AnimationDiv=Styled.div<{anime:number}>`

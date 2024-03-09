@@ -20,8 +20,9 @@ header {
   box-sizing: border-box;
   align-items: center;
   z-index: 2;
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(rgb(0, 0, 41), rgb(15, 15, 15));
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
 }
 header .headerRight {
   width: 60%;
@@ -48,31 +49,17 @@ main h1 {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .home .left {
-  width: 30%;
-}
-.home .left .imgHolder {
-  position: relative;
-  background: linear-gradient(135deg, white 50%, rgb(0, 89, 255) 50%, rgb(0, 89, 255));
-  margin: 0 auto;
-  height: 100vh;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: auto;
+  background: linear-gradient(135deg, white 50%, rgb(0, 89, 255) 50%, rgb(0, 89, 255));
 }
-.home .left .imgHolder img {
+.home .left img {
   height: 100%;
   display: block;
-}
-.home .left .imgHolder::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(transparent 50%, #000055);
 }
 .home .right {
   margin-top: 70px;
@@ -86,7 +73,7 @@ main h1 {
   margin: 0;
 }
 .home .right h2 {
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .home .right .animationDiv {
   margin: 50px auto 0;
@@ -97,91 +84,97 @@ main h1 {
   overflow: visible;
 }
 
-.about section {
+.about {
   display: flex;
   width: -moz-fit-content;
   width: fit-content;
   justify-content: space-evenly;
-  align-items: flex-start;
-  margin: 30px auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
-.about section h3 {
-  margin: 20px 0 0;
+.about h3 {
+  margin: 0;
   width: -moz-fit-content;
   width: fit-content;
   padding: 3px 17px;
   border-radius: 5px 5px 0 0;
   background-color: rgba(240, 248, 255, 0.3);
 }
-.about section .aboutLeft {
+.about .aboutLeft {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.about section .aboutLeft h3 {
-  margin: 50px 0 0;
-}
-.about section .aboutLeft .setBG, .about section .aboutLeft .introduction {
+.about .aboutLeft .introduction {
   color: rgba(255, 255, 255, 0.6);
 }
-.about section .aboutLeft img {
+.about .aboutLeft img {
   width: 50%;
   display: block;
-  margin: 50px auto;
+  margin: 0 auto;
   border-radius: 10px;
 }
-.about section .aboutLeft .iconFlex {
+.about .aboutLeft .leftDiv .iconFlex {
   display: flex;
   flex-wrap: wrap;
 }
-.about section .aboutLeft .iconFlex svg {
+.about .aboutLeft .leftDiv .iconFlex svg {
   width: 50px;
   margin: 5px 15px;
 }
-.about section article {
+.about .aboutRight {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.about section article h4 {
+.about .aboutRight .rightDiv h4 {
   margin: 5px 0;
   text-decoration: underline;
 }
-.about section article .expDiv > ul {
+.about .aboutRight .rightDiv .expDiv {
+  margin-bottom: 20px;
+}
+.about .aboutRight .rightDiv .expDiv > ul {
   padding: 0;
   list-style: none;
 }
-.about section article .expDiv > ul > li {
+.about .aboutRight .rightDiv .expDiv > ul > li {
   margin-bottom: 10px;
   padding: 10px 0;
-  background-color: rgba(240, 248, 255, 0.15);
+  background-color: rgba(240, 248, 255, 0.2);
   border-radius: 7px;
 }
-.about section article .expDiv > ul > li .title, .about section article .expDiv > ul > li .period, .about section article .expDiv > ul > li .place {
+.about .aboutRight .rightDiv .expDiv > ul > li .title, .about .aboutRight .rightDiv .expDiv > ul > li .period, .about .aboutRight .rightDiv .expDiv > ul > li .place {
   text-align: center;
 }
-.about section article .expDiv > ul > li .title {
+.about .aboutRight .rightDiv .expDiv > ul > li .title {
   font-size: 1.1em;
   font-weight: bold;
 }
-.about section article .expDiv > ul > li .period {
+.about .aboutRight .rightDiv .expDiv > ul > li .period {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 10px;
 }
-.about section article .expDiv > ul > li .place {
-  color: aquamarine;
+.about .aboutRight .rightDiv .expDiv > ul > li .place {
+  color: rgb(113, 151, 187);
 }
-.about section article .expDiv > ul > li p {
+.about .aboutRight .rightDiv .expDiv > ul > li p {
   margin: 0;
   padding: 0 10px;
   color: rgba(255, 255, 255, 0.6);
 }
-.about section article .expDiv > ul > li ul {
+.about .aboutRight .rightDiv .expDiv > ul > li ul {
   list-style: circle;
 }
-.about section article .expDiv > ul > li ul li {
+.about .aboutRight .rightDiv .expDiv > ul > li ul li {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
   margin: 10px 0;
 }
-.about section .expDiv, .about section .iconContainer, .about section .setBG, .about section .introduction {
-  background-color: rgba(255, 255, 255, 0.2);
+.about .expDiv, .about .iconContainer, .about .setBG, .about .introduction {
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 15px;
   outline: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 5px;
@@ -189,15 +182,22 @@ main h1 {
 
 .contact {
   position: relative;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact h1 {
+  text-align: center;
 }
 .contact p {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 70px auto 0;
-  padding: 5px 30px;
+  text-align: center;
+  margin-top: 10px;
 }
 .contact hr {
   width: 80%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 50px;
 }
 .contact .contactFlex {
@@ -218,11 +218,11 @@ main h1 {
   margin: 0 20px;
 }
 .contact .contactFlex .contactFlexLeft a svg {
-  fill: #ffffff;
+  fill: rgba(255, 255, 255, 0.4509803922);
   transition: all 0.3s ease-in-out;
 }
 .contact .contactFlex .contactFlexLeft a svg:hover {
-  fill: #404dff;
+  fill: #ffffff;
 }
 .contact .contactFlex .contactFlexRight {
   width: 40%;
@@ -258,14 +258,132 @@ main h1 {
   width: 100px;
   margin: 15px auto;
   padding: 5px 15px;
-  background: linear-gradient(33deg, rgb(193, 237, 252), rgb(124, 159, 233));
   border: none;
   border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.4235294118);
+  color: #ffffff;
 }
 .contact .contactFlex .contactFlexRight form .formFlex input[type=submit]:hover {
-  background: linear-gradient(33deg, rgb(144, 194, 211), rgb(87, 122, 197));
+  background-color: rgba(0, 0, 0, 0.7254901961);
 }
 
+.works {
+  padding-top: 50px;
+}
+.works .blurBG {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 1;
+}
+.works .detail {
+  position: fixed;
+  width: 90%;
+  height: 80vh;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(160deg, rgb(172, 206, 223) 0%, white 20%, white 70%, rgb(162, 228, 198));
+  z-index: 1;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.works .detail .x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.works .detail .x svg {
+  overflow: visible;
+  display: block;
+}
+.works .detail .x svg rect, .works .detail .x svg path {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 2;
+}
+.works .detail .x svg rect {
+  stroke-width: 0;
+}
+.works .detail .x:hover rect {
+  fill: #ff5e5e;
+}
+.works .detail .x:hover path {
+  stroke: #ffffff;
+}
+.works .detail .portfolioImg {
+  width: 35%;
+  margin-right: 30px;
+}
+.works .detail video {
+  margin-right: 30px;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 3px 3px 10px grey;
+}
+.works .detail .detailright {
+  width: 40%;
+}
+.works .detail .detailright .linkFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 30px;
+}
+.works .detail .detailright .linkFlex h2 {
+  margin: 0;
+  padding: 0 20px;
+  border-bottom: 2px solid rgb(177, 0, 0);
+}
+.works .detail .detailright .linkFlex .demo, .works .detail .detailright .linkFlex .github {
+  position: relative;
+}
+.works .detail .detailright .linkFlex .demo a, .works .detail .detailright .linkFlex .github a {
+  text-decoration: none;
+}
+.works .detail .detailright .linkFlex .demo a svg, .works .detail .detailright .linkFlex .github a svg {
+  height: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 10px;
+  display: block;
+}
+.works .detail .detailright .linkFlex .demo a svg path, .works .detail .detailright .linkFlex .github a svg path {
+  fill: black;
+}
+.works .detail .detailright .linkFlex .demo a:hover svg path, .works .detail .detailright .linkFlex .github a:hover svg path {
+  fill: #0000CD;
+}
+.works .detail .detailright .linkFlex .demo a:hover + span, .works .detail .detailright .linkFlex .github a:hover + span {
+  opacity: 1;
+}
+.works .detail .detailright .linkFlex .demo span, .works .detail .detailright .linkFlex .github span {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  color: #0000CD;
+}
+.works .detail .detailright hr {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.works .detail .detailright .iconFlex {
+  display: flex;
+  justify-content: center;
+}
+.works .detail .detailright .iconFlex svg {
+  width: 40px;
+  margin: 0 10px;
+}
 .works .worksFlex {
   display: flex;
   justify-content: center;
@@ -293,13 +411,9 @@ main h1 {
   margin: 0 10px;
 }
 .works .worksFlex .WFchild p {
-  color: rgba(255, 255, 255, 0.5019607843);
+  color: rgba(121, 121, 121, 0.8078431373);
   margin: 10px auto;
   min-height: 60px;
-}
-.works svg {
-  width: 70px;
-  margin: 0 10px;
 }
 
 .inquiry {

@@ -22,12 +22,12 @@ function About({selected}:Props) {
       className='about'
       show={selected.current==1?1:0}
       direction={selected.current-selected.prev<0?1:0}
+      selected={selected.current}
     >
       {/* <h1>About Me</h1> */}
 
-      <section>
 
-        <div className='aboutLeft'>{/* Left side */}
+        <section className='aboutLeft'>{/* Left side */}
           <img src={path}/>
           <p className='introduction'>
             Hi, my name is Daisuke Seki, a full stack web developer.<br/>
@@ -36,33 +36,34 @@ function About({selected}:Props) {
             and excited about utilizing them in a professional scene and fulfilling real clients' demands.
           </p>
 
-          <h3>Soft Skills</h3>
-          <div className='setBG'>
-            Quick Learner | Attentive | Problem-solving | Teamwork | Adaptability | Strong work ethic
+          <div className='leftDiv'>
+
+            <h3>Technical Skills</h3>
+            <div className='iconContainer'>
+              <div className='iconFlex'>
+                <HTML/>
+                <CSS/>
+                <JS/>
+                <TS/>
+                <Jquery strokeColor={'#ffffff'}/>
+                <React/>
+              </div>
+              <div className='iconFlex'>
+                <PHP/>
+                <NodeJS/>
+                <MySQL/>
+                <PostgreSQL strokeColor={'#ffffff'}/>
+              </div>
+            </div>
+
           </div>
 
-          <h3>Technical Skills</h3>
-          <div className='iconContainer'>
-            <div className='iconFlex'>
-              <HTML/>
-              <CSS/>
-              <JS/>
-              <TS/>
-              <Jquery/>
-              <React/>
-            </div>
-            <div className='iconFlex'>
-              <PHP/>
-              <NodeJS/>
-              <MySQL/>
-              <PostgreSQL/>
-            </div>
-          </div>
 
-        </div>
+        </section>
 
-        <article>{/* Right side */}
+        <section className='aboutRight'>{/* Right side */}
 
+        <div className='rightDiv'>
           <h3>Experience</h3>
           <div className='expDiv'>
             <h4>Education:</h4>
@@ -73,7 +74,7 @@ function About({selected}:Props) {
                 <div className='place'>Cornerstone International Community College of Canada, Vancouver, BC</div>
                 <div className='period'>(September 2022 - December 2023)</div>
                 
-                <p>Learned programming languages listed below and worked on multiple team projects.</p>
+                {/* <p>Learned programming languages listed below and worked on multiple team projects.</p> */}
               </li>
               <li>
 
@@ -81,7 +82,7 @@ function About({selected}:Props) {
                 <div className='place'>Kansai University, Osaka, Japan</div>
                 <div className='period'>(April 2010 - September 2014)</div>
                 
-                <p>Majored in machine engineering and studied relevant subjects such as mathematic, physics, chemistry, programming etc.</p>
+                {/* <p>Majored in machine engineering and studied relevant subjects such as mathematic, physics, chemistry, programming etc.</p> */}
               </li>
             </ul>
 
@@ -91,7 +92,7 @@ function About({selected}:Props) {
                 <div className='title'>Production Management (building materials)</div>
                 <div className='place'>Okabe co., ltd. - Tokyo, Japan</div>
                 <div className='period'>(April 2015 - March 2018)</div>
-
+{/* 
                 <ul>
 
                 <li>
@@ -102,27 +103,27 @@ function About({selected}:Props) {
                   Controlled drawings, specifications, costs, processes, production quantity and quality of products which I was in charge of.
 
                   </li>
-                  {/* <li>
+                  <li>
                   Dealt with custom-order products too according as construction sites' needs.
 
-                  </li> */}
-                </ul>
+                  </li>
+                </ul> */}
                 
                 
               </li>
 
-              <li>
+              {/* <li>
 
                 <div className='title'>Warehouse Worker</div>
                 <div className='place'>Multiple companies - Osaka, Japan</div>
                 <div className='period'>(April 2018 - September 2022)</div>
                  <ul>
-                  {/* <li>Treated chilled and frozen food products at multiple warehouse.</li> */}
+                  <li>Treated chilled and frozen food products at multiple warehouse.</li>
                   <li>Performed warehouse laborer duties including storing, picking, packing, checking, distributing.</li>
                  </ul>
                 
                 
-              </li>
+              </li> */}
               
               <li>
 
@@ -131,14 +132,18 @@ function About({selected}:Props) {
                 <div className='period'>(April 2023 - Present)</div>
                 
                 
-                
+                {/* 
                 <ul>
-                  {/* <li>Treating plants at the warehouse.</li> */}
+                  <li>Treating plants at the warehouse.</li>
                   <li>Performing warehouse laborer duties including storing, picking, packing, checking, distributing.</li>
-                 </ul>
+                 </ul> */}
               </li>
             </ul>
           </div>
+
+
+        </div>
+
 
           {/* <h3>Technical Skills</h3>
           <div className='iconContainer'>
@@ -163,9 +168,16 @@ function About({selected}:Props) {
             Quick Learner | Attentive | Problem-solving | Teamwork | Adaptability | Strong work ethic
           </div> */}
 
-        </article>
+          <div className='rightDiv'>
 
-      </section>
+            <h3>Soft Skills</h3>
+            <div className='setBG'>
+              Quick Learner | Attentive | Problem-solving | Teamwork | Adaptability | Strong work ethic
+            </div>
+          </div>
+
+        </section>
+
     </Main>
   )
 };

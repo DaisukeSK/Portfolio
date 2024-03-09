@@ -3,7 +3,7 @@ import Header from './components/Header.tsx';
 import About from './components/page/About.tsx';
 import Contact from './components/page/Contact.tsx';
 import Home from './components/page/Home.tsx';
-import Works from './components/page/Works.tsx';
+import Works from './components/page/Works/Works.tsx';
 import Inquiry from './components/page/Inquiry.tsx';
 import ComingSoon from './components/page/ComingSoon.tsx';
 
