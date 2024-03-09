@@ -15,7 +15,7 @@ import portfolio from '../../../../public/portfolio.png';
 // import ccc from '../../../../public/videos/Color Code Converter.mp4'
 // import ecommerce from '../../../../public/videos/Fake Shop.mp4'
 // import satellite from '../../../../public/videos/Satellite Launch simulation.mp4'
-import animation from '../../../../public/videos/SVG Animation Gallery.mp4'
+// import animation from '../../../../public/videos/SVG Animation Gallery.mp4'
 // import memolis from '../../../../public/videos/memolis.mp4'
 // import dnn from '../../../../public/videos/DNN.mp4'
 
@@ -45,7 +45,7 @@ function WorkDetail(props:{showDetail:showDetailType, setShowDetail:React.Dispat
     // 'Color Code Converter':ccc,
     // 'E-Commerce':ecommerce,
     // 'Satellite Launch Simulation':satellite,
-    'SVG Animation Gallery':animation,
+    // 'SVG Animation Gallery':animation,
     // 'DNN':dnn
   }
 
