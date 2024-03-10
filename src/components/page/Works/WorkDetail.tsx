@@ -58,6 +58,7 @@ function WorkDetail(props:{showDetail:showDetailType, setShowDetail:React.Dispat
     <>
       <div className="blurBG"></div>
       <div className='detail'>
+
         <div className='x' onClick={()=>props.setShowDetail({title:'',description:'',url:[],languages:[]})}>
           <svg width='20' height='20'>
             <rect x='0' y='0' width='20' height='20' rx='5' ry='5'/>
@@ -65,20 +66,21 @@ function WorkDetail(props:{showDetail:showDetailType, setShowDetail:React.Dispat
             <path d='m15,5 l-10,10'/>
           </svg>
         </div>
+
         {/* {imagePaths[props.showDetail.title]} */}
 
         
 
           {props.showDetail.title=='This portfolio'?
-          <img className='portfolioImg' src={portfolio}/>:
+            <img className='portfolioImg' src={portfolio}/>:
 
-        <video width='45%' autoPlay loop muted>
-          <source src={videoPaths[props.showDetail.title]} type='video/mp4'/>
-          <p>Your browser not supporting video</p>
+            <video width='45%' autoPlay loop muted>
+              <source src={videoPaths[props.showDetail.title]} type='video/mp4'/>
+              <p>Your browser not supporting video</p>
 
-        </video>
-        
-        }
+            </video>
+          
+          }
 
         <div className='detailright'>
 
@@ -91,14 +93,14 @@ function WorkDetail(props:{showDetail:showDetailType, setShowDetail:React.Dispat
                 <a href={props.showDetail.url[0]} target='_blank'>
                   <Laptop/>
                 </a>
-                  <span><u>Demo</u></span>
+                  <span>See demo</span>
               </div>
             }
             <div className='github'>
               <a href={props.showDetail.url[1]} target='_blank'>
                 <Github/>
               </a>
-                <span><u>Github</u></span>
+                <span>Github</span>
             </div>
 
           </div>

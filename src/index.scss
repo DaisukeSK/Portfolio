@@ -449,7 +449,6 @@ main {
             &:hover {
                 rect {
                     fill: #ff5e5e;
-                    
                 }
                 path {
                     stroke: #ffffff;
@@ -484,7 +483,8 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 10px auto 30px;
+                // margin: 10px auto 30px;
+                margin-bottom: 30px;
     
                 // .demo {
                 //     border-right: 1px solid black;
@@ -509,7 +509,7 @@ main {
                     a {
                         // width: fit-content;
                         // display: block;
-                        text-decoration: none;
+                        // text-decoration: none;
                         svg {
                             height:30px;
                             width: fit-content;
@@ -526,7 +526,7 @@ main {
                         &:hover {
                             svg {
                                 path {
-                                    fill: #0000CD;
+                                    fill: #0000ac;
                                 }
                             }
                             &+span {
@@ -541,12 +541,15 @@ main {
                     //     text-align:center;
                     // }
                     span {
+                        // width: 150px;
+                        // background-color: #ac6700;
+                        white-space: nowrap;
                         position: absolute;
-                        bottom: -20px;
+                        top: -20px;
                         left: 50%;
                         transform: translateX(-50%);
                         opacity: 0;
-                        color:#0000CD;
+                        color:#0000ac;
                     }
                 }
             }
@@ -564,11 +567,12 @@ main {
                 svg {
                     width: 40px;
                     margin: 0 10px;
+                    display: block;
                 }
             }
         }
         
-    }
+    }//.detail
     
     .worksFlex {
         display: flex;
@@ -581,13 +585,14 @@ main {
         // margin: 40px auto;
         margin: 50px auto;
         .WFchild {
-            width: 45%;
-            width: 400px;
-            margin: 20px 50px;
+            // width: 45%;
+            
+            // height: 250px;
+            margin: 30px 50px;
             // outline: 1px solid rgb(12, 0, 185);
             // background-color: rgb(177, 177, 177);
             // padding: 20px;
-            box-sizing: border-box;
+            // box-sizing: border-box;
             
             // .imgDiv {
             //     width: 100%;
@@ -597,27 +602,10 @@ main {
             //     background: url('../../../public/smpl.png');
             // }
             
-            h2 {
+            h3 {
                 // color: black;
                 width: fit-content;
                 margin: 10px auto 0;
-            }
-            .iconFlex {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                // background-color: rgb(255, 255, 255);
-                svg {
-                    width: 40px;
-                    margin: 0 10px;
-                }
-            }
-            p {
-                // color: black;
-                color: #797979ce;
-                margin: 10px auto;
-                min-height: 60px;
-                // background-color: #ffffffa2;
             }
         }
     }

@@ -335,7 +335,7 @@ main h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px auto 30px;
+  margin-bottom: 30px;
 }
 .works .detail .detailright .linkFlex h2 {
   margin: 0;
@@ -344,9 +344,6 @@ main h1 {
 }
 .works .detail .detailright .linkFlex .demo, .works .detail .detailright .linkFlex .github {
   position: relative;
-}
-.works .detail .detailright .linkFlex .demo a, .works .detail .detailright .linkFlex .github a {
-  text-decoration: none;
 }
 .works .detail .detailright .linkFlex .demo a svg, .works .detail .detailright .linkFlex .github a svg {
   height: 30px;
@@ -359,18 +356,19 @@ main h1 {
   fill: black;
 }
 .works .detail .detailright .linkFlex .demo a:hover svg path, .works .detail .detailright .linkFlex .github a:hover svg path {
-  fill: #0000CD;
+  fill: #0000ac;
 }
 .works .detail .detailright .linkFlex .demo a:hover + span, .works .detail .detailright .linkFlex .github a:hover + span {
   opacity: 1;
 }
 .works .detail .detailright .linkFlex .demo span, .works .detail .detailright .linkFlex .github span {
+  white-space: nowrap;
   position: absolute;
-  bottom: -20px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  color: #0000CD;
+  color: #0000ac;
 }
 .works .detail .detailright hr {
   border: none;
@@ -383,6 +381,7 @@ main h1 {
 .works .detail .detailright .iconFlex svg {
   width: 40px;
   margin: 0 10px;
+  display: block;
 }
 .works .worksFlex {
   display: flex;
@@ -391,29 +390,12 @@ main h1 {
   margin: 50px auto;
 }
 .works .worksFlex .WFchild {
-  width: 45%;
-  width: 400px;
-  margin: 20px 50px;
-  box-sizing: border-box;
+  margin: 30px 50px;
 }
-.works .worksFlex .WFchild h2 {
+.works .worksFlex .WFchild h3 {
   width: -moz-fit-content;
   width: fit-content;
   margin: 10px auto 0;
-}
-.works .worksFlex .WFchild .iconFlex {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.works .worksFlex .WFchild .iconFlex svg {
-  width: 40px;
-  margin: 0 10px;
-}
-.works .worksFlex .WFchild p {
-  color: rgba(121, 121, 121, 0.8078431373);
-  margin: 10px auto;
-  min-height: 60px;
 }
 
 .inquiry {

@@ -137,7 +137,7 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
     `;
     
     export const LinkDiv=Styled.div<{bg:string}>`
-    
+    width: 400px;
     height: 250px;
     position: relative;
     border-radius: 5px;
@@ -147,6 +147,8 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
     background-image:${(props)=>css`url(${props.bg})`};
     background-size: cover;
     background-position: center;
+
+    cursor: pointer;
     &:before, &:after {
 
         opacity: 0;
@@ -170,6 +172,8 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
         left:50%;
         transform: translate(-50%, -50%);
         color: navy;
+        font-style: italic;
+        font-weight: bold;
         
     }
     &:hover {

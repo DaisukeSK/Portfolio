@@ -93,43 +93,45 @@ function Works({selected}:Props) {
         {Object.keys(worksObj).map((val:string, key:number)=>{
           return (
 
-            <div key={key} className='WFchild' onClick={()=>setShowDetail({title:val,description:worksObj[val]['description'],url:[...worksObj[val]['url']],languages:[...worksObj[val]['languages']]})}>
-                
-              <LinkDiv bg={imagePaths[val]}/>
+            
+              <div key={key} className='WFchild'>
+                  
+                <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val,description:worksObj[val]['description'],url:[...worksObj[val]['url']],languages:[...worksObj[val]['languages']]})}/>
 
-                {/* <div className='linkFlex'> */}
+                  {/* <div className='linkFlex'> */}
 
-                  {/* {worksObj[val]['url'][0] && */}
-                    {/* <div className='demo'>
-                      <a href={worksObj[val]['url'][0]} target='_blank'>
-                        <Laptop/>
-                        <span><b><u>Demo</u></b></span>
+                    {/* {worksObj[val]['url'][0] && */}
+                      {/* <div className='demo'>
+                        <a href={worksObj[val]['url'][0]} target='_blank'>
+                          <Laptop/>
+                          <span><b><u>Demo</u></b></span>
+                        </a>
+                      </div> */}
+                    {/* } */}
+                    {/* <div className='github'>
+                      <a href={worksObj[val]['url'][1]} target='_blank'>
+                        <Github/>
+                        <span><b><u>Github</u></b></span>
                       </a>
-                    </div> */}
-                  {/* } */}
-                  {/* <div className='github'>
-                    <a href={worksObj[val]['url'][1]} target='_blank'>
-                      <Github/>
-                      <span><b><u>Github</u></b></span>
-                    </a>
-                  </div>
+                    </div>
 
+                  </div> */}
+
+
+                <h3>{[val]}</h3>
+
+                
+
+                {/* <p>{worksObj[val]['description']}</p>
+
+                <div className='iconFlex'>
+                  {worksObj[val]['languages'].map((lang:string, key:number)=>{
+                    return <Fragment key={key}>{languageObj[lang]}</Fragment>
+                  })}
                 </div> */}
 
-
-              <h2>{[val]}</h2>
-
-              
-
-              {/* <p>{worksObj[val]['description']}</p>
-
-              <div className='iconFlex'>
-                {worksObj[val]['languages'].map((lang:string, key:number)=>{
-                  return <Fragment key={key}>{languageObj[lang]}</Fragment>
-                })}
-              </div> */}
-
-            </div>
+              </div>
+            
           
           )
         })}
