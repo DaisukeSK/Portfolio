@@ -36,10 +36,10 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
     top: 0;
 
     width: 100%;
-    height: fit-content;
+    // height: fit-content;
     min-height: 100vh;
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
-    // padding-top: 50px;
+    padding-top: 60px;
 
     overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
 
@@ -108,14 +108,14 @@ export const UnderLine=Styled.div< { position: number,testprop:number, still:num
 
         // background: linear-gradient(transparent, #ffffff55);
         background: ${(props)=>
-            props.position==0?css`linear-gradient(transparent, ${color_01}55)`:
-            props.position==1?css`linear-gradient(transparent, ${color_12}55)`:
-            props.position==2?css`linear-gradient(transparent, ${color_22}55)`:
-            `linear-gradient(transparent, ${color_32}55)`
+            props.position==0?css`linear-gradient(transparent, ${color_01}77)`:
+            props.position==1?css`linear-gradient(transparent, ${color_12}77)`:
+            props.position==2?css`linear-gradient(transparent, ${color_22}77)`:
+            `linear-gradient(transparent, ${color_32}77)`
         };
-        background: linear-gradient(transparent, #ffffff55);
+        // background: linear-gradient(transparent, #ffffff55);
         opacity: ${(props)=>props.still?css`1`:css`0`};
-        transition: ${(props)=>props.still?css`all 1s ease-in-out`:css`all 0s`};
+        transition: ${(props)=>props.still?css`all 2s ease-in-out`:css`all 0s`};
         z-index: -1;
         
 

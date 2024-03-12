@@ -56,7 +56,7 @@ function WorkDetail(props:{showDetail:showDetailType, setShowDetail:React.Dispat
     
 
     <>
-      <div className="blurBG"></div>
+      <div className="blurBG" onClick={()=>props.setShowDetail({title:'',description:'',url:[],languages:[]})}></div>
       <div className='detail'>
 
         <div className='x' onClick={()=>props.setShowDetail({title:'',description:'',url:[],languages:[]})}>
@@ -93,7 +93,7 @@ function WorkDetail(props:{showDetail:showDetailType, setShowDetail:React.Dispat
                 <a href={props.showDetail.url[0]} target='_blank'>
                   <Laptop/>
                 </a>
-                  <span>See demo</span>
+                  <span>Demo</span>
               </div>
             }
             <div className='github'>

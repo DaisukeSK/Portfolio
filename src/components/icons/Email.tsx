@@ -1,7 +1,7 @@
 function Email() {
   return (
     
-    <svg width="64px" height="64px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+    <svg width="70" height="70" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000000">
 
 <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
 

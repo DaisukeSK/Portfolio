@@ -54,7 +54,7 @@ main h1 {
 .home .left {
   width: -moz-fit-content;
   width: fit-content;
-  margin-top: auto;
+  height: 100%;
   background: linear-gradient(135deg, white 50%, rgb(0, 89, 255) 50%, rgb(0, 89, 255));
 }
 .home .left img {
@@ -62,7 +62,6 @@ main h1 {
   display: block;
 }
 .home .right {
-  margin-top: 70px;
   text-align: center;
   width: 50%;
   display: flex;
@@ -89,7 +88,6 @@ main h1 {
   width: -moz-fit-content;
   width: fit-content;
   justify-content: space-evenly;
-  padding-top: 100px;
   padding-bottom: 50px;
 }
 .about h3 {
@@ -182,13 +180,9 @@ main h1 {
 
 .contact {
   position: relative;
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.contact h1 {
-  text-align: center;
 }
 .contact p {
   text-align: center;
@@ -197,29 +191,28 @@ main h1 {
 .contact hr {
   width: 80%;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 50px;
 }
 .contact .contactFlex {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
 }
 .contact .contactFlex .contactFlexLeft {
   width: 25%;
-  margin-top: -50px;
-  margin-right: 100px;
+  margin-right: 7%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .contact .contactFlex .contactFlexLeft a {
-  width: 30%;
-  margin: 0 20px;
+  margin: 0 30px;
 }
 .contact .contactFlex .contactFlexLeft a svg {
   fill: rgba(255, 255, 255, 0.4509803922);
   transition: all 0.3s ease-in-out;
+  display: block;
 }
 .contact .contactFlex .contactFlexLeft a svg:hover {
   fill: #ffffff;
@@ -235,9 +228,6 @@ main h1 {
 .contact .contactFlex .contactFlexRight form {
   width: 100%;
 }
-.contact .contactFlex .contactFlexRight form h1 {
-  margin-bottom: 20px;
-}
 .contact .contactFlex .contactFlexRight form .formFlex {
   display: flex;
   flex-direction: column;
@@ -245,7 +235,7 @@ main h1 {
 }
 .contact .contactFlex .contactFlexRight form .formFlex input, .contact .contactFlex .contactFlexRight form .formFlex textarea {
   margin-bottom: 15px;
-  font-family: Arial, "Times New Roman", serif;
+  font-family: Helvetica, Arial, "Times New Roman", serif;
   border-radius: 3px;
   min-height: 18px;
   background-color: rgba(255, 255, 255, 0.7058823529);
@@ -267,9 +257,6 @@ main h1 {
   background-color: rgba(0, 0, 0, 0.7254901961);
 }
 
-.works {
-  padding-top: 50px;
-}
 .works .blurBG {
   width: 100%;
   height: 100vh;
@@ -294,6 +281,7 @@ main h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: 1px solid rgba(97, 97, 97, 0.3);
 }
 .works .detail .x {
   position: absolute;

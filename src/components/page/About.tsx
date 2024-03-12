@@ -23,6 +23,7 @@ function About({selected}:Props) {
       show={selected.current==1?1:0}
       direction={selected.current-selected.prev<0?1:0}
       selected={selected.current}
+      style={{paddingTop: '100px'}}
     >
       {/* <h1>About Me</h1> */}
 

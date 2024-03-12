@@ -71,7 +71,7 @@ function Works({selected}:Props) {
       show={selected.current==2?1:0}
       direction={selected.current-selected.prev<0?1:0}
       selected={selected.current}
-      style={{position:'relative'}}
+      // style={{position:'relative'}}
     >
       {/* <h1>Works</h1> */}
 
