@@ -12,7 +12,7 @@ import PostgreSQL from '../../icons/PostgreSQL';
 import Github from '../../icons/Github';
 import Laptop from '../../icons/Laptop';
 
-import portfolio from '../../../../public/portfolio.png';
+import portfolio from '../../../../public/worksPics/portfolio.png';
 import ccc from '../../../../public/videos/Color Code Converter.mp4'
 import ecommerce from '../../../../public/videos/Fake Shop.mp4'
 import satellite from '../../../../public/videos/Satellite Launch simulation.mp4'
