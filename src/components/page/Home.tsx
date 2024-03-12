@@ -15,6 +15,7 @@ type Props = {
   selected:Selected
 };
 
+
 function Home({selected}:Props) {
 
   // const [innerH, setInnerH]=useState<number>(window.innerHeight)
