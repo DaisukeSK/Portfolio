@@ -77,6 +77,29 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
         opacity: ${(props) =>
             props.show?css`1`:`0`
         };
+        z-index: -2;
+    }
+
+    &::after {
+        width: 100%;
+        height: 100vh;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        background: ${(props) =>
+            // props.selected==0? css`linear-gradient(${color_01}, ${color_02})`:
+            // props.selected==1? css`linear-gradient(210deg, #ffffff77, transparent)`:
+            props.selected==2? css`linear-gradient(110deg, #FFEA097D, transparent, #FF090D7D)`:
+            props.selected==3? css`linear-gradient(90deg, transparent, #ffffff55, transparent)`:
+            null
+        };
+        
+        transition: opacity 3s ease-out;
+        opacity: ${(props) =>
+            props.show?css`1`:`0`
+        };
         z-index: -1;
     }
     
