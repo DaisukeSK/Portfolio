@@ -41,7 +41,7 @@
     },
     "DNN":{
         "url":[
-            "https://news-app2024.vercel.app/",
+            "https://dnn-2024.vercel.app/",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
         "description":"API application for news feed. You can select news from various categories, and search by keywords too.",
