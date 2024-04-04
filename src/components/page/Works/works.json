@@ -5,7 +5,8 @@
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
         "description":"WordBook app. You can create your own account, and add pairs of a term and definition that you want to memorize.",
-        "languages":["JS","Jquery","PHP","MySQL"]
+        "languages":["JS","Jquery","PHP","MySQL"],
+        "team":false
     },
     "Color Code Converter":{
         "url":[
@@ -13,7 +14,8 @@
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
         "description":"It provides multiple kinds of color codes of any color that you want. You can pick up any color from color space or color bars.",
-        "languages":["TS","React"]
+        "languages":["TS","React"],
+        "team":false
     },
     "E-Commerce":{
         "url":[
@@ -21,7 +23,8 @@
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
         "description":"E-commerce app which has basic fanctionalities such as creating account, adding to cart, adding to favorite, purchase, and refering shopping history.",
-        "languages":["TS","React","NodeJs","PostgreSQL"]
+        "languages":["TS","React","NodeJs","PostgreSQL"],
+        "team":false
     },
     "Satellite Launch Simulation":{
         "url":[
@@ -29,7 +32,8 @@
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
         "description":"A numerical simulation of a satellite's behavior going around the planet, created based on a formula for gravity. You can try it in various situations.",
-        "languages":["JS","Jquery"]
+        "languages":["JS","Jquery"],
+        "team":false
     },
     "SVG Animation Gallery":{
         "url":[
@@ -37,7 +41,8 @@
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
         "description":"You can enjoy many mouse-interactive SVG animations. They are all made with only Vanilla JavaScript.",
-        "languages":["JS"]
+        "languages":["JS"],
+        "team":false
     },
     "DNN":{
         "url":[
@@ -45,7 +50,8 @@
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
         "description":"API application for news feed. You can select news from various categories, and search by keywords too.",
-        "languages":["TS","React"]
+        "languages":["TS","React"],
+        "team":false
     },
     "This portfolio":{
         "url":[
@@ -53,6 +59,16 @@
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
         "description":"Portfolio you are browsing right now. Thank you for visiting my portfolio, have fun, I hope you like it.",
-        "languages":["TS","React","PHP","MySQL"]
+        "languages":["TS","React","PHP","MySQL"],
+        "team":false
+    },
+    "Preparing...":{
+        "url":[
+            "",
+            "https://portfolio-daisuke.vercel.app?preparing"
+        ],
+        "description":"Preparing...",
+        "languages":["TS","React","PHP","MySQL","Jquery"],
+        "team":true
     }
 }

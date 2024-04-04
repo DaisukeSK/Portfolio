@@ -284,3 +284,33 @@ transition:all .5s ease-in-out;
 
 
 `;
+
+export const Toggle=Styled.div<{teamP:boolean}>`
+    position: relative;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 10px 30px;
+    padding-left: 40px;
+    background-color: #0050FF3E;
+    box-shadow: #002E93C2 2px 2px 7px;
+    svg {
+        position: absolute;
+        top: ${(props)=>props.teamP?css`35px`:`13px`};
+        left: 10px;
+        transition: top .3s ease-out;
+    }
+    .individual, .team {
+        cursor: pointer;
+        transition: color .3s ease-out;
+        text-align: center;
+        
+    }
+    .individual {
+        color: ${(props)=>props.teamP?css`#ffffff77`:css`#ffffff`};
+        pointer-events: ${(props)=>!props.teamP && css`none`};
+    }
+    .team {
+        color: ${(props)=>props.teamP?css`#ffffff`:css`#ffffff77`};
+        pointer-events: ${(props)=>props.teamP && css`none`};
+    }
+`;

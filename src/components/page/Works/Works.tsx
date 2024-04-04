@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Main, LinkDiv } from '../../StyledComponents';
+import { Main, LinkDiv, Toggle } from '../../StyledComponents';
 // import JS from '../../icons/JS';
 // import TS from '../../icons/TS';
 // import Jquery from '../../icons/Jquery';
@@ -16,6 +16,7 @@ import ecommerce from '../../../../public/worksPics/ecommerce.png';
 import satellite from '../../../../public/worksPics/satellite.png';
 import animation from '../../../../public/worksPics/animation.png';
 import memolis from '../../../../public/worksPics/memolis.png';
+import preparing from '../../../../public/worksPics/preparing.png';
 // import news from '../../../../public/news.png';
 import dnn from '../../../../public/worksPics/dnn.png';
 import { Selected } from '../../../App';
@@ -31,7 +32,8 @@ type JsonType={
   [key:string]:{
     'url':Array<string>,
     'description':string,
-    'languages':Array<string>
+    'languages':Array<string>,
+    'team':boolean
   }
 }
 
@@ -44,6 +46,7 @@ function Works({selected}:Props) {
   // const [onMouse, setOnMouse] = useState<boolean>(false)
   const [showDetail, setShowDetail] = useState<showDetailType>({title:'',description:'',url:[],languages:[]})
 
+  const [teamP, setTeamP]=useState<boolean>(false);
   const worksObj:JsonType = {...js}
   // const languageObj:{[key:string]:JSX.Element} = {'JS':<JS/>,'TS':<TS/>,'Jquery':<Jquery/>,'React':<React/>,'MySQL':<MySQL/>,'PHP':<PHP/>,'PostgreSQL':<PostgreSQL/>,'NodeJs':<NodeJS2/>}
   // const paths:Array<string> = [memolis, ccc, ecommerce, satellite, animation, news, portfolio]
@@ -55,12 +58,14 @@ function Works({selected}:Props) {
     'Satellite Launch Simulation':satellite,
     'SVG Animation Gallery':animation,
     'DNN':dnn,
-    'This portfolio': portfolio
+    'This portfolio': portfolio,
+    'Preparing...': preparing,
   }
 
   useEffect(()=>{
 
     setShowDetail({title:'',description:'',url:[],languages:[]})
+    setTeamP(false)
 
   },[selected])
 
@@ -73,6 +78,16 @@ function Works({selected}:Props) {
       selected={selected.current}
       // style={{position:'relative'}}
     >
+<Toggle teamP={teamP}>
+
+  <svg width="15" height="10">
+    <path d="m0,0 15,5 -15,5" fill='#ffffff'/>
+  </svg>
+
+  <div className='individual' onClick={()=>setTeamP(false)}>Individual</div>
+  <div className='team' onClick={()=>setTeamP(true)}>Team</div>
+
+</Toggle>
       {/* <h1>Works</h1> */}
 
       {/* <div style={{display:showDetail.title?'block':'none',position:'fixed',width:'80%',height:'80vh',top:'100px',left:'100px',background:'#ffffff77',zIndex:1}}>
@@ -91,7 +106,7 @@ function Works({selected}:Props) {
       <div className='worksFlex'>
 
         {Object.keys(worksObj).map((val:string, key:number)=>{
-          return (
+          return (worksObj[val]['team']==teamP &&
 
             
               <div key={key} className='WFchild'>

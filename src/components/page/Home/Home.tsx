@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { Main } from '../StyledComponents';
-import pathName from '../../../public/me5-2-5.png';
+import { Main } from '../../StyledComponents';
+import pathName from '../../../../public/me5-2-5.png';
 // import G1_bg1 from '../../../public/van4.png';
 // import G1_bg2 from '../../../public/van3.png';
 // import G1_bg3 from '../../../public/bg2.png';
@@ -8,7 +8,7 @@ import pathName from '../../../public/me5-2-5.png';
 // import G2_bg2 from '../../../public/bg5.png';
 // import G2_bg3 from '../../../public/bg4.png';
 // import G3_bg1 from '../../../public/bg8.png';
-import { Selected } from '../../App';
+import { Selected } from '../../../App';
 import Animation from './Animation';
 
 type Props = {
