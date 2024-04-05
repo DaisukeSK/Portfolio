@@ -85,7 +85,6 @@ main {
 }
 
 .about {
-    $textColor: rgba(255, 255, 255, 0.6);
     display: flex;
     width: fit-content;
     justify-content: space-evenly;
@@ -104,10 +103,6 @@ main {
         flex-direction: column;
         justify-content: space-between;
 
-        .introduction {
-            color: $textColor;
-        }
-
         img {
             width: 50%;
             display: block;
@@ -115,7 +110,6 @@ main {
             border-radius: 10px;
         }
         .leftDiv {
-
             .iconFlex {
                 display: flex;
                 flex-wrap: wrap;
@@ -145,7 +139,8 @@ main {
                     &> li {
                         margin-bottom: 10px;
                         padding: 10px 0;
-                        background-color: rgba(240, 248, 255, 0.2);
+                        background-color: rgba(240, 248, 255, 0.3);
+                        outline: 1px solid rgba(255, 255, 255, 0.5);
                         border-radius: 7px;
                         
                         .title, .period, .place {
@@ -154,28 +149,15 @@ main {
                         .title {
                             font-size: 1.1em;
                             font-weight: bold;
+                            text-shadow: #00000055 2px 2px 2px;
                         }
 
                         .period {
-                            color: $textColor;
                             margin-bottom: 10px;
                         }
                         
                         .place {
-                            color: rgb(113, 151, 187);
-                        }
-                        p {
-                            margin: 0;
-                            padding: 0 10px;
-                            color: $textColor;
-                        }
-                        ul {
-                            list-style: circle;
-                            li {
-                                background-color: transparent;
-                                color: $textColor;
-                                margin: 10px 0;
-                            }
+                            color: rgb(93, 144, 192);
                         }
                     }
                 }
@@ -184,8 +166,9 @@ main {
     }
     .expDiv, .iconContainer, .setBG, .introduction {
         background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: rgba(115, 31, 0, 0.67) 3px 3px 10px;
         padding: 15px;
-        outline: 1px solid rgba(255, 255, 255, 0.5);
+        outline: 1px solid rgba(255, 255, 255, 0.7);
         border-radius: 5px;
     }
 }
@@ -261,6 +244,7 @@ main {
                         border-radius: 7px;
                         background-color: #0000006c;
                         color: #ffffff;
+                        cursor: pointer;
                         &:hover {
                             background-color: #000000b9;
                         }

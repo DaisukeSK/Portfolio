@@ -104,9 +104,6 @@ main h1 {
   flex-direction: column;
   justify-content: space-between;
 }
-.about .aboutLeft .introduction {
-  color: rgba(255, 255, 255, 0.6);
-}
 .about .aboutLeft img {
   width: 50%;
   display: block;
@@ -141,7 +138,8 @@ main h1 {
 .about .aboutRight .rightDiv .expDiv > ul > li {
   margin-bottom: 10px;
   padding: 10px 0;
-  background-color: rgba(240, 248, 255, 0.2);
+  background-color: rgba(240, 248, 255, 0.3);
+  outline: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
 }
 .about .aboutRight .rightDiv .expDiv > ul > li .title, .about .aboutRight .rightDiv .expDiv > ul > li .period, .about .aboutRight .rightDiv .expDiv > ul > li .place {
@@ -150,31 +148,19 @@ main h1 {
 .about .aboutRight .rightDiv .expDiv > ul > li .title {
   font-size: 1.1em;
   font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.3333333333) 2px 2px 2px;
 }
 .about .aboutRight .rightDiv .expDiv > ul > li .period {
-  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 10px;
 }
 .about .aboutRight .rightDiv .expDiv > ul > li .place {
-  color: rgb(113, 151, 187);
-}
-.about .aboutRight .rightDiv .expDiv > ul > li p {
-  margin: 0;
-  padding: 0 10px;
-  color: rgba(255, 255, 255, 0.6);
-}
-.about .aboutRight .rightDiv .expDiv > ul > li ul {
-  list-style: circle;
-}
-.about .aboutRight .rightDiv .expDiv > ul > li ul li {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 10px 0;
+  color: rgb(93, 144, 192);
 }
 .about .expDiv, .about .iconContainer, .about .setBG, .about .introduction {
   background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(115, 31, 0, 0.67) 3px 3px 10px;
   padding: 15px;
-  outline: 1px solid rgba(255, 255, 255, 0.5);
+  outline: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 5px;
 }
 
@@ -252,6 +238,7 @@ main h1 {
   border-radius: 7px;
   background-color: rgba(0, 0, 0, 0.4235294118);
   color: #ffffff;
+  cursor: pointer;
 }
 .contact .contactFlex .contactFlexRight form .formFlex input[type=submit]:hover {
   background-color: rgba(0, 0, 0, 0.7254901961);
