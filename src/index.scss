@@ -272,6 +272,7 @@ main {
 }
 
 .works {
+    min-height: 101vh;
     .blurBG {
         width: 100%;
         height: 100vh;
@@ -399,6 +400,9 @@ main {
         margin: 50px auto;
         .WFchild {
             margin: 30px 50px;
+            div {
+                box-shadow: #000000aa 3px 3px 10px;
+            }
             h3 {
                 width: fit-content;
                 margin: 10px auto 0;

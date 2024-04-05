@@ -244,7 +244,7 @@ export const G3=Styled.g<{anime:number}>`
 export const Toggle=Styled.div<{teamP:boolean}>`
     position: relative;
     width: fit-content;
-    margin: 30px auto;
+    margin: 50px auto;
     padding: 10px 30px;
     padding-left: 40px;
     background-color: #0050FF3E;
