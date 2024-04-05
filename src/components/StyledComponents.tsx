@@ -1,9 +1,7 @@
-
 import Styled from "styled-components";
 import { css,keyframes } from "styled-components";
 
 const timingFunc='cubic-bezier(0,1,.7,1)';
-
 
 const color_01='#4455CF'
 const color_02='#020B4E'
@@ -34,17 +32,11 @@ const fromLeft=keyframes`
 export const Main=Styled.main< { show: number,direction: number, selected:number} >`
     position: absolute;
     top: 0;
-
     width: 100%;
-    // height: fit-content;
     min-height: 100vh;
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
     padding-top: 60px;
-
     overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
-
-    // background-color:#000055;
-
     visibility: ${(props)=>props.show?css`visible`:css`hidden`};
     z-index: ${(props)=>props.show?css`1`:css`0`};
     animation-name:${(props) =>
@@ -72,14 +64,12 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
             props.selected==3? css`linear-gradient(${color_31}, ${color_32})`:
             null
         };
-        // background: #000055;
         transition: opacity 3s ease-out;
         opacity: ${(props) =>
             props.show?css`1`:`0`
         };
         z-index: -2;
     }
-
     &::after {
         width: 100%;
         height: 100vh;
@@ -87,10 +77,7 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
         position: fixed;
         top: 0;
         left: 0;
-        
         background: ${(props) =>
-            // props.selected==0? css`linear-gradient(${color_01}, ${color_02})`:
-            // props.selected==1? css`linear-gradient(210deg, #ffffff77, transparent)`:
             props.selected==2? css`linear-gradient(110deg, #FFEA097D, transparent, #FF090D7D)`:
             props.selected==3? css`linear-gradient(90deg, transparent, #ffffff55, transparent)`:
             null
@@ -102,7 +89,6 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
         };
         z-index: -1;
     }
-    
 `;
 
 export const UnderLine=Styled.div< { position: number,testprop:number, still:number} >`
@@ -128,27 +114,21 @@ export const UnderLine=Styled.div< { position: number,testprop:number, still:num
         top: 0;
         left: 0;
         content: '';
-
-        // background: linear-gradient(transparent, #ffffff55);
         background: ${(props)=>
             props.position==0?css`linear-gradient(transparent, ${color_01}77)`:
             props.position==1?css`linear-gradient(transparent, ${color_12}77)`:
             props.position==2?css`linear-gradient(transparent, ${color_22}77)`:
             `linear-gradient(transparent, ${color_32}77)`
         };
-        // background: linear-gradient(transparent, #ffffff55);
         opacity: ${(props)=>props.still?css`1`:css`0`};
         transition: ${(props)=>props.still?css`all 2s ease-in-out`:css`all 0s`};
         z-index: -1;
-        
-
     }
 `;
 
 export const HeaderRightChild=Styled.div<{disabled:number}>`
     pointer-events: ${(props)=>props.disabled?css`none`:css`auto`};
     width: 100px;
-    // font-weight: bold;
     text-align: center;
     border-radius: 7px;
     padding: 5px;
@@ -157,23 +137,20 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
         background-color: rgba(255, 255, 255, 0.4);
         transition: all ease-out 1s;
     };
-    `;
+`;
     
-    export const LinkDiv=Styled.div<{bg:string}>`
+export const LinkDiv=Styled.div<{bg:string}>`
     width: 400px;
     height: 250px;
     position: relative;
     border-radius: 5px;
     outline: 1px solid rgba(255, 255, 255, 0.3);
     overflow:hidden;
-
     background-image:${(props)=>css`url(${props.bg})`};
     background-size: cover;
     background-position: top;
-
     cursor: pointer;
     &:before, &:after {
-
         opacity: 0;
         transition: opacity .3s ease-in-out;
     }
@@ -185,44 +162,37 @@ export const HeaderRightChild=Styled.div<{disabled:number}>`
         top:0;
         left:0;
         background: #ffffffaa;
-
     }
     &:after {
         content:'Click for detail...';
         position:absolute;
-        
         top:50%;
         left:50%;
         transform: translate(-50%, -50%);
         color: navy;
         font-style: italic;
         font-weight: bold;
-        
     }
     &:hover {
         &:before, &:after {
             opacity: 1;
         }
     }
-    
-
-`
+`;
 
 export const AnimationDiv=Styled.div<{anime:number}>`
     margin: 50px auto 0;
     width: 430px;
     height: ${(props)=>props.anime<30?css`240px`:css`0`};
     transition: all 3s ease-in-out;
-
     svg {
         overflow: visible;
     }
 `;
 
 export const G1=Styled.g<{anime:number}>`
-
-opacity:${(props)=>(props.anime>=1 && props.anime<6)?1:0};
-transition:all .5s ease-in-out;
+    opacity:${(props)=>(props.anime>=1 && props.anime<6)?1:0};
+    transition:all .5s ease-in-out;
     path {
         transition:all .5s ease-in-out;
     }
@@ -231,22 +201,16 @@ transition:all .5s ease-in-out;
     }
     .g1_path2 {
         opacity:${(props)=>props.anime>=2?1:0};
-        // opacity:1;
     }
     .g1_path3 {
         opacity:${(props)=>props.anime>=3?1:0};
-        // opacity:1;
     }
-
 `;
 
 export const G2=Styled.g<{anime:number}>`
 
-opacity:${(props)=>(props.anime>=8 && props.anime<14)?1:0};
-// transition:all .5s ease-in-out;
-    rect {
-        // transition:all .5s ease-in-out;
-    }
+    opacity:${(props)=>(props.anime>=8 && props.anime<14)?1:0};
+    
     .g2_rect1 {
         opacity:${(props)=>props.anime>=8?1:0};
     }
@@ -256,33 +220,25 @@ opacity:${(props)=>(props.anime>=8 && props.anime<14)?1:0};
     .g2_rect3 {
         opacity:${(props)=>props.anime>=9?1:0};
     }
-
 `;
 
 export const G3=Styled.g<{anime:number}>`
-
-opacity:${(props)=>props.anime<34?1:0};
-// overflow: visible;
-
-transition:all .5s ease-in-out;
-.g3_text1, .g3_text2 {
+    opacity:${(props)=>props.anime<34?1:0};
     transition:all .5s ease-in-out;
-}
+    .g3_text1, .g3_text2 {
+        transition:all .5s ease-in-out;
+    }
 
-.g3_text1 {
-    opacity:${(props)=>(props.anime>=15 && props.anime<27.5)?1:0}
-}
-.g3_text2 {
-    opacity:${(props)=>(props.anime>=16 && props.anime<28.5)?1:0}
-}
+    .g3_text1 {
+        opacity:${(props)=>(props.anime>=15 && props.anime<27.5)?1:0}
+    }
+    .g3_text2 {
+        opacity:${(props)=>(props.anime>=16 && props.anime<28.5)?1:0}
+    }
 
-.g3_text3 {
-    fill:${(props)=>props.anime>=24?css`red`:css`white`}
-}
-
-
-
-
+    .g3_text3 {
+        fill:${(props)=>props.anime>=24?css`red`:css`white`}
+    }
 `;
 
 export const Toggle=Styled.div<{teamP:boolean}>`
@@ -303,7 +259,6 @@ export const Toggle=Styled.div<{teamP:boolean}>`
         cursor: pointer;
         transition: color .3s ease-out;
         text-align: center;
-        
     }
     .individual {
         color: ${(props)=>props.teamP?css`#ffffff77`:css`#ffffff`};

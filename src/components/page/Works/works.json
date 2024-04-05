@@ -8,6 +8,7 @@
         "languages":["JS","Jquery","PHP","MySQL"],
         "team":false
     },
+
     "Color Code Converter":{
         "url":[
             "https://color-code-converter.vercel.app/",
@@ -17,6 +18,7 @@
         "languages":["TS","React"],
         "team":false
     },
+
     "E-Commerce":{
         "url":[
             "https://e-commerce-u5ft.vercel.app/",
@@ -26,6 +28,7 @@
         "languages":["TS","React","NodeJs","PostgreSQL"],
         "team":false
     },
+
     "Satellite Launch Simulation":{
         "url":[
             "https://satellite-launch-simulation.vercel.app/",
@@ -35,6 +38,7 @@
         "languages":["JS","Jquery"],
         "team":false
     },
+
     "SVG Animation Gallery":{
         "url":[
             "https://svg-animation-gallery.vercel.app/",
@@ -44,6 +48,7 @@
         "languages":["JS"],
         "team":false
     },
+
     "DNN":{
         "url":[
             "https://dnn-2024.vercel.app/",
@@ -53,6 +58,7 @@
         "languages":["TS","React"],
         "team":false
     },
+
     "This portfolio":{
         "url":[
             "",
@@ -62,6 +68,7 @@
         "languages":["TS","React","PHP","MySQL"],
         "team":false
     },
+    
     "Preparing...":{
         "url":[
             "",

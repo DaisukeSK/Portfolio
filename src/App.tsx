@@ -8,49 +8,38 @@ import Inquiry from './components/page/Inquiry.tsx';
 import ComingSoon from './components/page/ComingSoon.tsx';
 
 export type Selected={
-  prev:number,
-  current:number
+    prev:number,
+    current:number
 };
 
 export const AppContext=createContext({selected:{prev:0, current:0}})
 
 function App() {
-  const [selected, setSelected] = useState<Selected>({prev:0, current:0});
-  const [inquiry, setInquiry] = useState<boolean>(false);
-  const [preparing, setPreparing] = useState<boolean>(false);
+    const [selected, setSelected] = useState<Selected>({prev:0, current:0});
+    const [inquiry, setInquiry] = useState<boolean>(false);
+    const [preparing, setPreparing] = useState<boolean>(false);
 
-  useEffect(()=>{
-    window.location.search=='?inquiry' && setInquiry(true);
+    useEffect(()=>{
+        window.location.search=='?inquiry' && setInquiry(true);
+        window.location.search=='?preparing' && setPreparing(true);
+    },[]);
 
-    window.location.search=='?preparing' && setPreparing(true);
-    console.log("preparing running")
-  },[]);
+    return (
+        <AppContext.Provider value={{selected}}>
+            {preparing && <ComingSoon/>}
+            {inquiry && <Inquiry/>}
 
-  // useEffect(()=>{
-  //   window.location.search=='?preparing' && setPreparing(true);
-  //   console.log("preparing running")
-  // },[]);
-
-  // useEffect(()=>{
-  //   selected.current==0 && location.reload()
-  // },[selected]);
-
-  return (
-    <AppContext.Provider value={{selected}}>
-      {preparing && <ComingSoon/>}
-      {inquiry && <Inquiry/>}
-
-      {(!inquiry && !preparing) &&
-        <>
-          <Header selected={selected} setSelected={setSelected}></Header>
-          <About selected={selected}></About>
-          <Contact selected={selected}></Contact>
-          <Home selected={selected}></Home>
-          <Works selected={selected}></Works>
-        </>
-      }
-    </AppContext.Provider>
-  )
+            {(!inquiry && !preparing) &&
+                <>
+                    <Header selected={selected} setSelected={setSelected}></Header>
+                    <About selected={selected}></About>
+                    <Contact selected={selected}></Contact>
+                    <Home selected={selected}></Home>
+                    <Works selected={selected}></Works>
+                </>
+            }
+        </AppContext.Provider>
+    )
 };
 
 export default App;

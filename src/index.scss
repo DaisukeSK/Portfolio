@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    // overflow-y:hidden;
     background-color: rgb(0, 0, 0);
     color: white;
     position: relative;
@@ -15,25 +14,18 @@ header {
     top: 0;
     width: 100%;
     height: 60px;
-    // background-color: rgba(95, 158, 160, 0.5);
     display: flex;
-    // justify-content: space-between;
     justify-content: center;
     padding: 10px 10%;
     box-sizing: border-box;
     align-items: center;
     z-index: 2;
-    // background-color: rgb(0, 0, 0);
-    // background: linear-gradient(rgb(2, 2, 65),rgb(10, 2, 82));
-    // background: linear-gradient(rgb(0, 0, 41),rgb(15, 15, 15));
-    // background: linear-gradient(rgb(97, 66, 0),rgb(71, 77, 0));
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(7px);
     
     .headerRight {
         width: 60%;
         max-width: 600px;
-
         position: relative;
 
         .headerRightFlex {
@@ -44,29 +36,11 @@ header {
             div {
                 cursor: pointer;
             }
-
         }
-
-        // .headerRightChild {
-        //     width: 100px;
-        //     text-align: center;
-        //     border-radius: 5px;
-        //     &:hover {
-        //         background-color: rgba(255, 255, 255, 0.2);
-        //         transition: all ease-out .5s;
-        //     }
-        // }
     }
 }
 
 main {
-    // padding-top: 100px;
-    
-    // position: absolute;
-    // top: 0;
-    // width: 100%;
-    // height: 100vh;
-    // background-attachment: fixed;
     h1 {
         width: fit-content;
         margin: 0 auto;
@@ -76,31 +50,19 @@ main {
 .home {
     display: flex;
     width: fit-content;
-    // align-items: end;
     margin: 0 auto;
-
-    
     justify-content: space-evenly;
     .left {
         width: fit-content;
-        
-        // margin-top: auto;
         height: 100%;
-        // position: relative;
-        // background-color: white;
-        // outline: 1px solid navy;
         background: linear-gradient(135deg, white 50%, rgb(0, 89, 255) 50%, rgb(0, 89, 255));
         img {
             height: 100%;
             display: block;
-
         }
-        
     }
     .right {
-        // margin-top: 70px;
         text-align: center;
-        // outline: 1px solid navy;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -115,186 +77,127 @@ main {
             margin: 50px auto 0;
             width: 430px;
             height: 240px;
-            // outline: 1px solid grey;
-
-            
             svg {
                 overflow: visible;
             }
-            
         }
     } 
 }
 
 .about {
     $textColor: rgba(255, 255, 255, 0.6);
-    // font-size: 1.1em;
     display: flex;
     width: fit-content;
     justify-content: space-evenly;
-    // align-items: center;
-    // margin: 50px auto;
-    // padding-top: 200px;
     padding-bottom: 50px;
-    // section {
-        h3 {
-            margin: 0;
-            width: fit-content;
-            padding: 3px 17px;
-            border-radius: 5px 5px 0 0;
-            background-color: rgba(240, 248, 255, 0.3);
+    h3 {
+        margin: 0;
+        width: fit-content;
+        padding: 3px 17px;
+        border-radius: 5px 5px 0 0;
+        background-color: rgba(240, 248, 255, 0.3);
+    }
+
+    .aboutLeft {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .introduction {
+            color: $textColor;
         }
 
-        .aboutLeft {
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            // margin-top: 100px;
-            // margin-right: 0px;
+        img {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        .leftDiv {
 
-            
-
-            .introduction {
-                color: $textColor;
-            }
-
-            img {
-                width: 50%;
-                display: block;
-                margin: 0 auto;
-                border-radius: 10px;
-                // margin-bottom: 200px;
-            }
-            .leftDiv {
-
-                .iconFlex {
-                    display: flex;
-                    flex-wrap: wrap;
-                    
-                    svg {
-                        width: 50px;
-                        margin: 5px 15px;
-                    }
+            .iconFlex {
+                display: flex;
+                flex-wrap: wrap;
+                svg {
+                    width: 50px;
+                    margin: 5px 15px;
                 }
             }
         }
-        .aboutRight {
-            width: 40%;
-            // outline: 1px solid grey;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+    }
+    .aboutRight {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-            .rightDiv {
+        .rightDiv {
+            h4 {
+                margin: 5px 0;
+                text-decoration: underline;
+            }
+            .expDiv {
+                margin-bottom: 20px;
+                &>ul {
+                    padding: 0;
+                    list-style: none;
+                    &> li {
+                        margin-bottom: 10px;
+                        padding: 10px 0;
+                        background-color: rgba(240, 248, 255, 0.2);
+                        border-radius: 7px;
+                        
+                        .title, .period, .place {
+                            text-align: center;
+                        }
+                        .title {
+                            font-size: 1.1em;
+                            font-weight: bold;
+                        }
 
-                // margin-bottom: 100px;
-
-                h4 {
-                    margin: 5px 0;
-                    text-decoration: underline;
-                }
-                // .nameFlex {
-                //     display: flex;
-                //     align-items: center;
-                //     div {
-                //         margin-left: 10px;
-                //     }
-                // }
-                .expDiv {
-                    margin-bottom: 20px;
-                    &>ul {
-                        // margin-left: 0;
-                        padding: 0;
-                        list-style: none;
-                        &> li {
+                        .period {
+                            color: $textColor;
                             margin-bottom: 10px;
-                            padding: 10px 0;
-                            background-color: rgba(240, 248, 255, 0.2);
-                            border-radius: 7px;
-                            
-                            .title, .period, .place {
-                                // text-decoration: none;
-                                text-align: center;
-                            }
-                            .title {
-                                font-size: 1.1em;
-                                // color: rgb(197, 197, 197);
-                                // background-color: aliceblue;
-                                // width: fit-content;
-                                // margin: 0 auto;
-                                // padding: 10px;
-                                font-weight: bold;
-                            }
-    
-                            .period {
+                        }
+                        
+                        .place {
+                            color: rgb(113, 151, 187);
+                        }
+                        p {
+                            margin: 0;
+                            padding: 0 10px;
+                            color: $textColor;
+                        }
+                        ul {
+                            list-style: circle;
+                            li {
+                                background-color: transparent;
                                 color: $textColor;
-                                margin-bottom: 10px;
-                            }
-                            
-                            .place {
-                                color: rgb(113, 151, 187);
-                                // display: block;
-                            }
-                            p {
-                                margin: 0;
-                                padding: 0 10px;
-                                color: $textColor;
-                            }
-                            ul {
-                                // margin-left: 0;
-                                
-                                list-style: circle;
-                                li {
-                                    background-color: transparent;
-                                    color: $textColor;
-                                    margin: 10px 0;
-                                    // padding: 0;
-                                }
+                                margin: 10px 0;
                             }
                         }
                     }
                 }
             }
-            
-            // .iconFlex {
-            //     display: flex;
-            //     flex-wrap: wrap;
-                
-            //     svg {
-            //         width: 50px;
-            //         margin: 5px 15px;
-            //     }
-            // }
-
         }
-        .expDiv, .iconContainer, .setBG, .introduction {
-            background-color: rgba(255, 255, 255, 0.3);
-            padding: 15px;
-            outline: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 5px;
-        }
-    // }
+    }
+    .expDiv, .iconContainer, .setBG, .introduction {
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 15px;
+        outline: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+    }
 }
 
 .contact {
     position: relative;
-    // padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
-    h1 {
-        // text-align: center;
-    }
     p {
         text-align: center;
         margin-top: 10px;
-        // width: fit-content;
-        // margin: 0 auto;
-        // padding: 5px 30px;
-        // font-size: 1.2em;
-        // background-color: #404dff;
     }
     hr {
         width: 80%;
@@ -303,31 +206,17 @@ main {
         margin-bottom: 50px;
     }
     .contactFlex {
-        // height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        // width: 100%;
-        // position: absolute;
-        // top: 55%;
-        // left: 50%;
-        // transform: translate(-50%,-50%);
-        // background-color: rgb(70, 207, 77);
-
         .contactFlexLeft {
             width: 25%;
-            // background-color: cadetblue;
-            // outline: 1px solid grey;
-            // margin-top: -50px;
             margin-right: 7%;
             display: flex;
             justify-content: center;
             align-items: center;
             a {
-    
-                // width: 30%;
                 margin: 0 30px;
-                // display: block;
                 svg {
                     fill: #ffffff73;
                     transition: all .3s ease-in-out;
@@ -338,29 +227,16 @@ main {
                 }
             }
         }
-
     
         .contactFlexRight {
-            
             width: 40%;
             max-width: 400px;
-    
             display: flex;
             align-items: center;
             padding: 10px 20px;
             background-color: #ffffff2d;
-            // outline: 1px solid grey;
             form {
                 width: 100%;
-                // position: absolute;
-                // top: 50%;
-                // left: 50%;
-                // transform: translate(-50%,-50%);
-                // background-color: lightblue;
-                // margin: 20px auto;
-                // h1 {
-                //     margin-bottom: 20px;
-                // }
                 .formFlex {
                     display: flex;
                     flex-direction: column;
@@ -371,7 +247,6 @@ main {
                         border-radius: 3px;
                         min-height: 18px;
                         background-color: #ffffffb4;
-                        // outline: none;
                         border: none;
                         &:focus {
                             outline: none;
@@ -382,41 +257,30 @@ main {
                         width: 100px;
                         margin: 15px auto;
                         padding: 5px 15px;
-                        // background-color: aquamarine;
-                        // background: linear-gradient(33deg,rgb(193, 237, 252),rgb(124, 159, 233));
                         border: none;
                         border-radius: 7px;
                         background-color: #0000006c;
                         color: #ffffff;
                         &:hover {
                             background-color: #000000b9;
-                            // background: linear-gradient(33deg,rgb(144, 194, 211),rgb(87, 122, 197));
                         }
                     }
                 }
             }
         }
     }
-
 }
 
-
 .works {
-    // background: linear-gradient(160deg,rgb(0, 0, 112),rgb(81, 81, 255));
-    // background-attachment: fixed;
-    // padding-top: 50px;
-
     .blurBG {
         width: 100%;
         height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
-        // background-color: #ad1c1cce;
         backdrop-filter: blur(5px);
         z-index: 1;
     }
-
     .detail {
         position:fixed;
         width:90%;
@@ -425,13 +289,10 @@ main {
         left:50%;
         transform: translate(-50%, -50%);
         background: linear-gradient(160deg, rgb(172, 206, 223) 0%, white 20%, white 70%, rgb(162, 228, 198));
-        // background: #4f4f7c;
         z-index:1;
         color: #000000;
         text-align: center;
-
         display: flex;
-        // flex-direction: column;
         justify-content: center;
         align-items: center;
         outline: 1px solid rgba(97, 97, 97, 0.3);
@@ -439,8 +300,6 @@ main {
             position:absolute;
             top:10px;
             right:10px;
-            // background-color: chartreuse;
-
             svg {
                 overflow: visible;
                 display: block;
@@ -450,10 +309,8 @@ main {
                     stroke-width: 2;
                 }
                 rect {
-                    // fill: #dddddd;
                     stroke-width: 0;
                 }
-                
             }
             &:hover {
                 rect {
@@ -469,69 +326,34 @@ main {
             margin-right: 30px;
         }
         video {
-            // width: 40%;
-            // margin: 0 auto;
             margin-right: 30px;
             height: fit-content;
             box-shadow: 3px 3px 10px grey;
         }
-        
         .detailright {
             width: 40%;
-            
-            
             .linkFlex {
-                
-                // opacity:0;
-                // transition: ${(props)=>props.onmouse?css`all 0s ease-in`:css`all .5s ease-in`};
-                // position: absolute;
-                // top: 50%;
-                // left: 50%;
-                // transform: translate(-50%,-50%);
-                // background:navy;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // margin: 10px auto 30px;
                 margin-bottom: 30px;
-    
-                // .demo {
-                //     border-right: 1px solid black;
-                // }
-    
                 h2 {
                     margin: 0;
-                    // text-decoration: underline;
-
-                    // color: white;
                     padding: 0 20px;
                     border-bottom: 2px solid rgb(177, 0, 0);
-                    // background: linear-gradient(200deg, rgb(197, 195, 231),rgb(155, 207, 224),rgb(133, 230, 162));
                 }
                 .demo, .github {
-    
-                    // width:5%;
-                    // padding: 0 25px;
-                    // outline: 1px solid grey;
                     position: relative;
-    
                     a {
-                        // width: fit-content;
-                        // display: block;
-                        // text-decoration: none;
                         svg {
                             height:30px;
                             width: fit-content;
                             margin: 0 10px;
-                            // background: orange;
                             display: block;
-                            // margin: 0 auto;
                             path {
                                 fill: black;
                             }
                         }
-                        
-    
                         &:hover {
                             svg {
                                 path {
@@ -540,18 +362,10 @@ main {
                             }
                             &+span {
                                 opacity: 1;
-                                // color: red;
                             }
                         }
-                        
                     }
-                    // span {
-                    //     display: block;
-                    //     text-align:center;
-                    // }
                     span {
-                        // width: 150px;
-                        // background-color: #ac6700;
                         white-space: nowrap;
                         position: absolute;
                         top: -20px;
@@ -567,12 +381,8 @@ main {
                 border-bottom: 1px solid rgba(0, 0, 0, 0.3);
             }
             .iconFlex {
-                // width: fit-content;
                 display: flex;
                 justify-content: center;
-                // background: linear-gradient(rgb(124, 124, 124),rgb(124, 124, 124));
-                // margin: 0 auto;
-                // padding: 5px 10px;
                 svg {
                     width: 40px;
                     margin: 0 10px;
@@ -580,66 +390,32 @@ main {
                 }
             }
         }
-        
     }//.detail
     
     .worksFlex {
         display: flex;
         justify-content: center;
-        // width: 70%;
-        // max-width: 850px;
-        // outline: 1px solid grey;
-        // padding: 0 100px;
         flex-wrap: wrap;
-        // margin: 40px auto;
         margin: 50px auto;
         .WFchild {
-            // width: 45%;
-            
-            // height: 250px;
             margin: 30px 50px;
-            // outline: 1px solid rgb(12, 0, 185);
-            // background-color: rgb(177, 177, 177);
-            // padding: 20px;
-            // box-sizing: border-box;
-            
-            // .imgDiv {
-            //     width: 100%;
-            //     height: 200px;
-            //     display: block;
-            //     margin: 0 auto 10px;
-            //     background: url('../../../public/smpl.png');
-            // }
-            
             h3 {
-                // color: black;
                 width: fit-content;
                 margin: 10px auto 0;
             }
         }
     }
-    // svg {
-    //     width: 70px;
-    //     margin: 0 10px;
-    // }
 }
 
 .inquiry {
-    // main {
         background: linear-gradient(160deg,rgb(0, 0, 77),rgb(84, 84, 255));
         width: 100%;
         height: 100vh;
         position: absolute;
         top: 0;
         left: 0;
-        // background: linear-gradient(160deg,rgb(0, 0, 77),yellow);
-    //     display: none;
-    //     opacity: 0;
-    // }
     .inquiryFlex {
-
         width: fit-content;
-        // outline: 1px solid blue;
         border-radius: 7px;
         position: absolute;
         top: 40%;
@@ -648,10 +424,8 @@ main {
         padding: 30px 70px;
         background-color: rgba(255, 255, 255, 0.1);
         h1 {
-            
             text-align: center;
             text-shadow: navy 4px 4px 3px;
-    
         }
         p {
             text-align: center;
