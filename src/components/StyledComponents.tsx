@@ -33,7 +33,7 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
     position: absolute;
     top: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: ${(props) =>props.selected==2? css`101vh`:css`100vh`};
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
     padding-top: 60px;
     overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
