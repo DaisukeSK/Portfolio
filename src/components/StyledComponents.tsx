@@ -116,9 +116,9 @@ export const UnderLine=Styled.div< { position: number,testprop:number, still:num
         content: '';
         background: ${(props)=>
             props.position==0?css`linear-gradient(transparent, ${color_01}77)`:
-            props.position==1?css`linear-gradient(transparent, ${color_12}77)`:
+            props.position==1?css`linear-gradient(transparent, ${color_11}77)`:
             props.position==2?css`linear-gradient(transparent, ${color_22}77)`:
-            `linear-gradient(transparent, ${color_32}77)`
+            `linear-gradient(transparent, ${color_31}77)`
         };
         opacity: ${(props)=>props.still?css`1`:css`0`};
         transition: ${(props)=>props.still?css`all 2s ease-in-out`:css`all 0s`};
