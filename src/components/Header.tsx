@@ -29,7 +29,7 @@ function Header({selected,setSelected}:Props) {
             current:
             Div.innerText==='Home'?0:
             Div.innerText==='About'?1:
-            Div.innerText==='Works'?2:3
+            Div.innerText==='Projects'?2:3
         });
         window.scrollTo(0, 0);
     };
@@ -45,7 +45,7 @@ function Header({selected,setSelected}:Props) {
                 <div className='headerRightFlex'>
                     <HeaderRightChild disabled={selected.current==0?1:0} onClick={(e)=>ClickHandler(e)}>Home</HeaderRightChild>
                     <HeaderRightChild disabled={selected.current==1?1:0} onClick={(e)=>ClickHandler(e)}>About</HeaderRightChild>
-                    <HeaderRightChild disabled={selected.current==2?1:0} onClick={(e)=>ClickHandler(e)}>Works</HeaderRightChild>
+                    <HeaderRightChild disabled={selected.current==2?1:0} onClick={(e)=>ClickHandler(e)}>Projects</HeaderRightChild>
                     <HeaderRightChild disabled={selected.current==3?1:0} onClick={(e)=>ClickHandler(e)}>Contact</HeaderRightChild>
                 </div>
             </div>

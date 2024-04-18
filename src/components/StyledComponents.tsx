@@ -241,7 +241,7 @@ export const G3=Styled.g<{anime:number}>`
     }
 `;
 
-export const Toggle=Styled.div<{teamP:boolean}>`
+export const Toggle=Styled.div<{teamp:boolean}>`
     position: relative;
     width: fit-content;
     margin: 50px auto;
@@ -251,7 +251,7 @@ export const Toggle=Styled.div<{teamP:boolean}>`
     box-shadow: #002E93C2 2px 2px 7px;
     svg {
         position: absolute;
-        top: ${(props)=>props.teamP?css`35px`:`13px`};
+        top: ${(props)=>props.teamp?css`35px`:`13px`};
         left: 10px;
         transition: top .3s ease-out;
     }
@@ -261,11 +261,11 @@ export const Toggle=Styled.div<{teamP:boolean}>`
         text-align: center;
     }
     .individual {
-        color: ${(props)=>props.teamP?css`#ffffff77`:css`#ffffff`};
-        pointer-events: ${(props)=>!props.teamP && css`none`};
+        color: ${(props)=>props.teamp?css`#ffffff77`:css`#ffffff`};
+        pointer-events: ${(props)=>!props.teamp && css`none`};
     }
     .team {
-        color: ${(props)=>props.teamP?css`#ffffff`:css`#ffffff77`};
-        pointer-events: ${(props)=>props.teamP && css`none`};
+        color: ${(props)=>props.teamp?css`#ffffff`:css`#ffffff77`};
+        pointer-events: ${(props)=>props.teamp && css`none`};
     }
 `;

@@ -244,7 +244,7 @@ main h1 {
   background-color: rgba(0, 0, 0, 0.7254901961);
 }
 
-.works .blurBG {
+.projects .blurBG {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -254,7 +254,7 @@ main h1 {
           backdrop-filter: blur(5px);
   z-index: 1;
 }
-.works .detail {
+.projects .detail {
   position: fixed;
   width: 90%;
   height: 80vh;
@@ -270,73 +270,73 @@ main h1 {
   align-items: center;
   outline: 1px solid rgba(97, 97, 97, 0.3);
 }
-.works .detail .x {
+.projects .detail .x {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-.works .detail .x svg {
+.projects .detail .x svg {
   overflow: visible;
   display: block;
 }
-.works .detail .x svg rect, .works .detail .x svg path {
+.projects .detail .x svg rect, .projects .detail .x svg path {
   fill: none;
   stroke: #000000;
   stroke-width: 2;
 }
-.works .detail .x svg rect {
+.projects .detail .x svg rect {
   stroke-width: 0;
 }
-.works .detail .x:hover rect {
+.projects .detail .x:hover rect {
   fill: #ff5e5e;
 }
-.works .detail .x:hover path {
+.projects .detail .x:hover path {
   stroke: #ffffff;
 }
-.works .detail .portfolioImg {
+.projects .detail .portfolioImg {
   width: 35%;
   margin-right: 30px;
 }
-.works .detail video {
+.projects .detail video {
   margin-right: 30px;
   height: -moz-fit-content;
   height: fit-content;
   box-shadow: 3px 3px 10px grey;
 }
-.works .detail .detailright {
+.projects .detail .detailright {
   width: 40%;
 }
-.works .detail .detailright .linkFlex {
+.projects .detail .detailright .linkFlex {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
-.works .detail .detailright .linkFlex h2 {
+.projects .detail .detailright .linkFlex h2 {
   margin: 0;
   padding: 0 20px;
   border-bottom: 2px solid rgb(177, 0, 0);
 }
-.works .detail .detailright .linkFlex .demo, .works .detail .detailright .linkFlex .github {
+.projects .detail .detailright .linkFlex .demo, .projects .detail .detailright .linkFlex .github {
   position: relative;
 }
-.works .detail .detailright .linkFlex .demo a svg, .works .detail .detailright .linkFlex .github a svg {
+.projects .detail .detailright .linkFlex .demo a svg, .projects .detail .detailright .linkFlex .github a svg {
   height: 30px;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 10px;
   display: block;
 }
-.works .detail .detailright .linkFlex .demo a svg path, .works .detail .detailright .linkFlex .github a svg path {
+.projects .detail .detailright .linkFlex .demo a svg path, .projects .detail .detailright .linkFlex .github a svg path {
   fill: black;
 }
-.works .detail .detailright .linkFlex .demo a:hover svg path, .works .detail .detailright .linkFlex .github a:hover svg path {
+.projects .detail .detailright .linkFlex .demo a:hover svg path, .projects .detail .detailright .linkFlex .github a:hover svg path {
   fill: #0000ac;
 }
-.works .detail .detailright .linkFlex .demo a:hover + span, .works .detail .detailright .linkFlex .github a:hover + span {
+.projects .detail .detailright .linkFlex .demo a:hover + span, .projects .detail .detailright .linkFlex .github a:hover + span {
   opacity: 1;
 }
-.works .detail .detailright .linkFlex .demo span, .works .detail .detailright .linkFlex .github span {
+.projects .detail .detailright .linkFlex .demo span, .projects .detail .detailright .linkFlex .github span {
   white-space: nowrap;
   position: absolute;
   top: -20px;
@@ -345,32 +345,32 @@ main h1 {
   opacity: 0;
   color: #0000ac;
 }
-.works .detail .detailright hr {
+.projects .detail .detailright hr {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-.works .detail .detailright .iconFlex {
+.projects .detail .detailright .iconFlex {
   display: flex;
   justify-content: center;
 }
-.works .detail .detailright .iconFlex svg {
+.projects .detail .detailright .iconFlex svg {
   width: 40px;
   margin: 0 10px;
   display: block;
 }
-.works .worksFlex {
+.projects .projectsFlex {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 50px auto;
 }
-.works .worksFlex .WFchild {
+.projects .projectsFlex .WFchild {
   margin: 30px 50px;
 }
-.works .worksFlex .WFchild div {
+.projects .projectsFlex .WFchild div {
   box-shadow: rgba(0, 0, 0, 0.6666666667) 3px 3px 10px;
 }
-.works .worksFlex .WFchild h3 {
+.projects .projectsFlex .WFchild h3 {
   width: -moz-fit-content;
   width: fit-content;
   margin: 10px auto 0;

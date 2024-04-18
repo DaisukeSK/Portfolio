@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
 import { Main, LinkDiv, Toggle } from '../../StyledComponents';
-import portfolio from '../../../../public/worksPics/portfolio.png';
-import ccc from '../../../../public/worksPics/ccc.png';
-import ecommerce from '../../../../public/worksPics/ecommerce.png';
-import satellite from '../../../../public/worksPics/satellite.png';
-import animation from '../../../../public/worksPics/animation.png';
-import memolis from '../../../../public/worksPics/memolis.png';
-import preparing from '../../../../public/worksPics/preparing.png';
-import dnn from '../../../../public/worksPics/dnn.png';
+import portfolio from '../../../../public/projectsPics/portfolio.png';
+import ccc from '../../../../public/projectsPics/ccc.png';
+import ecommerce from '../../../../public/projectsPics/ecommerce.png';
+import satellite from '../../../../public/projectsPics/satellite.png';
+import animation from '../../../../public/projectsPics/animation.png';
+import memolis from '../../../../public/projectsPics/memolis.png';
+import preparing from '../../../../public/projectsPics/preparing.png';
+import dnn from '../../../../public/projectsPics/dnn.png';
 import { Selected } from '../../../App';
-import js from './works.json';
-import WorkDetail from './WorkDetail';
+import js from './projects.json';
+import ProjectDetail from './ProjectDetail';
 
 type Props = {
     selected:Selected
@@ -27,11 +27,11 @@ type JsonType={
 
 export type showDetailType={title:string,description:string,url:Array<string>,languages:Array<string>}
 
-function Works({selected}:Props) {
+function Projects({selected}:Props) {
     const [showDetail, setShowDetail] = useState<showDetailType>({title:'',description:'',url:[],languages:[]})
     const [teamP, setTeamP] = useState<boolean>(false);
 
-    const worksObj:JsonType = {...js}
+    const projectsObj:JsonType = {...js}
     const imagePaths:{[key:string]:string} = {
         'memolis':memolis,
         'Color Code Converter':ccc,
@@ -51,12 +51,12 @@ function Works({selected}:Props) {
     return (
 
         <Main
-            className='works'
+            className='projects'
             show={selected.current==2?1:0}
             direction={selected.current-selected.prev<0?1:0}
             selected={selected.current}
         >
-            <Toggle teamP={teamP}>
+            <Toggle teamp={teamP}>
                 <svg width="15" height="10">
                     <path d="m0,0 15,5 -15,5" fill='#ffffff'/>
                 </svg>
@@ -65,15 +65,15 @@ function Works({selected}:Props) {
             </Toggle>
 
             {showDetail.title &&
-                <WorkDetail showDetail={showDetail} setShowDetail={setShowDetail}/>
+                <ProjectDetail showDetail={showDetail} setShowDetail={setShowDetail}/>
             }
 
-            <div className='worksFlex'>
-                {Object.keys(worksObj).map((val:string, key:number)=>{
-                    return (worksObj[val]['team']==teamP &&
+            <div className='projectsFlex'>
+                {Object.keys(projectsObj).map((val:string, key:number)=>{
+                    return (projectsObj[val]['team']==teamP &&
                         <div key={key} className='WFchild'>
                             
-                            <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val,description:worksObj[val]['description'],url:[...worksObj[val]['url']],languages:[...worksObj[val]['languages']]})}/>
+                            <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val,description:projectsObj[val]['description'],url:[...projectsObj[val]['url']],languages:[...projectsObj[val]['languages']]})}/>
                             <h3>{[val]}</h3>
 
                         </div>
@@ -85,4 +85,4 @@ function Works({selected}:Props) {
     )
 };
 
-export default Works;
+export default Projects;

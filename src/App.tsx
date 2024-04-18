@@ -3,7 +3,7 @@ import Header from './components/Header.tsx';
 import About from './components/page/About.tsx';
 import Contact from './components/page/Contact.tsx';
 import Home from './components/page/Home/Home.tsx';
-import Works from './components/page/Works/Works.tsx';
+import Projects from './components/page/Projects/Projects.tsx';
 import Inquiry from './components/page/Inquiry.tsx';
 import ComingSoon from './components/page/ComingSoon.tsx';
 
@@ -35,7 +35,7 @@ function App() {
                     <About selected={selected}></About>
                     <Contact selected={selected}></Contact>
                     <Home selected={selected}></Home>
-                    <Works selected={selected}></Works>
+                    <Projects selected={selected}></Projects>
                 </>
             }
         </AppContext.Provider>

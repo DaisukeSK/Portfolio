@@ -15,7 +15,7 @@ function Animation() {
     let insert1:Array<JSX.Element>=[]
     for(let i:number=0;i<13;i++){
         insert1.push(
-            <rect x={i*10} y='0' width='10' height='240'>
+            <rect x={i*10} y='0' width='10' height='240' key={i}>
             <animate attributeName="width" values="10;0" dur=".5s" fill='freeze' begin={`${12+i*0.1}s`} repeatCount="1"/>
             </rect>
         )
@@ -24,7 +24,7 @@ function Animation() {
     let insert2:Array<JSX.Element>=[]
     for(let i:number=0;i<24;i++){
         insert2.push(
-            <rect x='150' y={i*10} width='130' height='10'>
+            <rect x='150' y={i*10} width='130' height='10' key={i}>
             <animate attributeName="height" values="10;0" dur=".5s" fill='freeze' begin={`${12+i*0.05}s`} repeatCount="1"/>
             </rect>
         )
@@ -33,7 +33,7 @@ function Animation() {
     let insert3:Array<JSX.Element>=[]
     for(let i:number=0;i<13;i++){
         insert3.push(
-            <rect x={420-i*10} y='0' width='10' height='240'>
+            <rect x={420-i*10} y='0' width='10' height='240' key={i}>
             <animate attributeName="width" values="10;0" dur=".5s" fill='freeze' begin={`${12+i*0.1}s`} repeatCount="1"/>
             </rect>
         )
@@ -42,7 +42,7 @@ function Animation() {
     let insert4=[]
     for(let i=0; i<6; i++){
         insert4.push(
-            <text y='170' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='#ffffff' fontFamily='arial' fontSize='65' fontWeight='900' fontStyle='italic'>
+            <text y='170' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='#ffffff' fontFamily='arial' fontSize='65' fontWeight='900' fontStyle='italic' key={i}>
                 <animate attributeName='x' values='20%;50%' fill='freeze' calcMode="spline" keySplines='0 .5 .5 1' begin={`${17+i*0.1}s`} dur='1.5s' repeatCount="1"/>
                 <animate attributeName='opacity' values='0;1' begin={`${17+i*0.1}s`} dur='3s' repeatCount="1"/>
                 Vancouver
@@ -53,7 +53,7 @@ function Animation() {
     let insert5=[]
     for(let i=0; i<6; i++){
         insert5.push(
-            <text y='170' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='#ffffff' fontFamily='arial' fontSize='65' fontWeight='900' fontStyle='italic'>
+            <text y='170' opacity='0' dominantBaseline="middle" textAnchor="middle" fill='#ffffff' fontFamily='arial' fontSize='65' fontWeight='900' fontStyle='italic' key={i}>
                 <animate attributeName='x' values='80%;50%' fill='freeze' calcMode="spline" keySplines='0 .5 .5 1' begin={`${17+i*0.1}s`} dur='1.5s' repeatCount="1"/>
                 <animate attributeName='opacity' values='0;1' begin={`${17+i*0.1}s`} dur='3s' repeatCount="1"/>
                 Vancouver
@@ -158,9 +158,9 @@ function Animation() {
                 </G1>
 
                 <G2 anime={animeState}>
-                    <rect className='g2_rect1' x='0' y='0' width='130' height='100%' fill='url(#g2_1)' clip-path='url(#g2_clip1)'/>
-                    <rect className='g2_rect2' x='150' y='0' width='130' height='100%' fill='url(#g2_2)' clip-path='url(#g2_clip2)'/>
-                    <rect className='g2_rect3' x='300' y='0' width='130' height='100%' fill='url(#g2_3)' clip-path='url(#g2_clip3)'/>
+                    <rect className='g2_rect1' x='0' y='0' width='130' height='100%' fill='url(#g2_1)' clipPath='url(#g2_clip1)'/>
+                    <rect className='g2_rect2' x='150' y='0' width='130' height='100%' fill='url(#g2_2)' clipPath='url(#g2_clip2)'/>
+                    <rect className='g2_rect3' x='300' y='0' width='130' height='100%' fill='url(#g2_3)' clipPath='url(#g2_clip3)'/>
                 </G2>
 
                 <G3 anime={animeState}>
@@ -181,7 +181,7 @@ function Animation() {
                         Vancouver
                     </text>
 
-                    <rect x='0' y='0' width='100%' height='200px' fill='url(#g3_1)' clip-path='url(#g3_clip)'/>
+                    <rect x='0' y='0' width='100%' height='200px' fill='url(#g3_1)' clipPath='url(#g3_clip)'/>
                     
                     {insert4}{insert5}
                 </G3>

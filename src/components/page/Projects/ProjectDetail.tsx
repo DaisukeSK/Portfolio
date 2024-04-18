@@ -9,17 +9,17 @@ import NodeJS2 from '../../icons/NodeJS2';
 import PostgreSQL from '../../icons/PostgreSQL';
 import Github from '../../icons/Github';
 import Laptop from '../../icons/Laptop';
-import portfolio from '../../../../public/worksPics/portfolio.png';
-import ccc from '../../../../public/videos/Color Code Converter.mp4'
-import ecommerce from '../../../../public/videos/Fake Shop.mp4'
-import satellite from '../../../../public/videos/Satellite Launch simulation.mp4'
-import animation from '../../../../public/videos/SVG Animation Gallery.mp4'
-import memolis from '../../../../public/videos/memolis.mp4'
-import dnn from '../../../../public/videos/DNN.mp4'
+import portfolio from '../../../../public/projectsPics/portfolio.png';
+import ccc from '../../../../public/projectsVideos/Color Code Converter.mp4'
+import ecommerce from '../../../../public/projectsVideos/Fake Shop.mp4'
+import satellite from '../../../../public/projectsVideos/Satellite Launch simulation.mp4'
+import animation from '../../../../public/projectsVideos/SVG Animation Gallery.mp4'
+import memolis from '../../../../public/projectsVideos/memolis.mp4'
+import dnn from '../../../../public/projectsVideos/DNN.mp4'
 
-import { showDetailType } from './Works';
+import { showDetailType } from './Projects';
 
-function WorkDetail(props:{
+function ProjectDetail(props:{
     showDetail: showDetailType,
     setShowDetail: React.Dispatch<React.SetStateAction<showDetailType>>
     }) {
@@ -106,4 +106,4 @@ function WorkDetail(props:{
     )
 };
 
-export default WorkDetail;
+export default ProjectDetail;
