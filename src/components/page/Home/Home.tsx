@@ -6,7 +6,7 @@ import { AppContext } from '../../../App';
 import { useContext } from 'react';
 import p1 from '../../../../public/test2-5.png'
 // import codingVideo from '../../../../public/codingClip.mp4'
-import { useState } from 'react';
+// import { useState } from 'react';
 
 // type Props = {
 //     selected:Selected
@@ -15,7 +15,7 @@ import { useState } from 'react';
 function Home() {
 
     const { selected } = useContext(AppContext)
-    const [ BG, setBG ] = useState<number>(1)
+    // const [ BG, setBG ] = useState<number>(1)
 
     return (
         
@@ -30,15 +30,14 @@ function Home() {
                 <rect x="100" y='100' width='200' height='50' fill='#ffffff1E' filter='blur(2px)'></rect>
             </svg> */}
 
-            {BG==2 &&
+            {/* {BG==2 &&
                 <div className='BG2'>
                     <video width='100%' autoPlay loop muted>
-                        {/* <source src={codingVideo} type='video/mp4'/> */}
+                        <source src={codingVideo} type='video/mp4'/>
                         <p>Your browser not supporting video</p>
                     </video>
-                    {/* <div className='BG2Div' style={{position:'absolute', top:0,left:0,width:'100%',height:'100vh', backgroundColor:BG==2?'#00000077':'#000000', transition:'all 3s ease-out'}}></div> */}
                 </div>
-            }
+            } */}
 
 
             <div className='left'>

@@ -1,18 +1,18 @@
 import { Main } from '../StyledComponents';
-import path from "../../../public/me4-5.png";
-import JS from '../icons/JS';
-import TS from '../icons/TS';
-import HTML from '../icons/HTML';
-import CSS from '../icons/CSS';
-import Jquery from '../icons/Jquery';
-import React from '../icons/React';
-import MySQL from '../icons/MySQL';
-import PHP from '../icons/PHP';
-import NodeJS from '../icons/NodeJS';
-import PostgreSQL from '../icons/PostgreSQL';
-import Fortran from '../icons/Fortran';
+// import path from "../../../public/me4-5.png";
+// import JS from '../icons/JS';
+// import TS from '../icons/TS';
+// import HTML from '../icons/HTML';
+// import CSS from '../icons/CSS';
+// import Jquery from '../icons/Jquery';
+// import React from '../icons/React';
+// import MySQL from '../icons/MySQL';
+// import PHP from '../icons/PHP';
+// import NodeJS from '../icons/NodeJS';
+// import PostgreSQL from '../icons/PostgreSQL';
+// import Fortran from '../icons/Fortran';
 import { AppContext } from '../../App';
-import { useContext, useState, Fragment } from 'react';
+import { useContext } from 'react';
 import IconFlex from './IconFlex'
 
 // type Props = {
@@ -23,14 +23,14 @@ function About() {
 
     const { selected } = useContext(AppContext)
 
-    const [show, setShow]=useState<number>(NaN)
+    // const [show, setShow]=useState<number>(NaN)
 
-    const style = {
-        border: '#00000000 3px solid',
-        ':hover': {
-            border: '#f060a0 3px solid'
-        }
-      };
+    // const style = {
+    //     border: '#00000000 3px solid',
+    //     ':hover': {
+    //         border: '#f060a0 3px solid'
+    //     }
+    //   };
 
     return (
 
