@@ -3,8 +3,10 @@ import { css,keyframes } from "styled-components";
 
 const timingFunc='cubic-bezier(0,1,.7,1)';
 
-const color_01='#4455CF'
-const color_02='#020B4E'
+// const color_01='#4455CF'
+// const color_02='#020B4E'
+const color_01='#000037'
+const color_02='#000000'
 const color_11='#CED71C'
 const color_12='#FF4E13'
 const color_21='#85FF74'
@@ -35,7 +37,7 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
     width: 100%;
     min-height: ${(props) =>props.selected==2? css`101vh`:css`100vh`};
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
-    padding-top: 60px;
+    padding-top: 45px;
     overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
     visibility: ${(props)=>props.show?css`visible`:css`hidden`};
     z-index: ${(props)=>props.show?css`1`:css`0`};
@@ -91,14 +93,16 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
     }
 `;
 
-export const UnderLine=Styled.div< { position: number,testprop:number, still:number} >`
-    position: relative;
-    height: 30px;
-    width: ${(props)=>(props.testprop/4)*0.6}px;
-    margin-left: ${(props)=>(props.testprop/4)*0.2}px;
+const headerNavWidth=450
+
+export const UnderLine=Styled.div< { position: number, still:number} >`
+    height: 25px;
+    // outline: 1px solid grey;
+    width: ${headerNavWidth/4*0.7}px;
+    margin-left: ${headerNavWidth/4*0.15}px;
     border-bottom: 2px solid #ffffff;
     position: absolute;
-    bottom: -5px;
+    bottom: -2px;
     left: ${(props)=>
         props.position==0?css`0`:
         props.position==1?css`25%`:
@@ -115,24 +119,26 @@ export const UnderLine=Styled.div< { position: number,testprop:number, still:num
         left: 0;
         content: '';
         background: ${(props)=>
-            props.position==0?css`linear-gradient(transparent, ${color_01}77)`:
+            props.position==0?css`linear-gradient(transparent, ${'#ffffff'}33)`:
             props.position==1?css`linear-gradient(transparent, ${color_11}77)`:
             props.position==2?css`linear-gradient(transparent, ${color_22}77)`:
             `linear-gradient(transparent, ${color_31}77)`
         };
         opacity: ${(props)=>props.still?css`1`:css`0`};
-        transition: ${(props)=>props.still?css`all 2s ease-in-out`:css`all 0s`};
+        transition: all ${(props)=>props.still?`2s`:`0s`} ease-in-out;
         z-index: -1;
     }
 `;
 
-export const HeaderRightChild=Styled.div<{disabled:number}>`
+export const NavChild=Styled.div<{disabled:number}>`
     pointer-events: ${(props)=>props.disabled?css`none`:css`auto`};
-    width: 100px;
+    width: 90px;
     text-align: center;
     border-radius: 7px;
-    padding: 5px;
+    padding: 2px;
     box-sizing: border-box;
+    cursor: pointer;
+    // outline: 1px solid green;
     &:hover {
         background-color: rgba(255, 255, 255, 0.4);
         transition: all ease-out 1s;
@@ -183,61 +189,29 @@ export const LinkDiv=Styled.div<{bg:string}>`
 export const AnimationDiv=Styled.div<{anime:number}>`
     margin: 50px auto 0;
     width: 430px;
-    height: ${(props)=>props.anime<30?css`240px`:css`0`};
+    height: ${(props)=>props.anime<16?css`240px`:css`0`};
     transition: all 3s ease-in-out;
     svg {
         overflow: visible;
     }
 `;
 
-export const G1=Styled.g<{anime:number}>`
-    opacity:${(props)=>(props.anime>=1 && props.anime<6)?1:0};
-    transition:all .5s ease-in-out;
-    path {
-        transition:all .5s ease-in-out;
-    }
-    .g1_path1 {
-        opacity:${(props)=>props.anime>=1?1:0};
-    }
-    .g1_path2 {
-        opacity:${(props)=>props.anime>=2?1:0};
-    }
-    .g1_path3 {
-        opacity:${(props)=>props.anime>=3?1:0};
-    }
-`;
-
-export const G2=Styled.g<{anime:number}>`
-
-    opacity:${(props)=>(props.anime>=8 && props.anime<14)?1:0};
-    
-    .g2_rect1 {
-        opacity:${(props)=>props.anime>=8?1:0};
-    }
-    .g2_rect2 {
-        opacity:${(props)=>props.anime>=10?1:0};
-    }
-    .g2_rect3 {
-        opacity:${(props)=>props.anime>=9?1:0};
-    }
-`;
-
 export const G3=Styled.g<{anime:number}>`
-    opacity:${(props)=>props.anime<34?1:0};
+    opacity:${(props)=>props.anime<20?1:0};
     transition:all .5s ease-in-out;
     .g3_text1, .g3_text2 {
         transition:all .5s ease-in-out;
     }
 
     .g3_text1 {
-        opacity:${(props)=>(props.anime>=15 && props.anime<27.5)?1:0}
+        opacity:${(props)=>(props.anime>=1 && props.anime<13.5)?1:0}
     }
     .g3_text2 {
-        opacity:${(props)=>(props.anime>=16 && props.anime<28.5)?1:0}
+        opacity:${(props)=>(props.anime>=2 && props.anime<14.5)?1:0}
     }
 
     .g3_text3 {
-        fill:${(props)=>props.anime>=24?css`red`:css`white`}
+        fill:${(props)=>props.anime>=10?css`red`:css`white`}
     }
 `;
 

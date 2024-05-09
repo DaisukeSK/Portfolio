@@ -12,7 +12,27 @@ export type Selected={
     current:number
 };
 
-export const AppContext=createContext({selected:{prev:0, current:0}})
+type Context = {
+    selected: {prev:number, current:number},
+    setSelected: React.Dispatch<React.SetStateAction<Selected>>
+}
+
+export const AppContext=createContext<Context>({} as Context)
+
+// export const AppContext= createContext<Context>({} as Context)
+
+// export type Context = {
+//     ColorCodes:CCs,
+//     dispatch:(cc:actionType)=>void,
+//     textColor:boolean,
+//     rangeBG:rangeBGType,
+//     builtInColor:Array<string | null>,
+//     output:outputType,
+//     aside:boolean,
+//     pointerPosition:ppType,
+//     setAside:(aside:boolean)=>void,
+//     setPointerPosition:(pp:ppType)=>void
+// }
 
 function App() {
     const [selected, setSelected] = useState<Selected>({prev:0, current:0});
@@ -25,17 +45,17 @@ function App() {
     },[]);
 
     return (
-        <AppContext.Provider value={{selected}}>
+        <AppContext.Provider value={{selected, setSelected}}>
             {preparing && <ComingSoon/>}
             {inquiry && <Inquiry/>}
 
             {(!inquiry && !preparing) &&
                 <>
-                    <Header selected={selected} setSelected={setSelected}></Header>
-                    <About selected={selected}></About>
-                    <Contact selected={selected}></Contact>
-                    <Home selected={selected}></Home>
-                    <Projects selected={selected}></Projects>
+                    <Header/>
+                    <Home/>
+                    <About/>
+                    <Projects/>
+                    <Contact/>
                 </>
             }
         </AppContext.Provider>

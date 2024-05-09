@@ -5,7 +5,7 @@ import Jquery from '../../icons/Jquery';
 import React from '../../icons/React';
 import MySQL from '../../icons/MySQL';
 import PHP from '../../icons/PHP';
-import NodeJS2 from '../../icons/NodeJS2';
+import NodeJS from '../../icons/NodeJS';
 import PostgreSQL from '../../icons/PostgreSQL';
 import Github from '../../icons/Github';
 import Laptop from '../../icons/Laptop';
@@ -32,7 +32,7 @@ function ProjectDetail(props:{
         'MySQL':<MySQL/>,
         'PHP':<PHP/>,
         'PostgreSQL':<PostgreSQL strokeColor={'#000000'}/>,
-        'NodeJs':<NodeJS2/>
+        'NodeJs':<NodeJS/>
     }
 
     const videoPaths:{[key:string]:string} = {
@@ -46,9 +46,9 @@ function ProjectDetail(props:{
 
     return (
         <>
-            <div className="blurBG" onClick={()=>props.setShowDetail({title:'',description:'',url:[],languages:[]})}></div>
+            <div className="blurBG" onClick={()=>props.setShowDetail({title:'',description:[],url:[],languages:[],features:[]})}></div>
             <div className='detail'>
-                <div className='x' onClick={()=>props.setShowDetail({title:'',description:'',url:[],languages:[]})}>
+                <div className='x' onClick={()=>props.setShowDetail({title:'',description:[],url:[],languages:[],features:[]})}>
                     <svg width='20' height='20'>
                         <rect x='0' y='0' width='20' height='20' rx='5' ry='5'/>
                         <path d='m5,5 l10,10'/>
@@ -82,14 +82,21 @@ function ProjectDetail(props:{
 
                         <div className='github'>
                             <a href={props.showDetail.url[1]} target='_blank'>
-                                <Github/>
+                                <Github where='projectDetail'/>
                             </a>
                             <span>Github</span>
                         </div>
 
                     </div>
                     
-                    <p>{props.showDetail.description}</p>
+                    <p className='descriptionP'>
+                        {props.showDetail.description.map((desc:string,key:number)=>{
+                            return <span style={{
+                                textAlign:desc=='username: guest'||desc=='password: 1234'?'center':'left',
+                                textDecoration:desc=='username: guest'||desc=='password: 1234'?'underline':'none'
+                            }} key={key}>{desc}</span>
+                        })}
+                    </p>
                     
                     <hr/>
 
@@ -98,6 +105,12 @@ function ProjectDetail(props:{
                             return <Fragment key={key}>{languageObj[lang]}</Fragment>
                         })}
                     </div>
+
+                    {/* <div className='featureFlex'>
+                        {props.showDetail.features.map((feature:string, key:number)=>{
+                            return <div key={key}>{feature}</div>
+                        })}
+                    </div> */}
 
                 </div>
 

@@ -1,19 +1,21 @@
-import { useState } from 'react';
-import { UnderLine, HeaderRightChild } from './StyledComponents';
-import { Selected } from '../App';
+import { useContext, useState } from 'react';
+import { UnderLine, NavChild } from './StyledComponents';
+import { AppContext } from '../App';
 
-type Props={
-    selected:Selected,
-    setSelected:(state:Selected)=>void
-};
+// type Props={
+//     selected:Selected,
+//     setSelected:(state:Selected)=>void
+// };
 
-const setWidth=():number=>{
-    return window.innerWidth*0.48>=600? 600:window.innerWidth*0.48;
-};
+// const setWidth=():number=>{
+//     return window.innerWidth*0.48>=600? 600:window.innerWidth*0.48;
+// };
 
-function Header({selected,setSelected}:Props) {
+function Header() {
 
-    const [width_headerRight, setWidth_headerRight] = useState(setWidth());
+    const { selected,setSelected } = useContext(AppContext)
+
+    // const [width_headerRight, setWidth_headerRight] = useState(setWidth());
     const [still, setStill] = useState<boolean>(true);
     
     const ClickHandler=(event: React.MouseEvent<HTMLDivElement>): void=>{
@@ -34,21 +36,21 @@ function Header({selected,setSelected}:Props) {
         window.scrollTo(0, 0);
     };
 
-    window.onresize=()=>{
-        setWidth_headerRight(setWidth());
-    };
+    // window.onresize=()=>{
+    //     setWidth_headerRight(setWidth());
+    // };
 
     return (
         <header>
-            <div className='headerRight'>
-                <UnderLine still={still?1:0} position={selected.current} testprop={width_headerRight}></UnderLine>
-                <div className='headerRightFlex'>
-                    <HeaderRightChild disabled={selected.current==0?1:0} onClick={(e)=>ClickHandler(e)}>Home</HeaderRightChild>
-                    <HeaderRightChild disabled={selected.current==1?1:0} onClick={(e)=>ClickHandler(e)}>About</HeaderRightChild>
-                    <HeaderRightChild disabled={selected.current==2?1:0} onClick={(e)=>ClickHandler(e)}>Projects</HeaderRightChild>
-                    <HeaderRightChild disabled={selected.current==3?1:0} onClick={(e)=>ClickHandler(e)}>Contact</HeaderRightChild>
-                </div>
-            </div>
+            <nav>
+                <UnderLine still={still?1:0} position={selected.current}></UnderLine>
+                <NavChild disabled={selected.current==0?1:0} onClick={(e)=>ClickHandler(e)}>Home</NavChild>
+                <NavChild disabled={selected.current==1?1:0} onClick={(e)=>ClickHandler(e)}>About</NavChild>
+                <NavChild disabled={selected.current==2?1:0} onClick={(e)=>ClickHandler(e)}>Projects</NavChild>
+                <NavChild disabled={selected.current==3?1:0} onClick={(e)=>ClickHandler(e)}>Contact</NavChild>
+                {/* <div className='headerRightFlex'>
+                </div> */}
+            </nav>
         </header>
     )
 };

@@ -13,29 +13,21 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 60px;
+  height: 45px;
   display: flex;
   justify-content: center;
-  padding: 10px 10%;
-  box-sizing: border-box;
   align-items: center;
+  box-sizing: border-box;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
 }
-header .headerRight {
-  width: 60%;
-  max-width: 600px;
+header nav {
+  width: 450px;
   position: relative;
-}
-header .headerRight .headerRightFlex {
-  width: 100%;
   display: flex;
   justify-content: space-around;
-}
-header .headerRight .headerRightFlex div {
-  cursor: pointer;
 }
 
 main h1 {
@@ -51,15 +43,53 @@ main h1 {
   margin: 0 auto;
   justify-content: space-evenly;
 }
+@keyframes showUp {
+  from {
+    background-color: #000000;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.4666666667);
+  }
+}
+.home .BG2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.home .BG2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation-name: showUp;
+  animation-fill-mode: both;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
 .home .left {
+  position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  height: 100%;
-  background: linear-gradient(135deg, white 50%, rgb(0, 89, 255) 50%, rgb(0, 89, 255));
+  height: 70%;
+  margin-top: 70px;
+  width: 300px;
+}
+.home .left svg {
+  position: absolute;
+  overflow: visible;
+  left: 0;
+  bottom: 0;
 }
 .home .left img {
-  height: 100%;
-  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
 }
 .home .right {
   text-align: center;
@@ -68,7 +98,15 @@ main h1 {
   flex-direction: column;
   justify-content: center;
 }
+.home .right h1 {
+  font-size: 3.7rem;
+}
+.home .right h2 {
+  font-size: 2.3rem;
+  text-shadow: rgba(255, 255, 255, 0.5333333333) 2px 2px 5px;
+}
 .home .right h2, .home .right p {
+  color: rgba(255, 255, 255, 0.5921568627);
   margin: 0;
 }
 .home .right h2 {
@@ -82,6 +120,33 @@ main h1 {
 .home .right .animationDiv svg {
   overflow: visible;
 }
+.home .right .buttonContainer button {
+  position: relative;
+  bottom: 0;
+  height: 25px;
+  width: 35px;
+  margin: 20px;
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.home .right .buttonContainer button:hover {
+  bottom: 3px;
+}
+.home .right .buttonContainer .button1 {
+  background: linear-gradient(#000055, #00001f);
+  box-shadow: rgba(0, 0, 255, 0.5019607843) 0 0 10px;
+}
+.home .right .buttonContainer .button2 {
+  background: url("../public/buttonBg1.png");
+  background-size: 200%;
+  box-shadow: rgba(66, 255, 66, 0.7137254902) 0 0 10px;
+}
+.home .right .buttonContainer .button3 {
+  background-color: #750000;
+  box-shadow: rgba(252, 63, 30, 0.5960784314) 0 0 10px;
+}
 
 .about {
   display: flex;
@@ -90,85 +155,116 @@ main h1 {
   justify-content: space-evenly;
   padding-bottom: 50px;
 }
-.about h3 {
-  margin: 0;
+.about .introduction {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  width: 95%;
+  box-sizing: border-box;
+}
+.about .introduction p {
+  width: 95%;
+  margin: 0 auto;
+}
+.about .introduction h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: rgba(243, 109, 0, 0.726);
   width: -moz-fit-content;
   width: fit-content;
-  padding: 3px 17px;
-  border-radius: 5px 5px 0 0;
-  background-color: rgba(240, 248, 255, 0.3);
+  padding: 2px 20px;
 }
-.about .aboutLeft {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.about .aboutLeft img {
-  width: 50%;
-  display: block;
+.about .introduction .skills {
   margin: 0 auto;
-  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.about .aboutLeft .leftDiv .iconFlex {
+.about .introduction .skills h3 {
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+.about .introduction .skills .skillsFlex {
   display: flex;
   flex-wrap: wrap;
 }
-.about .aboutLeft .leftDiv .iconFlex svg {
+.about .introduction .skills .skillsFlex .iconContainer {
+  position: relative;
+  margin: 15px 0;
+}
+.about .introduction .skills .skillsFlex .iconContainer .iconName {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.8rem;
+}
+.about .introduction .skills .skillsFlex .iconContainer svg {
   width: 50px;
-  margin: 5px 15px;
+  margin: 15px 15px 0;
 }
-.about .aboutRight {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.about .aboutRight .rightDiv h4 {
-  margin: 5px 0;
-  text-decoration: underline;
-}
-.about .aboutRight .rightDiv .expDiv {
-  margin-bottom: 20px;
-}
-.about .aboutRight .rightDiv .expDiv > ul {
-  padding: 0;
-  list-style: none;
-}
-.about .aboutRight .rightDiv .expDiv > ul > li {
-  margin-bottom: 10px;
-  padding: 10px 0;
-  background-color: rgba(240, 248, 255, 0.3);
-  outline: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 7px;
-}
-.about .aboutRight .rightDiv .expDiv > ul > li .title, .about .aboutRight .rightDiv .expDiv > ul > li .period, .about .aboutRight .rightDiv .expDiv > ul > li .place {
-  text-align: center;
-}
-.about .aboutRight .rightDiv .expDiv > ul > li .title {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-shadow: rgba(0, 0, 0, 0.3333333333) 2px 2px 2px;
-}
-.about .aboutRight .rightDiv .expDiv > ul > li .period {
-  margin-bottom: 10px;
-}
-.about .aboutRight .rightDiv .expDiv > ul > li .place {
-  color: rgb(93, 144, 192);
-}
-.about .expDiv, .about .iconContainer, .about .setBG, .about .introduction {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: rgba(115, 31, 0, 0.67) 3px 3px 10px;
-  padding: 15px;
-  outline: 1px solid rgba(255, 255, 255, 0.7);
+.about .introduction .skills .skillsFlex .iconFlex {
+  position: relative;
+  border: rgba(255, 255, 255, 0) 2px solid;
+  border-collapse: collapse;
   border-radius: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 5px;
+  transition: all 0.3s ease-in-out;
 }
-
+.about .introduction .skills .skillsFlex .iconFlex .title {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 7px;
+  white-space: nowrap;
+  background-color: #ffffff;
+  color: #000000;
+  opacity: 0;
+  transition: inherit;
+  border-radius: inherit;
+}
+.about .introduction .skills .skillsFlex .iconFlex:hover {
+  border: rgba(255, 255, 255, 0.6666666667) 2px solid;
+}
+.about .introduction .skills .skillsFlex .iconFlex:hover .title {
+  opacity: 1;
+}
+.about .introduction .experienceDiv {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.about .introduction .experienceDiv .title {
+  background-color: rgba(255, 255, 255, 0.8666666667);
+  border-radius: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 10px;
+  color: #000000;
+}
+.about .introduction .experienceDiv .place {
+  color: rgba(255, 255, 255, 0.8);
+}
+.about .introduction .experienceDiv ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 20px;
+}
+.about .introduction .experienceDiv ul li {
+  margin-bottom: 10px;
+}
 .contact {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.contact h1 {
+  font-size: 3.2rem;
+  text-shadow: rgba(255, 255, 255, 0.6588235294) 2px 2px 5px;
 }
 .contact p {
   text-align: center;
@@ -188,20 +284,32 @@ main h1 {
 .contact .contactFlex .contactFlexLeft {
   width: 25%;
   margin-right: 7%;
+  margin-top: -30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .contact .contactFlex .contactFlexLeft a {
   margin: 0 30px;
+  text-decoration: none;
+}
+.contact .contactFlex .contactFlexLeft a:hover div {
+  color: #ffffff;
+}
+.contact .contactFlex .contactFlexLeft a:hover svg {
+  fill: #ffffff;
+}
+.contact .contactFlex .contactFlexLeft a div, .contact .contactFlex .contactFlexLeft a svg {
+  transition: all 0.3s ease-in-out;
+}
+.contact .contactFlex .contactFlexLeft a div {
+  color: rgba(255, 255, 255, 0.6666666667);
+  text-align: center;
+  margin-bottom: 10px;
 }
 .contact .contactFlex .contactFlexLeft a svg {
   fill: rgba(255, 255, 255, 0.4509803922);
-  transition: all 0.3s ease-in-out;
   display: block;
-}
-.contact .contactFlex .contactFlexLeft a svg:hover {
-  fill: #ffffff;
 }
 .contact .contactFlex .contactFlexRight {
   width: 40%;
@@ -222,10 +330,13 @@ main h1 {
 .contact .contactFlex .contactFlexRight form .formFlex input, .contact .contactFlex .contactFlexRight form .formFlex textarea {
   margin-bottom: 15px;
   font-family: Helvetica, Arial, "Times New Roman", serif;
-  border-radius: 3px;
   min-height: 18px;
-  background-color: rgba(255, 255, 255, 0.7058823529);
+  background-color: rgba(255, 255, 255, 0.7333333333);
+  background-color: transparent;
   border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7333333333);
+  color: rgba(255, 255, 255, 0.7333333333);
+  font-size: 1rem;
 }
 .contact .contactFlex .contactFlexRight form .formFlex input:focus, .contact .contactFlex .contactFlexRight form .formFlex textarea:focus {
   outline: none;
@@ -235,7 +346,7 @@ main h1 {
   margin: 15px auto;
   padding: 5px 15px;
   border: none;
-  border-radius: 7px;
+  border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.4235294118);
   color: #ffffff;
   cursor: pointer;
@@ -345,6 +456,9 @@ main h1 {
   opacity: 0;
   color: #0000ac;
 }
+.projects .detail .detailright .descriptionP span {
+  display: block;
+}
 .projects .detail .detailright hr {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -357,6 +471,18 @@ main h1 {
   width: 40px;
   margin: 0 10px;
   display: block;
+}
+.projects .detail .detailright .featureFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.projects .detail .detailright .featureFlex div {
+  background-color: cadetblue;
+  padding: 0 10px;
+  margin: 5px;
+  color: #ffffff;
 }
 .projects .projectsFlex {
   display: flex;

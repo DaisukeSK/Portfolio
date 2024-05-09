@@ -1,9 +1,6 @@
 function PHP() {
     return (
-        <svg
-            viewBox="0 0 128 128"
-            className="icon_PHP"
-        >
+        <svg viewBox="0 0 128 128">
             <defs>
                 <path id="php-original-a" d="M64.026 96.076c33.676 0 60.976-14.361 60.976-32.076s-27.3-32.075-60.976-32.075S3.051 46.285 3.051 64s27.3 32.076 60.975 32.076"/>
             </defs>

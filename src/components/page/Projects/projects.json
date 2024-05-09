@@ -4,8 +4,13 @@
             "https://memolis.000webhostapp.com/login/login.php",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
-        "description":"WordBook app. You can create your own account, and add pairs of a term and definition that you want to memorize.",
+        "description":[
+            "A word-Book app.",
+            "You can register pairs of a term and definition that you want to memorize. They will be saved in database.",
+            "You can refer or edit them anytime."
+        ],
         "languages":["JS","Jquery","PHP","MySQL"],
+        "features":[],
         "team":false
     },
 
@@ -14,8 +19,14 @@
             "https://color-code-converter.vercel.app/",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
-        "description":"It provides multiple kinds of color codes of any color that you want. You can pick up any color from color space or color bars.",
+        "description":[
+            "It provides you multiple kinds of color codes of any color.",
+            "(HSL, HSV, Hexa, RGB and CYMK)",
+            "You can pick up any color from color space, input bars or input field of Hexa color, and it gives you color codes of the picked color.",
+            "You can also copy those color codes, change opacity and pick up built-in colors from the humburger menu on the top left."
+        ],
         "languages":["TS","React"],
+        "features":[],
         "team":false
     },
 
@@ -24,8 +35,14 @@
             "https://e-commerce-u5ft.vercel.app/",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
-        "description":"E-commerce app which has basic fanctionalities such as creating account, adding to cart, adding to favorite, purchase, and refering shopping history.",
+        "description":[
+            "A sample e-commerce app which has basic fanctionalities of EC websites such as creating account, searching products, adding to cart, adding to favorite, purchase, and refering shopping history.",
+            "If you don't feel like creating your own user account, please use the below shared account.",
+            "username: guest",
+            "password: 1234"
+        ],
         "languages":["TS","React","NodeJs","PostgreSQL"],
+        "features":[],
         "team":false
     },
 
@@ -34,8 +51,12 @@
             "https://satellite-launch-simulation.vercel.app/",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
-        "description":"A numerical simulation of a satellite's behavior going around the planet, created based on a formula for gravity. You can try it in various situations.",
+        "description":[
+            "A numerical simulation of an artificial satellite's behavior, created based on a formula for gravity.",
+            "This simulation is to simulate how the satellite goes around the planet depending on parameters you set."
+        ],
         "languages":["JS","Jquery"],
+        "features":[],
         "team":false
     },
 
@@ -44,8 +65,12 @@
             "https://svg-animation-gallery.vercel.app/",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
-        "description":"You can enjoy many mouse-interactive SVG animations. They are all made with only Vanilla JavaScript.",
+        "description":[
+            "This gallery is to show mouse-interactive SVG animations that I have made.",
+            "They are all made only with plain JavaScript."
+        ],
         "languages":["JS"],
+        "features":[],
         "team":false
     },
 
@@ -54,8 +79,12 @@
             "https://dnn-2024.vercel.app/",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
-        "description":"API application for news feed. You can select news from various categories, and search by keywords too.",
+        "description":[
+            "A news feed application using API.",
+            "You can browse news from multiple categories, and search news by keywords, category, date and language."
+        ],
         "languages":["TS","React"],
+        "features":[],
         "team":false
     },
 
@@ -64,8 +93,9 @@
             "",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
-        "description":"Portfolio you are browsing right now. Thank you for visiting my portfolio, have fun, I hope you like it.",
+        "description":["Portfolio you are browsing right now. Thank you for visiting my portfolio, have fun, I hope you like it."],
         "languages":["TS","React","PHP","MySQL"],
+        "features":[],
         "team":false
     },
     
@@ -74,8 +104,9 @@
             "",
             "https://portfolio-daisuke.vercel.app?preparing"
         ],
-        "description":"Preparing...",
+        "description":["Preparing..."],
         "languages":["TS","React","PHP","MySQL","Jquery"],
+        "features":[],
         "team":true
     }
 }
