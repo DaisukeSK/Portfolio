@@ -5,7 +5,7 @@ import { AppContext } from '../../../App';
 // import Animation from './Animation';
 import { useContext } from 'react';
 import p1 from '../../../../public/test2-5.png'
-import codingVideo from '../../../../public/codingClip.mp4'
+// import codingVideo from '../../../../public/codingClip.mp4'
 import { useState } from 'react';
 
 // type Props = {
@@ -33,7 +33,7 @@ function Home() {
             {BG==2 &&
                 <div className='BG2'>
                     <video width='100%' autoPlay loop muted>
-                        <source src={codingVideo} type='video/mp4'/>
+                        {/* <source src={codingVideo} type='video/mp4'/> */}
                         <p>Your browser not supporting video</p>
                     </video>
                     {/* <div className='BG2Div' style={{position:'absolute', top:0,left:0,width:'100%',height:'100vh', backgroundColor:BG==2?'#00000077':'#000000', transition:'all 3s ease-out'}}></div> */}
@@ -102,11 +102,11 @@ function Home() {
                 <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
                 {/* {selected.current==0 && <Animation/>} */}
 
-                <div className='buttonContainer'>
+                {/* <div className='buttonContainer'>
                     <button className='button1' onClick={()=>setBG(1)}></button>
                     <button className='button2' onClick={()=>setBG(2)}></button>
                     <button className='button3' onClick={()=>setBG(3)}></button>
-                </div>
+                </div> */}
             </div>
 
         </Main>
