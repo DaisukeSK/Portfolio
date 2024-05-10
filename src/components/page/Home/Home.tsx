@@ -1,11 +1,12 @@
-import { Main } from '../../StyledComponents';
+import { Main, VideoDiv, BG_Button1, BG_Button2, BG_Button3 } from '../../StyledComponents';
 // import pathName from '../../../../public/me5-2-5.png';
 import pathName from '../../../../public/man2.png';
 import { AppContext } from '../../../App';
 // import Animation from './Animation';
 import { useContext } from 'react';
 import p1 from '../../../../public/test2-5.png'
-import codingVideo from '../../../../public/codingClip.mp4'
+import codingClip1 from '../../../../public/codingClip.mp4';
+import codingClip2 from '../../../../public/codingClip2.mp4'
 import { useState, useEffect } from 'react';
 
 // type Props = {
@@ -21,6 +22,11 @@ function Home() {
         setBG(1)
     },[selected])
 
+    const SVG=
+        <svg width='16' height='5'>
+            <path d='m0,5 h16 l-8,-5z' fill='#ffffff'/>
+        </svg>
+
     return (
         
         <Main
@@ -34,15 +40,23 @@ function Home() {
                 <rect x="100" y='100' width='200' height='50' fill='#ffffff1E' filter='blur(2px)'></rect>
             </svg> */}
 
-            {BG==2 &&
-                <div className='BG2'>
-                    <video width='100%' autoPlay loop muted>
-                        <source src={codingVideo} type='video/mp4'/>
-                        <p>Your browser not supporting video</p>
-                    </video>
-                </div>
+            {BG!==1 &&
+                <VideoDiv BG={BG}>
+                    {BG==2 &&
+                        <video width='100%' autoPlay loop muted>
+                            <source src={codingClip1} type='video/mp4'/>
+                            <p>Your browser not supporting video</p>
+                        </video>
+                    }
+                    {BG==3 &&
+                        <video width='100%' autoPlay loop muted>
+                            <source src={codingClip2} type='video/mp4'/>
+                            <p>Your browser not supporting video</p>
+                        </video>
+                    }
+                </VideoDiv>
             }
-
+            
 
             <div className='left'>
 
@@ -102,14 +116,23 @@ function Home() {
                 </svg>
                 {/* <h1>Hi, I'm Daisuke.</h1> */}
                 <h2>Full Stack Developer</h2>
-                <p>with enthusiasm and curiosity about exploring uknown and creating new things..</p>
+                <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
                 {/* {selected.current==0 && <Animation/>} */}
 
-                {/* <div className='buttonContainer'>
-                    <button className='button1' onClick={()=>setBG(1)}></button>
-                    <button className='button2' onClick={()=>setBG(2)}></button>
-                    <button className='button3' onClick={()=>setBG(3)}></button>
-                </div> */}
+                <div className='buttonContainer'>
+                    <div className='BGbuttonDiv'>
+                        <BG_Button1 BG={BG} onClick={()=>setBG(1)}/>
+                        {BG==1 && SVG}
+                    </div>
+                    <div className='BGbuttonDiv'>
+                        <BG_Button2 BG={BG} onClick={()=>setBG(2)}/>
+                        {BG==2 && SVG}
+                    </div>
+                    <div className='BGbuttonDiv'>
+                        <BG_Button3 BG={BG} onClick={()=>setBG(3)}/>
+                        {BG==3 && SVG}
+                    </div>
+                </div>
             </div>
 
         </Main>

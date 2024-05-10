@@ -55,34 +55,8 @@ main {
     width: fit-content;
     margin: 0 auto;
     justify-content: space-evenly;
-    @keyframes showUp {
-        from {
-            background-color: #000000;
-        }
-        to {
-            background-color: #00000077;
-        }
-    }
-    .BG2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: -1;
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            animation-name: showUp;
-            animation-fill-mode: both;
-            animation-duration: 10s;
-            animation-iteration-count: 1;
-        }
-    }
+    
+    
     // .BG2Div {
     //     animation-name: bb;
     //     animation-duration: 10s;
@@ -166,31 +140,18 @@ main {
             }
         }
         .buttonContainer {
-            // background-color: #ffffff38;
-            button {
-                position: relative;
-                bottom: 0;
-                height: 25px;
-                width: 35px;
+            // outline: 1px solid grey;
+            display: flex;
+            justify-content: center;
+            .BGbuttonDiv {
                 margin: 20px;
-                outline: 1px solid #ffffff33;
-                border-radius: 5px;
-                border: none;
-                transition: all .2s ease-in-out;
-                &:hover {
-                    bottom: 3px;
+                position: relative;
+                svg {
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
-            }
-            .button1 {
-                background: linear-gradient(#000055,#00001f);
-                box-shadow: #0000ff80 0 0 10px;
-            }.button2 {
-                background: url('../public/buttonBg1.png');
-                background-size: 200%;
-                box-shadow: #42ff42b6 0 0 10px;
-            }.button3 {
-                background-color: #750000;
-                box-shadow: #fc3f1e98 0 0 10px;
             }
         }
     } 

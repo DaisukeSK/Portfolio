@@ -43,34 +43,6 @@ main h1 {
   margin: 0 auto;
   justify-content: space-evenly;
 }
-@keyframes showUp {
-  from {
-    background-color: #000000;
-  }
-  to {
-    background-color: rgba(0, 0, 0, 0.4666666667);
-  }
-}
-.home .BG2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-}
-.home .BG2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  animation-name: showUp;
-  animation-fill-mode: both;
-  animation-duration: 10s;
-  animation-iteration-count: 1;
-}
 .home .left {
   position: relative;
   width: -moz-fit-content;
@@ -120,32 +92,19 @@ main h1 {
 .home .right .animationDiv svg {
   overflow: visible;
 }
-.home .right .buttonContainer button {
-  position: relative;
-  bottom: 0;
-  height: 25px;
-  width: 35px;
+.home .right .buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+.home .right .buttonContainer .BGbuttonDiv {
   margin: 20px;
-  outline: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  border: none;
-  transition: all 0.2s ease-in-out;
+  position: relative;
 }
-.home .right .buttonContainer button:hover {
-  bottom: 3px;
-}
-.home .right .buttonContainer .button1 {
-  background: linear-gradient(#000055, #00001f);
-  box-shadow: rgba(0, 0, 255, 0.5019607843) 0 0 10px;
-}
-.home .right .buttonContainer .button2 {
-  background: url("../public/buttonBg1.png");
-  background-size: 200%;
-  box-shadow: rgba(66, 255, 66, 0.7137254902) 0 0 10px;
-}
-.home .right .buttonContainer .button3 {
-  background-color: #750000;
-  box-shadow: rgba(252, 63, 30, 0.5960784314) 0 0 10px;
+.home .right .buttonContainer .BGbuttonDiv svg {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .about {

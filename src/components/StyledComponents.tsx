@@ -243,3 +243,72 @@ export const Toggle=Styled.div<{teamp:boolean}>`
         pointer-events: ${(props)=>props.teamp && css`none`};
     }
 `;
+
+
+export const VideoDiv=Styled.div<{BG:number}>`
+    @keyframes showUp {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: .7;
+        }
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0;
+        animation-name: ${(props)=>props.BG==2?'showUp':'none'};
+        animation-fill-mode: both;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+    }
+    &::after {
+        animation-name: ${(props)=>props.BG==3?'showUp':'none'};
+    }
+`;
+
+export const BG_Button=Styled.button`
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+    height: 25px;
+    width: 35px;
+
+    outline: 1px solid #ffffff33;
+    border-radius: 5px;
+    border: none;
+    transition: all .2s ease-in-out;
+    &:hover {
+        bottom: 3px;
+    }
+`;
+
+export const BG_Button1=Styled(BG_Button)<{BG:number}>`
+    pointer-events: ${(props)=>props.BG==1?'none':'auto'};
+    background: linear-gradient(#000055,#00001f);
+    box-shadow: #0000ff80 0 0 10px;
+    `;
+    export const BG_Button2=Styled(BG_Button)<{BG:number}>`
+    pointer-events: ${(props)=>props.BG==2?'none':'auto'};
+    background: url('../public/buttonBg1.png');
+    background-size: 200%;
+    box-shadow: #42ff42b6 0 0 10px;
+`;
+export const BG_Button3=Styled(BG_Button)<{BG:number}>`
+    pointer-events: ${(props)=>props.BG==3?'none':'auto'};
+    background: url('../public/buttonBg2.png');
+    background-size: 130%;
+    box-shadow: #00c3ffb6 0 0 10px;
+`;
