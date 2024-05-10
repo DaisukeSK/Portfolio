@@ -102,7 +102,7 @@ function Home() {
                 </svg>
                 {/* <h1>Hi, I'm Daisuke.</h1> */}
                 <h2>Full Stack Developer</h2>
-                <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
+                <p>with enthusiasm and curiosity about exploring uknown and creating new things..</p>
                 {/* {selected.current==0 && <Animation/>} */}
 
                 {/* <div className='buttonContainer'>
