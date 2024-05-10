@@ -1,5 +1,7 @@
 import Styled from "styled-components";
 import { css,keyframes } from "styled-components";
+import butonBG1 from '../../public/buttonBg1.png'
+import butonBG2 from '../../public/buttonBg2.png'
 
 const timingFunc='cubic-bezier(0,1,.7,1)';
 
@@ -302,13 +304,13 @@ export const BG_Button1=Styled(BG_Button)<{BG:number}>`
     `;
     export const BG_Button2=Styled(BG_Button)<{BG:number}>`
     pointer-events: ${(props)=>props.BG==2?'none':'auto'};
-    background: url('../public/buttonBg1.png');
+    background: url(${butonBG1});
     background-size: 200%;
     box-shadow: #42ff42b6 0 0 10px;
 `;
 export const BG_Button3=Styled(BG_Button)<{BG:number}>`
     pointer-events: ${(props)=>props.BG==3?'none':'auto'};
-    background: url('../public/buttonBg2.png');
+    background: url(${butonBG2});
     background-size: 130%;
     box-shadow: #00c3ffb6 0 0 10px;
 `;
