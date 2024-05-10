@@ -4,9 +4,13 @@ import pathName from '../../../../public/man2.png';
 import { AppContext } from '../../../App';
 // import Animation from './Animation';
 import { useContext } from 'react';
-import p1 from '../../../../public/test2-5.png'
-import codingClip1 from '../../../../public/codingClip.mp4';
-import codingClip2 from '../../../../public/codingClip2.mp4'
+// import p1 from '../../../../public/test2-5.png'
+import textBG1 from '../../../../public/textBG1.png'
+import textBG2 from '../../../../public/textBG2.png'
+import textBG3 from '../../../../public/textBG3.png'
+
+import bgClip1 from '../../../../public/bgClip1.mp4';
+import bgClip2 from '../../../../public/bgClip2.mp4'
 import { useState, useEffect } from 'react';
 
 // type Props = {
@@ -18,13 +22,26 @@ function Home() {
     const { selected } = useContext(AppContext)
     const [ BG, setBG ] = useState<number>(1)
 
+    // const animateRef=useRef(null)
+
+    const imgHref=BG==1?textBG1:BG==2?textBG2:textBG3
+    const textShadow=BG==1?'#CC108E':BG==2?'#00FF00B8':'#5050FF'
+
+    const gradient_1_0=BG==1?'#3939FFD4':BG==2?'#FCFF8133':'#0EC3FF55';
+    const gradient_1_1=BG==1?'#CB00CBC7':BG==2?'#004F1DCC':'#00003CC2';
+
+    const gradient_3_0=BG==1?'#8686FFBA':BG==2?'#ffffff77':'#ffffff55';
+
     useEffect(()=>{
         setBG(1)
     },[selected])
 
+    // useEffect(()=>{
+    // },[BG])
+
     const SVG=
         <svg width='16' height='5'>
-            <path d='m0,5 h16 l-8,-5z' fill='#ffffff'/>
+            <path d='m0,5 h16 l-8,-5z' fill='#ffffff77'/>
         </svg>
 
     return (
@@ -44,13 +61,13 @@ function Home() {
                 <VideoDiv BG={BG}>
                     {BG==2 &&
                         <video width='100%' autoPlay loop muted>
-                            <source src={codingClip1} type='video/mp4'/>
+                            <source src={bgClip1} type='video/mp4'/>
                             <p>Your browser not supporting video</p>
                         </video>
                     }
                     {BG==3 &&
                         <video width='100%' autoPlay loop muted>
-                            <source src={codingClip2} type='video/mp4'/>
+                            <source src={bgClip2} type='video/mp4'/>
                             <p>Your browser not supporting video</p>
                         </video>
                     }
@@ -63,24 +80,27 @@ function Home() {
                 <svg height="250" width="100%">
                     <defs>
                         <linearGradient id="grad1" x1="100%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0" stopColor='#3939FFD4'></stop>
-                            {/* <stop offset=".5" stopColor='#FFB1B1D6'></stop> */}
-                            <stop offset="1" stopColor='#CB00CBC7'></stop>
+                            
+                            <stop offset="0" stopColor={gradient_1_0}></stop>
+                            <stop offset="1" stopColor={gradient_1_1}></stop>
+                            
                         </linearGradient>
 
                         <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0" stopColor='#420080E0'></stop>
-                            {/* <stop offset=".5" stopColor='#FFB1B1D6'></stop> */}
+                            {/* <stop offset="0" stopColor='#420080E0'></stop>
                             <stop offset=".5" stopColor='transparent'></stop>
-                            <stop offset="1" stopColor='#000080D6'></stop>
+                            <stop offset="1" stopColor='#000080D6'></stop> */}
+
+                            <stop offset="0" stopColor={BG==1?'#420080E0':'transparent'}></stop>
+                            <stop offset=".5" stopColor='transparent'></stop>
+                            <stop offset="1" stopColor={BG==1?'#000080D6':'transparent'}></stop>
                         </linearGradient>
 
                         <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="50%">
-                            <stop offset="0" stopColor='#8686FFBA'></stop>
-                            {/* <stop offset=".7" stopColor='transparent'></stop> */}
+                            <stop offset="0" stopColor={gradient_3_0}></stop>
+                            
                             <stop offset=".9" stopColor='transparent'></stop>
                             <stop offset="1" stopColor='transparent'></stop>
-                            {/* <stop offset="1" stopColor='yellow'></stop> */}
                         </linearGradient>
 
                         <pattern id="pattern1" width="100%" height="100%">
@@ -101,18 +121,16 @@ function Home() {
                 <svg height='70' style={{overflow:'visible'}}>
 
                     <pattern id="pattern_1" width="100%" height="100%">
-                        <image href={p1} x='190' y="0" width="230px">
+                        <image href={imgHref} x='190' y="0" width="230px">
+                            <animate attributeName="opacity" dur={"3s"} values="0;1" repeatCount='1'/>
                         </image>
                     </pattern>
 
                     <text text-anchor="middle" x="50%" y="80%" font-size="3.7rem" font-family="Helvetica" fontWeight='750'>
                         <tspan fill="#ffffffcc" style={{textShadow:'#ffffff88 2px 2px 5px'}}>Hi, I'm </tspan>
-                        <tspan fill='url(#pattern_1)' style={{
-                            textShadow:`#CC108E 2px 2px 5px`
-                            // textShadow:`navy 2px 2px 5px`
-                            }}>Daisuke</tspan>
-                        
+                        <tspan fill='url(#pattern_1)' style={{textShadow:`${textShadow} 3px 3px 5px`}}>Daisuke</tspan>
                     </text>
+
                 </svg>
                 {/* <h1>Hi, I'm Daisuke.</h1> */}
                 <h2>Full Stack Developer</h2>
