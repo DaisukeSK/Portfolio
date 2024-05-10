@@ -10,7 +10,9 @@ import textBG2 from '../../../../public/textBG2.png'
 import textBG3 from '../../../../public/textBG3.png'
 
 import bgClip1 from '../../../../public/bgClip1.mp4';
-import bgClip2 from '../../../../public/bgClip2.mp4'
+import bgClip2 from '../../../../public/bgClip2.mp4';
+
+import poster from '../../../../public/black.png'
 import { useState, useEffect } from 'react';
 
 // type Props = {
@@ -21,6 +23,9 @@ function Home() {
 
     const { selected } = useContext(AppContext)
     const [ BG, setBG ] = useState<number>(1)
+
+    // const [ count, setCount ] = useState<number>(0)
+
     const [ showButton, setShowButton ] = useState<boolean>(false)
 
     // const animateRef=useRef(null)
@@ -62,22 +67,24 @@ function Home() {
                 <rect x="100" y='100' width='200' height='50' fill='#ffffff1E' filter='blur(2px)'></rect>
             </svg> */}
 
-            {BG!==1 &&
+            {/* <div style={{position:'absolute',top:100,left:10}}>Count: {count}</div> */}
+
+            {/* {BG!==1 && */}
                 <VideoDiv BG={BG}>
                     {BG==2 &&
-                        <video width='100%' autoPlay loop muted>
+                        <video width='100%' autoPlay loop muted poster={poster}>
                             <source src={bgClip1} type='video/mp4'/>
                             <p>Your browser not supporting video</p>
                         </video>
                     }
                     {BG==3 &&
-                        <video width='100%' autoPlay loop muted>
+                        <video width='100%' autoPlay loop muted poster={poster}>
                             <source src={bgClip2} type='video/mp4'/>
                             <p>Your browser not supporting video</p>
                         </video>
                     }
                 </VideoDiv>
-            }
+            {/* } */}
             
 
             <div className='left'>
