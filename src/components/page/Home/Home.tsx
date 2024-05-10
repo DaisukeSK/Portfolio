@@ -21,6 +21,7 @@ function Home() {
 
     const { selected } = useContext(AppContext)
     const [ BG, setBG ] = useState<number>(1)
+    const [ showButton, setShowButton ] = useState<boolean>(false)
 
     // const animateRef=useRef(null)
 
@@ -31,6 +32,10 @@ function Home() {
     const gradient_1_1=BG==1?'#CB00CBC7':BG==2?'#004F1DCC':'#00003CC2';
 
     const gradient_3_0=BG==1?'#8686FFBA':BG==2?'#ffffff77':'#ffffff55';
+
+    setTimeout(()=>{
+        setShowButton(true)
+    },3000)
 
     useEffect(()=>{
         setBG(1)
@@ -137,7 +142,9 @@ function Home() {
                 <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
                 {/* {selected.current==0 && <Animation/>} */}
 
-                <div className='buttonContainer'>
+                
+
+                <div className='buttonContainer' style={{opacity:showButton?1:0}}>
                     <div className='BGbuttonDiv'>
                         <BG_Button1 BG={BG} onClick={()=>setBG(1)}/>
                         {BG==1 && SVG}

@@ -95,6 +95,7 @@ main h1 {
 .home .right .buttonContainer {
   display: flex;
   justify-content: center;
+  transition: all 1s ease-in-out;
 }
 .home .right .buttonContainer .BGbuttonDiv {
   margin: 20px;
