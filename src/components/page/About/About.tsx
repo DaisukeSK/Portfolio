@@ -21,7 +21,7 @@ function About() {
                     I hope you will see and enjoy those applications I made.<br/><br/>
 
                     My coding experience just started one day with a simple question.
-                    --"How can a web site be made?"--<br/>
+                    <br/>--"How can a web site be made?"--<br/>
                     I just Googled and learned very basic of HTML and CSS.
                     Then I tried writing a very short simple code with Notepad, and tested it out with a browser.<br/>
                     It was such simple contents, but certainly showed what I had just coded, which was enough to make me excited.<br/>
