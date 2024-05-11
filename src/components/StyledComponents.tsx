@@ -39,6 +39,7 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
     width: 100%;
     min-height: ${(props) =>props.selected==2? css`101vh`:css`100vh`};
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
+    height: ${(props)=>props.selected==0 && css`100vh`};
     padding-top: 45px;
     overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
     visibility: ${(props)=>props.show?css`visible`:css`hidden`};
@@ -217,7 +218,7 @@ export const G3=Styled.g<{anime:number}>`
     }
 `;
 
-export const Toggle=Styled.div<{teamp:boolean}>`
+export const Toggle=Styled.div<{teamp:number}>`
     position: relative;
     width: fit-content;
     margin: 50px auto;
@@ -247,7 +248,7 @@ export const Toggle=Styled.div<{teamp:boolean}>`
 `;
 
 
-export const VideoDiv=Styled.div<{BG:number}>`
+export const VideoDiv=Styled.div<{bg:number}>`
     @keyframes showUp {
         from {
             opacity: 1;
@@ -271,13 +272,13 @@ export const VideoDiv=Styled.div<{BG:number}>`
         height: 100%;
         background-color: #000000;
         opacity: 0;
-        animation-name: ${(props)=>props.BG==2?'showUp':'none'};
+        animation-name: ${(props)=>props.bg==2?'showUp':'none'};
         animation-fill-mode: both;
         animation-duration: 5s;
         animation-iteration-count: 1;
     }
     &::after {
-        animation-name: ${(props)=>props.BG==3?'showUp':'none'};
+        animation-name: ${(props)=>props.bg==3?'showUp':'none'};
     }
 `;
 
@@ -297,19 +298,19 @@ export const BG_Button=Styled.button`
     }
 `;
 
-export const BG_Button1=Styled(BG_Button)<{BG:number}>`
-    pointer-events: ${(props)=>props.BG==1?'none':'auto'};
+export const BG_Button1=Styled(BG_Button)<{bg:number}>`
+    pointer-events: ${(props)=>props.bg==1?'none':'auto'};
     background: linear-gradient(#000055,#00001f);
     box-shadow: #0000ff80 0 0 10px;
     `;
-    export const BG_Button2=Styled(BG_Button)<{BG:number}>`
-    pointer-events: ${(props)=>props.BG==2?'none':'auto'};
+    export const BG_Button2=Styled(BG_Button)<{bg:number}>`
+    pointer-events: ${(props)=>props.bg==2?'none':'auto'};
     background: url(${butonBG1});
     background-size: 200%;
     box-shadow: #42ff42b6 0 0 10px;
 `;
-export const BG_Button3=Styled(BG_Button)<{BG:number}>`
-    pointer-events: ${(props)=>props.BG==3?'none':'auto'};
+export const BG_Button3=Styled(BG_Button)<{bg:number}>`
+    pointer-events: ${(props)=>props.bg==3?'none':'auto'};
     background: url(${butonBG2});
     background-size: 130%;
     box-shadow: #00c3ffb6 0 0 10px;

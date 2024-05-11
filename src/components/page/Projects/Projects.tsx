@@ -12,11 +12,7 @@ import { AppContext } from '../../../App';
 import js from './projects.json';
 import ProjectDetail from './ProjectDetail';
 
-// type Props = {
-//     selected:Selected
-// };
-
-type JsonType={
+type JsonType = {
     [key:string]:{
         'url':Array<string>,
         'description':Array<string>,
@@ -26,15 +22,27 @@ type JsonType={
     }
 }
 
-export type showDetailType={title:string,description:Array<string>,url:Array<string>,languages:Array<string>,features:Array<string>}
+export type showDetailType = {
+    title: string,
+    description: Array<string>,
+    url: Array<string>,
+    languages: Array<string>,
+    features: Array<string>
+}
 
 function Projects() {
 
     const { selected } = useContext(AppContext)
 
-    const [showDetail, setShowDetail] = useState<showDetailType>({title:'',description:[],url:[],languages:[],features:[]})
     const [teamP, setTeamP] = useState<boolean>(false);
-
+    const [showDetail, setShowDetail] = useState<showDetailType>({
+        title:'',
+        description:[],
+        url:[],
+        languages:[],
+        features:[]
+    })
+    
     const projectsObj:JsonType = {...js}
     const imagePaths:{[key:string]:string} = {
         'memolis':memolis,
@@ -48,7 +56,7 @@ function Projects() {
     }
 
     useEffect(()=>{
-        setShowDetail({title:'',description:[],url:[],languages:[],features:[]})
+        setShowDetail({title:'', description:[], url:[], languages:[], features:[]})
         setTeamP(false)
     },[selected])
 
@@ -60,7 +68,7 @@ function Projects() {
             direction={selected.current-selected.prev<0?1:0}
             selected={selected.current}
         >
-            <Toggle teamp={teamP}>
+            <Toggle teamp={teamP?1:0}>
                 <svg width="15" height="10">
                     <path d="m0,0 15,5 -15,5" fill='#ffffff'/>
                 </svg>
@@ -76,10 +84,8 @@ function Projects() {
                 {Object.keys(projectsObj).map((val:string, key:number)=>{
                     return (projectsObj[val]['team']==teamP &&
                         <div key={key} className='WFchild'>
-                            
-                            <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val,description:projectsObj[val]['description'],url:projectsObj[val]['url'],languages:projectsObj[val]['languages'],features:projectsObj[val]['features']})}/>
+                            <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val, description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
                             <h3>{[val]}</h3>
-
                         </div>
                     )
                 })}

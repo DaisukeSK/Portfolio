@@ -168,19 +168,26 @@ main {
     .introduction {
         background-color: rgba(255, 255, 255, 0.3);
         // box-shadow: rgba(115, 31, 0, 0.7) 3px 3px 10px;
-        padding: 15px;
+        margin-top: 40px;
+        // padding: 15px;
         // padding-left: 30px;
         // outline: 1px solid rgba(255, 255, 255, 0.7);
-        // border-radius: 5px;
+        border-radius: 10px;
         width: 95%;
-        box-sizing: border-box;
+        // box-sizing: border-box;
+
+        hr {
+            width: 95%;
+            border: none;
+            border-bottom: 1px solid #ffffffaa;
+        }
         
         p {
-            width: 95%;
-            margin: 0 auto;
+            width: 55%;
+            margin: 50px auto;
         }
         h2 {
-            margin-top: 30px;
+            // margin-top: 30px;
             margin-bottom: 20px;
             // text-decoration: underline;
             // background: linear-gradient(45deg, rgb(0, 20, 204),rgb(8, 53, 150));
@@ -239,7 +246,7 @@ main {
                         top: -15px;
                         left: 50%;
                         transform: translateX(-50%);
-                        padding: 0 7px;
+                        padding: 0 10px;
                         white-space: nowrap;
                         background-color: #ffffff;
                         color: #000000;
@@ -285,10 +292,7 @@ main {
                     margin-bottom: 10px;
                     
                 }
-                .etc {
-                    // margin-bottom: 10px;
-                    
-                }
+                
             }
         }
     }
@@ -563,7 +567,7 @@ main {
                     padding: 0 20px;
                     border-bottom: 2px solid rgb(177, 0, 0);
                 }
-                .demo, .github {
+                .website, .github {
                     position: relative;
                     a {
                         svg {

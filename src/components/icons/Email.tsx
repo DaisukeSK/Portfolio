@@ -1,4 +1,5 @@
 function Email() {
+    
     return (
         <svg width="70" height="70" viewBox="0 0 20 20">
             <rect x="0" fill="none" width="20" height="20"/>

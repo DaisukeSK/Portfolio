@@ -117,16 +117,20 @@ main h1 {
 }
 .about .introduction {
   background-color: rgba(255, 255, 255, 0.3);
-  padding: 15px;
+  margin-top: 40px;
+  border-radius: 10px;
   width: 95%;
-  box-sizing: border-box;
+}
+.about .introduction hr {
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6666666667);
 }
 .about .introduction p {
-  width: 95%;
-  margin: 0 auto;
+  width: 55%;
+  margin: 50px auto;
 }
 .about .introduction h2 {
-  margin-top: 30px;
   margin-bottom: 20px;
   background-color: rgba(243, 109, 0, 0.726);
   width: -moz-fit-content;
@@ -178,7 +182,7 @@ main h1 {
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0 7px;
+  padding: 0 10px;
   white-space: nowrap;
   background-color: #ffffff;
   color: #000000;
@@ -216,6 +220,7 @@ main h1 {
 .about .introduction .experienceDiv ul li {
   margin-bottom: 10px;
 }
+
 .contact {
   position: relative;
   display: flex;
@@ -388,26 +393,26 @@ main h1 {
   padding: 0 20px;
   border-bottom: 2px solid rgb(177, 0, 0);
 }
-.projects .detail .detailright .linkFlex .demo, .projects .detail .detailright .linkFlex .github {
+.projects .detail .detailright .linkFlex .website, .projects .detail .detailright .linkFlex .github {
   position: relative;
 }
-.projects .detail .detailright .linkFlex .demo a svg, .projects .detail .detailright .linkFlex .github a svg {
+.projects .detail .detailright .linkFlex .website a svg, .projects .detail .detailright .linkFlex .github a svg {
   height: 30px;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 10px;
   display: block;
 }
-.projects .detail .detailright .linkFlex .demo a svg path, .projects .detail .detailright .linkFlex .github a svg path {
+.projects .detail .detailright .linkFlex .website a svg path, .projects .detail .detailright .linkFlex .github a svg path {
   fill: black;
 }
-.projects .detail .detailright .linkFlex .demo a:hover svg path, .projects .detail .detailright .linkFlex .github a:hover svg path {
+.projects .detail .detailright .linkFlex .website a:hover svg path, .projects .detail .detailright .linkFlex .github a:hover svg path {
   fill: #0000ac;
 }
-.projects .detail .detailright .linkFlex .demo a:hover + span, .projects .detail .detailright .linkFlex .github a:hover + span {
+.projects .detail .detailright .linkFlex .website a:hover + span, .projects .detail .detailright .linkFlex .github a:hover + span {
   opacity: 1;
 }
-.projects .detail .detailright .linkFlex .demo span, .projects .detail .detailright .linkFlex .github span {
+.projects .detail .detailright .linkFlex .website span, .projects .detail .detailright .linkFlex .github span {
   white-space: nowrap;
   position: absolute;
   top: -20px;

@@ -46,9 +46,9 @@ function ProjectDetail(props:{
 
     return (
         <>
-            <div className="blurBG" onClick={()=>props.setShowDetail({title:'',description:[],url:[],languages:[],features:[]})}></div>
+            <div className="blurBG" onClick={()=>props.setShowDetail({title:'', description:[], url:[], languages:[], features:[]})}></div>
             <div className='detail'>
-                <div className='x' onClick={()=>props.setShowDetail({title:'',description:[],url:[],languages:[],features:[]})}>
+                <div className='x' onClick={()=>props.setShowDetail({title:'', description:[], url:[], languages:[], features:[]})}>
                     <svg width='20' height='20'>
                         <rect x='0' y='0' width='20' height='20' rx='5' ry='5'/>
                         <path d='m5,5 l10,10'/>
@@ -72,11 +72,11 @@ function ProjectDetail(props:{
                         <h2>{props.showDetail.title}</h2>
 
                         {props.showDetail.url[0] &&
-                            <div className='demo'>
+                            <div className='website'>
                                 <a href={props.showDetail.url[0]} target='_blank'>
                                     <Laptop/>
                                 </a>
-                                <span>Demo</span>
+                                <span>Web-site</span>
                             </div>
                         }
 
@@ -90,11 +90,18 @@ function ProjectDetail(props:{
                     </div>
                     
                     <p className='descriptionP'>
-                        {props.showDetail.description.map((desc:string,key:number)=>{
-                            return <span style={{
-                                textAlign:desc=='username: guest'||desc=='password: 1234'?'center':'left',
-                                textDecoration:desc=='username: guest'||desc=='password: 1234'?'underline':'none'
-                            }} key={key}>{desc}</span>
+                        {props.showDetail.description.map((desc:string, key:number)=>{
+                            return (
+                                <span
+                                    style={{
+                                        textAlign:desc=='username: guest'||desc=='password: 1234'?'center':'left',
+                                        textDecoration:desc=='username: guest'||desc=='password: 1234'?'underline':'none'
+                                    }}
+                                    key={key}
+                                >
+                                    {desc}
+                                </span>
+                            )
                         })}
                     </p>
                     
@@ -105,12 +112,6 @@ function ProjectDetail(props:{
                             return <Fragment key={key}>{languageObj[lang]}</Fragment>
                         })}
                     </div>
-
-                    {/* <div className='featureFlex'>
-                        {props.showDetail.features.map((feature:string, key:number)=>{
-                            return <div key={key}>{feature}</div>
-                        })}
-                    </div> */}
 
                 </div>
 

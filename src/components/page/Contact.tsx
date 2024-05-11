@@ -5,10 +5,6 @@ import LinkedIn from '../icons/LinkedIn';
 import Github from '../icons/Github';
 import { useContext } from 'react';
 
-// type Props = {
-//     selected: Selected
-// };
-
 function Contact() {
 
     const { selected } = useContext(AppContext)
@@ -22,6 +18,7 @@ function Contact() {
         >
             <h1>Say hi to me!</h1>
             <p>Please feel free to contact me for any inquiries.</p>
+            
             <hr/>
 
             <div className="contactFlex">
