@@ -248,7 +248,7 @@ export const Toggle=Styled.div<{teamp:number}>`
 `;
 
 
-export const VideoDiv=Styled.div<{bg:number,vidloading:number}>`
+export const VideoDiv=Styled.div<{bg:number, vidloading:number}>`
     @keyframes showUp {
         from {
             opacity: 1;
@@ -299,19 +299,19 @@ export const BG_Button=Styled.button`
     }
 `;
 
-export const BG_Button1=Styled(BG_Button)<{bg:number}>`
-    pointer-events: ${(props)=>props.bg==1?'none':'auto'};
+export const BG_Button1=Styled(BG_Button)<{bg:number, vidloading:number}>`
+    pointer-events: ${(props)=>props.bg==1 || props.vidloading?'none':'auto'};
     background: linear-gradient(#000055,#00001f);
     box-shadow: #0000ff80 0 0 10px;
     `;
-    export const BG_Button2=Styled(BG_Button)<{bg:number}>`
-    pointer-events: ${(props)=>props.bg==2?'none':'auto'};
+    export const BG_Button2=Styled(BG_Button)<{bg:number, vidloading:number}>`
+    pointer-events: ${(props)=>props.bg==2 || props.vidloading?'none':'auto'};
     background: url(${butonBG1});
     background-size: 200%;
     box-shadow: #42ff42b6 0 0 10px;
 `;
-export const BG_Button3=Styled(BG_Button)<{bg:number}>`
-    pointer-events: ${(props)=>props.bg==3?'none':'auto'};
+export const BG_Button3=Styled(BG_Button)<{bg:number, vidloading:number}>`
+    pointer-events: ${(props)=>props.bg==3 || props.vidloading?'none':'auto'};
     background: url(${butonBG2});
     background-size: 130%;
     box-shadow: #00c3ffb6 0 0 10px;

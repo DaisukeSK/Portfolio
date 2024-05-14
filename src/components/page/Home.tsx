@@ -17,7 +17,7 @@ function Home() {
 
     const { selected } = useContext(AppContext)
     const [ BG, setBG ] = useState<number>(1)
-    const [ showButton, setShowButton ] = useState<boolean>(false)
+    // const [ showButton, setShowButton ] = useState<boolean>(false)
 
     const [ vidLoading, setVidLoading ] = useState<boolean>(true)
 
@@ -30,7 +30,7 @@ function Home() {
     const gradient_3_0:string = BG==1?'#8686FFBA':BG==2?'#ffffff77':'#ffffff55';
 
     setTimeout(()=>{
-        setShowButton(true)
+        // setShowButton(true)
         setVidLoading(false)
     },3000)
 
@@ -127,23 +127,25 @@ function Home() {
                 <h2>Full Stack Developer</h2>
                 <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
                 
-                {showButton &&
                 
-                    <div className='buttonContainer' style={{opacity:showButton?1:0}}>
+                
+                    <div className='buttonContainer'
+                    style={{opacity:vidLoading?0:1}}
+                    >
                         <div className='BGbuttonDiv'>
-                            <BG_Button1 bg={BG} onClick={()=>setBG(1)}/>
+                            <BG_Button1 bg={BG}vidloading={vidLoading?1:0} onClick={()=>setBG(1)}/>
                             {BG==1 && SVG}
                         </div>
                         <div className='BGbuttonDiv'>
-                            <BG_Button2 bg={BG} onClick={()=>setBG(2)}/>
+                            <BG_Button2 bg={BG} vidloading={vidLoading?1:0} onClick={()=>setBG(2)}/>
                             {BG==2 && SVG}
                         </div>
                         <div className='BGbuttonDiv'>
-                            <BG_Button3 bg={BG} onClick={()=>setBG(3)}/>
+                            <BG_Button3 bg={BG} vidloading={vidLoading?1:0} onClick={()=>setBG(3)}/>
                             {BG==3 && SVG}
                         </div>
                     </div>
-                }
+                
             </div>
 
         </Main>
