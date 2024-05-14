@@ -262,6 +262,7 @@ export const VideoDiv=Styled.div<{bg:number}>`
     left: 0;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
     z-index: -1;
     &::before, &::after {
         content: '';
@@ -269,7 +270,7 @@ export const VideoDiv=Styled.div<{bg:number}>`
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: #000000;
         opacity: 0;
         animation-name: ${(props)=>props.bg==2?'showUp':'none'};

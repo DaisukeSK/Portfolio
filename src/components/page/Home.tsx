@@ -28,8 +28,8 @@ function Home() {
     const gradient_3_0:string = BG==1?'#8686FFBA':BG==2?'#ffffff77':'#ffffff55';
 
     setTimeout(()=>{
-        setShowButton(false)
-    },3000)
+        setShowButton(true)
+    },10000)
 
     useEffect(()=>{
         setBG(1)
