@@ -24,26 +24,46 @@ function App() {
     const [selected, setSelected] = useState<Selected>({prev:0, current:0});
     const [inquiry, setInquiry] = useState<boolean>(false);
     const [preparing, setPreparing] = useState<boolean>(false);
+    const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
 
     useEffect(()=>{
         window.location.search=='?inquiry' && setInquiry(true);
         window.location.search=='?preparing' && setPreparing(true);
     },[]);
 
+    window.onresize=()=>{
+        setInnerWidth(window.innerWidth)
+    }
+
     return (
         <AppContext.Provider value={{selected, setSelected}}>
             {preparing && <ComingSoon/>}
             {inquiry && <Inquiry/>}
 
-            {(!inquiry && !preparing) &&
-                <>
-                    <Header/>
-                    <Home/>
-                    <About/>
-                    <Projects/>
-                    <Contact/>
-                </>
+            {
+                (innerWidth>450 && !inquiry && !preparing)?
+                    <>
+                        <Header/>
+                        <Home/>
+                        <About/>
+                        <Projects/>
+                        <Contact/>
+                    </>
+                    :
+
+                (innerWidth<=450 && !inquiry && !preparing)&&
+                    <>
+                        <header className='headerForMobile'></header>
+                        <main className='mainForMobile'>
+                            <p>
+                                Are you trying my portfolio with your mobile phone?<br/>
+                                I'm sorry, it is not ready for mobile devices yet.<br/>
+                                Try with your laptop, thank you.
+                            </p>
+                        </main>
+                    </>
             }
+
         </AppContext.Provider>
     )
 };

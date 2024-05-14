@@ -17,8 +17,6 @@ function Home() {
 
     const { selected } = useContext(AppContext)
     const [ BG, setBG ] = useState<number>(1)
-    // const [ showButton, setShowButton ] = useState<boolean>(false)
-
     const [ vidLoading, setVidLoading ] = useState<boolean>(true)
 
     const imgHref:string = BG==1?textBG1:BG==2?textBG2:textBG3
@@ -30,7 +28,6 @@ function Home() {
     const gradient_3_0:string = BG==1?'#8686FFBA':BG==2?'#ffffff77':'#ffffff55';
 
     setTimeout(()=>{
-        // setShowButton(true)
         setVidLoading(false)
     },3000)
 
@@ -51,30 +48,19 @@ function Home() {
             selected={selected.current}
         >
 
-            {/* <div style={{position:'absolute',top:'100px',left:'20px'}}>{vidLoading?'True':'False'}</div> */}
             <VideoDiv bg={BG} vidloading={vidLoading?1:0}>
-                {/* {BG==2 && */}
-                {/* }
-                {BG==3 && */}
-                
-                    {(vidLoading || BG==2) &&
-                    // <div style={{position:'absolute',top:'120px',left:'20px'}}>Vid2 shown</div>
-                        <video width='100%' autoPlay loop muted poster={poster}>
-                            <source src={bgClip1} type='video/mp4'/>
-                            <p>Your browser not supporting video</p>
-                        </video>
-                    }
-                    {(vidLoading || BG==3) &&
-                        <video width='100%' autoPlay loop muted poster={poster}>
-                            <source src={bgClip2} type='video/mp4'/>
-                            <p>Your browser not supporting video</p>
-                        </video>
-                    }
-                
-                
-                
-                
-                {/* } */}
+                {(vidLoading || BG==2) &&
+                    <video autoPlay loop muted poster={poster}>
+                        <source src={bgClip1} type='video/mp4'/>
+                        <p>Your browser not supporting video</p>
+                    </video>
+                }
+                {(vidLoading || BG==3) &&
+                    <video autoPlay loop muted poster={poster}>
+                        <source src={bgClip2} type='video/mp4'/>
+                        <p>Your browser not supporting video</p>
+                    </video>
+                }
             </VideoDiv>
 
             <div className='left'>
@@ -120,20 +106,16 @@ function Home() {
 
                     <text textAnchor="middle" x="50%" y="80%" fontSize="3.7rem" fontFamily="Helvetica" fontWeight='750'>
                         <tspan fill="#ffffffcc" style={{textShadow:'#ffffff88 2px 2px 5px'}}>Hi, I'm </tspan>
-                        <tspan fill='url(#pattern_2)' style={{textShadow:`${textShadow} 3px 3px 5px`}}>Daisuke</tspan>
+                        <tspan fill='url(#pattern_2)' style={{textShadow:`${textShadow} 2px 2px 6px`}}>Daisuke</tspan>
                     </text>
                 </svg>
 
                 <h2>Full Stack Developer</h2>
                 <p>with enthusiasm and curiosity about exploring uknown and creating new things.</p>
                 
-                
-                
-                    <div className='buttonContainer'
-                    style={{opacity:vidLoading?0:1}}
-                    >
+                    <div className='buttonContainer' style={{opacity:vidLoading?0:1}}>
                         <div className='BGbuttonDiv'>
-                            <BG_Button1 bg={BG}vidloading={vidLoading?1:0} onClick={()=>setBG(1)}/>
+                            <BG_Button1 bg={BG} vidloading={vidLoading?1:0} onClick={()=>setBG(1)}/>
                             {BG==1 && SVG}
                         </div>
                         <div className='BGbuttonDiv'>

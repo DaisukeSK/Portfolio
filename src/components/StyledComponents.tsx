@@ -41,7 +41,7 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
     height: ${(props)=>props.selected==0 && css`100vh`};
     padding-top: 45px;
-    overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
+    overflow-y: ${(props)=>(props.selected!==0 && props.show)?css`visible`:css`hidden`};
     visibility: ${(props)=>props.show?css`visible`:css`hidden`};
     z-index: ${(props)=>props.show?css`1`:css`0`};
     animation-name:${(props) =>
@@ -280,6 +280,10 @@ export const VideoDiv=Styled.div<{bg:number, vidloading:number}>`
     }
     &::after {
         animation-name: ${(props)=>props.bg==3?'showUp':'none'};
+    }
+    video {
+        min-width: 100%;
+        min-height: 100vh;
     }
 `;
 
