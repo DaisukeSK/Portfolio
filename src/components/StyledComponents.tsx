@@ -248,7 +248,7 @@ export const Toggle=Styled.div<{teamp:number}>`
 `;
 
 
-export const VideoDiv=Styled.div<{bg:number}>`
+export const VideoDiv=Styled.div<{bg:number,vidloading:number}>`
     @keyframes showUp {
         from {
             opacity: 1;
@@ -263,7 +263,7 @@ export const VideoDiv=Styled.div<{bg:number}>`
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: -1;
+    z-index: ${(props)=>props.vidloading?-3:-1};
     &::before, &::after {
         content: '';
         position: absolute;

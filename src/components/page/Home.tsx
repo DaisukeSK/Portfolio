@@ -19,6 +19,8 @@ function Home() {
     const [ BG, setBG ] = useState<number>(1)
     const [ showButton, setShowButton ] = useState<boolean>(false)
 
+    const [ vidLoading, setVidLoading ] = useState<boolean>(true)
+
     const imgHref:string = BG==1?textBG1:BG==2?textBG2:textBG3
     const textShadow:string = BG==1?'#CC108E':BG==2?'#00FF00B8':'#5050FF'
 
@@ -29,7 +31,8 @@ function Home() {
 
     setTimeout(()=>{
         setShowButton(true)
-    },10000)
+        setVidLoading(false)
+    },3000)
 
     useEffect(()=>{
         setBG(1)
@@ -47,19 +50,31 @@ function Home() {
             direction={selected.current-selected.prev<0?1:0}
             selected={selected.current}
         >
-            <VideoDiv bg={BG}>
-                {BG==2 &&
-                    <video width='100%' autoPlay loop muted poster={poster}>
-                        <source src={bgClip1} type='video/mp4'/>
-                        <p>Your browser not supporting video</p>
-                    </video>
-                }
-                {BG==3 &&
-                    <video width='100%' autoPlay loop muted poster={poster}>
-                        <source src={bgClip2} type='video/mp4'/>
-                        <p>Your browser not supporting video</p>
-                    </video>
-                }
+
+            {/* <div style={{position:'absolute',top:'100px',left:'20px'}}>{vidLoading?'True':'False'}</div> */}
+            <VideoDiv bg={BG} vidloading={vidLoading?1:0}>
+                {/* {BG==2 && */}
+                {/* }
+                {BG==3 && */}
+                
+                    {(vidLoading || BG==2) &&
+                    // <div style={{position:'absolute',top:'120px',left:'20px'}}>Vid2 shown</div>
+                        <video width='100%' autoPlay loop muted poster={poster}>
+                            <source src={bgClip1} type='video/mp4'/>
+                            <p>Your browser not supporting video</p>
+                        </video>
+                    }
+                    {(vidLoading || BG==3) &&
+                        <video width='100%' autoPlay loop muted poster={poster}>
+                            <source src={bgClip2} type='video/mp4'/>
+                            <p>Your browser not supporting video</p>
+                        </video>
+                    }
+                
+                
+                
+                
+                {/* } */}
             </VideoDiv>
 
             <div className='left'>
