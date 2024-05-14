@@ -53,6 +53,7 @@ main h1 {
 }
 .home .left svg {
   overflow: visible;
+  margin-top: 50px;
 }
 .home .left img {
   position: absolute;
