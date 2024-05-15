@@ -7,9 +7,9 @@ import Projects from './components/LapTop/Pages/Projects/Projects.tsx';
 import Inquiry from './components/LapTop/Pages/Inquiry.tsx';
 import ComingSoon from './components/LapTop/Pages/ComingSoon.tsx';
 
-import M_Header from './components/Mobile/M_Header.tsx';
-import M_SideMenu from './components/Mobile/M_SideMenu.tsx';
-import M_Main from './components/Mobile/M_Main.tsx';
+// import M_Header from './components/Mobile/M_Header.tsx';
+// import M_SideMenu from './components/Mobile/M_SideMenu.tsx';
+// import M_Main from './components/Mobile/M_Main.tsx';
 
 export type Selected={
     prev:number,
