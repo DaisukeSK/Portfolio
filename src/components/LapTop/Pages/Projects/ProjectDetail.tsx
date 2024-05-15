@@ -1,21 +1,21 @@
 import { Fragment } from 'react'
-import JS from '../../icons/JS';
-import TS from '../../icons/TS';
-import Jquery from '../../icons/Jquery';
-import React from '../../icons/React';
-import MySQL from '../../icons/MySQL';
-import PHP from '../../icons/PHP';
-import NodeJS from '../../icons/NodeJS';
-import PostgreSQL from '../../icons/PostgreSQL';
-import Github from '../../icons/Github';
-import Laptop from '../../icons/Laptop';
-import portfolio from '../../../../public/projectsPics/portfolio.png';
-import ccc from '../../../../public/projectsVideos/Color Code Converter.mp4'
-import ecommerce from '../../../../public/projectsVideos/Fake Shop.mp4'
-import satellite from '../../../../public/projectsVideos/Satellite Launch simulation.mp4'
-import animation from '../../../../public/projectsVideos/SVG Animation Gallery.mp4'
-import memolis from '../../../../public/projectsVideos/memolis.mp4'
-import dnn from '../../../../public/projectsVideos/DNN.mp4'
+import JS from '../../../icons/JS';
+import TS from '../../../icons/TS';
+import Jquery from '../../../icons/Jquery';
+import React from '../../../icons/React';
+import MySQL from '../../../icons/MySQL';
+import PHP from '../../../icons/PHP';
+import NodeJS from '../../../icons/NodeJS';
+import PostgreSQL from '../../../icons/PostgreSQL';
+import Github from '../../../icons/Github';
+import Laptop from '../../../icons/Laptop';
+import portfolio from '../../../../../public/projectsPics/portfolio.png';
+import ccc from '../../../../../public/projectsVideos/Color Code Converter.mp4'
+import ecommerce from '../../../../../public/projectsVideos/Fake Shop.mp4'
+import satellite from '../../../../../public/projectsVideos/Satellite Launch simulation.mp4'
+import animation from '../../../../../public/projectsVideos/SVG Animation Gallery.mp4'
+import memolis from '../../../../../public/projectsVideos/memolis.mp4'
+import dnn from '../../../../../public/projectsVideos/DNN.mp4'
 
 import { showDetailType } from './Projects';
 

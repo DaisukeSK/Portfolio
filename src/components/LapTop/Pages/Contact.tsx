@@ -1,8 +1,8 @@
 import { Main } from '../StyledComponents';
-import { AppContext } from '../../App';
-import Email from '../icons/Email';
-import LinkedIn from '../icons/LinkedIn';
-import Github from '../icons/Github';
+import { AppContext } from '../../../App';
+import Email from '../../icons/Email';
+import LinkedIn from '../../icons/LinkedIn';
+import Github from '../../icons/Github';
 import { useContext } from 'react';
 
 function Contact() {

@@ -1,24 +1,24 @@
 import { useState } from 'react';
 
-import JS from '../../icons/JS';
-import TS from '../../icons/TS';
-import HTML from '../../icons/HTML';
-import CSS from '../../icons/CSS';
-import Sass from '../../icons/Sass';
-import Jquery from '../../icons/Jquery';
-import React from '../../icons/React';
-import MySQL from '../../icons/MySQL';
-import PHP from '../../icons/PHP';
-import NodeJS from '../../icons/NodeJS';
-import PostgreSQL from '../../icons/PostgreSQL';
-import Fortran from '../../icons/Fortran';
-import Git from '../../icons/Git';
-import Github from '../../icons/Github';
-import VSCode from '../../icons/VSCode';
-import Inkscape from '../../icons/Inkscape';
-import Render from '../../icons/Render';
-import Vercel from '../../icons/Vercel';
-import Hostinger from '../../icons/Hostinger';
+import JS from '../../../icons/JS';
+import TS from '../../../icons/TS';
+import HTML from '../../../icons/HTML';
+import CSS from '../../../icons/CSS';
+import Sass from '../../../icons/Sass';
+import Jquery from '../../../icons/Jquery';
+import React from '../../../icons/React';
+import MySQL from '../../../icons/MySQL';
+import PHP from '../../../icons/PHP';
+import NodeJS from '../../../icons/NodeJS';
+import PostgreSQL from '../../../icons/PostgreSQL';
+import Fortran from '../../../icons/Fortran';
+import Git from '../../../icons/Git';
+import Github from '../../../icons/Github';
+import VSCode from '../../../icons/VSCode';
+import Inkscape from '../../../icons/Inkscape';
+import Render from '../../../icons/Render';
+import Vercel from '../../../icons/Vercel';
+import Hostinger from '../../../icons/Hostinger';
 
 const iconObj : {[key:string]:JSX.Element} = {
     'JavaScript': <JS/>,

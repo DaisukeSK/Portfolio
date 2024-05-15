@@ -1,11 +1,15 @@
 import { useState, useEffect, createContext } from 'react';
-import Header from './components/Header.tsx';
-import About from './components/page/About/About.tsx';
-import Contact from './components/page/Contact.tsx';
-import Home from './components/page/Home.tsx';
-import Projects from './components/page/Projects/Projects.tsx';
-import Inquiry from './components/page/Inquiry.tsx';
-import ComingSoon from './components/page/ComingSoon.tsx';
+import Header from './components/LapTop/Header.tsx';
+import About from './components/LapTop/Pages/About/About.tsx';
+import Contact from './components/LapTop/Pages/Contact.tsx';
+import Home from './components/LapTop/Pages/Home.tsx';
+import Projects from './components/LapTop/Pages/Projects/Projects.tsx';
+import Inquiry from './components/LapTop/Pages/Inquiry.tsx';
+import ComingSoon from './components/LapTop/Pages/ComingSoon.tsx';
+
+// import M_Header from './components/Mobile/Pages/M_Header.tsx';
+// import M_SideMenu from './components/Mobile/Pages/M_SideMenu.tsx';
+// import M_Main from './components/Mobile/Pages/M_Main.tsx';
 
 export type Selected={
     prev:number,
@@ -15,6 +19,8 @@ export type Selected={
 type Context = {
     selected: {prev:number, current:number},
     setSelected: React.Dispatch<React.SetStateAction<Selected>>
+    aside: boolean,
+    setAside: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const AppContext=createContext<Context>({} as Context)
@@ -26,6 +32,8 @@ function App() {
     const [preparing, setPreparing] = useState<boolean>(false);
     const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
 
+    const [aside, setAside] = useState<boolean>(false)
+
     useEffect(()=>{
         window.location.search=='?inquiry' && setInquiry(true);
         window.location.search=='?preparing' && setPreparing(true);
@@ -36,12 +44,13 @@ function App() {
     }
 
     return (
-        <AppContext.Provider value={{selected, setSelected}}>
-            {preparing && <ComingSoon/>}
-            {inquiry && <Inquiry/>}
-
+        <AppContext.Provider value={{selected, setSelected, aside, setAside}}>
             {
-                (innerWidth>450 && !inquiry && !preparing)?
+                preparing? <ComingSoon/>
+                :
+                inquiry? <Inquiry/>
+                :
+                innerWidth>450?
                     <>
                         <Header/>
                         <Home/>
@@ -49,9 +58,8 @@ function App() {
                         <Projects/>
                         <Contact/>
                     </>
-                    :
-
-                (innerWidth<=450 && !inquiry && !preparing)&&
+                :
+                innerWidth<=450 &&
                     <>
                         <header className='headerForMobile'></header>
                         <main className='mainForMobile'>
@@ -61,6 +69,9 @@ function App() {
                                 Try with your laptop, thank you.
                             </p>
                         </main>
+                        {/* <M_Header></M_Header>
+                        <M_SideMenu></M_SideMenu>
+                        <M_Main></M_Main> */}
                     </>
             }
 

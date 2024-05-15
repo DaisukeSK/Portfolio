@@ -1,5 +1,5 @@
 import { Main } from '../../StyledComponents';
-import { AppContext } from '../../../App';
+import { AppContext } from '../../../../App';
 import { useContext } from 'react';
 import IconFlex from './IconFlex'
 

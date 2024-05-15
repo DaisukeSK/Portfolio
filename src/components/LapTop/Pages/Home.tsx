@@ -1,17 +1,17 @@
 import { Main, VideoDiv, BG_Button1, BG_Button2, BG_Button3 } from '../StyledComponents';
-import { AppContext } from '../../App';
+import { AppContext } from '../../../App';
 import { useContext, useState, useEffect } from 'react';
 
-import pathName from '../../../public/man2.png';
+import pathName from '../../../../public/man2.png';
 
-import textBG1 from '../../../public/textBG1.png'
-import textBG2 from '../../../public/textBG2.png'
-import textBG3 from '../../../public/textBG3.png'
+import textBG1 from '../../../../public/textBG1.png'
+import textBG2 from '../../../../public/textBG2.png'
+import textBG3 from '../../../../public/textBG3.png'
 
-import bgClip1 from '../../../public/bgClip1.mp4';
-import bgClip2 from '../../../public/bgClip2.mp4';
+import bgClip1 from '../../../../public/bgClip1.mp4';
+import bgClip2 from '../../../../public/bgClip2.mp4';
 
-import poster from '../../../public/black.png'
+import poster from '../../../../public/black.png'
 
 function Home() {
 

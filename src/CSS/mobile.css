@@ -35,4 +35,23 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+header.forMobile {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+  background-color: rgba(76, 0, 255, 0.6);
+}
+
+main.forMobile {
+  background-color: rgb(52, 83, 255);
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=mobile.css.map */

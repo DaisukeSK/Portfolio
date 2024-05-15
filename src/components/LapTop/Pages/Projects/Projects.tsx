@@ -1,14 +1,14 @@
 import { useState, useEffect, useContext } from 'react'
 import { Main, LinkDiv, Toggle } from '../../StyledComponents';
-import portfolio from '../../../../public/projectsPics/portfolio.png';
-import ccc from '../../../../public/projectsPics/ccc.png';
-import ecommerce from '../../../../public/projectsPics/ecommerce.png';
-import satellite from '../../../../public/projectsPics/satellite.png';
-import animation from '../../../../public/projectsPics/animation.png';
-import memolis from '../../../../public/projectsPics/memolis.png';
-import preparing from '../../../../public/projectsPics/preparing.png';
-import dnn from '../../../../public/projectsPics/dnn.png';
-import { AppContext } from '../../../App';
+import portfolio from '../../../../../public/projectsPics/portfolio.png';
+import ccc from '../../../../../public/projectsPics/ccc.png';
+import ecommerce from '../../../../../public/projectsPics/ecommerce.png';
+import satellite from '../../../../../public/projectsPics/satellite.png';
+import animation from '../../../../../public/projectsPics/animation.png';
+import memolis from '../../../../../public/projectsPics/memolis.png';
+import preparing from '../../../../../public/projectsPics/preparing.png';
+import dnn from '../../../../../public/projectsPics/dnn.png';
+import { AppContext } from '../../../../App';
 import js from './projects.json';
 import ProjectDetail from './ProjectDetail';
 

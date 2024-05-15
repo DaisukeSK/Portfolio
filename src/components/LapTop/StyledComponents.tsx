@@ -1,7 +1,7 @@
 import Styled from "styled-components";
 import { css,keyframes } from "styled-components";
-import butonBG1 from '../../public/buttonBg1.png'
-import butonBG2 from '../../public/buttonBg2.png'
+import butonBG1 from '../../../public/buttonBg1.png'
+import butonBG2 from '../../../public/buttonBg2.png'
 
 const timingFunc='cubic-bezier(0,1,.7,1)';
 

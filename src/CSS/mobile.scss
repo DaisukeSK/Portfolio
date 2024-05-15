@@ -38,3 +38,27 @@
     }
     
 }
+
+header.forMobile {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 10px 10%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    
+    // z-index: 2;
+    background-color: rgba(76, 0, 255, 0.6);
+    // backdrop-filter: blur(7px);
+    // opacity: 0;
+}
+
+main.forMobile {
+    background-color: rgb(52, 83, 255);
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { UnderLine, NavChild } from './StyledComponents';
-import { AppContext } from '../App';
+import { AppContext } from '../../App';
 
 function Header() {
 
