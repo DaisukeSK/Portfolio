@@ -1,6 +1,6 @@
-import { AppContext } from "../../../App";
+import { AppContext } from "../../App";
 import { useContext } from "react";
-import { Aside } from "../StyledComponents";
+import { Aside } from "./StyledComponents";
 
 function M_SideMenu() {
 

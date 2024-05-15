@@ -1,4 +1,4 @@
-import { AppContext } from "../../../App";
+import { AppContext } from "../../App";
 import { useContext } from "react";
 
 function M_Header() {
@@ -6,7 +6,7 @@ function M_Header() {
     const { aside, setAside } = useContext(AppContext)
 
     return (
-        <header className='forMobile'>
+        <header>
 
             <div>Portfolio</div>
 

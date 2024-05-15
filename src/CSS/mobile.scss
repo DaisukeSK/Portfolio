@@ -1,64 +1,118 @@
-.headerForMobile {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // padding: 10px 10%;
-    box-sizing: border-box;
-    z-index: 2;
-    background-color: rgba(125, 179, 179, 0.6);
-    backdrop-filter: blur(7px);
-    opacity: 0;
-}
+.mobile {
 
-.mainForMobile {
-
-    position: relative;
-    // padding: 20px;
-    // padding-top: 45px;
-    min-height: 100vh;
-    background: linear-gradient(45deg,yellow,blue);
-    &::after {
-        content: '';
+    .mainForMobile {
+        
+        position: relative;
+        // padding: 20px;
         // padding-top: 45px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
         background: linear-gradient(rgba(255, 0, 0, 0.3),rgba(9, 255, 0, 0.3));
-    }
-    p {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .flex {
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 15px;
+            }
+        }
+        
+        &::before {
+            content: '';
+            // padding-top: 45px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(45deg,yellow,blue);
+            z-index: -1;
+        }
+        
+        
     }
     
-}
-
-header.forMobile {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // padding: 10px 10%;
-    padding: 0 15px;
-    box-sizing: border-box;
+    header {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 10px 10%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        
+        // z-index: 2;
+        background-color: rgba(76, 0, 255, 0.6);
+        // backdrop-filter: blur(7px);
+        // opacity: 0;
+    }
     
-    // z-index: 2;
-    background-color: rgba(76, 0, 255, 0.6);
-    // backdrop-filter: blur(7px);
-    // opacity: 0;
-}
+    main {
+        background-color: rgb(52, 83, 255);
+        padding: 20px;
+        padding-top: 35px;
+        box-sizing: border-box;
+        width: 100vw;
+        height: fit-content;
+    
+        .about {
+            // background-color: chocolate;
 
-main.forMobile {
-    background-color: rgb(52, 83, 255);
-    width: 100vw;
-    height: 100vh;
+            p, .skills {
+                padding-bottom: 20px;
+                border-bottom: 1px solid #ffffff85;
+            }
+    
+            .skills {
+                // background-color: cadetblue;
+                .front-end, .tools {
+                    justify-content: space-between;
+                }
+                .back-end, .database {
+                    svg {
+                        margin: 10px;
+                    }
+                }
+                .flex {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .front-end, .back-end, .database, .tools {
+                    position: relative;
+
+                    display: flex;
+                    // outline: 1px solid #ffffff;
+                    // width: fit-content;
+                    // outline: 1px solid grey;
+                    margin-top: 50px;
+                    .title {
+                        width: fit-content;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: -20px;
+                        white-space: nowrap;
+                        background-color: rgba(0, 0, 158, 0.747);
+                        border-radius: 10px;
+                        padding: 2px 15px;
+                    }
+                    svg {
+                        width: 30px;
+                        margin-top: 15px;
+                        // margin: 10px;
+                    }
+                }
+                
+            }
+        }
+        
+    }
 }

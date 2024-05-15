@@ -1,40 +1,32 @@
-.headerForMobile {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 45px;
+.mobile .mainForMobile {
+  position: relative;
+  background: linear-gradient(rgba(255, 0, 0, 0.3), rgba(9, 255, 0, 0.3));
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  z-index: 2;
-  background-color: rgba(125, 179, 179, 0.6);
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
-  opacity: 0;
 }
-
-.mainForMobile {
-  position: relative;
-  min-height: 100vh;
-  background: linear-gradient(45deg, yellow, blue);
+.mobile .mainForMobile .flex {
+  display: flex;
+  align-items: center;
 }
-.mainForMobile::after {
+.mobile .mainForMobile .flex svg {
+  margin-right: 15px;
+}
+.mobile .mainForMobile::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(255, 0, 0, 0.3), rgba(9, 255, 0, 0.3));
+  background: linear-gradient(45deg, yellow, blue);
+  z-index: -1;
 }
-.mainForMobile p {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-header.forMobile {
+.mobile header {
   position: fixed;
   top: 0;
   width: 100vw;
@@ -46,9 +38,47 @@ header.forMobile {
   box-sizing: border-box;
   background-color: rgba(76, 0, 255, 0.6);
 }
-
-main.forMobile {
+.mobile main {
   background-color: rgb(52, 83, 255);
+  padding: 20px;
+  padding-top: 35px;
+  box-sizing: border-box;
   width: 100vw;
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.mobile main .about p, .mobile main .about .skills {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+}
+.mobile main .about .skills .front-end, .mobile main .about .skills .tools {
+  justify-content: space-between;
+}
+.mobile main .about .skills .back-end svg, .mobile main .about .skills .database svg {
+  margin: 10px;
+}
+.mobile main .about .skills .flex {
+  display: flex;
+  justify-content: space-around;
+}
+.mobile main .about .skills .front-end, .mobile main .about .skills .back-end, .mobile main .about .skills .database, .mobile main .about .skills .tools {
+  position: relative;
+  display: flex;
+  margin-top: 50px;
+}
+.mobile main .about .skills .front-end .title, .mobile main .about .skills .back-end .title, .mobile main .about .skills .database .title, .mobile main .about .skills .tools .title {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 158, 0.747);
+  border-radius: 10px;
+  padding: 2px 15px;
+}
+.mobile main .about .skills .front-end svg, .mobile main .about .skills .back-end svg, .mobile main .about .skills .database svg, .mobile main .about .skills .tools svg {
+  width: 30px;
+  margin-top: 15px;
 }/*# sourceMappingURL=mobile.css.map */
