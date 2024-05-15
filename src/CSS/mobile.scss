@@ -17,13 +17,13 @@
 .mainForMobile {
 
     position: relative;
-    padding: 20px;
-    padding-top: 45px;
+    // padding: 20px;
+    // padding-top: 45px;
     min-height: 100vh;
     background: linear-gradient(45deg,yellow,blue);
     &::after {
         content: '';
-        padding-top: 45px;
+        // padding-top: 45px;
         position: absolute;
         top: 0;
         left: 0;
