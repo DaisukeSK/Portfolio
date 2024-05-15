@@ -56,7 +56,7 @@ function App() {
                         <header className='headerForMobile'></header>
                         <main className='mainForMobile'>
                             <p>
-                                Are you trying my portfolio with your mobile phone?<br/>
+                                Are you accessing my portfolio with your mobile phone?<br/>
                                 I'm sorry, it is not ready for mobile devices yet.<br/>
                                 Try with your laptop, thank you.
                             </p>

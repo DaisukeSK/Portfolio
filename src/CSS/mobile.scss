@@ -11,6 +11,7 @@
     z-index: 2;
     background-color: rgba(125, 179, 179, 0.6);
     backdrop-filter: blur(7px);
+    opacity: 0;
 }
 
 .mainForMobile {
@@ -19,6 +20,17 @@
     padding: 20px;
     padding-top: 45px;
     min-height: 100vh;
+    background: linear-gradient(45deg,yellow,blue);
+    &::after {
+        content: '';
+        padding-top: 45px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(rgba(255, 0, 0, 0.3),rgba(9, 255, 0, 0.3));
+    }
     p {
         position: absolute;
         top: 50%;
