@@ -2,7 +2,7 @@ import { Main, VideoDiv, BG_Button1, BG_Button2, BG_Button3 } from '../StyledCom
 import { AppContext } from '../../../App';
 import { useContext, useState, useEffect } from 'react';
 
-import pathName from '../../../../public/man2.png';
+import pathName from '../../../../public/me.png';
 
 import textBG1 from '../../../../public/textBG1.png'
 import textBG2 from '../../../../public/textBG2.png'
@@ -11,21 +11,24 @@ import textBG3 from '../../../../public/textBG3.png'
 import bgClip1 from '../../../../public/bgClip1.mp4';
 import bgClip2 from '../../../../public/bgClip2.mp4';
 
-import poster from '../../../../public/black.png'
+import poster from '../../../../public/poster.png'
+import blackBG from '../../../../public/black.png'
 
 function Home() {
 
     const { selected } = useContext(AppContext)
+    
     const [ BG, setBG ] = useState<number>(1)
     const [ vidLoading, setVidLoading ] = useState<boolean>(true)
+    const [ textShadow, setTextShadow ] = useState<string>('#CC108E')
 
-    const imgHref:string = BG==1?textBG1:BG==2?textBG2:textBG3
-    const textShadow:string = BG==1?'#CC108E':BG==2?'#00FF00B8':'#5050FF'
+    const imgHref:string = BG==1?textBG1:BG==2?textBG2:textBG3;
 
     const gradient_1_0:string = BG==1?'#3939FFD4':BG==2?'#FCFF8133':'#0EC3FF55';
     const gradient_1_1:string = BG==1?'#CB00CBC7':BG==2?'#004F1DCC':'#00003CC2';
 
     const gradient_3_0:string = BG==1?'#8686FFBA':BG==2?'#ffffff77':'#ffffff55';
+    const textTransition:string = `all ${textShadow=='#000000'?'0s':'3s'} ease-in-out`;
 
     setTimeout(()=>{
         setVidLoading(false)
@@ -34,6 +37,15 @@ function Home() {
     useEffect(()=>{
         setBG(1)
     },[selected])
+
+    useEffect(()=>{
+
+        setTextShadow('#000000')
+        setTimeout(()=>{
+            setTextShadow(BG==1?'#CC108E':BG==2?'#00FF00B8':'#5050FF')
+        },50)
+
+    },[BG])
 
     const SVG: JSX.Element =
         <svg width='16' height='5'>
@@ -92,7 +104,7 @@ function Home() {
                     <rect x="0" y="0" width="100%" height="100%" rx="15" fill='url(#grad1)' transform='skewY(-20)'/>
                     <rect x="0" y="0" width="100%" height="100%" rx="15" fill='url(#grad2)' transform='skewY(-20)'/>
                     <rect x="0" y="0" width="150%" height="100%" rx="15" fill='url(#grad3)' transform='skewY(20)'/>
-                    <path d='m0 250 l300 -109.19 v-250 h-300' fill='url(#pattern_1)'/>
+                    <path d='m0 250 l300 -109.19 v-280 h-300' fill='url(#pattern_1)'/>
                 </svg>
 
             </div>
@@ -102,11 +114,12 @@ function Home() {
                 <svg height='70' style={{overflow:'visible'}}>
                     <pattern id="pattern_2" width="100%" height="100%">
                         <image href={imgHref} x='190' y="0" width="230px"/>
+                        <image href={blackBG} x='190' y="0" width="230px" style={{opacity:textShadow=='#000000'?1:0, transition:`${textTransition}`}}/>
                     </pattern>
 
                     <text textAnchor="middle" x="50%" y="80%" fontSize="3.7rem" fontFamily="Helvetica" fontWeight='750'>
                         <tspan fill="#ffffffcc" style={{textShadow:'#ffffff88 2px 2px 5px'}}>Hi, I'm </tspan>
-                        <tspan fill='url(#pattern_2)' style={{textShadow:`${textShadow} 2px 2px 6px`}}>Daisuke</tspan>
+                        <tspan fill='url(#pattern_2)' style={{textShadow:`${textShadow} 2px 2px 6px`, transition:`${textTransition}`}}>Daisuke</tspan>
                     </text>
                 </svg>
 
