@@ -12,11 +12,7 @@ console.log(BG1,BG2,BG3,BG4,BG5,BG6)
 export const Main=Styled.main<{selected:number}>`
 
     position: absolute;
-    top: 0;
-    background-color: #85CCE9;
-
-    background-image: url(${BG6});
-    background-attachment: fixed;
+    top: 0;    
     
     padding: 20px;
     padding-top: 35px;
@@ -24,6 +20,18 @@ export const Main=Styled.main<{selected:number}>`
     width: 100vw;
     height: fit-content;
     min-height: 100vh;
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(${BG6});
+        background-size: cover;
+        z-index: -10;
+    }
 
 `;
 
