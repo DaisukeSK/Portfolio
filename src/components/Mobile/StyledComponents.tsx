@@ -20,6 +20,8 @@ export const Main=Styled.main<{selected:number}>`
     width: 100vw;
     height: fit-content;
     min-height: 100vh;
+
+    overflow: hidden;
 `;
 
 export const Aside=Styled.aside<{aside:number}>`
@@ -27,7 +29,7 @@ width: 150px;
 height: 100%;
 position: absolute;
 top: 0;
-right: ${(props)=>props.aside?'0':'-200px'};
+right: ${(props)=>props.aside?'0':'-160px'};
 transition: all .5s ease-in-out;
 z-index: 2;
 background-color: navy;

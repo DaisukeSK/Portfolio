@@ -1,3 +1,6 @@
+.mobile {
+  overflow: hidden;
+}
 .mobile .mainForMobile {
   position: relative;
   background: linear-gradient(rgba(255, 0, 0, 0.3), rgba(9, 255, 0, 0.3));
