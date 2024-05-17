@@ -12,12 +12,14 @@ import Contact from "./Pages/Contact/Contact";
 
 function M_Main() {
 
-    const { selected, setAside } = useContext(AppContext)
+    const { selected, aside, setAside } = useContext(AppContext)
 
     return (
         <Main selected={selected.current} onClick={()=>setAside(false)}>
 
-<M_SideMenu></M_SideMenu>
+            {aside && <M_SideMenu></M_SideMenu>}
+
+            
             
             {
             selected.current==0? <Home/>
