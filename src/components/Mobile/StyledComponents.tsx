@@ -14,6 +14,9 @@ export const Main=Styled.main<{selected:number}>`
     position: absolute;
     top: 0;
     background-color: #85CCE9;
+
+    background-image: url(${BG6});
+    background-attachment: fixed;
     
     padding: 20px;
     padding-top: 35px;
@@ -29,7 +32,7 @@ export const Aside=Styled.aside<{aside:number}>`
     height: 100vh;
     position: fixed;
     top: 0;
-    right: ${(props)=>props.aside?'0':'-160px'};
+    right: ${(props)=>props.aside?'0':'-150px'};
     transition: all .5s ease-in-out;
     z-index: 2;
     background-color: navy;

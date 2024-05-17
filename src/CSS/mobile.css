@@ -43,6 +43,12 @@
   z-index: 2;
   background-color: rgba(76, 0, 255, 0.6);
 }
+.mobile main .home h1, .mobile main .home h2 {
+  text-align: center;
+}
+.mobile main .home img {
+  width: 70%;
+}
 .mobile main .about hr {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
