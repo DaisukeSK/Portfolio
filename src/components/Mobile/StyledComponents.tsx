@@ -10,10 +10,9 @@ import BG6 from '../../../public/mb_BG6.png'
 console.log(BG1,BG2,BG3,BG4,BG5,BG6)
 
 export const Main=Styled.main<{selected:number}>`
-    background-image: url(${(props)=>props.selected==0?BG6:props.selected==1?BG2:props.selected==2?BG3:props.selected==3 && BG4});
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+
+    position: relative;
+    
     padding: 20px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -21,7 +20,23 @@ export const Main=Styled.main<{selected:number}>`
     height: fit-content;
     min-height: 100vh;
 
-    overflow: hidden;
+    &::before {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        background-image: url(${(props)=>props.selected==0?BG6:props.selected==1?BG2:props.selected==2?BG3:props.selected==3 && BG4});
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
 `;
 
 export const Aside=Styled.aside<{aside:number}>`
