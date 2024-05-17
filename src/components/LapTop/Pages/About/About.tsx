@@ -75,7 +75,7 @@ function About() {
 
                 <hr/>
 
-                <section className='experienceDiv'>
+                <section className='experience'>
 
                     <div className='education'>
                         <h2>Education</h2>

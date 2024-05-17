@@ -38,47 +38,160 @@
   box-sizing: border-box;
   background-color: rgba(76, 0, 255, 0.6);
 }
-.mobile main {
-  background-color: rgb(52, 83, 255);
-  padding: 20px;
-  padding-top: 35px;
-  box-sizing: border-box;
-  width: 100vw;
-  height: -moz-fit-content;
-  height: fit-content;
+.mobile main .about hr {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
-.mobile main .about p, .mobile main .about .skills {
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+.mobile main .about .skills h3 {
+  margin: 25px 0 10px;
 }
-.mobile main .about .skills .front-end, .mobile main .about .skills .tools {
+.mobile main .about .skills .languages, .mobile main .about .skills .tools {
+  width: 85%;
+  margin: 0 auto;
+}
+.mobile main .about .skills .languages {
+  display: flex;
   justify-content: space-between;
 }
-.mobile main .about .skills .back-end svg, .mobile main .about .skills .database svg {
-  margin: 10px;
-}
-.mobile main .about .skills .flex {
+.mobile main .about .skills .languages .right {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.mobile main .about .skills .front-end, .mobile main .about .skills .back-end, .mobile main .about .skills .database, .mobile main .about .skills .tools {
-  position: relative;
+.mobile main .about .skills .tools .flex {
   display: flex;
-  margin-top: 50px;
+  justify-content: space-between;
 }
-.mobile main .about .skills .front-end .title, .mobile main .about .skills .back-end .title, .mobile main .about .skills .database .title, .mobile main .about .skills .tools .title {
+.mobile main .about .skills .icons .iconNnameFlex {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.mobile main .about .skills .icons .iconNnameFlex svg {
+  width: 30px;
+}
+.mobile main .about .skills .icons .iconName {
+  margin-left: 15px;
+  color: rgba(255, 255, 255, 0.6666666667);
+}
+.mobile main .about .experience ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 85%;
+}
+.mobile main .about .experience ul li .title {
   width: -moz-fit-content;
   width: fit-content;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -20px;
-  white-space: nowrap;
-  background-color: rgba(0, 0, 158, 0.747);
-  border-radius: 10px;
-  padding: 2px 15px;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #000000;
 }
-.mobile main .about .skills .front-end svg, .mobile main .about .skills .back-end svg, .mobile main .about .skills .database svg, .mobile main .about .skills .tools svg {
-  width: 30px;
+.mobile main .about .experience ul li .place {
+  color: rgba(255, 255, 255, 0.6666666667);
+}
+.mobile main .about .experience ul .etc {
+  color: rgba(255, 255, 255, 0.6666666667);
+  margin-top: 10px;
+}
+.mobile main .contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mobile main .contact h1, .mobile main .contact p {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.mobile main .contact p {
+  margin-top: 10px;
+}
+.mobile main .contact .contactFlex {
+  width: 65%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.mobile main .contact .contactFlex a {
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+.mobile main .contact .contactFlex a svg {
+  width: 50px;
+  fill: rgba(255, 255, 255, 0.8);
+}
+.mobile main .contact form {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  border-radius: 5px;
+}
+.mobile main .contact form .formFlex {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.mobile main .contact form .formFlex input, .mobile main .contact form .formFlex textarea {
   margin-top: 15px;
+}
+.mobile main .contact form .formFlex input[type=submit] {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 10px;
+  margin: 15px auto;
+}
+.mobile main .projects .project {
+  margin-bottom: 30px;
+}
+.mobile main .projects .project img {
+  width: 90%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+.mobile main .projects .project .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+.mobile main .projects .project .title h3 {
+  margin: 0 0 0 10px;
+}
+.mobile main .projects .project .hiddenPart {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  display: none;
+  box-sizing: border-box;
+}
+.mobile main .projects .project .hiddenPart .url h4 {
+  margin: 0;
+}
+.mobile main .projects .project .hiddenPart .url a {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
+}
+.mobile main .projects .project .hiddenPart .description {
+  margin: 20px 0;
+}
+.mobile main .projects .project .hiddenPart .description p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6666666667);
+}
+.mobile main .projects .project .hiddenPart .languages {
+  display: flex;
+  justify-content: center;
+}
+.mobile main .projects .project .hiddenPart .languages svg {
+  width: 30px;
+  margin: 0 15px;
 }/*# sourceMappingURL=mobile.css.map */

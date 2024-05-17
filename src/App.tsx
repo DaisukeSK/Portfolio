@@ -7,9 +7,9 @@ import Projects from './components/LapTop/Pages/Projects/Projects.tsx';
 import Inquiry from './components/LapTop/Pages/Inquiry.tsx';
 import ComingSoon from './components/LapTop/Pages/ComingSoon.tsx';
 
-// import M_Header from './components/Mobile/M_Header.tsx';
+import M_Header from './components/Mobile/M_Header.tsx';
 // import M_SideMenu from './components/Mobile/M_SideMenu.tsx';
-// import M_Main from './components/Mobile/M_Main.tsx';
+import M_Main from './components/Mobile/M_Main.tsx';
 
 export type Selected={
     prev:number,
@@ -61,7 +61,7 @@ function App() {
                 :
                 innerWidth<=450 &&
                     <div className='mobile'>
-                        <main className='mainForMobile'>
+                        {/* <main className='mainForMobile'>
 
                             <div className='flex'>
 
@@ -80,10 +80,10 @@ function App() {
                                 I'm sorry, it is not ready for mobile devices yet.<br/>
                                 Try with your laptop, thank you.
                             </p>
-                        </main>
-                        {/* <M_Header></M_Header>
-                        <M_SideMenu></M_SideMenu>
-                        <M_Main></M_Main> */}
+                        </main> */}
+                        <M_Header></M_Header>
+                        {/* <M_SideMenu></M_SideMenu> */}
+                        <M_Main></M_Main>
                     </div>
             }
 

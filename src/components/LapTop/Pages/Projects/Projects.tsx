@@ -9,10 +9,10 @@ import memolis from '../../../../../public/projectsPics/memolis.png';
 import preparing from '../../../../../public/projectsPics/preparing.png';
 import dnn from '../../../../../public/projectsPics/dnn.png';
 import { AppContext } from '../../../../App';
-import js from './projects.json';
+import js from '../../../projects.json';
 import ProjectDetail from './ProjectDetail';
 
-type JsonType = {
+export type JsonType = {
     [key:string]:{
         'url':Array<string>,
         'description':Array<string>,
@@ -30,6 +30,17 @@ export type showDetailType = {
     features: Array<string>
 }
 
+export const imagePaths:{[key:string]:string} = {
+    'memolis':memolis,
+    'Color Code Converter':ccc,
+    'E-Commerce':ecommerce,
+    'Satellite Launch Simulation':satellite,
+    'SVG Animation Gallery':animation,
+    'DNN':dnn,
+    'This portfolio': portfolio,
+    'Preparing...': preparing,
+}
+
 function Projects() {
 
     const { selected } = useContext(AppContext)
@@ -44,16 +55,6 @@ function Projects() {
     })
     
     const projectsObj:JsonType = {...js}
-    const imagePaths:{[key:string]:string} = {
-        'memolis':memolis,
-        'Color Code Converter':ccc,
-        'E-Commerce':ecommerce,
-        'Satellite Launch Simulation':satellite,
-        'SVG Animation Gallery':animation,
-        'DNN':dnn,
-        'This portfolio': portfolio,
-        'Preparing...': preparing,
-    }
 
     useEffect(()=>{
         setShowDetail({title:'', description:[], url:[], languages:[], features:[]})

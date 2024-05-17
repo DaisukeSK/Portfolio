@@ -1,28 +1,38 @@
 import { AppContext } from "../../App";
 import { useContext } from "react";
 
-import About from "./Pages/About";
+import { Main } from "./StyledComponents";
+
+import M_SideMenu from "./M_SideMenu";
+
+import Home from "./Pages/Home";
+import About from "./Pages/About/About";
+import Projects from "./Pages/Projects";
+import Contact from "./Pages/Contact/Contact";
 
 function M_Main() {
 
     const { selected, setAside } = useContext(AppContext)
 
     return (
-        <main onClick={()=>setAside(false)}>
+        <Main selected={selected.current} onClick={()=>setAside(false)}>
+
+<M_SideMenu></M_SideMenu>
             
             {
-            selected.current==0? 'Home'
+            selected.current==0? <Home/>
             :
-            selected.current==1? <About></About>
+            selected.current==1? <About/>
             :
-            selected.current==2? 'Projects'
+            selected.current==2? <Projects/>
             :
-            selected.current==3 && 'Contact'
+            selected.current==3 && <Contact/>
             
             }
+            {/* <Projects/> */}
             
             
-        </main>
+        </Main>
     )
 };
 

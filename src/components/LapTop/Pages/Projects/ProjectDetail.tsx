@@ -19,21 +19,22 @@ import dnn from '../../../../../public/projectsVideos/DNN.mp4'
 
 import { showDetailType } from './Projects';
 
+export const languageObj:{[key:string]:JSX.Element} = {
+    'JS':<JS/>,
+    'TS':<TS/>,
+    'Jquery':<Jquery strokeColor={'#000000'}/>,
+    'React':<React/>,
+    'MySQL':<MySQL/>,
+    'PHP':<PHP/>,
+    'PostgreSQL':<PostgreSQL strokeColor={'#000000'}/>,
+    'NodeJs':<NodeJS/>
+}
+
 function ProjectDetail(props:{
     showDetail: showDetailType,
     setShowDetail: React.Dispatch<React.SetStateAction<showDetailType>>
     }) {
 
-    const languageObj:{[key:string]:JSX.Element} = {
-        'JS':<JS/>,
-        'TS':<TS/>,
-        'Jquery':<Jquery strokeColor={'#000000'}/>,
-        'React':<React/>,
-        'MySQL':<MySQL/>,
-        'PHP':<PHP/>,
-        'PostgreSQL':<PostgreSQL strokeColor={'#000000'}/>,
-        'NodeJs':<NodeJS/>
-    }
 
     const videoPaths:{[key:string]:string} = {
         'memolis':memolis,
