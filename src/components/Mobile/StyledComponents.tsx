@@ -11,7 +11,9 @@ console.log(BG1,BG2,BG3,BG4,BG5,BG6)
 
 export const Main=Styled.main<{selected:number}>`
 
-    position: relative;
+    position: absolute;
+    top: 0;
+    background-color: #85CCE9;
     
     padding: 20px;
     padding-top: 35px;
@@ -20,48 +22,31 @@ export const Main=Styled.main<{selected:number}>`
     height: fit-content;
     min-height: 100vh;
 
-    &::before {
-        content: "";
-        display: block;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -10;
-        background-image: url(${(props)=>props.selected==0?BG6:props.selected==1?BG2:props.selected==2?BG3:props.selected==3 && BG4});
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-    }
 `;
 
 export const Aside=Styled.aside<{aside:number}>`
-width: 150px;
-height: 100%;
-position: absolute;
-top: 0;
-right: ${(props)=>props.aside?'0':'-160px'};
-transition: all .5s ease-in-out;
-z-index: 2;
-background-color: navy;
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: ${(props)=>props.aside?'0':'-160px'};
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    background-color: navy;
 
-svg {
-    margin: 10px 10px 10px auto;
-    display: block;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    li {
-        
+    svg {
+        margin: 10px 10px 10px auto;
+        display: block;
     }
-}
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            
+        }
+    }
 
 `;
 

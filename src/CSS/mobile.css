@@ -1,3 +1,7 @@
+.mobile {
+  position: relative;
+  min-height: 100vh;
+}
 .mobile .mainForMobile {
   position: relative;
   background: linear-gradient(rgba(255, 0, 0, 0.3), rgba(9, 255, 0, 0.3));
@@ -36,6 +40,7 @@
   align-items: center;
   padding: 0 15px;
   box-sizing: border-box;
+  z-index: 2;
   background-color: rgba(76, 0, 255, 0.6);
 }
 .mobile main .about hr {
@@ -97,7 +102,7 @@
   margin-top: 10px;
 }
 .mobile main .contact {
-  min-height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

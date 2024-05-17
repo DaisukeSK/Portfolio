@@ -49,7 +49,7 @@ function Projects() {
                                 {showDetail==projectName?
                                 <>
                                     <path d='m0,19 l10,-10 l10,10 v-3 l-10,-10 l-10,10'/>
-                                    <path d='m0,16 l10,-10 l10,10 v-3 l-10,-10 l-10,10'/>
+                                    <path d='m0,13 l10,-10 l10,10 v-3 l-10,-10 l-10,10'/>
                                 </>
                                 :
                                 <>
