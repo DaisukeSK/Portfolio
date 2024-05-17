@@ -12,7 +12,7 @@ import Contact from "./Pages/Contact/Contact";
 
 function M_Main() {
 
-    const { selected, aside, setAside } = useContext(AppContext)
+    const { selected, setAside } = useContext(AppContext)
 
     return (
         <Main selected={selected.current} onClick={()=>setAside(false)}>
