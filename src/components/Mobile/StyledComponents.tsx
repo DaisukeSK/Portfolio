@@ -48,8 +48,7 @@ export const Main=Styled.main<{selected:number}>`
             props.selected==2?'#FFFFFFbb':
             props.selected==3 && '#00104677'
         };
-        // backdrop-filter: blur(2px);
-        z-index: -3;
+        z-index: -1;
     }
 
     
