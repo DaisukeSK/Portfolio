@@ -1,13 +1,14 @@
 import Styled, { styled } from "styled-components";
-import BG1 from '../../../public/mb_BG1.png'
-import BG2 from '../../../public/mb_BG2.png'
+// import BG1 from '../../../public/mobile/mb_BG1.png'
+import BG2 from '../../../public/mobile/mb_BG2.png'
+import BG3 from '../../../public/mobile/mb_BG3.png'
 // import BG3 from '../../../public/mb_BG3.png'
-import BG4 from '../../../public/mb_BG4.png'
+import BG4 from '../../../public/mobile/mb_BG4.png'
 // import BG5 from '../../../public/mb_BG5.png'
 // import BG6 from '../../../public/mb_BG6.png'
 // import BG7 from '../../../public/mb_BG7.png'
 // import BG8 from '../../../public/mb_BG8.png'
-import BG9 from '../../../public/mb_BG9.png'
+import BG9 from '../../../public/mobile/mb_BG9.png'
 // import { css,keyframes } from "styled-components";
 
 // console.log(BG1,BG2,BG3,BG4,BG5,BG6)
@@ -34,7 +35,7 @@ export const Main=Styled.main<{selected:number}>`
     }
     &::before {
         
-        background-image: url(${(props)=>props.selected==0?BG9:props.selected==1?BG2:props.selected==2?BG1:props.selected==3 && BG4});
+        background-image: url(${(props)=>props.selected==0?BG9:props.selected==1?BG2:props.selected==2?BG3:props.selected==3 && BG4});
 
         background-size: cover;
         background-position: center;
@@ -42,25 +43,14 @@ export const Main=Styled.main<{selected:number}>`
 
     }
     &::after {
-        background-color: ${(props)=>
-            props.selected==0?'#95AEFF77':
-            props.selected==1?'#001046A1':
-            props.selected==2?'#FFFFFFbb':
+        background: ${(props)=>
+            props.selected==0?'linear-gradient(#FF560E55,#95AEFF77)':
+            props.selected==1?'linear-gradient(#F7FF0E33,#001046A1)':
+            props.selected==2?'linear-gradient(#FFFFFF77,#FFFFFF77)':
             props.selected==3 && '#00104677'
         };
         z-index: -2;
     }
-`;
-
-export const MainBlackBG=Styled.div<{bg:number}>`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: ${(props)=>props.bg?'#000000dd':'#00000000'};
-    transition: all ${(props)=>props.bg?'0s':'3s'} ease-in-out;
-    z-index: -1;
 `;
 
 export const Aside=Styled.aside<{aside:number}>`

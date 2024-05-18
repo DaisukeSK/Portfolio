@@ -66,6 +66,9 @@
   display: block;
   margin: 30px auto 80px;
 }
+.mobile main .home svg .path1 {
+  filter: blur(30px);
+}
 .mobile main .about hr {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -93,7 +96,7 @@
 .mobile main .about .skills .icons .iconNnameFlex {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 .mobile main .about .skills .icons .iconNnameFlex svg {
   width: 30px;
