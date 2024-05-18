@@ -52,17 +52,7 @@ export const Main=Styled.main<{selected:number}>`
         z-index: -3;
     }
 
-    .testDiv {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 50vh;
-        background-color: #0000aa77;
-        backdrop-filter: blur(2px);
-        z-index: -1;
-    }
+    
 `;
 
 export const Aside=Styled.aside<{aside:number}>`
