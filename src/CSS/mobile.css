@@ -52,6 +52,10 @@
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }
+.mobile main aside {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
 .mobile main .home {
   height: 90vh;
   display: flex;
@@ -169,6 +173,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.6666666667);
+  border-radius: 0;
 }
 .mobile main .contact form .formFlex input:not(input[type=submit]):focus, .mobile main .contact form .formFlex textarea:focus {
   outline: none;
@@ -215,7 +220,7 @@
   margin: 0 0 0 10px;
 }
 .mobile main .projects .project .hiddenPart {
-  background-color: rgba(0, 0, 0, 0.3333333333);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 20px;
   display: none;

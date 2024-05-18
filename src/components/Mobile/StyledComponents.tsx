@@ -62,7 +62,7 @@ export const Aside=Styled.aside<{aside:number}>`
     right: ${(props)=>props.aside?'0':'-150px'};
     transition: all .5s ease-in-out;
     z-index: 2;
-    background-color: navy;
+    background-color: #000088cc;
 
     &>svg {
         margin: 10px 10px 10px auto;
@@ -106,12 +106,12 @@ export const Toggle=styled.div<{team:number}>`
         background-color: ${(props)=>props.team?'#00000055':'#2F60FFD1'};
         box-shadow: #2F60FFD1 0 0 ${(props)=>props.team?'0':'5px'};
         pointer-events: ${(props)=>props.team?'auto':'none'};
-        color: ${(props)=>props.team?'#000000':'#ffffff'};
+        color: ${(props)=>props.team?'#00000077':'#ffffff'};
     }
     div:nth-child(2) {
         background-color: ${(props)=>!props.team?'#00000055':'#2F60FFD1'};
         box-shadow: #2F60FFD1 0 0 ${(props)=>!props.team?'0':'5px'};
         pointer-events: ${(props)=>!props.team?'auto':'none'};
-        color: ${(props)=>!props.team?'#000000':'#ffffff'};
+        color: ${(props)=>!props.team?'#00000077':'#ffffff'};
     }
 `;

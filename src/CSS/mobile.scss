@@ -67,6 +67,9 @@
         &::after {
             backdrop-filter: blur(2px);
         }
+        aside {
+            backdrop-filter: blur(2px);
+        }
         .home {
             height: 90vh;
             display: flex;
@@ -249,6 +252,7 @@
                         background-color: transparent;
                         border: none;
                         border-bottom: 1px solid #000000aa;
+                        border-radius: 0;
                         &:focus {
                             outline: none;
                         }
@@ -298,7 +302,7 @@
                     }
                 }
                 .hiddenPart {
-                    background-color: #00000055;
+                    background-color: #00000033;
                     border-radius: 5px;
                     // outline: 1px solid grey;
                     padding: 20px;
