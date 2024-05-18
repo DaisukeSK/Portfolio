@@ -1,16 +1,18 @@
 import Styled, { styled } from "styled-components";
 import BG1 from '../../../public/mb_BG1.png'
 import BG2 from '../../../public/mb_BG2.png'
-import BG3 from '../../../public/mb_BG3.png'
+// import BG3 from '../../../public/mb_BG3.png'
 import BG4 from '../../../public/mb_BG4.png'
-import BG5 from '../../../public/mb_BG5.png'
-import BG6 from '../../../public/mb_BG6.png'
+// import BG5 from '../../../public/mb_BG5.png'
+// import BG6 from '../../../public/mb_BG6.png'
+// import BG7 from '../../../public/mb_BG7.png'
+// import BG8 from '../../../public/mb_BG8.png'
+import BG9 from '../../../public/mb_BG9.png'
 // import { css,keyframes } from "styled-components";
 
-console.log(BG1,BG2,BG3,BG4,BG5,BG6)
+// console.log(BG1,BG2,BG3,BG4,BG5,BG6)
 
 export const Main=Styled.main<{selected:number}>`
-
     position: absolute;
     top: 0;    
     
@@ -21,16 +23,33 @@ export const Main=Styled.main<{selected:number}>`
     height: fit-content;
     min-height: 100vh;
 
-    &::before {
-        content: "";
+    &::before, &::after {
+        content: '';
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-image: url(${BG6});
+        
+    }
+    &::before {
+        
+        background-image: url(${(props)=>props.selected==0?BG9:props.selected==1?BG2:props.selected==2?BG1:props.selected==3 && BG4});
+
         background-size: cover;
-        z-index: -10;
+        background-position: center;
+        z-index: -2;
+
+    }
+    &::after {
+        background-color: ${(props)=>
+            props.selected==0?'#95AEFF77':
+            props.selected==1?'#001046A1':
+            props.selected==2?'#FFFFFFbb':
+            props.selected==3 && '#00104677'
+        };
+        backdrop-filter: blur(2px);
+        z-index: -1;
     }
 
 `;
@@ -45,7 +64,7 @@ export const Aside=Styled.aside<{aside:number}>`
     z-index: 2;
     background-color: navy;
 
-    svg {
+    &>svg {
         margin: 10px 10px 10px auto;
         display: block;
     }
@@ -55,10 +74,17 @@ export const Aside=Styled.aside<{aside:number}>`
         padding: 0;
         list-style: none;
         li {
-            
+            display: flex;
+            align-items: center;
+           
         }
     }
 
+`;
+
+export const ArrowSVG=Styled.svg.attrs({width:'12', height:'10'})<{selected:number}>`
+    margin: 10px;
+    opacity: ${(props)=>props.selected?1:0};
 `;
 
 export const Toggle=styled.div<{team:number}>`
@@ -77,13 +103,15 @@ export const Toggle=styled.div<{team:number}>`
         transition: all .3s ease-in-out;
     }
     div:first-child {
-        background-color: ${(props)=>props.team?'#00000055':'#ffffff55'};
-        box-shadow: #ffffff 0 0 ${(props)=>props.team?'0':'5px'};
+        background-color: ${(props)=>props.team?'#00000055':'#2F60FFD1'};
+        box-shadow: #2F60FFD1 0 0 ${(props)=>props.team?'0':'5px'};
         pointer-events: ${(props)=>props.team?'auto':'none'};
+        color: ${(props)=>props.team?'#000000':'#ffffff'};
     }
     div:nth-child(2) {
-        background-color: ${(props)=>!props.team?'#00000055':'#ffffff55'};
-        box-shadow: #ffffff 0 0 ${(props)=>!props.team?'0':'5px'};
+        background-color: ${(props)=>!props.team?'#00000055':'#2F60FFD1'};
+        box-shadow: #2F60FFD1 0 0 ${(props)=>!props.team?'0':'5px'};
         pointer-events: ${(props)=>!props.team?'auto':'none'};
+        color: ${(props)=>!props.team?'#000000':'#ffffff'};
     }
 `;

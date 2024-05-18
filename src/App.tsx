@@ -39,6 +39,10 @@ function App() {
         window.location.search=='?preparing' && setPreparing(true);
     },[]);
 
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[selected]);
+
     window.onresize=()=>{
         setInnerWidth(window.innerWidth)
     }

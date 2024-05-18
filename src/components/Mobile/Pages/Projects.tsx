@@ -44,7 +44,7 @@ function Projects() {
                     <div className='project' key={key}>
                         <img src={imagePaths[projectName]} onClick={()=>setShowDetail(showDetail==projectName?'':projectName)}/>
                         <div className='title' onClick={()=>setShowDetail(showDetail==projectName?'':projectName)}>
-                            <svg width='20' height='19' fill='#ffffff'>
+                            <svg width='20' height='19' fill='#000000'>
 
                                 {showDetail==projectName?
                                 <>

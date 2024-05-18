@@ -8,7 +8,7 @@ function M_Header() {
     return (
         <header>
 
-            <div>Portfolio</div>
+            <h1>Daisuke's Portfolio</h1>
 
             <svg width='25' height='19' onClick={()=>setAside(!aside)}>
                 <rect x='0' y='0' width='25' height='3' fill='#ffffff'/>

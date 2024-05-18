@@ -1,15 +1,17 @@
 import { AppContext } from "../../App";
 import { useContext } from "react";
-import { Aside } from "./StyledComponents";
+import { Aside, ArrowSVG } from "./StyledComponents";
 
 function M_SideMenu() {
 
-    const { aside, setAside, setSelected } = useContext(AppContext)
+    const { aside, setAside, selected, setSelected } = useContext(AppContext)
 
     const onClickHandler=(num:number):void=>{
         setSelected({prev:0, current:num})
         setAside(false)
     }
+
+    const path: JSX.Element = <path fill='#ffffff' d='m0,0 l12 5 l-12,5'/>
 
     return (
         <Aside aside={aside?1:0}>
@@ -21,10 +23,22 @@ function M_SideMenu() {
             </svg>
 
             <ul>
-                <li onClick={()=>onClickHandler(0)}>Home</li>
-                <li onClick={()=>onClickHandler(1)}>About</li>
-                <li onClick={()=>onClickHandler(2)}>Projects</li>
-                <li onClick={()=>onClickHandler(3)}>Contact</li>
+                <li onClick={()=>onClickHandler(0)}>
+                    <ArrowSVG selected={selected.current==0?1:0}>{path}</ArrowSVG>
+                    <div>Home</div>
+                </li>
+                <li onClick={()=>onClickHandler(1)}>
+                    <ArrowSVG selected={selected.current==1?1:0}>{path}</ArrowSVG>
+                    <div>About</div>
+                </li>
+                <li onClick={()=>onClickHandler(2)}>
+                    <ArrowSVG selected={selected.current==2?1:0}>{path}</ArrowSVG>
+                    <div>Projects</div>
+                </li>
+                <li onClick={()=>onClickHandler(3)}>
+                    <ArrowSVG selected={selected.current==3?1:0}>{path}</ArrowSVG>
+                    <div>Contact</div>
+                </li>
             </ul>
             
         </Aside>
