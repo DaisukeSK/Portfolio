@@ -42,12 +42,7 @@ export const Main=Styled.main<{selected:number}>`
 
     }
     &::after {
-        background-color: ${(props)=>
-            props.selected==0?'#95AEFF77':
-            props.selected==1?'#001046A1':
-            props.selected==2?'#FFFFFFbb':
-            props.selected==3 && '#00104677'
-        };
+        
         backdrop-filter: blur(2px);
         z-index: -1;
     }
