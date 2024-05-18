@@ -48,11 +48,7 @@
 .mobile header h1 {
   font-size: 1rem;
 }
-.mobile main::after {
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-}
-.mobile main aside {
+.mobile main::after, .mobile main aside {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }

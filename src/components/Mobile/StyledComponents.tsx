@@ -38,7 +38,7 @@ export const Main=Styled.main<{selected:number}>`
 
         background-size: cover;
         background-position: center;
-        z-index: -2;
+        z-index: -3;
 
     }
     &::after {
@@ -48,10 +48,19 @@ export const Main=Styled.main<{selected:number}>`
             props.selected==2?'#FFFFFFbb':
             props.selected==3 && '#00104677'
         };
-        z-index: -1;
+        z-index: -2;
     }
+`;
 
-    
+export const MainBlackBG=Styled.div<{bg:number}>`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: ${(props)=>props.bg?'#000000dd':'#00000000'};
+    transition: all ${(props)=>props.bg?'0s':'3s'} ease-in-out;
+    z-index: -1;
 `;
 
 export const Aside=Styled.aside<{aside:number}>`

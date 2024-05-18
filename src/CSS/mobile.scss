@@ -64,12 +64,10 @@
     
     main {
 
-        &::after {
+        &::after, aside {
             backdrop-filter: blur(2px);
         }
-        aside {
-            backdrop-filter: blur(2px);
-        }
+        
         .home {
             height: 90vh;
             display: flex;
