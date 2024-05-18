@@ -23,13 +23,13 @@ function Home() {
 
                 </defs>
     
-                <path
+                {/* <path
                     fill='#ffffffCC'
                     stroke='#ffffffCC'
                     strokeWidth='55'
                     d="M400,207 l-150,87 l-150,-87 v-120 l150,-87 l150,87z"
                     className='path1'
-                />
+                /> */}
                 <path
                     fill='url(#grad_1)'
                     stroke='url(#grad_1)'
