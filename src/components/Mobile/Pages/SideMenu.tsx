@@ -1,8 +1,8 @@
-import { AppContext } from "../../App";
+import { AppContext } from "../../../App";
 import { useContext } from "react";
-import { Aside, ArrowSVG } from "./StyledComponents";
+import { Aside, ArrowSVG } from "../StyledComponents";
 
-function M_SideMenu() {
+function SideMenu() {
 
     const { aside, setAside, selected, setSelected } = useContext(AppContext)
 
@@ -45,4 +45,4 @@ function M_SideMenu() {
     )
 };
 
-export default M_SideMenu;
+export default SideMenu;

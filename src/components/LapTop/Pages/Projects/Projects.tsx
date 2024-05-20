@@ -18,7 +18,8 @@ export type JsonType = {
         'description':Array<string>,
         'languages':Array<string>,
         'features':Array<string>,
-        'team':boolean
+        'team':boolean,
+        'responsive':boolean
     }
 }
 
@@ -27,7 +28,8 @@ export type showDetailType = {
     description: Array<string>,
     url: Array<string>,
     languages: Array<string>,
-    features: Array<string>
+    features: Array<string>,
+    responsive?: boolean
 }
 
 export const imagePaths:{[key:string]:string} = {
@@ -84,7 +86,7 @@ function Projects() {
             <div className='projectsFlex'>
                 {Object.keys(projectsObj).map((val:string, key:number)=>{
                     return (projectsObj[val]['team']==teamP &&
-                        <div key={key} className='WFchild'>
+                        <div key={key} className='flexChild'>
                             <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val, description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
                             <h3>{[val]}</h3>
                         </div>

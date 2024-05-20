@@ -11,7 +11,8 @@
         ],
         "languages":["JS","Jquery","PHP","MySQL"],
         "features":[],
-        "team":false
+        "team":false,
+        "responsive":false
     },
 
     "Color Code Converter":{
@@ -27,7 +28,8 @@
         ],
         "languages":["TS","React"],
         "features":[],
-        "team":false
+        "team":false,
+        "responsive":false
     },
 
     "E-Commerce":{
@@ -43,7 +45,8 @@
         ],
         "languages":["TS","React","NodeJs","PostgreSQL"],
         "features":[],
-        "team":false
+        "team":false,
+        "responsive":false
     },
 
     "Satellite Launch Simulation":{
@@ -57,7 +60,8 @@
         ],
         "languages":["JS","Jquery"],
         "features":[],
-        "team":false
+        "team":false,
+        "responsive":false
     },
 
     "SVG Animation Gallery":{
@@ -71,7 +75,8 @@
         ],
         "languages":["JS"],
         "features":[],
-        "team":false
+        "team":false,
+        "responsive":false
     },
 
     "DNN":{
@@ -85,7 +90,8 @@
         ],
         "languages":["TS","React"],
         "features":[],
-        "team":false
+        "team":false,
+        "responsive":false
     },
 
     "This portfolio":{
@@ -96,7 +102,8 @@
         "description":["Portfolio you are browsing right now. Thank you for visiting my portfolio, have fun, I hope you like it."],
         "languages":["TS","React","PHP","MySQL"],
         "features":[],
-        "team":false
+        "team":false,
+        "responsive":true
     },
     
     "Preparing...":{
@@ -107,6 +114,7 @@
         "description":["Preparing..."],
         "languages":["TS","React","PHP","MySQL","Jquery"],
         "features":[],
-        "team":true
+        "team":true,
+        "responsive":false
     }
 }

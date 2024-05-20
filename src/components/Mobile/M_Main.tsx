@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { Main } from "./StyledComponents";
 
-import M_SideMenu from "./M_SideMenu";
+import SideMenu from "./Pages/SideMenu";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About/About";
@@ -21,7 +21,7 @@ function M_Main() {
 
             {/* <div className="testDiv"></div> */}
 
-            <M_SideMenu></M_SideMenu>
+            <SideMenu></SideMenu>
             
             {
             selected.current==0? <Home/>

@@ -445,13 +445,13 @@ body {
   flex-wrap: wrap;
   margin: 50px auto;
 }
-.laptop .projects .projectsFlex .WFchild {
+.laptop .projects .projectsFlex .flexChild {
   margin: 30px 50px;
 }
-.laptop .projects .projectsFlex .WFchild div {
+.laptop .projects .projectsFlex .flexChild div {
   box-shadow: rgba(0, 0, 0, 0.6666666667) 3px 3px 10px;
 }
-.laptop .projects .projectsFlex .WFchild h3 {
+.laptop .projects .projectsFlex .flexChild h3 {
   width: -moz-fit-content;
   width: fit-content;
   margin: 10px auto 0;

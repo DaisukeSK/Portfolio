@@ -2,34 +2,6 @@
   position: relative;
   min-height: 100vh;
 }
-.mobile .mainForMobile {
-  position: relative;
-  background: linear-gradient(rgba(255, 0, 0, 0.3), rgba(9, 255, 0, 0.3));
-  min-height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.mobile .mainForMobile .flex {
-  display: flex;
-  align-items: center;
-}
-.mobile .mainForMobile .flex svg {
-  margin-right: 15px;
-}
-.mobile .mainForMobile::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(45deg, yellow, blue);
-  z-index: -1;
-}
 .mobile header {
   position: fixed;
   top: 0;
@@ -219,11 +191,28 @@
   margin: 0 0 0 10px;
 }
 .mobile main .projects .project .hiddenPart {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3333333333);
   border-radius: 5px;
   padding: 20px;
   display: none;
   box-sizing: border-box;
+}
+.mobile main .projects .project .hiddenPart .notResponsive {
+  background-color: #655db4;
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+.mobile main .projects .project .hiddenPart .notResponsive .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile main .projects .project .hiddenPart .notResponsive .flex h3 {
+  margin: 0 0 0 5px;
+}
+.mobile main .projects .project .hiddenPart .notResponsive p {
+  margin: 0;
+  text-align: center;
 }
 .mobile main .projects .project .hiddenPart .url h4 {
   margin: 0;

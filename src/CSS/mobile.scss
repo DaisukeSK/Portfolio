@@ -3,42 +3,6 @@
     position: relative;
     min-height: 100vh;
     // color: #000000;
-    .mainForMobile {
-        
-        position: relative;
-        // padding: 20px;
-        // padding-top: 45px;
-        background: linear-gradient(rgba(255, 0, 0, 0.3),rgba(9, 255, 0, 0.3));
-        min-height: 100vh;
-        padding: 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        .flex {
-            display: flex;
-            align-items: center;
-            svg {
-                margin-right: 15px;
-            }
-        }
-        
-        &::before {
-            content: '';
-            // padding-top: 45px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: linear-gradient(45deg,yellow,blue);
-            z-index: -1;
-        }
-        
-        
-    }
     
     header {
         position: fixed;
@@ -305,7 +269,7 @@
                     }
                 }
                 .hiddenPart {
-                    background-color: #00000033;
+                    background-color: #00000055;
                     border-radius: 5px;
                     // outline: 1px solid grey;
                     padding: 20px;
@@ -313,6 +277,29 @@
                     // padding-top: 1px;
                     display: none;
                     box-sizing: border-box;
+
+                    .notResponsive {
+
+                        background-color: #655db4;
+                        // color: #ffffff;
+                        padding: 5px 0;
+                        margin-bottom: 10px;
+
+                        .flex {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            h3 {
+                                margin: 0 0 0 5px;
+                                
+                            }
+                        }
+                        p {
+                            margin: 0;
+                            text-align: center;
+                        }
+
+                    }
                     .url {
                         h4 {
                             margin: 0;
@@ -321,6 +308,7 @@
                             color: #000000;
                             display: block;
                             margin-bottom: 10px;
+                            // white-space: nowrap;
                         }
                         
                     }
