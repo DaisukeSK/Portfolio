@@ -63,45 +63,10 @@
                 border: none;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.7);
             }
-    
             .skills {
                 h3 {
                     margin: 25px 0 10px;
                 }
-                // .front-end, .tools {
-                //     justify-content: space-between;
-                // }
-                // .back-end, .database {
-                //     svg {
-                //         margin: 10px;
-                //     }
-                // }
-                // .flex {
-                //     display: flex;
-                //     justify-content: space-around;
-                // }
-                // .front-end, .back-end, .database, .tools {
-                //     position: relative;
-
-                //     display: flex;
-                //     margin-top: 50px;
-                //     .title {
-                //         width: fit-content;
-                //         position: absolute;
-                //         left: 50%;
-                //         transform: translateX(-50%);
-                //         top: -20px;
-                //         white-space: nowrap;
-                //         background-color: rgba(0, 0, 158, 0.747);
-                //         border-radius: 10px;
-                //         padding: 2px 15px;
-                //     }
-                //     svg {
-                //         width: 30px;
-                //         margin-top: 15px;
-                //         // margin: 10px;
-                //     }
-                // }
                 .languages, .tools {
                     width: 85%;
                     margin: 0 auto;
@@ -109,8 +74,6 @@
                 .languages {
                     display: flex;
                     justify-content: space-between;
-                    // background-color: rgba(165, 42, 42, 0.342);
-                    
                     
                     .right {
                         display: flex;
@@ -123,15 +86,11 @@
 
                         display: flex;
                         justify-content: space-between;
-                        // background-color: rgba(165, 42, 42, 0.342);
                     }
                 }
 
                 //////////////////////
                 .icons {
-                    // margin-top: 100px;
-                    // display: flex;
-                    // flex-wrap: wrap;
                     .iconNnameFlex {
                         display: flex;
                         align-items: center;
