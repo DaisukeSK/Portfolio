@@ -111,8 +111,13 @@
             "https://fridgefy.onrender.com",
             "https://github.com/diogoka/final-project-react-devteamddgm"
         ],
-        "description":["Fridgefy app"],
-        "languages":["TS","React","NextJS","FireBase"],
+        "description":[
+            "It provides you with various recipes from various kinds.",
+            "You have 2 lists, your-favorite-recipe list and ingredient-you-have-in-the-fridge list.",
+            "Once you add a recipe in the list, it shows you what ingredients that you need but don't have in the fridge yet."
+        
+        ],
+        "languages":["JS","React","NextJS","FireBase"],
         "features":[],
         "team":true,
         "responsive":false

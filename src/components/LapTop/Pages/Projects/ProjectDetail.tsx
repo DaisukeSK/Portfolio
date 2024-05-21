@@ -18,6 +18,7 @@ import satellite from '../../../../../public/projectsVideos/Satellite Launch sim
 import animation from '../../../../../public/projectsVideos/SVG Animation Gallery.mp4'
 import memolis from '../../../../../public/projectsVideos/memolis.mp4'
 import dnn from '../../../../../public/projectsVideos/DNN.mp4'
+import Fridgefy from '../../../../../public/projectsVideos/Fridgefy.mp4'
 
 import { showDetailType } from './Projects';
 
@@ -46,7 +47,8 @@ function ProjectDetail(props:{
         'E-Commerce':ecommerce,
         'Satellite Launch Simulation':satellite,
         'SVG Animation Gallery':animation,
-        'DNN':dnn
+        'DNN':dnn,
+        'Fridgefy':Fridgefy
     }
 
     return (
