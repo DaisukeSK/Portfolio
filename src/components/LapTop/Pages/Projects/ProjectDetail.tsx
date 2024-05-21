@@ -7,6 +7,8 @@ import MySQL from '../../../icons/MySQL';
 import PHP from '../../../icons/PHP';
 import NodeJS from '../../../icons/NodeJS';
 import PostgreSQL from '../../../icons/PostgreSQL';
+import FireBase from '../../../icons/FireBase';
+import NextJS from '../../../icons/NextJS';
 import Github from '../../../icons/Github';
 import Laptop from '../../../icons/Laptop';
 import portfolio from '../../../../../public/projectsPics/portfolio.png';
@@ -27,7 +29,9 @@ export const languageObj:{[key:string]:JSX.Element} = {
     'MySQL':<MySQL/>,
     'PHP':<PHP/>,
     'PostgreSQL':<PostgreSQL strokeColor={'#000000'}/>,
-    'NodeJs':<NodeJS/>
+    'NodeJs':<NodeJS/>,
+    'FireBase':<FireBase/>,
+    'NextJS':<NextJS/>
 }
 
 function ProjectDetail(props:{

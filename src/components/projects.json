@@ -106,13 +106,13 @@
         "responsive":true
     },
     
-    "Preparing...":{
+    "Fridgefy":{
         "url":[
-            "",
-            "https://portfolio-daisuke.vercel.app?preparing"
+            "https://fridgefy.onrender.com",
+            "https://github.com/diogoka/final-project-react-devteamddgm"
         ],
-        "description":["Preparing..."],
-        "languages":["TS","React","PHP","MySQL","Jquery"],
+        "description":["Fridgefy app"],
+        "languages":["TS","React","NextJS","FireBase"],
         "features":[],
         "team":true,
         "responsive":false

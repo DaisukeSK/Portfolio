@@ -65,28 +65,8 @@ function App() {
                 :
                 innerWidth<=450 &&
                     <div className='mobile'>
-                        {/* <main className='mainForMobile'>
-
-                            <div className='flex'>
-
-                                <svg width="40" height="40" viewBox="0 0 16 16">
-                                    <path fill="#FFA500" d="M15.35 12.81 9 2.08a1.22 1.22 0 0 0-2 0L.65 12.81a1.14 1.14 0 0 0 1 1.69h12.66a1.14 1.14 0 0 0 1.04-1.69zm-13.66.55L8 2.64l6.31 10.72z"/>
-                                    <path fill="#ffffff" d="M7.32 5.45h1.25V10H7.32z"/>
-                                    <ellipse fill="#ffffff" cx="7.95" cy="11.9" rx=".67" ry=".7"/>
-                                </svg>
-
-                                <h1>Opps :(</h1>
-
-                            </div>
-
-                            <p>
-                                Are you accessing my portfolio with your mobile phone?<br/>
-                                I'm sorry, it is not ready for mobile devices yet.<br/>
-                                Try with your laptop, thank you.
-                            </p>
-                        </main> */}
+                        
                         <M_Header></M_Header>
-                        {/* <M_SideMenu></M_SideMenu> */}
                         <M_Main></M_Main>
                     </div>
             }

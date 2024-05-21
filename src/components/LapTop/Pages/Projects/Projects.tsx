@@ -6,8 +6,9 @@ import ecommerce from '../../../../../public/projectsPics/ecommerce.png';
 import satellite from '../../../../../public/projectsPics/satellite.png';
 import animation from '../../../../../public/projectsPics/animation.png';
 import memolis from '../../../../../public/projectsPics/memolis.png';
-import preparing from '../../../../../public/projectsPics/preparing.png';
+// import preparing from '../../../../../public/projectsPics/preparing.png';
 import dnn from '../../../../../public/projectsPics/dnn.png';
+import fridgefy from '../../../../../public/projectsPics/fridgefy.png';
 import { AppContext } from '../../../../App';
 import js from '../../../projects.json';
 import ProjectDetail from './ProjectDetail';
@@ -40,7 +41,7 @@ export const imagePaths:{[key:string]:string} = {
     'SVG Animation Gallery':animation,
     'DNN':dnn,
     'This portfolio': portfolio,
-    'Preparing...': preparing,
+    'Fridgefy': fridgefy,
 }
 
 function Projects() {
