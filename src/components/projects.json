@@ -18,7 +18,7 @@
     "Color Code Converter":{
         "url":[
             "https://color-code-converter.vercel.app/",
-            "https://portfolio-daisuke.vercel.app?preparing"
+            "https://github.com/DaisukeSK/Color-Code-Converter"
         ],
         "description":[
             "It provides you multiple kinds of color codes of any color.",
@@ -35,7 +35,7 @@
     "E-Commerce":{
         "url":[
             "https://e-commerce-u5ft.vercel.app/",
-            "https://portfolio-daisuke.vercel.app?preparing"
+            "https://github.com/DaisukeSK/e-commerce"
         ],
         "description":[
             "A sample e-commerce app which has basic fanctionalities of EC websites such as creating account, searching products, adding to cart, adding to favorite, purchase, and refering shopping history.",
@@ -52,7 +52,7 @@
     "Satellite Launch Simulation":{
         "url":[
             "https://satellite-launch-simulation.vercel.app/",
-            "https://portfolio-daisuke.vercel.app?preparing"
+            "https://github.com/DaisukeSK/Satellite-Launch-Simulation"
         ],
         "description":[
             "A numerical simulation of an artificial satellite's behavior, created based on a formula for gravity.",
@@ -67,7 +67,7 @@
     "SVG Animation Gallery":{
         "url":[
             "https://svg-animation-gallery.vercel.app/",
-            "https://portfolio-daisuke.vercel.app?preparing"
+            "https://github.com/DaisukeSK/SVG-Animation-Gallery"
         ],
         "description":[
             "This gallery is to show mouse-interactive SVG animations that I have made.",
@@ -82,7 +82,7 @@
     "DNN":{
         "url":[
             "https://dnn-2024.vercel.app/",
-            "https://portfolio-daisuke.vercel.app?preparing"
+            "https://github.com/DaisukeSK/DNN"
         ],
         "description":[
             "A news feed application using API.",
@@ -97,7 +97,7 @@
     "This portfolio":{
         "url":[
             "",
-            "https://portfolio-daisuke.vercel.app?preparing"
+            "https://github.com/DaisukeSK/Portfolio"
         ],
         "description":["Portfolio you are browsing right now. Thank you for visiting my portfolio, have fun, I hope you like it."],
         "languages":["TS","React","PHP","MySQL"],
