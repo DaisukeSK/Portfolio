@@ -11,7 +11,6 @@ import textBG3 from '../../../../public/textBG3.png'
 import bgClip1 from '../../../../public/bgClip1.mp4';
 import bgClip2 from '../../../../public/bgClip2.mp4';
 
-import poster from '../../../../public/poster.png'
 import blackBG from '../../../../public/black.png'
 
 function Home() {
@@ -62,13 +61,13 @@ function Home() {
 
             <VideoDiv bg={BG} vidloading={vidLoading?1:0}>
                 {(vidLoading || BG==2) &&
-                    <video autoPlay loop muted poster={poster}>
+                    <video autoPlay loop muted poster={blackBG}>
                         <source src={bgClip1} type='video/mp4'/>
                         <p>Your browser not supporting video</p>
                     </video>
                 }
                 {(vidLoading || BG==3) &&
-                    <video autoPlay loop muted poster={poster}>
+                    <video autoPlay loop muted poster={blackBG}>
                         <source src={bgClip2} type='video/mp4'/>
                         <p>Your browser not supporting video</p>
                     </video>
