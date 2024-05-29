@@ -16,52 +16,60 @@ const color_22='#0077FF'
 const color_31='#6455CF'
 const color_32='#b20B4E'
 
+const num=0
+
 const toRight=keyframes`
     from{ left: 0; opacity:1; }
-    to{ left: 100%; opacity:0; }
+    to{ left: 100%; opacity:${num}; }
 `;
 const toLeft=keyframes`
     from{ left: 0; opacity:1; }
-    to{ left: -100%; opacity:0; }
+    to{ left: -100%; opacity:${num}; }
 `;
 const fromRight=keyframes`
-    from{ left: 100%; opacity:0; }
+    from{ left: 100%; opacity:${num}; }
     to{ left: 0; opacity:1; }
 `;
 const fromLeft=keyframes`
-    from{ left: -100%; opacity:0; }
+    from{ left: -100%; opacity:${num}; }
     to{ left: 0; opacity:1; }
 `;
 
-export const Main=Styled.main< { show: number,direction: number, selected:number} >`
+export const Main=Styled.main< { show: number, direction: number, selected:number} >`
     position: absolute;
     top: 0;
     width: 100%;
     min-height: ${(props) =>props.selected==2? css`101vh`:css`100vh`};
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
-    height: ${(props)=>props.selected==0 && css`100vh`};
+
     padding-top: 45px;
-    overflow-y: ${(props)=>(props.selected!==0 && props.show)?css`visible`:css`hidden`};
-    visibility: ${(props)=>props.show?css`visible`:css`hidden`};
+    overflow-y: ${(props)=>props.show?css`visible`:css`hidden`};
     z-index: ${(props)=>props.show?css`1`:css`0`};
+
     animation-name:${(props) =>
         props.show && props.direction? css`${fromLeft}`:
         props.show && !props.direction? css`${fromRight}`:
         !props.show && props.direction? css`${toRight}`:
-        !props.show && !props.direction? css`${toLeft}`:
-        null
+        !props.show && !props.direction && css`${toLeft}`
     };
     animation-timing-function: ${timingFunc};
-    animation-duration: 1s;
+    animation-duration: ${(props)=>props.show?css`1s`:css`0s`};;
+    animation-fill-mode: both;
     box-sizing: border-box;
-    &::before {
+
+    &::before, &::after {
         width: 100%;
         height: 100vh;
         content: '';
         position: fixed;
         top: 0;
         left: 0;
-        background: linear-gradient(#4455CF, #020B4E);
+        transition: opacity 3s ease-out;
+        opacity: ${(props) =>
+            props.show?css`1`:`0`
+        };
+    }
+    &::before {
         background: ${(props) =>
             props.selected==0? css`linear-gradient(${color_01}, ${color_02})`:
             props.selected==1? css`linear-gradient(165deg, ${color_11}, ${color_12})`:
@@ -69,28 +77,13 @@ export const Main=Styled.main< { show: number,direction: number, selected:number
             props.selected==3? css`linear-gradient(${color_31}, ${color_32})`:
             null
         };
-        transition: opacity 3s ease-out;
-        opacity: ${(props) =>
-            props.show?css`1`:`0`
-        };
         z-index: -2;
     }
     &::after {
-        width: 100%;
-        height: 100vh;
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
         background: ${(props) =>
             props.selected==2? css`linear-gradient(110deg, #FFEA097D, transparent, #FF090D7D)`:
             props.selected==3? css`linear-gradient(90deg, transparent, #ffffff55, transparent)`:
             null
-        };
-        
-        transition: opacity 3s ease-out;
-        opacity: ${(props) =>
-            props.show?css`1`:`0`
         };
         z-index: -1;
     }
@@ -189,34 +182,6 @@ export const LinkDiv=Styled.div<{bg:string}>`
     }
 `;
 
-export const AnimationDiv=Styled.div<{anime:number}>`
-    margin: 50px auto 0;
-    width: 430px;
-    height: ${(props)=>props.anime<16?css`240px`:css`0`};
-    transition: all 3s ease-in-out;
-    svg {
-        overflow: visible;
-    }
-`;
-
-export const G3=Styled.g<{anime:number}>`
-    opacity:${(props)=>props.anime<20?1:0};
-    transition:all .5s ease-in-out;
-    .g3_text1, .g3_text2 {
-        transition:all .5s ease-in-out;
-    }
-
-    .g3_text1 {
-        opacity:${(props)=>(props.anime>=1 && props.anime<13.5)?1:0}
-    }
-    .g3_text2 {
-        opacity:${(props)=>(props.anime>=2 && props.anime<14.5)?1:0}
-    }
-
-    .g3_text3 {
-        fill:${(props)=>props.anime>=10?css`red`:css`white`}
-    }
-`;
 
 export const Toggle=Styled.div<{teamp:number}>`
     position: relative;
@@ -308,7 +273,7 @@ export const BG_Button1=Styled(BG_Button)<{bg:number, vidloading:number}>`
     background: linear-gradient(#000055,#00001f);
     box-shadow: #0000ff80 0 0 10px;
     `;
-    export const BG_Button2=Styled(BG_Button)<{bg:number, vidloading:number}>`
+export const BG_Button2=Styled(BG_Button)<{bg:number, vidloading:number}>`
     pointer-events: ${(props)=>props.bg==2 || props.vidloading?'none':'auto'};
     background: url(${butonBG1});
     background-size: 200%;

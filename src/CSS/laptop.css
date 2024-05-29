@@ -35,7 +35,6 @@ body {
 }
 .laptop .home .left {
   position: relative;
-  height: 100vh;
   width: 300px;
   display: flex;
   align-items: center;
