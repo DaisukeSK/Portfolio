@@ -101,8 +101,8 @@ function ProjectDetail(props:{
                             return (
                                 <span
                                     style={{
-                                        textAlign:desc=='username: guest'||desc=='password: 1234'?'center':'left',
-                                        textDecoration:desc=='username: guest'||desc=='password: 1234'?'underline':'none'
+                                        textAlign:desc=='username: guest'||desc=='password: 123456'?'center':'left',
+                                        textDecoration:desc=='username: guest'||desc=='password: 123456'?'underline':'none'
                                     }}
                                     key={key}
                                 >
@@ -115,8 +115,8 @@ function ProjectDetail(props:{
                     
                     {/* {props.showDetail.features.length>0 &&
                         <>
-                            <div className='otherFeatures'>&nbsp;Other features:&nbsp;</div>
                             <div className='featureFlex'>
+                            <div className='otherFeatures'>&nbsp;Other features:&nbsp;</div>
                                 {props.showDetail.features.map((feature:string, key:number)=>{
                                     return <div key={key}>{feature}</div>
                                 })}

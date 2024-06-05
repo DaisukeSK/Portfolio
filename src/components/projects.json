@@ -10,7 +10,7 @@
             "You can refer or edit them anytime."
         ],
         "languages":["JS","Jquery","PHP","MySQL"],
-        "features":["Anti-XXS","Hash Password"],
+        "features":["Anti-XXS","Anti-CSRF","Salted & Hashed Password"],
         "team":false,
         "responsive":false
     },
@@ -41,10 +41,10 @@
             "A sample e-commerce app which has basic fanctionalities of EC websites such as creating account, searching products, adding to cart, adding to favorite, purchase, and refering shopping history.",
             "If you don't feel like creating your own user account, please use the below shared account.",
             "username: guest",
-            "password: 1234"
+            "password: 123456"
         ],
         "languages":["TS","React","NodeJs","PostgreSQL"],
-        "features":["API"],
+        "features":["API","Salted & Hashed Password"],
         "team":false,
         "responsive":false
     },
@@ -59,7 +59,7 @@
             "This simulation is to simulate how the satellite goes around the planet depending on parameters you set."
         ],
         "languages":["JS","Jquery"],
-        "features":[],
+        "features":["Trigonometry"],
         "team":false,
         "responsive":false
     },

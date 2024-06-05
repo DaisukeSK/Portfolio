@@ -413,18 +413,20 @@ body {
 .laptop .projects .detail .detailright .descriptionP span {
   display: block;
 }
-.laptop .projects .detail .detailright .otherFeatures {
-  text-decoration: underline;
-}
 .laptop .projects .detail .detailright .featureFlex {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 .laptop .projects .detail .detailright .featureFlex div {
-  background: linear-gradient(45deg, rgb(47, 47, 255), rgb(110, 196, 199));
   padding: 2px 15px;
   margin: 5px;
+}
+.laptop .projects .detail .detailright .featureFlex .otherFeatures {
+  text-decoration: underline;
+}
+.laptop .projects .detail .detailright .featureFlex div:not(.otherFeatures) {
+  background: linear-gradient(45deg, rgb(67, 67, 255), rgb(110, 196, 199));
   color: #ffffff;
 }
 .laptop .projects .detail .detailright hr {

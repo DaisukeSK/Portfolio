@@ -613,23 +613,26 @@ body {
                         display: block;
                     }
                 }
-                .otherFeatures {
-                    text-decoration: underline;
-                    
-                }
                 .featureFlex {
                     display: flex;
                     justify-content: center;
                     flex-wrap: wrap;
                     // margin-top: 10px;
+
                     div {
+                        padding: 2px 15px;
+                        margin: 5px;
+                    }
+                    .otherFeatures {
+                        text-decoration: underline;
+                    }
+                    div:not(.otherFeatures) {
                         // display: flex;
                         // justify-content: center;
                         // align-items: center;
 
-                        background: linear-gradient(45deg, rgb(47, 47, 255), rgb(110, 196, 199));
-                        padding: 2px 15px;
-                        margin: 5px;
+                        background: linear-gradient(45deg, rgb(67, 67, 255), rgb(110, 196, 199));
+                        
                         color: #ffffff;
                     }
                 }
