@@ -413,6 +413,20 @@ body {
 .laptop .projects .detail .detailright .descriptionP span {
   display: block;
 }
+.laptop .projects .detail .detailright .otherFeatures {
+  text-decoration: underline;
+}
+.laptop .projects .detail .detailright .featureFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.laptop .projects .detail .detailright .featureFlex div {
+  background: linear-gradient(45deg, rgb(47, 47, 255), rgb(110, 196, 199));
+  padding: 2px 15px;
+  margin: 5px;
+  color: #ffffff;
+}
 .laptop .projects .detail .detailright hr {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -425,18 +439,6 @@ body {
   width: 40px;
   margin: 0 10px;
   display: block;
-}
-.laptop .projects .detail .detailright .featureFlex {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-.laptop .projects .detail .detailright .featureFlex div {
-  background-color: cadetblue;
-  padding: 0 10px;
-  margin: 5px;
-  color: #ffffff;
 }
 .laptop .projects .projectsFlex {
   display: flex;

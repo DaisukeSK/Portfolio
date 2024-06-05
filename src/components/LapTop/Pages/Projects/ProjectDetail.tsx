@@ -111,7 +111,18 @@ function ProjectDetail(props:{
                             )
                         })}
                     </p>
+
                     
+                    {/* {props.showDetail.features.length>0 &&
+                        <>
+                            <div className='otherFeatures'>&nbsp;Other features:&nbsp;</div>
+                            <div className='featureFlex'>
+                                {props.showDetail.features.map((feature:string, key:number)=>{
+                                    return <div key={key}>{feature}</div>
+                                })}
+                            </div>
+                        </>
+                    } */}
                     <hr/>
 
                     <div className='iconFlex'>
@@ -119,6 +130,7 @@ function ProjectDetail(props:{
                             return <Fragment key={key}>{languageObj[lang]}</Fragment>
                         })}
                     </div>
+
 
                 </div>
 

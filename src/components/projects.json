@@ -10,7 +10,7 @@
             "You can refer or edit them anytime."
         ],
         "languages":["JS","Jquery","PHP","MySQL"],
-        "features":[],
+        "features":["Anti-XXS","Hash Password"],
         "team":false,
         "responsive":false
     },
@@ -44,7 +44,7 @@
             "password: 1234"
         ],
         "languages":["TS","React","NodeJs","PostgreSQL"],
-        "features":[],
+        "features":["API"],
         "team":false,
         "responsive":false
     },
@@ -74,7 +74,7 @@
             "They are all made only with plain JavaScript."
         ],
         "languages":["JS"],
-        "features":[],
+        "features":["Vanilla JS"],
         "team":false,
         "responsive":false
     },
@@ -89,7 +89,7 @@
             "You can browse news from multiple categories, and search news by keywords, category, date and language."
         ],
         "languages":["TS","React"],
-        "features":[],
+        "features":["API"],
         "team":false,
         "responsive":false
     },

@@ -17,7 +17,7 @@ function About() {
             <div className='introduction'>
                 <p>
                     Hi, my name is Daisuke Seki, a full stack web developer.<br/>
-                    I'm always excited about learning new things and improving myself skills.
+                    I'm always excited about learning new things and improving my skills.
                     I hope you will see and enjoy those applications I made.<br/><br/>
 
                     My coding experience just started one day with a simple question.
