@@ -72,11 +72,11 @@ function Projects() {
                                 {projectsObj[projectName]['url'][0] &&
                                     <>
                                         <h4>Web-site</h4>
-                                        <a href={projectsObj[projectName]['url'][0]}>{projectsObj[projectName]['url'][0]}</a>
+                                        <a href={projectsObj[projectName]['url'][0]} target='_blank'>{projectsObj[projectName]['url'][0]}</a>
                                     </>
                                 }
                                 <h4>Github</h4>
-                                <a href={projectsObj[projectName]['url'][1]}>{projectsObj[projectName]['url'][1]}</a>
+                                <a href={projectsObj[projectName]['url'][1]} target='_blank'>{projectsObj[projectName]['url'][1]}</a>
                                     
                             </div>
                             <div className='description'>

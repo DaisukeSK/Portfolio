@@ -1,21 +1,10 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 
 import IconFlex from './IconFlex';
 
 function About() {
 
-    
     const right_ref=useRef<HTMLInputElement>(null)
-
-    const [flexRightWidth, setFlexRightWidth] =useState<number>()
-
-    // let flexRightWidth:number|undefined;
-    
-    useEffect(()=>{
-        setFlexRightWidth(right_ref?.current?.offsetWidth)
-        // flexRightWidth=right_ref?.current?.offsetWidth
-        console.log("Ref:",flexRightWidth)
-    },[])
 
     return (
         <div className='about'>
@@ -98,7 +87,7 @@ function About() {
                     </li>
                 </ul>
 
-                <h3>Work</h3>
+                {/* <h3>Work</h3>
                 <ul>
                     <li>
                         <div className='title'>
@@ -118,7 +107,7 @@ function About() {
                         </div>                                
                     </li>
                     <li className='etc'>etc.</li>
-                </ul>
+                </ul> */}
 
             </section>
             

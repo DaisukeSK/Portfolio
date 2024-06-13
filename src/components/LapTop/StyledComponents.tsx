@@ -5,8 +5,6 @@ import butonBG2 from '../../../public/buttonBg2.png'
 
 const timingFunc='cubic-bezier(0,1,.7,1)';
 
-// const color_01='#4455CF'
-// const color_02='#020B4E'
 const color_01='#000037'
 const color_02='#000000'
 const color_11='#CED71C'
@@ -38,8 +36,8 @@ const fromLeft=keyframes`
 export const Main=Styled.main< { show: number, direction: number, selected:number} >`
     position: absolute;
     top: 0;
-    width: 100%;
-    min-height: ${(props) =>props.selected==2? css`101vh`:css`100vh`};
+    width: 100vw;
+    min-height: 100vh;
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
 
     padding-top: 45px;

@@ -94,7 +94,7 @@ function About() {
                         </ul>
                     </div>
 
-                    <div className='work'>
+                    {/* <div className='work'>
                         <h2>Work</h2>
                         <ul>
                             <li>
@@ -107,7 +107,7 @@ function About() {
                             </li>
                             <li className='etc'>etc.</li>
                         </ul>
-                    </div>
+                    </div> */}
 
                 </section>
 

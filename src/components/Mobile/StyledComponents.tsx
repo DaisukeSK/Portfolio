@@ -1,17 +1,4 @@
 import Styled, { styled } from "styled-components";
-// import BG1 from '../../../public/mobile/mb_BG1.png'
-import BG2 from '../../../public/mobile/mb_BG2.png'
-import BG3 from '../../../public/mobile/mb_BG3.png'
-// import BG3 from '../../../public/mb_BG3.png'
-import BG4 from '../../../public/mobile/mb_BG4.png'
-// import BG5 from '../../../public/mb_BG5.png'
-// import BG6 from '../../../public/mb_BG6.png'
-// import BG7 from '../../../public/mb_BG7.png'
-// import BG8 from '../../../public/mb_BG8.png'
-import BG9 from '../../../public/mobile/mb_BG9.png'
-// import { css,keyframes } from "styled-components";
-
-// console.log(BG1,BG2,BG3,BG4,BG5,BG6)
 
 export const Main=Styled.main<{selected:number}>`
     position: absolute;
@@ -20,7 +7,7 @@ export const Main=Styled.main<{selected:number}>`
     padding: 20px;
     padding-top: 35px;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     min-height: 100vh;
 
@@ -35,8 +22,12 @@ export const Main=Styled.main<{selected:number}>`
     }
     &::before {
         
-        background-image: url(${(props)=>props.selected==0?BG9:props.selected==1?BG2:props.selected==2?BG3:props.selected==3 && BG4});
-
+        background: ${(props)=>
+            props.selected==0?'linear-gradient(#ffffff,#ffffff)':
+            props.selected==1?'linear-gradient(#F7FF0E33,#001046A1)':
+            props.selected==2?'linear-gradient(#FFFFFF,#FFFFFF)':
+            props.selected==3 && '#00104677'
+        };
         background-size: cover;
         background-position: center;
         z-index: -3;

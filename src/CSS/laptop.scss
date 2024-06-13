@@ -14,7 +14,7 @@ body {
     header {
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 100vw;
         height: 45px;
         display: flex;
         justify-content: center;
@@ -193,8 +193,11 @@ body {
                 // background: linear-gradient(45deg, rgb(0, 20, 204),rgb(8, 53, 150));
                 // background: linear-gradient(45deg, rgb(216, 97, 0),rgb(216, 97, 0));
                 background-color: rgba(243, 109, 0, 0.726);
+                // background: linear-gradient(45deg, rgba(255, 115, 0, 0.829), rgba(255, 195, 31, 0.7));
                 width: fit-content;
                 padding: 2px 20px;
+                // border: #ffffff8e 1px solid;
+                border-radius: 7px;
                 // box-shadow: #b35600d2 2px 2px 5px;
             }
             .skills {
@@ -272,6 +275,20 @@ body {
                 justify-content: space-evenly;
                 flex-wrap: wrap;
                 margin-bottom: 30px;
+
+                /////////////////////////////////
+                .education {
+                    ul {
+                        display: flex;
+                        // align-items: center;
+                        li {
+                            margin: 0 20px;
+                        }
+
+                    }
+                }
+                /////////////////////////////////
+
                 .title {
                     // font-size: 1.1rem;
                     // color: $liColor;

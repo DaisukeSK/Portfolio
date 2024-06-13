@@ -117,7 +117,7 @@
             "Once you add a recipe in the list, it shows you what ingredients that you need but don't have in the fridge yet."
         
         ],
-        "languages":["JS","React","NextJS","FireBase"],
+        "languages":["JS","React","FireBase"],
         "features":[],
         "team":true,
         "responsive":false
