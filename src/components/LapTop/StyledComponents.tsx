@@ -36,7 +36,7 @@ const fromLeft=keyframes`
 export const Main=Styled.main< { show: number, direction: number, selected:number} >`
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: ${(props) =>props.selected==2? css`100vw`:css`100%`};
     min-height: 100vh;
     max-height: ${(props)=>props.show?css`fit-content`:css`100vh`};
 
@@ -73,7 +73,7 @@ export const Main=Styled.main< { show: number, direction: number, selected:numbe
             props.selected==1? css`linear-gradient(165deg, ${color_11}, ${color_12})`:
             props.selected==2? css`linear-gradient(20deg, ${color_21}, ${color_22})`:
             props.selected==3? css`linear-gradient(${color_31}, ${color_32})`:
-            null
+            'none'
         };
         z-index: -2;
     }
@@ -81,7 +81,7 @@ export const Main=Styled.main< { show: number, direction: number, selected:numbe
         background: ${(props) =>
             props.selected==2? css`linear-gradient(110deg, #FFEA097D, transparent, #FF090D7D)`:
             props.selected==3? css`linear-gradient(90deg, transparent, #ffffff55, transparent)`:
-            null
+            'none'
         };
         z-index: -1;
     }

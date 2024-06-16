@@ -87,7 +87,7 @@ function Projects() {
             <div className='projectsFlex'>
                 {Object.keys(projectsObj).map((val:string, key:number)=>{
                     return (projectsObj[val]['team']==teamP &&
-                        <div key={key} className='flexChild'>
+                        <div key={key} className='flexChild' style={{animationName: selected.current==2 ? 'comeDown':'none'}}>
                             <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val, description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
                             <h3>{[val]}</h3>
                         </div>

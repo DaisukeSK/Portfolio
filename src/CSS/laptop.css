@@ -457,6 +457,19 @@ body {
 }
 .laptop .projects .projectsFlex .flexChild {
   margin: 30px 50px;
+  position: relative;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+@keyframes comeDown {
+  from {
+    top: -70px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 .laptop .projects .projectsFlex .flexChild div {
   box-shadow: rgba(0, 0, 0, 0.6666666667) 3px 3px 10px;
@@ -465,6 +478,66 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 10px auto 0;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(1) {
+  animation-delay: 0.1428571429s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(2) {
+  animation-delay: 0.2857142857s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(3) {
+  animation-delay: 0.4285714286s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(4) {
+  animation-delay: 0.5714285714s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(5) {
+  animation-delay: 0.7142857143s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(6) {
+  animation-delay: 0.8571428571s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(7) {
+  animation-delay: 1s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(8) {
+  animation-delay: 1.1428571429s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(9) {
+  animation-delay: 1.2857142857s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(10) {
+  animation-delay: 1.4285714286s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(11) {
+  animation-delay: 1.5714285714s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(12) {
+  animation-delay: 1.7142857143s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(13) {
+  animation-delay: 1.8571428571s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(14) {
+  animation-delay: 2s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(15) {
+  animation-delay: 2.1428571429s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(16) {
+  animation-delay: 2.2857142857s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(17) {
+  animation-delay: 2.4285714286s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(18) {
+  animation-delay: 2.5714285714s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(19) {
+  animation-delay: 2.7142857143s;
+}
+.laptop .projects .projectsFlex .flexChild:nth-child(20) {
+  animation-delay: 2.8571428571s;
 }
 
 .inquiry {

@@ -676,14 +676,36 @@ body {
             margin: 50px auto;
             
             .flexChild {
+
+                @keyframes comeDown {
+                    from {
+                        top: -70px;
+                        opacity: 0;
+                    }
+                    to {
+                        top: 0;
+                        opacity: 1;
+                    }
+                }
+
                 margin: 30px 50px;
-                
+                position: relative;
+                animation-duration: 1.5s; // animation-name is in Project.tsx
+                animation-fill-mode: both;
+
                 div {
                     box-shadow: #000000aa 3px 3px 10px;
                 }
                 h3 {
                     width: fit-content;
                     margin: 10px auto 0;
+                }
+            }
+
+            @for $i from 1 through 20 {
+
+                .flexChild:nth-child(#{$i}) {
+                    animation-delay: #{calc($i/7)}s;
                 }
             }
         }
