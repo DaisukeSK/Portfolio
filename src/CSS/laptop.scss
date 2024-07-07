@@ -647,10 +647,22 @@ body {
                         // display: flex;
                         // justify-content: center;
                         // align-items: center;
+                        position: relative;
 
                         background: linear-gradient(45deg, rgb(67, 67, 255), rgb(110, 196, 199));
                         
                         color: #ffffff;
+                        border-radius: 5px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background: linear-gradient(#ffffff85, transparent);
+                            // z-index: -1;
+                        }
                     }
                 }
                 hr {
@@ -690,6 +702,7 @@ body {
 
                 margin: 30px 50px;
                 position: relative;
+                animation-name: comeDown;
                 animation-duration: 1.5s; // animation-name is in Project.tsx
                 animation-fill-mode: both;
 

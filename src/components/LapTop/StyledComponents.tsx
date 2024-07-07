@@ -139,14 +139,14 @@ export const NavChild=Styled.div<{disabled:number}>`
     };
 `;
     
-export const LinkDiv=Styled.div<{bg:string}>`
+export const LinkDiv=Styled.div<{code:string}>`
     width: 400px;
     height: 250px;
     position: relative;
     border-radius: 5px;
     outline: 1px solid rgba(255, 255, 255, 0.3);
     overflow:hidden;
-    background-image:${(props)=>css`url(${props.bg})`};
+    background-image:${(props)=>css`url(../../../../../public/projectsPics/${props.code}.png)`};
     background-size: cover;
     background-position: top;
     cursor: pointer;

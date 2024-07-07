@@ -20,7 +20,8 @@ export type JsonType = {
         'languages':Array<string>,
         'features':Array<string>,
         'team':boolean,
-        'responsive':boolean
+        'responsive':boolean,
+        'code':string
     }
 }
 
@@ -48,7 +49,7 @@ function Projects() {
 
     const { selected } = useContext(AppContext)
 
-    const [teamP, setTeamP] = useState<boolean>(false);
+    const [teamP, setTeamP] = useState<boolean>(true);
     const [showDetail, setShowDetail] = useState<showDetailType>({
         title:'',
         description:[],
@@ -61,7 +62,7 @@ function Projects() {
 
     useEffect(()=>{
         setShowDetail({title:'', description:[], url:[], languages:[], features:[]})
-        setTeamP(false)
+        setTeamP(selected.current==2?false:true)
     },[selected])
 
     return (
@@ -87,8 +88,8 @@ function Projects() {
             <div className='projectsFlex'>
                 {Object.keys(projectsObj).map((val:string, key:number)=>{
                     return (projectsObj[val]['team']==teamP &&
-                        <div key={key} className='flexChild' style={{animationName: selected.current==2 ? 'comeDown':'none'}}>
-                            <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val, description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
+                        <div key={key} className='flexChild'>
+                            <LinkDiv code={projectsObj[val]['code']} onClick={()=>setShowDetail({title:val, description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
                             <h3>{[val]}</h3>
                         </div>
                     )

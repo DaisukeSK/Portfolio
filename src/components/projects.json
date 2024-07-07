@@ -10,9 +10,10 @@
             "You can refer or edit them anytime."
         ],
         "languages":["JS","Jquery","PHP","MySQL"],
-        "features":["Anti-XXS","Anti-CSRF","Salted & Hashed Password"],
+        "features":["Sanitized Input Data","Anti-CSRF","Salted & Hashed Password","Responsive Design"],
         "team":false,
-        "responsive":false
+        "responsive":true,
+        "code":"memolis"
     },
 
     "Color Code Converter":{
@@ -29,7 +30,8 @@
         "languages":["TS","React"],
         "features":[],
         "team":false,
-        "responsive":false
+        "responsive":false,
+        "code":"ccc"
     },
 
     "E-Commerce":{
@@ -44,9 +46,10 @@
             "password: 123456"
         ],
         "languages":["TS","React","NodeJs","PostgreSQL"],
-        "features":["API","Salted & Hashed Password"],
+        "features":["Sanitized Input Data","Salted & Hashed Password"],
         "team":false,
-        "responsive":false
+        "responsive":false,
+        "code":"ecommerce"
     },
 
     "Satellite Launch Simulation":{
@@ -61,7 +64,8 @@
         "languages":["JS","Jquery"],
         "features":["Trigonometry"],
         "team":false,
-        "responsive":false
+        "responsive":false,
+        "code":"satellite"
     },
 
     "SVG Animation Gallery":{
@@ -76,7 +80,8 @@
         "languages":["JS"],
         "features":["Vanilla JS"],
         "team":false,
-        "responsive":false
+        "responsive":false,
+        "code":"animation"
     },
 
     "DNN":{
@@ -91,7 +96,8 @@
         "languages":["TS","React"],
         "features":["API"],
         "team":false,
-        "responsive":false
+        "responsive":false,
+        "code":"dnn"
     },
 
     "This portfolio":{
@@ -101,9 +107,10 @@
         ],
         "description":["Portfolio you are browsing right now. Thank you for visiting my portfolio, have fun, I hope you like it."],
         "languages":["TS","React","PHP","MySQL"],
-        "features":[],
+        "features":["Responsive Design"],
         "team":false,
-        "responsive":true
+        "responsive":true,
+        "code":"portfolio"
     },
     
     "Fridgefy":{
@@ -120,6 +127,25 @@
         "languages":["JS","React","FireBase"],
         "features":[],
         "team":true,
-        "responsive":false
+        "responsive":false,
+        "code":"fridgefy"
+    },
+
+    "Coenerstone Connect":{
+        "url":[
+            "https://cornerstone-connect.onrender.com",
+            "https://github.com/diogoka/eventllege"
+        ],
+        "description":[
+            "It provides you with various recipes from various kinds.",
+            "You have 2 lists, your-favorite-recipe list and ingredient-you-have-in-the-fridge list.",
+            "Once you add a recipe in the list, it shows you what ingredients that you need but don't have in the fridge yet."
+        
+        ],
+        "languages":["TS","NextJS","NodeJS","PostgreSQL","FireBase"],
+        "features":[],
+        "team":true,
+        "responsive":true,
+        "code":"cornerstone-connect"
     }
 }
