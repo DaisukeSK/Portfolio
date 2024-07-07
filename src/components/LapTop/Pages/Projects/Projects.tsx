@@ -6,6 +6,7 @@ import ecommerce from '../../../../../public/projectsPics/ecommerce.png';
 import satellite from '../../../../../public/projectsPics/satellite.png';
 import animation from '../../../../../public/projectsPics/animation.png';
 import memolis from '../../../../../public/projectsPics/memolis.png';
+import cornerstoneConect from '../../../../../public/projectsPics/cornerstone-connect.png';
 // import preparing from '../../../../../public/projectsPics/preparing.png';
 import dnn from '../../../../../public/projectsPics/dnn.png';
 import fridgefy from '../../../../../public/projectsPics/fridgefy.png';
@@ -20,8 +21,7 @@ export type JsonType = {
         'languages':Array<string>,
         'features':Array<string>,
         'team':boolean,
-        'responsive':boolean,
-        'code':string
+        'responsive':boolean
     }
 }
 
@@ -43,6 +43,7 @@ export const imagePaths:{[key:string]:string} = {
     'DNN':dnn,
     'This portfolio': portfolio,
     'Fridgefy': fridgefy,
+    'Coenerstone Connect':cornerstoneConect
 }
 
 function Projects() {
@@ -89,7 +90,7 @@ function Projects() {
                 {Object.keys(projectsObj).map((val:string, key:number)=>{
                     return (projectsObj[val]['team']==teamP &&
                         <div key={key} className='flexChild'>
-                            <LinkDiv code={projectsObj[val]['code']} onClick={()=>setShowDetail({title:val, description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
+                            <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val, description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
                             <h3>{[val]}</h3>
                         </div>
                     )

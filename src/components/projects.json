@@ -12,8 +12,7 @@
         "languages":["JS","Jquery","PHP","MySQL"],
         "features":["Sanitized Input Data","Anti-CSRF","Salted & Hashed Password","Responsive Design"],
         "team":false,
-        "responsive":true,
-        "code":"memolis"
+        "responsive":true
     },
 
     "Color Code Converter":{
@@ -30,8 +29,7 @@
         "languages":["TS","React"],
         "features":[],
         "team":false,
-        "responsive":false,
-        "code":"ccc"
+        "responsive":false
     },
 
     "E-Commerce":{
@@ -48,8 +46,7 @@
         "languages":["TS","React","NodeJs","PostgreSQL"],
         "features":["Sanitized Input Data","Salted & Hashed Password"],
         "team":false,
-        "responsive":false,
-        "code":"ecommerce"
+        "responsive":false
     },
 
     "Satellite Launch Simulation":{
@@ -64,8 +61,7 @@
         "languages":["JS","Jquery"],
         "features":["Trigonometry"],
         "team":false,
-        "responsive":false,
-        "code":"satellite"
+        "responsive":false
     },
 
     "SVG Animation Gallery":{
@@ -80,8 +76,7 @@
         "languages":["JS"],
         "features":["Vanilla JS"],
         "team":false,
-        "responsive":false,
-        "code":"animation"
+        "responsive":false
     },
 
     "DNN":{
@@ -96,8 +91,7 @@
         "languages":["TS","React"],
         "features":["API"],
         "team":false,
-        "responsive":false,
-        "code":"dnn"
+        "responsive":false
     },
 
     "This portfolio":{
@@ -109,8 +103,7 @@
         "languages":["TS","React","PHP","MySQL"],
         "features":["Responsive Design"],
         "team":false,
-        "responsive":true,
-        "code":"portfolio"
+        "responsive":true
     },
     
     "Fridgefy":{
@@ -127,8 +120,7 @@
         "languages":["JS","React","FireBase"],
         "features":[],
         "team":true,
-        "responsive":false,
-        "code":"fridgefy"
+        "responsive":false
     },
 
     "Coenerstone Connect":{
@@ -145,7 +137,6 @@
         "languages":["TS","NextJS","NodeJS","PostgreSQL","FireBase"],
         "features":[],
         "team":true,
-        "responsive":true,
-        "code":"cornerstone-connect"
+        "responsive":true
     }
 }

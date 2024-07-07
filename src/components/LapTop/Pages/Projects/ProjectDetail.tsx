@@ -113,7 +113,7 @@ function ProjectDetail(props:{
                     </p>
 
                     
-                    {props.showDetail.features.length>0 &&
+                    {/* {props.showDetail.features.length>0 &&
                         <>
                             <div className='featureFlex'>
                             <div className='otherFeatures'>&nbsp;Other features:&nbsp;</div>
@@ -122,7 +122,7 @@ function ProjectDetail(props:{
                                 })}
                             </div>
                         </>
-                    }
+                    } */}
                     <hr/>
 
                     <div className='iconFlex'>
