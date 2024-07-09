@@ -365,7 +365,7 @@ body {
 .laptop .projects .detail .x:hover path {
   stroke: #ffffff;
 }
-.laptop .projects .detail .portfolioImg {
+.laptop .projects .detail .altImg {
   width: 35%;
   margin-right: 5%;
 }

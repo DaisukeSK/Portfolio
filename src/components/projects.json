@@ -1,5 +1,6 @@
 {
     "memolis":{
+        "title":"memolis",
         "url":[
             "https://memolis.in/login/login.php",
             "https://github.com/DaisukeSK/memolis"
@@ -9,13 +10,14 @@
             "You can register pairs of a term and definition that you want to memorize. They will be saved in database.",
             "You can refer or edit them anytime."
         ],
-        "languages":["JS","Jquery","PHP","MySQL"],
+        "languages":["JavaScript","jQuery","PHP","MySQL"],
         "features":["Sanitized Input Data","Anti-CSRF","Salted & Hashed Password","Responsive Design"],
         "team":false,
         "responsive":true
     },
 
-    "Color Code Converter":{
+    "ccc":{
+        "title":"Color Code Converter",
         "url":[
             "https://color-code-converter.vercel.app/",
             "https://github.com/DaisukeSK/Color-Code-Converter"
@@ -26,13 +28,14 @@
             "You can pick up any color from color space, input bars or input field of Hexa color, and it gives you color codes of the picked color.",
             "You can also copy those color codes, change opacity and pick up built-in colors from the humburger menu on the top left."
         ],
-        "languages":["TS","React"],
+        "languages":["TypeScript","React"],
         "features":[],
         "team":false,
         "responsive":false
     },
 
-    "E-Commerce":{
+    "e-commerce":{
+        "title":"E-Commerce",
         "url":[
             "https://e-commerce-u5ft.vercel.app/",
             "https://github.com/DaisukeSK/e-commerce"
@@ -43,13 +46,14 @@
             "username: guest",
             "password: 123456"
         ],
-        "languages":["TS","React","NodeJs","PostgreSQL"],
+        "languages":["TypeScript","React","Node.js","PostgreSQL"],
         "features":["Sanitized Input Data","Salted & Hashed Password"],
         "team":false,
         "responsive":false
     },
 
-    "Satellite Launch Simulation":{
+    "satellite":{
+        "title":"Satellite Launch Simulation",
         "url":[
             "https://satellite-launch-simulation.vercel.app/",
             "https://github.com/DaisukeSK/Satellite-Launch-Simulation"
@@ -58,13 +62,14 @@
             "A numerical simulation of an artificial satellite's behavior, created based on a formula for gravity.",
             "This simulation is to simulate how the satellite goes around the planet depending on parameters you set."
         ],
-        "languages":["JS","Jquery"],
+        "languages":["JavaScript","jQuery"],
         "features":["Trigonometry"],
         "team":false,
         "responsive":false
     },
 
-    "SVG Animation Gallery":{
+    "animation":{
+        "title":"SVG Animation Gallery",
         "url":[
             "https://svg-animation-gallery.vercel.app/",
             "https://github.com/DaisukeSK/SVG-Animation-Gallery"
@@ -73,13 +78,14 @@
             "This gallery is to show mouse-interactive SVG animations that I have made.",
             "They are all made only with plain JavaScript."
         ],
-        "languages":["JS"],
+        "languages":["JavaScript"],
         "features":["Vanilla JS"],
         "team":false,
         "responsive":false
     },
 
-    "DNN":{
+    "dnn":{
+        "title":"DNN",
         "url":[
             "https://dnn-2024.vercel.app/",
             "https://github.com/DaisukeSK/DNN"
@@ -88,25 +94,27 @@
             "A news feed application using API.",
             "You can browse news from multiple categories, and search news by keywords, category, date and language."
         ],
-        "languages":["TS","React"],
+        "languages":["TypeScript","React"],
         "features":["API"],
         "team":false,
         "responsive":false
     },
 
-    "This portfolio":{
+    "portfolio":{
+        "title":"This portfolio",
         "url":[
             "",
             "https://github.com/DaisukeSK/Portfolio"
         ],
         "description":["Portfolio you are browsing right now. Thank you for visiting my portfolio, have fun, I hope you like it."],
-        "languages":["TS","React","PHP","MySQL"],
+        "languages":["TypeScript","React","PHP","MySQL"],
         "features":["Responsive Design"],
         "team":false,
         "responsive":true
     },
     
-    "Fridgefy":{
+    "fridgefy":{
+        "title":"Fridgefy",
         "url":[
             "https://fridgefy.onrender.com",
             "https://github.com/diogoka/final-project-react-devteamddgm"
@@ -117,13 +125,14 @@
             "Once you add a recipe in the list, it shows you what ingredients that you need but don't have in the fridge yet."
         
         ],
-        "languages":["JS","React","FireBase"],
+        "languages":["JavaScript","React","FireBase"],
         "features":[],
         "team":true,
         "responsive":false
     },
 
-    "Coenerstone Connect":{
+    "coenerstone-connect":{
+        "title":"Coenerstone Connect",
         "url":[
             "https://cornerstone-connect.onrender.com",
             "https://github.com/diogoka/eventllege"
@@ -134,7 +143,7 @@
             "Once you add a recipe in the list, it shows you what ingredients that you need but don't have in the fridge yet."
         
         ],
-        "languages":["TS","NextJS","NodeJS","PostgreSQL","FireBase"],
+        "languages":["TypeScript","NextJS","Node.js","PostgreSQL","FireBase"],
         "features":[],
         "team":true,
         "responsive":true

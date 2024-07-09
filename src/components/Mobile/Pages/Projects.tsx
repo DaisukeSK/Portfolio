@@ -2,8 +2,8 @@ import projectsJson from '../../projects.json'
 import { Fragment, useState } from 'react';
 import { JsonType } from '../../LapTop/Pages/Projects/Projects';
 
-import { imagePaths } from '../../LapTop/Pages/Projects/Projects';
-import { languageObj } from '../../LapTop/Pages/Projects/ProjectDetail';
+import { imagePaths } from '../../Media';
+import { iconObj } from '../../Media';
 
 import { Toggle } from '../StyledComponents'; 
 
@@ -87,7 +87,7 @@ function Projects() {
 
                             <div className='languages'>
                                 {projectsObj[projectName]['languages'].map((lang:string, key:number)=>{
-                                    return <Fragment key={key}>{languageObj[lang]}</Fragment>
+                                    return <Fragment key={key}>{iconObj[lang]}</Fragment>
                                 })}
                             </div>
 

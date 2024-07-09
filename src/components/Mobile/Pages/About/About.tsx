@@ -37,7 +37,7 @@ function About() {
 
                     <div className='left'>
                         <h3>Front-end</h3>
-                        <IconFlex icons={['HTML','CSS','JavaScript','TypeScript','Sass','jQuery','React']}/>
+                        <IconFlex icons={['HTML','CSS','JavaScript','TypeScript','Sass','@jQuery','React']}/>
                     </div>
 
                     <div className='right' ref={right_ref}>
@@ -47,7 +47,7 @@ function About() {
                         </div>
                         <div>
                             <h3>Database</h3>
-                            <IconFlex icons={['MySQL','PostgreSQL']}/>
+                            <IconFlex icons={['MySQL','@PostgreSQL']}/>
                         </div>
                     </div>
                 </div>

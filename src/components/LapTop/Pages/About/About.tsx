@@ -45,7 +45,7 @@ function About() {
 
                         <section className='iconFlex'>
                             <div className='title'>Front-end</div>
-                            <IconFlex icons={['HTML','CSS','JavaScript','TypeScript','Sass','jQuery','React']}/>
+                            <IconFlex icons={['HTML','CSS','JavaScript','TypeScript','Sass','@jQuery','React']}/>
                         </section>
 
                         <section className='iconFlex'>
@@ -55,7 +55,7 @@ function About() {
 
                         <section className='iconFlex'>
                             <div className='title'>Database</div>
-                            <IconFlex icons={['MySQL','PostgreSQL']}/>
+                            <IconFlex icons={['MySQL','@PostgreSQL']}/>
                         </section>
 
                         <section className='iconFlex'>

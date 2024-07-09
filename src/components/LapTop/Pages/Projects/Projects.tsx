@@ -1,21 +1,14 @@
 import { useState, useEffect, useContext } from 'react'
 import { Main, LinkDiv, Toggle } from '../../StyledComponents';
-import portfolio from '../../../../../public/projectsPics/portfolio.png';
-import ccc from '../../../../../public/projectsPics/ccc.png';
-import ecommerce from '../../../../../public/projectsPics/ecommerce.png';
-import satellite from '../../../../../public/projectsPics/satellite.png';
-import animation from '../../../../../public/projectsPics/animation.png';
-import memolis from '../../../../../public/projectsPics/memolis.png';
-import cornerstoneConect from '../../../../../public/projectsPics/cornerstone-connect.png';
-// import preparing from '../../../../../public/projectsPics/preparing.png';
-import dnn from '../../../../../public/projectsPics/dnn.png';
-import fridgefy from '../../../../../public/projectsPics/fridgefy.png';
 import { AppContext } from '../../../../App';
 import js from '../../../projects.json';
 import ProjectDetail from './ProjectDetail';
 
+import { imagePaths } from '../../../Media';
+
 export type JsonType = {
     [key:string]:{
+        'title':string,
         'url':Array<string>,
         'description':Array<string>,
         'languages':Array<string>,
@@ -26,24 +19,12 @@ export type JsonType = {
 }
 
 export type showDetailType = {
+    key: string,
     title: string,
     description: Array<string>,
     url: Array<string>,
     languages: Array<string>,
-    features: Array<string>,
-    responsive?: boolean
-}
-
-export const imagePaths:{[key:string]:string} = {
-    'memolis':memolis,
-    'Color Code Converter':ccc,
-    'E-Commerce':ecommerce,
-    'Satellite Launch Simulation':satellite,
-    'SVG Animation Gallery':animation,
-    'DNN':dnn,
-    'This portfolio': portfolio,
-    'Fridgefy': fridgefy,
-    'Coenerstone Connect':cornerstoneConect
+    features: Array<string>
 }
 
 function Projects() {
@@ -52,6 +33,7 @@ function Projects() {
 
     const [teamP, setTeamP] = useState<boolean>(true);
     const [showDetail, setShowDetail] = useState<showDetailType>({
+        key: '',
         title:'',
         description:[],
         url:[],
@@ -62,7 +44,7 @@ function Projects() {
     const projectsObj:JsonType = {...js}
 
     useEffect(()=>{
-        setShowDetail({title:'', description:[], url:[], languages:[], features:[]})
+        setShowDetail({key: '', title:'', description:[], url:[], languages:[], features:[]})
         setTeamP(selected.current==2?false:true)
     },[selected])
 
@@ -90,8 +72,8 @@ function Projects() {
                 {Object.keys(projectsObj).map((val:string, key:number)=>{
                     return (projectsObj[val]['team']==teamP &&
                         <div key={key} className='flexChild'>
-                            <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({title:val, description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
-                            <h3>{[val]}</h3>
+                            <LinkDiv bg={imagePaths[val]} onClick={()=>setShowDetail({key: val, title:projectsObj[val]['title'], description:projectsObj[val]['description'], url:projectsObj[val]['url'], languages:projectsObj[val]['languages'], features:projectsObj[val]['features']})}/>
+                            <h3>{projectsObj[val]['title']}</h3>
                         </div>
                     )
                 })}
