@@ -1,14 +1,14 @@
-import { AppContext } from "../../App";
-import { useContext } from "react";
+// import { AppContext } from "../../App";
+// import { useContext } from "react";
 
-import { Main } from "./StyledComponents";
+// import { Main } from "./StyledComponents";
 
-import SideMenu from "./Pages/SideMenu";
+// import SideMenu from "./Pages/SideMenu";
 
-import Home from "./Pages/Home";
-import About from "./Pages/About/About";
-import Projects from "./Pages/Projects";
-import Contact from "./Pages/Contact/Contact";
+// import Home from "./Pages/Home";
+// import About from "./Pages/About/About";
+// import Projects from "./Pages/Projects";
+// import Contact from "./Pages/Contact/Contact";
 
 import photo from '../../../public/me.png'
 
