@@ -542,6 +542,10 @@ body {
   animation-delay: 2.8571428571s;
 }
 
+.mobile {
+  display: none;
+}
+
 .inquiry {
   background: linear-gradient(160deg, rgb(0, 0, 77), rgb(84, 84, 255));
   width: 100%;
@@ -582,4 +586,23 @@ body {
 }
 .inquiry .inquiryFlex a:visited {
   color: white;
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #000000;
+    position: relative;
+    font-family: "Helvetica", Arial, serif;
+    font-size: 1rem;
+  }
+  .laptop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
 }/*# sourceMappingURL=laptop.css.map */

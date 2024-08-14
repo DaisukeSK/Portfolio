@@ -733,6 +733,10 @@ body {
     }
 }
 
+.mobile {
+    display: none;
+}
+
 
 .inquiry {
         background: linear-gradient(160deg,rgb(0, 0, 77),rgb(84, 84, 255));
@@ -771,5 +775,24 @@ body {
                 color: white;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #ffffff;
+        color: #000000;
+        position: relative;
+        font-family: 'Helvetica', Arial, serif;
+        font-size: 1rem;
+    }
+    .laptop {
+        display: none;
+    }
+    .mobile {
+        display: block;
     }
 }

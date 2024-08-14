@@ -30,7 +30,7 @@ function App() {
     const [selected, setSelected] = useState<Selected>({prev:0, current:0});
     const [inquiry, setInquiry] = useState<boolean>(false);
     const [preparing, setPreparing] = useState<boolean>(false);
-    const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
+    // const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
 
     const [aside, setAside] = useState<boolean>(false)
 
@@ -43,9 +43,9 @@ function App() {
         window.scrollTo(0,0)
     },[selected]);
 
-    window.onresize=()=>{
-        setInnerWidth(window.innerWidth)
-    }
+    // window.onresize=()=>{
+    //     setInnerWidth(window.innerWidth)
+    // }
 
     return (
         <AppContext.Provider value={{selected, setSelected, aside, setAside}}>
@@ -54,7 +54,9 @@ function App() {
                 :
                 inquiry? <Inquiry/>
                 :
-                innerWidth>450?
+                // innerWidth>450?
+
+                <>
                     <div className='laptop'>
                         <Header/>
                         <Home/>
@@ -62,13 +64,13 @@ function App() {
                         <Projects/>
                         <Contact/>
                     </div>
-                :
-                innerWidth<=450 &&
+                    
                     <div className='mobile'>
                         
-                        <M_Header></M_Header>
+                        {/* <M_Header></M_Header> */}
                         <M_Main></M_Main>
                     </div>
+                </>
             }
 
         </AppContext.Provider>

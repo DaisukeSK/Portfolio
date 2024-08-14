@@ -10,33 +10,46 @@ import About from "./Pages/About/About";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact/Contact";
 
+import photo from '../../../public/me.png'
+
 function M_Main() {
 
-    const { selected, setAside } = useContext(AppContext)
+    // const { selected, setAside } = useContext(AppContext)
 
     return (
-        <Main selected={selected.current} onClick={()=>setAside(false)}>
 
-            {/* {aside && <M_SideMenu></M_SideMenu>} */}
+        <>
+        
+            {/* <Main selected={selected.current} onClick={()=>setAside(false)}> */}
 
-            {/* <div className="testDiv"></div> */}
+                {/* <SideMenu></SideMenu>
+                
+                {
+                selected.current==0? <Home/>
+                :
+                selected.current==1? <About/>
+                :
+                selected.current==2? <Projects/>
+                :
+                selected.current==3 && <Contact/>
+                } */}
 
-            <SideMenu></SideMenu>
-            
-            {
-            selected.current==0? <Home/>
-            :
-            selected.current==1? <About/>
-            :
-            selected.current==2? <Projects/>
-            :
-            selected.current==3 && <Contact/>
-            
-            }
-            {/* <About/> */}
-            
-            
-        </Main>
+                <h1>Hi, I'm Daisuke</h1>
+                <div className='beneathH1'>Full Stack Developer</div>
+                <div className='selfie'>
+
+                    <img src={photo}/>
+
+                    <div className='right'>
+
+                    </div>
+
+                </div>
+
+                
+                
+            {/* </Main> */}
+        </>
     )
 };
 
