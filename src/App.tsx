@@ -1,11 +1,11 @@
 import { useState, useEffect, createContext } from 'react';
 import Header from './components/LapTop/Header.tsx';
-import About from './components/LapTop/Pages/About/About.tsx';
-import Contact from './components/LapTop/Pages/Contact.tsx';
-import Home from './components/LapTop/Pages/Home.tsx';
-import Projects from './components/LapTop/Pages/Projects/Projects.tsx';
-import Inquiry from './components/LapTop/Pages/Inquiry.tsx';
-import ComingSoon from './components/LapTop/Pages/ComingSoon.tsx';
+import About from './components/LapTop/About/About.tsx';
+import Contact from './components/LapTop/Contact.tsx';
+import Home from './components/LapTop/Home.tsx';
+import Projects from './components/LapTop/Projects/Projects.tsx';
+import Inquiry from './components/LapTop/Inquiry.tsx';
+// import ComingSoon from './components/LapTop/Pages/ComingSoon.tsx';
 
 // import M_Header from './components/Mobile/M_Header.tsx';
 // import M_SideMenu from './components/Mobile/M_SideMenu.tsx';
@@ -29,14 +29,14 @@ function App() {
     
     const [selected, setSelected] = useState<Selected>({prev:0, current:0});
     const [inquiry, setInquiry] = useState<boolean>(false);
-    const [preparing, setPreparing] = useState<boolean>(false);
+    // const [preparing, setPreparing] = useState<boolean>(false);
     // const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
 
     const [aside, setAside] = useState<boolean>(false)
 
     useEffect(()=>{
         window.location.search=='?inquiry' && setInquiry(true);
-        window.location.search=='?preparing' && setPreparing(true);
+        // window.location.search=='?preparing' && setPreparing(true);
     },[]);
 
     useEffect(()=>{
@@ -50,8 +50,8 @@ function App() {
     return (
         <AppContext.Provider value={{selected, setSelected, aside, setAside}}>
             {
-                preparing? <ComingSoon/>
-                :
+                // preparing? <ComingSoon/>
+                // :
                 inquiry? <Inquiry/>
                 :
                 // innerWidth>450?

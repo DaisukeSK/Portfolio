@@ -1,10 +1,10 @@
 import { Fragment } from 'react'
-import Github from '../../../icons/Github';
-import Laptop from '../../../icons/Laptop';
+import Github from '../../icons/Github';
+import Laptop from '../../icons/Laptop';
 
 import { showDetailType } from './Projects';
 
-import { imagePaths, iconObj, videoPaths } from '../../../Media';
+import { imagePaths, iconObj, videoPaths } from '../../Media';
 
 function ProjectDetail(props:{
     showDetail: showDetailType,

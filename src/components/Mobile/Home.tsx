@@ -42,7 +42,7 @@ function Home() {
                 selected.current==3 && <Contact/>
                 } */}
 
-                <div className='selfie'>
+                <section className='selfie'>
 
                     <img src={photo}/>
 
@@ -50,7 +50,7 @@ function Home() {
 
                     </div>
 
-                </div>
+                </section>
                 <h1>Hi, I'm Daisuke</h1>
                 <div className='beneathH1'>Full Stack Web Developer</div>
 

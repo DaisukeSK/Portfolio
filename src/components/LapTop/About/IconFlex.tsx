@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { iconObj } from '../../../Media';
+import { iconObj } from '../../Media';
 
 function IconFlex(props:{icons:Array<string>}){
 

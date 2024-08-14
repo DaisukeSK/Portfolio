@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from 'react'
-import { Main, LinkDiv, Toggle } from '../../StyledComponents';
-import { AppContext } from '../../../../App';
-import js from '../../../projects.json';
+import { Main, LinkDiv, Toggle } from '../StyledComponents';
+import { AppContext } from '../../../App';
+import js from '../../projects.json';
 import ProjectDetail from './ProjectDetail';
 
-import { imagePaths } from '../../../Media';
+import { imagePaths } from '../../Media';
 
 export type JsonType = {
     [key:string]:{

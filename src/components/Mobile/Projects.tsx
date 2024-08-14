@@ -1,6 +1,6 @@
 import projectsJson from '../projects.json'
 import { Fragment, useState } from 'react';
-import { JsonType } from '../LapTop/Pages/Projects/Projects';
+import { JsonType } from '../LapTop/Projects/Projects';
 
 import { imagePaths } from '../Media';
 import { iconObj } from '../Media';
