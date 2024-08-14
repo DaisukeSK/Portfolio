@@ -80,7 +80,8 @@ export const ArrowSVG=Styled.svg.attrs({width:'12', height:'10'})<{selected:numb
 export const Toggle=styled.div<{team:number}>`
     display: flex;
     justify-content: center;
-    width: fit-content;
+    // width: fit-content;
+    background: pink;
     margin: 30px auto;
     div {
         width: 120px;
