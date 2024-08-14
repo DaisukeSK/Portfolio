@@ -9,7 +9,7 @@ import ComingSoon from './components/LapTop/Pages/ComingSoon.tsx';
 
 // import M_Header from './components/Mobile/M_Header.tsx';
 // import M_SideMenu from './components/Mobile/M_SideMenu.tsx';
-import M_Main from './components/Mobile/M_Main.tsx';
+import Mobile from './components/Mobile/Mobile.tsx';
 
 export type Selected={
     prev:number,
@@ -65,11 +65,11 @@ function App() {
                         <Contact/>
                     </div>
 
-                    <div className='mobile'>
+                    {/* <div className='mobile'> */}
                         
                         {/* <M_Header></M_Header> */}
-                        <M_Main></M_Main>
-                    </div>
+                        <Mobile></Mobile>
+                    {/* </div> */}
                 </>
             }
 

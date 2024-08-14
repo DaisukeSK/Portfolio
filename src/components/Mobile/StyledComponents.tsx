@@ -44,7 +44,7 @@ export const Main=Styled.main<{selected:number}>`
     }
 `;
 
-export const Aside=Styled.aside<{aside:number}>`
+export const Aside=Styled.aside<{aside:boolean}>`
     width: 150px;
     height: 100vh;
     position: fixed;

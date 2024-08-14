@@ -49,7 +49,7 @@
         "languages":["TypeScript","React","Node.js","PostgreSQL"],
         "features":["Sanitized Input Data","Salted & Hashed Password"],
         "team":false,
-        "responsive":false
+        "responsive":true
     },
 
     "satellite":{

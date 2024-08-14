@@ -1,9 +1,28 @@
-.mobile {
-  min-height: 100vh;
-  position: relative;
-  padding-top: 20px;
+.mobile header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
-.mobile::before {
+.mobile header h1 {
+  font-size: 1rem;
+  color: #002fff;
+}
+.mobile .home {
+  position: relative;
+  padding-bottom: 30px;
+  color: #ffffff;
+}
+.mobile .home::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -16,36 +35,226 @@
   background-attachment: fixed;
   z-index: -2;
 }
-.mobile::after {
+.mobile .home::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   z-index: -1;
 }
-.mobile h1, .mobile .beneathH1 {
-  text-align: center;
+.mobile .home hr {
+  border: none;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.6666666667);
+  width: 90%;
+}
+.mobile .home h2 {
+  margin-bottom: 10px;
+}
+.mobile .home h1, .mobile .home .beneathH1 {
   color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6666666667);
 }
-.mobile h1 {
-  margin-bottom: 0;
+.mobile .home h1 {
+  margin: 0;
 }
-.mobile .beneathH1 {
+.mobile .home .beneathH1 {
   margin-bottom: 20px;
 }
-.mobile .selfie {
-  padding-top: 30px;
+.mobile .home .beneath {
+  margin: 0;
+  border-bottom: 1px dashed grey;
+}
+.mobile .home .introduction {
+  padding: 0 20px;
+  color: rgba(255, 255, 255, 0.7333333333);
+}
+.mobile .home .selfie {
+  padding-top: 20px;
+  margin-bottom: 10px;
   background: linear-gradient(135deg, rgba(0, 0, 202, 0.582), rgba(35, 35, 43, 0.74));
 }
-.mobile .selfie img {
+.mobile .home .selfie img {
   display: block;
   width: 40%;
   margin: 0 auto;
 }
-.mobile .selfie .right {
+.mobile .home .selfie .right {
   color: #ffffff;
+}
+.mobile .home .skills {
+  padding: 0 10px 10px;
+}
+.mobile .home .skills .title {
+  color: rgba(255, 255, 255, 0.7333333333);
+}
+.mobile .home .skills .icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 5px 0 15px;
+}
+.mobile .home .skills .icons svg {
+  width: 12%;
+}
+.mobile .home .skills hr {
+  border-bottom: dashed 1px rgba(255, 255, 255, 0.3333333333);
+}
+.mobile .home .skills .seeProjects {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 3px 7px;
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 5px #ffffff;
+}
+.mobile .home .skills .seeProjects svg {
+  margin-right: 5px;
+}
+.mobile .home .contact h2 {
+  text-align: center;
+}
+.mobile .home .contact p {
+  color: rgba(255, 255, 255, 0.7333333333);
+  text-align: center;
+}
+.mobile .home .contact .contactFlex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.mobile .home .contact .contactFlex a {
+  color: rgba(255, 255, 255, 0.7333333333);
+  margin: 0 10px;
+  white-space: nowrap;
+}
+.mobile .home .contact .contactFlex a svg {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 5px;
+  fill: rgba(255, 255, 255, 0.7333333333);
+}
+.mobile .home .contact form {
+  width: 90%;
+  padding: 10px 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 7px;
+}
+.mobile .home .contact form input, .mobile .home .contact form textarea {
+  font-family: Helvetica;
+  color: #ffffff;
+  margin: 5px 0;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+}
+.mobile .home .contact form input::-moz-placeholder, .mobile .home .contact form textarea::-moz-placeholder {
+  font-family: Helvetica;
+  color: #ffffff;
+}
+.mobile .home .contact form input::placeholder, .mobile .home .contact form textarea::placeholder {
+  font-family: Helvetica;
+  color: #ffffff;
+}
+.mobile .home .contact form input:focus, .mobile .home .contact form textarea:focus {
+  outline: none;
+}
+.mobile .home .contact form input[type=submit] {
+  color: rgba(255, 255, 255, 0.7333333333);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto 0;
+  padding: 3px 15px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.mobile .projects .project {
+  margin-bottom: 30px;
+}
+.mobile .projects .project img {
+  width: 90%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.6666666667) 2px 2px 7px;
+}
+.mobile .projects .project .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+.mobile .projects .project .title h3 {
+  margin: 0 0 0 10px;
+}
+.mobile .projects .project .hiddenPart {
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  border-radius: 5px;
+  padding: 20px;
+  display: none;
+  box-sizing: border-box;
+}
+.mobile .projects .project .hiddenPart .notResponsive {
+  background-color: #655db4;
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+.mobile .projects .project .hiddenPart .notResponsive .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile .projects .project .hiddenPart .notResponsive .flex h3 {
+  margin: 0 0 0 5px;
+}
+.mobile .projects .project .hiddenPart .notResponsive p {
+  margin: 0;
+  text-align: center;
+}
+.mobile .projects .project .hiddenPart .url h4 {
+  margin: 0;
+}
+.mobile .projects .project .hiddenPart .url a {
+  color: #000000;
+  display: block;
+  margin-bottom: 10px;
+}
+.mobile .projects .project .hiddenPart .description {
+  margin: 20px 0;
+}
+.mobile .projects .project .hiddenPart .description p {
+  margin: 0;
+}
+.mobile .projects .project .hiddenPart .languages {
+  display: flex;
+  justify-content: center;
+}
+.mobile .projects .project .hiddenPart .languages svg {
+  width: 30px;
+  margin: 0 15px;
+}
+.mobile footer {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.6666666667);
 }/*# sourceMappingURL=mobile.css.map */
