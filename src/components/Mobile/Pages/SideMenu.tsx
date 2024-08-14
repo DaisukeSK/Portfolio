@@ -14,7 +14,7 @@ function SideMenu() {
     const path: JSX.Element = <path fill='#ffffff' d='m0,0 l12 5 l-12,5'/>
 
     return (
-        <Aside aside={aside?1:0}>
+        <Aside aside={aside}>
 
             <svg width='25' height='19' onClick={()=>setAside(false)}>
                 <rect x='0' y='0' width='25' height='3' fill='#ffffff'/>
