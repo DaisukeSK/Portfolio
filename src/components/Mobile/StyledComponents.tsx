@@ -80,28 +80,25 @@ export const ArrowSVG=Styled.svg.attrs({width:'12', height:'10'})<{selected:numb
 export const Toggle=styled.div<{team:number}>`
     display: flex;
     justify-content: center;
-    // width: fit-content;
-    background: pink;
+    // background: pink;
     margin: 30px auto;
     div {
         width: 120px;
         padding: 2px 10px;
+        border: 1px solid #ffffff55;
         box-sizing: border-box;
         text-align: center;
         border-radius: 5px;
-        outline: 1px solid #ffffff55;
-        margin: 0 15px;
+        margin: 0 10px;
         transition: all .3s ease-in-out;
     }
     div:first-child {
         background-color: ${(props)=>props.team?'#00000055':'#2F60FFD1'};
-        box-shadow: #2F60FFD1 0 0 ${(props)=>props.team?'0':'5px'};
         pointer-events: ${(props)=>props.team?'auto':'none'};
         color: ${(props)=>props.team?'#00000077':'#ffffff'};
     }
     div:nth-child(2) {
         background-color: ${(props)=>!props.team?'#00000055':'#2F60FFD1'};
-        box-shadow: #2F60FFD1 0 0 ${(props)=>!props.team?'0':'5px'};
         pointer-events: ${(props)=>!props.team?'auto':'none'};
         color: ${(props)=>!props.team?'#00000077':'#ffffff'};
     }

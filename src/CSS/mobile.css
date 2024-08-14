@@ -184,6 +184,9 @@
   border-radius: 7px;
   background-color: rgba(0, 0, 0, 0.8);
 }
+.mobile .projects {
+  padding: 0 20px 20px;
+}
 .mobile .projects::before {
   content: "";
   position: fixed;
@@ -206,8 +209,10 @@
           backdrop-filter: blur(3px);
   z-index: -1;
 }
-.mobile .projects .project {
-  margin-bottom: 30px;
+.mobile .projects hr {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3333333333);
+  margin: 20px 0;
 }
 .mobile .projects .project img {
   width: 100%;
@@ -216,14 +221,15 @@
      object-fit: cover;
   border-radius: 5px;
   display: block;
-  margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.6666666667) 2px 2px 7px;
 }
 .mobile .projects .project .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto 20px;
 }
 .mobile .projects .project .title h3 {
   margin: 0 0 0 10px;
