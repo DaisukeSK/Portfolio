@@ -76,7 +76,7 @@
 .mobile .home .selfie {
   padding-top: 20px;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, rgba(0, 0, 202, 0.582), rgba(35, 35, 43, 0.74));
+  background: linear-gradient(135deg, rgba(0, 0, 202, 0.5), rgba(5, 0, 24, 0.5));
 }
 .mobile .home .selfie img {
   display: block;
@@ -160,6 +160,7 @@
   font-size: 1rem;
   background: none;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid #ffffff;
 }
 .mobile .home .contact form input::-moz-placeholder, .mobile .home .contact form textarea::-moz-placeholder {

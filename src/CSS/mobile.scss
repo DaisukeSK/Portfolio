@@ -114,7 +114,7 @@ $headerHeight: 35px;
             // width: 60%;
     
     
-            background: linear-gradient(135deg, rgba(0, 0, 202, 0.582),rgba(35, 35, 43, 0.74));
+            background: linear-gradient(135deg, rgba(0, 0, 202, 0.5),rgba(5, 0, 24, 0.5));
             // border-top: 5px solid #ffffff;
             // border-bottom: 5px solid #ffffff;
     
@@ -225,6 +225,7 @@ $headerHeight: 35px;
                     font-size: 1rem;
                     background: none;
                     border: none;
+                    border-radius: 0;
                     border-bottom: 1px solid #ffffff;
                     &:focus {
                         outline: none;
