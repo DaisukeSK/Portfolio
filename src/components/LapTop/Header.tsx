@@ -22,7 +22,6 @@ function Header() {
             Div.innerText==='About'?1:
             Div.innerText==='Projects'?2:3
         });
-        // window.scrollTo(0, 0);
     };
 
     return (

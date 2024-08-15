@@ -1,9 +1,9 @@
 import { iconObj } from '../Media';
 
-function IconFlex(props:{icons:Array<string>, width?:number|undefined}) {
+function IconFlex(props:{icons:Array<string>}) {
 
     return (
-        <div className='icons' style={{width:props.width && `${props.width}px`}}>
+        <div className='icons'>
 
             {props.icons.map((icon:string)=>{
                 return iconObj[icon]

@@ -1,10 +1,7 @@
-import projectsJson from '../projects.json'
 import { Fragment, useState } from 'react';
-import { JsonType } from '../LapTop/Projects/Projects';
-
-import { imagePaths } from '../Media';
-import { iconObj } from '../Media';
-
+import projectsJson from '../projects.json'
+import { JsonType } from '../../App';
+import { imagePaths, iconObj } from '../Media';
 import { Toggle } from './StyledComponents'; 
 
 function Projects() {

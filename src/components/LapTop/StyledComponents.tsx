@@ -132,7 +132,6 @@ export const NavChild=Styled.div<{disabled:number}>`
     padding: 2px;
     box-sizing: border-box;
     cursor: pointer;
-    // outline: 1px solid green;
     &:hover {
         background-color: rgba(255, 255, 255, 0.4);
         transition: all ease-out 1s;

@@ -3,7 +3,6 @@ import Styled from "styled-components";
 export const Toggle=Styled.div<{team:number}>`
     display: flex;
     justify-content: center;
-    // background: pink;
     margin: 30px auto;
     div {
         width: 120px;
