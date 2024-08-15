@@ -37,6 +37,7 @@ function App() {
     useEffect(()=>{
         window.location.search=='?inquiry' && setInquiry(true);
         // window.location.search=='?preparing' && setPreparing(true);
+        
     },[]);
 
     useEffect(()=>{
