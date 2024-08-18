@@ -47,7 +47,7 @@ function Projects() {
                                     </>
                                     }
                                 </svg>
-                                <h3>{projectName}</h3>
+                                <h3>{projectsObj[projectName]['title']}</h3>
                             </div>
                             <div className='hiddenPart' style={{display:showDetail==projectName?'block':'none'}}>
 
