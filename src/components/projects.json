@@ -1,12 +1,11 @@
 {
     "memolis":{
-        "title":"memolis",
+        "title":"Word-Book App",
         "url":[
             "https://memolis.in/login/login.php",
             "https://github.com/DaisukeSK/memolis"
         ],
         "description":[
-            "A word-Book app.",
             "You can register pairs of a term and definition that you want to memorize. They will be saved in database.",
             "You can refer or edit them anytime."
         ],
@@ -85,23 +84,22 @@
     },
 
     "dnn":{
-        "title":"DNN",
+        "title":"News-Feed App",
         "url":[
             "https://dnn-2024.vercel.app/",
             "https://github.com/DaisukeSK/DNN"
         ],
         "description":[
-            "A news feed application using API.",
             "You can browse news from multiple categories, and search news by keywords, category, date and language."
         ],
         "languages":["TypeScript","React"],
         "features":["API"],
         "team":false,
-        "responsive":false
+        "responsive":true
     },
 
     "portfolio":{
-        "title":"This portfolio",
+        "title":"Portfolio",
         "url":[
             "",
             "https://github.com/DaisukeSK/Portfolio"
@@ -132,16 +130,13 @@
     },
 
     "coenerstone-connect":{
-        "title":"Coenerstone Connect",
+        "title":"Event-Management App",
         "url":[
             "https://cornerstone-connect.onrender.com",
             "https://github.com/diogoka/eventllege"
         ],
         "description":[
-            "It provides you with various recipes from various kinds.",
-            "You have 2 lists, your-favorite-recipe list and ingredient-you-have-in-the-fridge list.",
-            "Once you add a recipe in the list, it shows you what ingredients that you need but don't have in the fridge yet."
-        
+            ""
         ],
         "languages":["TypeScript","NextJS","Node.js","PostgreSQL","FireBase"],
         "features":[],
