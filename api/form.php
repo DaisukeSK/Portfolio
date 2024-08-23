@@ -31,7 +31,7 @@ try{
     echo '<script>location.href="https://portfolio-daisuke.vercel.app?inquiry"</script>';
     
 }catch(PDOException $e){
-    echo 'Error: ';
+    echo 'Error: '.$e;
     exit;
 };
 
