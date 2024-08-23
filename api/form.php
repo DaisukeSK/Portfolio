@@ -3,7 +3,9 @@
 $name=$_POST['userName'];
 $email=$_POST['email'];
 $inquiry=$_POST['inquiry'];
-$date=getTime();
+
+date_default_timezone_set("America/Vancouver");
+$date=date("Y/m/d/H/i/s");
 
 function db_open(){
     
