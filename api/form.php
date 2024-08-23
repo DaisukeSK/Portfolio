@@ -3,6 +3,7 @@
 $name=$_POST['userName'];
 $email=$_POST['email'];
 $inquiry=$_POST['inquiry'];
+$date=getTime();
 
 function db_open(){
     
@@ -19,12 +20,13 @@ function db_open(){
 
 try{
     $dbh=db_open();
-    $sql='insert into Form (id, name, email, inquiry) values (null, :name, :email, :inquiry)';
+    $sql='insert into Form (id, name, email, inquiry, date) values (null, :name, :email, :inquiry, :date)';
     $stmt2=$dbh->prepare($sql);
     
     $stmt2->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt2->bindParam(':email', $email, PDO::PARAM_STR);
     $stmt2->bindParam(':inquiry', $inquiry, PDO::PARAM_STR);
+    $stmt2->bindParam(':date', $date, PDO::PARAM_STR);
     
     $stmt2->execute();
 
