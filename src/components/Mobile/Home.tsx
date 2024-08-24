@@ -54,7 +54,7 @@ function Home() {
                 <div className='contactFlex'>
 
                     <a href='https://github.com/DaisukeSK' target='_blank'>
-                        <Github where='contact'/>
+                        <Github/>
                         <div>Github</div>
                     </a>
                     <a href='https://www.linkedin.com/in/daisuke-seki-670202261/' target='_blank'>
