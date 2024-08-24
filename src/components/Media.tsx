@@ -54,7 +54,7 @@ export const iconObj:{[key:string]:JSX.Element} = {
     'Node.js':<NodeJS/>,
     'FireBase':<FireBase/>,
     'NextJS':<NextJS/>,
-    'Github': <Github where='about'/>,
+    'Github': <Github/>,
     'Git': <Git/>,
     'VSCode': <VSCode/>,
     'Inkscape': <Inkscape/>,

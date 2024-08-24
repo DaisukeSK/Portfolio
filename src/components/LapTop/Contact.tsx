@@ -26,7 +26,7 @@ function Contact() {
                 <div className='contactFlexLeft'>
                     <a href='https://github.com/DaisukeSK' target='_blank'>
                         <div>Github</div>
-                        <Github where='contact'/>
+                        <Github/>
                     </a>
                     <a href='https://www.linkedin.com/in/daisuke-seki-670202261/' target='_blank'>
                         <div>LinkedIn</div>

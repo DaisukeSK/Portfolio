@@ -448,7 +448,7 @@ body {
                             color: #ffffff;
                         }
                         svg {
-    
+                            
                             fill: #ffffff;
                         }
                     }
@@ -471,6 +471,8 @@ body {
                     svg {
                         fill: #ffffff73;
                         // transition: all .3s ease-in-out;
+                        width: 70px;
+                        height: 70px;
                         display: block;
                         
                     }
@@ -603,7 +605,8 @@ body {
                         position: relative;
                         a {
                             svg {
-                                height:30px;
+                                width: 30px;
+                                height: 30px;
                                 width: fit-content;
                                 margin: 0 10px;
                                 display: block;

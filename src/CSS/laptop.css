@@ -259,6 +259,8 @@ body {
 }
 .laptop .contact .contactFlex .contactFlexLeft a svg {
   fill: rgba(255, 255, 255, 0.4509803922);
+  width: 70px;
+  height: 70px;
   display: block;
 }
 .laptop .contact .contactFlex .contactFlexRight {
@@ -383,6 +385,7 @@ body {
   position: relative;
 }
 .laptop .projects .detail .detailright .linkFlex .website a svg, .laptop .projects .detail .detailright .linkFlex .github a svg {
+  width: 30px;
   height: 30px;
   width: -moz-fit-content;
   width: fit-content;

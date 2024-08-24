@@ -49,7 +49,7 @@ function ProjectDetail(props:{
 
                         <div className='github'>
                             <a href={props.showDetail.url[1]} target='_blank'>
-                                <Github where='projectDetail'/>
+                                <Github/>
                             </a>
                             <span>Github</span>
                         </div>
